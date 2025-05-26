@@ -1,5 +1,5 @@
 import "./globals.css";
-import { League_Spartan, Noto_Color_Emoji, Quicksand } from "next/font/google";
+import { League_Spartan, Quicksand } from "next/font/google";
 import Footer from "@/components/ui/Footer";
 import Header from "@/components/ui/Header";
 import { QueryProvider } from "@/libs/QueryProvider";
@@ -14,10 +14,6 @@ const quickSand = Quicksand({
 const aleo = League_Spartan({
   variable: "--font-league-spartan",
   subsets: ["latin"],
-});
-const segoe = Noto_Color_Emoji({
-  variable: "--font-noto",
-  weight: "400",
 });
 
 import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
@@ -61,9 +57,7 @@ export default async function Layout({
 
   return (
     <html lang="en">
-      <body
-        className={`${quickSand.variable} ${aleo.variable} antialiased ${segoe.variable}`}
-      >
+      <body className={`${quickSand.variable} ${aleo.variable} antialiased`}>
         <NextIntlClientProvider>
           <QueryProvider>
             <div className="text-text flex min-h-screen flex-col items-center gap-20">
