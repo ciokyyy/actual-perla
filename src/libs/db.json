@@ -1,0 +1,200 @@
+{
+  "rooms": [
+    {
+      "id": "7095",
+      "number": "9",
+      "typeId": "APB",
+      "max": 5,
+      "images": [
+        { "src": "/images/camere/camera-9/camera-9-1.webp" },
+        { "src": "/images/camere/camera-9/camera-9-2.webp" },
+        { "src": "/images/camere/camera-9/camera-9-3.webp" },
+        { "src": "/images/camere/camera-9/camera-9-4.webp" }
+      ]
+    },
+    {
+      "id": "7087",
+      "number": "1",
+      "typeId": "DBB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/camera-1/camera-1-1.webp" },
+        { "src": "/images/camere/camera-1/camera-1-2.webp" },
+        { "src": "/images/camere/camera-1/camera-1-3.webp" },
+        { "src": "/images/camere/camera-1/camera-1-4.webp" }
+      ]
+    },
+    {
+      "id": "7097",
+      "number": "11",
+      "typeId": "DBB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/camera-11/camera-11-1.webp" },
+        { "src": "/images/camere/camera-11/camera-11-2.webp" },
+        { "src": "/images/camere/camera-11/camera-11-3.webp" },
+        { "src": "/images/camere/camera-11/camera-11-4.webp" }
+      ]
+    },
+    {
+      "id": "7102",
+      "number": "16",
+      "typeId": "DBB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/camera-18/camera-18-1.webp" },
+        { "src": "/images/camere/camera-18/camera-18-2.webp" }
+      ]
+    },
+    {
+      "id": "7090",
+      "number": "4",
+      "typeId": "DBB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/camera-4/camera-4-1.webp" },
+        { "src": "/images/camere/camera-4/camera-4-2.webp" },
+        { "src": "/images/camere/camera-4/camera-4-3.webp" }
+      ]
+    },
+    {
+      "id": "7091",
+      "number": "5",
+      "typeId": "DBB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/camera-5/camera-5-1.webp" },
+        { "src": "/images/camere/camera-5/camera-5-2.webp" },
+        { "src": "/images/camere/camera-5/camera-5-3.webp" }
+      ]
+    },
+    {
+      "id": "7101",
+      "number": "Agropensiune",
+      "typeId": "DBB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/agro-balcon/agro-balcon-1.webp" },
+        { "src": "/images/camere/agro-balcon/agro-balcon-2.webp" },
+        { "src": "/images/camere/agro-balcon/agro-balcon-3.webp" }
+      ]
+    },
+    {
+      "id": "7092",
+      "number": "6",
+      "typeId": "DB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/camera-6/camera-6-1.webp" },
+        { "src": "/images/camere/camera-6/camera-6-2.webp" },
+        { "src": "/images/camere/camera-6/camera-6-3.webp" }
+      ]
+    },
+    {
+      "id": "7093",
+      "number": "7",
+      "typeId": "DB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/camera-7/camera-7-1.webp" },
+        { "src": "/images/camere/camera-7/camera-7-2.webp" },
+        { "src": "/images/camere/camera-7/camera-7-3.webp" }
+      ]
+    },
+    {
+      "id": "7094",
+      "number": "Agropensiune",
+      "typeId": "DB",
+      "max": 2,
+      "images": [
+        { "src": "/images/camere/agro-balcon/agro-balcon-1.webp" },
+        { "src": "/images/camere/agro-balcon/agro-balcon-2.webp" },
+        { "src": "/images/camere/agro-balcon/agro-balcon-3.webp" }
+      ]
+    },
+    {
+      "id": "7098",
+      "number": "12",
+      "typeId": "TPB",
+      "max": 3,
+      "images": [
+        { "src": "/images/camere/camera-12/camera-12-1.webp" },
+        { "src": "/images/camere/camera-12/camera-12-2.webp" },
+        { "src": "/images/camere/camera-12/camera-12-3.webp" },
+        { "src": "/images/camere/camera-12/camera-12-4.webp" },
+        { "src": "/images/camere/camera-12/camera-12-5.webp" }
+      ]
+    },
+    {
+      "id": "7099",
+      "number": "13",
+      "typeId": "TPB",
+      "max": 3,
+      "images": [
+        { "src": "/images/camere/camera-13/camera-13-1.webp" },
+        { "src": "/images/camere/camera-13/camera-13-2.webp" },
+        { "src": "/images/camere/camera-13/camera-13-3.webp" }
+      ]
+    },
+    {
+      "id": "7100",
+      "number": "14",
+      "typeId": "TPB",
+      "max": 3,
+      "images": [
+        { "src": "/images/camere/camera-14/camera-14-1.webp" },
+        { "src": "/images/camere/camera-14/camera-14-2.webp" },
+        { "src": "/images/camere/camera-14/camera-14-3.webp" },
+        { "src": "/images/camere/camera-14/camera-14-4.webp" }
+      ]
+    },
+    {
+      "id": "7088",
+      "number": "2",
+      "typeId": "TPB",
+      "max": 3,
+      "images": [
+        { "src": "/images/camere/camera-2/camera-2-1.webp" },
+        { "src": "/images/camere/camera-2/camera-2-2.webp" },
+        { "src": "/images/camere/camera-2/camera-2-3.webp" },
+        { "src": "/images/camere/camera-2/camera-2-4.webp" },
+        { "src": "/images/camere/camera-2/camera-2-5.webp" },
+        { "src": "/images/camere/camera-2/camera-2-6.webp" }
+      ]
+    },
+    {
+      "id": "7103",
+      "number": "17",
+      "typeId": "TP",
+      "max": 3,
+      "images": [
+        { "src": "/images/camere/agro-fara-balcon/agro-fara-balcon-1.webp" },
+        { "src": "/images/camere/agro-fara-balcon/agro-fara-balcon-2.webp" },
+        { "src": "/images/camere/agro-fara-balcon/agro-fara-balcon-3.webp" }
+      ]
+    },
+    {
+      "id": "7104",
+      "number": "18",
+      "typeId": "TP",
+      "max": 3,
+      "images": [
+        { "src": "/images/camere/camera-18/camera-18-1.webp" },
+        { "src": "/images/camere/camera-18/camera-18-2.webp" }
+      ]
+    },
+    {
+      "id": "7089",
+      "number": "3",
+      "typeId": "SB",
+      "max": 4,
+      "images": [
+        { "src": "/images/camere/camera-3/camera-3-1.webp" },
+        { "src": "/images/camere/camera-3/camera-3-2.webp" },
+        { "src": "/images/camere/camera-3/camera-3-3.webp" },
+        { "src": "/images/camere/camera-3/camera-3-4.webp" },
+        { "src": "/images/camere/camera-3/camera-3-5.webp" }
+      ]
+    }
+  ]
+}

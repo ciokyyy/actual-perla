@@ -1,0 +1,288 @@
+{
+  "Footer": {
+    "pages": "Pages",
+    "offer_halfboard": "Half-board Offer",
+    "offer_christmas": "Christmas Offer",
+    "offer_newyear": "New Year's Offer",
+    "book_halfboard": "Book Half-board Now",
+    "contact": "Contact",
+    "phone_label": "Phone number",
+    "whatsapp_label": "Whatsapp",
+    "email_label": "Email",
+    "address_label": "Address",
+    "company_data": "Company Data",
+    "company_name": "SC GORIOAN PROD COM SRL",
+    "company_cui": "RO7086751",
+    "company_reg": "J33/243/1995",
+    "company_address": "Strada Principală 1A, Frumosu, Suceava"
+  },
+  "LocaleLayout": {
+    "title": "Home"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "English (US)"
+  },
+  "Menu": {
+    "menu": "Menu",
+    "home": "Home",
+    "book_halfboard": "Book Half-board Now",
+    "rooms": "Our Rooms",
+    "food": "Our Food",
+    "spa": "Our Spa",
+    "offer_halfboard": "Half-board Offer",
+    "offer_christmas": "Christmas Offer",
+    "offer_newyear": "New Year's Offer",
+    "contact": "Contact",
+    "about": "About Us"
+  },
+  "OffersPage": {
+    "our_offers": "Our Offers",
+    "demipensiune_title": "Half-board Offer",
+    "demipensiune_more": "Find out more!",
+    "craciun_title": "Christmas 2025 in Bucovina",
+    "craciun_more": "Find out more!",
+    "revelion_title": "New Year's Eve 2025-2026 in Bucovina",
+    "revelion_more": "Find out more!"
+  },
+  "Rooms": {
+    "APB": {
+      "title": "Apartment with Balcony",
+      "description": "The apartment has two well-defined rooms, with the bathroom centrally located for easy access from both. The first room is equipped with a double bed. The second room offers both a double bed and a sofa bed. This layout ensures maximum comfort and flexibility for guests."
+    },
+    "DBB": {
+      "title": "Double Room with Balcony",
+      "description": "All double rooms with a balcony offer delightful views and are equipped with private bathrooms with showers, ensuring complete privacy and comfort. Each room features a double bed, creating a spacious and comfortable area for relaxation and enjoying the scenery."
+    },
+    "DB": {
+      "title": "Double Room without Balcony",
+      "description": "Our double rooms without a balcony are comfortable and intimate, including private bathrooms with showers, guaranteeing privacy and convenience. Each of these rooms offers a generous double bed, creating an ideal space for rest and relaxation."
+    },
+    "SB": {
+      "title": "Suite with Balcony",
+      "description": "Our exclusive suite includes two interconnected rooms with a balcony, creating a spacious and private area with outdoor access. Each of these welcoming rooms is equipped with a comfortable double bed, ensuring a relaxing and intimate stay for our guests."
+    },
+    "TPB": {
+      "title": "Triple Room with Balcony",
+      "description": "All triple rooms with a balcony are equipped with a comfortable double bed and a sofa bed, providing extra generous space for relaxation and additional accommodation. Perfect for families or larger groups, these rooms with a balcony add extra comfort and a pleasant perspective for a wonderful stay."
+    },
+    "TP": {
+      "title": "Triple Room without Balcony",
+      "description": "Our triple rooms without a balcony are equipped with a comfortable double bed and a cleverly integrated single bed in the wardrobe to maximize space. This smart arrangement offers our guests increased flexibility and comfort during their stay."
+    },
+    "7101": {
+      "image1Alt": "Agro Balcon room, first view",
+      "image2Alt": "Agro Balcon room, second view",
+      "image3Alt": "Agro Balcon room, third view"
+    },
+    "7087": {
+      "image1Alt": "Room 1, first view",
+      "image2Alt": "Room 1, second view",
+      "image3Alt": "Room 1, third view",
+      "image4Alt": "Room 1, fourth view"
+    },
+    "7097": {
+      "image1Alt": "Room 11, first view",
+      "image2Alt": "Room 11, second view",
+      "image3Alt": "Room 11, third view",
+      "image4Alt": "Room 11, fourth view"
+    },
+    "7102": {
+      "image1Alt": "Room 18, first view",
+      "image2Alt": "Room 18, second view"
+    },
+    "7090": {
+      "image1Alt": "Room 4, first view",
+      "image2Alt": "Room 4, second view",
+      "image3Alt": "Room 4, third view"
+    },
+    "7091": {
+      "image1Alt": "Room 5, first view",
+      "image2Alt": "Room 5, second view",
+      "image3Alt": "Room 5, third view"
+    },
+    "7092": {
+      "image1Alt": "Room 6, first view",
+      "image2Alt": "Room 6, second view",
+      "image3Alt": "Room 6, third view"
+    },
+    "7093": {
+      "image1Alt": "Room 7, first view",
+      "image2Alt": "Room 7, second view",
+      "image3Alt": "Room 7, third view"
+    },
+    "7094": {
+      "image1Alt": "Room 8, first view",
+      "image2Alt": "Room 8, second view",
+      "image3Alt": "Room 8, third view"
+    },
+    "7095": {
+      "image1Alt": "Room 9, first view",
+      "image2Alt": "Room 9, second view",
+      "image3Alt": "Room 9, third view",
+      "image4Alt": "Room 9, fourth view"
+    },
+    "7098": {
+      "image1Alt": "Room 12, first view",
+      "image2Alt": "Room 12, second view",
+      "image3Alt": "Room 12, third view",
+      "image4Alt": "Room 12, fourth view",
+      "image5Alt": "Room 12, fifth view"
+    },
+    "7099": {
+      "image1Alt": "Room 13, first view",
+      "image2Alt": "Room 13, second view",
+      "image3Alt": "Room 13, third view"
+    },
+    "7100": {
+      "image1Alt": "Room 14, first view",
+      "image2Alt": "Room 14, second view",
+      "image3Alt": "Room 14, third view",
+      "image4Alt": "Room 14, fourth view"
+    },
+    "7088": {
+      "image1Alt": "Room 2, first view",
+      "image2Alt": "Room 2, second view",
+      "image3Alt": "Room 2, third view",
+      "image4Alt": "Room 2, fourth view",
+      "image5Alt": "Room 2, fifth view",
+      "image6Alt": "Room 2, sixth view"
+    },
+    "7103": {
+      "image1Alt": "Room 17, first view",
+      "image2Alt": "Room 17, second view",
+      "image3Alt": "Room 17, third view"
+    },
+    "7104": {
+      "image1Alt": "Room 18, first view",
+      "image2Alt": "Room 18, second view"
+    },
+    "7089": {
+      "image1Alt": "Room 3, first view",
+      "image2Alt": "Room 3, second view",
+      "image3Alt": "Room 3, third view",
+      "image4Alt": "Room 3, fourth view",
+      "image5Alt": "Room 3, fifth view"
+    }
+  },
+  "HalfBoardPage": {
+    "title": "Half-board Accommodation Offer",
+    "food_included": "The offer includes breakfast and dinner buffet",
+    "book_now": "Book Now !",
+    "food_traditional": "Traditional food, 60% from our own production",
+    "food_card_title": "Food",
+    "food_card_desc": "See what goodies we have!",
+    "spa_included": "The offer includes access to the spa. Enjoy well-being in the saltwater tub, pool, salt room, sauna, or jacuzzi.",
+    "spa_card_title": "Spa",
+    "spa_card_desc": "Where will you relax?",
+    "rooms_card_title": "Rooms",
+    "rooms_card_desc": "View and facilities",
+    "offers_card_title": "Other offers",
+    "offers_card_desc": "Christmas or New Year's Eve in Bucovina"
+  },
+  "Spa": {
+    "ciubar_1_alt": "Wooden hot tub with salted water, first view",
+    "jacuzzi_1_alt": "Jacuzzi area, first view",
+    "piscina_1_alt": "Swimming pool area, first view",
+    "salina_1_alt": "Salt room, first view",
+    "sauna_1_alt": "Sauna room, first view"
+  },
+  "Sala": {
+    "sala_1_alt": "Fitness room, first view",
+    "sala_4_alt": "Fitness room, fourth view"
+  },
+  "BookNow": {
+    "book_now": "Book Now !"
+  },
+  "Calculate": {
+    "adults": "Adults",
+    "children_6_12": "Children between 6 and 12 years",
+    "children_4_6": "Children between 4 and 6 years",
+    "calculate": "Calculate!",
+    "result": "Result"
+  },
+  "ChristmasPage": {
+    "title": "Celebrate Christmas 2025 in Bucovina",
+    "pricing": "4 nights / 5 days for just 3000 lei/person",
+    "food_drink": {
+      "title": "Food and Drinks",
+      "subtitle": "All inclusive!!!",
+      "desc1": "Everything is included, from food to drinks, you have plenty to choose from during your stay in Bucovina",
+      "desc2": "Traditional food, 60% from our own production"
+    },
+    "spa": {
+      "title": "Spa",
+      "subtitle": "Your relaxation oasis!",
+      "desc": "The offer includes access to the spa. Enjoy well-being in the saltwater tub, pool, salt room, sauna, or jacuzzi."
+    },
+    "schedule": {
+      "title": "Stay Schedule With Us",
+      "dec23": {
+        "title": "December 23",
+        "desc": "Enjoy a warm welcome with Bucovina traditions."
+      },
+      "dec24": {
+        "title": "December 24",
+        "desc": "At 10 AM, take a horse-drawn sleigh ride, then enjoy an outdoor meal with pork feast, barbecue and cauldron roast, along with mulled wine, hot plum brandy and delicious Poale-n Brau. In the evening, at dinner, Carolers and Santa Claus will bring the magic of holidays."
+      },
+      "dec25": {
+        "title": "December 25",
+        "desc": "In a festive atmosphere, enjoy traditional dishes, selected drinks and good cheer with your loved ones, from 2:30 PM, to the rhythms of a live orchestra."
+      },
+      "dec26": {
+        "title": "December 26",
+        "desc": "You have the freedom to spend the day as you please - either on the ski slope in Campulung Moldovenesc, or exploring local beauties such as Moldovita and Voronet monasteries, pottery in Marginea (Black Ceramics) or a ride with Hutulca Steam Train from Moldovita."
+      }
+    },
+    "calculate": {
+      "title": "Calculate the price of your stay!",
+      "discounts": {
+        "title": "Special Discounts",
+        "desc": "Children up to 12 years get 50% discount, those between 4 and 6 years get 70% discount, and those between 0 and 3 years have free access."
+      }
+    },
+    "book_now": "Book Now !"
+  },
+  "NewYearPage": {
+    "title": "Celebrate New Year's Eve 2025-2026 in Bucovina",
+    "pricing": "4 nights / 5 days for just 3200 lei/person",
+    "food_drink": {
+      "title": "Food and Drinks",
+      "subtitle": "All inclusive!!!",
+      "desc1": "Everything is included, from food to drinks, you have plenty to choose from during your stay in Bucovina",
+      "desc2": "Traditional food, 60% from our own production"
+    },
+    "spa": {
+      "title": "Spa",
+      "subtitle": "Your relaxation oasis!",
+      "desc": "The offer includes access to the spa. Enjoy well-being in the saltwater tub, pool, salt room, sauna, or jacuzzi."
+    },
+    "schedule": {
+      "title": "Stay Schedule With Us",
+      "dec29": {
+        "title": "December 29",
+        "desc": "Begin your holiday immersed in authentic Bucovina atmosphere, with a traditional welcome reception and a festive dinner where you'll discover the first flavors of our local cuisine."
+      },
+      "dec30": {
+        "title": "December 30",
+        "desc": "At 10 AM, embark on an unforgettable horse-drawn sleigh adventure through Bucovina's winter landscape. Following this, enjoy a traditional outdoor feast featuring local specialties: 'pomana porcului' (traditional pork feast), barbecue and cauldron-cooked dishes, all accompanied by aromatic mulled wine, hot plum brandy, and our famous 'Poale-n Brau' pastries that will warm the atmosphere of this special day."
+      },
+      "dec31": {
+        "title": "December 31",
+        "desc": "After lunch, enjoy an extraordinary spectacle of Bucovina's New Year traditions, featuring groups of carolers, traditional goat and bear dances, and other authentic local customs. At 9:00 PM, the grand New Year's Eve party begins, where you'll savor an exceptional culinary feast: refined cold and hot appetizers, including turkey aspic, beef salad, marinated meatballs, fish specialties, hot dishes of turkey, piglet, and veal, all accompanied by live music and dancing until dawn."
+      },
+      "jan1": {
+        "title": "January 1",
+        "desc": "The first day of the year offers you the freedom to explore Bucovina's beauty at your own pace. Choose between: an active day on the ski slopes in Campulung Moldovenesc resort; a cultural circuit to the famous UNESCO painted monasteries (Moldovita, Voronet - known for its unique blue, Humor, and Sucevita); a visit to the craft workshops in Marginea, famous for their unique black pottery; or a picturesque journey on the Hutulca Steam Train through Moldovita Valley, offering spectacular views of Bucovina's rolling hills."
+      }
+    },
+    "calculate": {
+      "title": "Calculate the price of your stay!",
+      "discounts": {
+        "title": "Special Discounts",
+        "desc": "Children up to 12 years get 50% discount, those between 4 and 6 years get 70% discount, and those between 0 and 3 years have free access."
+      }
+    },
+    "book_now": "Book Now !"
+  }
+}

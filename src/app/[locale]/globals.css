@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+
+@theme inline {
+    --color-primary: #1D5B17;
+    --color-secondary: #9fcaa6;
+    --radius-normal: 30px;
+    --spacing: 1px;
+    --color-background: #CAE0BD;
+    --text-logo: clamp(24px, 3vw, 32px);
+    --text-desc: clamp(16px, 2vw, 20px);
+    --color-foreground: #ADE091;
+    --color-text: #191f4c;
+    --text-label: 15px;
+    --shadow-wcolor:var(--color-foreground) 0 0 50px 10px;
+}
+.with-drop-shadow {
+    filter: drop-shadow(0 0 50px var(--color-primary));
+
+}
+.square-card {
+    @apply aspect-square w-full h-full flex flex-col gap-10 justify-center items-center cursor-pointer
+}
+.oferte-gradient {
+    background: rgb(202,224,189);
+    background: linear-gradient(0deg, rgba(202,224,189,1) 0%, rgba(173,224,145,1) 30%, rgba(173,224,145,1) 70%, rgba(202,224,189,1) 100%)}
+.header-gradient {
+    background: rgb(202,224,189);
+    background: linear-gradient(0deg, rgba(202,224,189,1) 0%, rgba(173,224,145,1) 30%, rgba(29,91,23,1) 100%);
+}
+.footer-gradient {
+    background: rgb(202,224,189);
+    background: linear-gradient(180deg, rgba(202,224,189,1) 0%, rgba(173,224,145,1) 30%, rgba(29,91,23,1) 100%);
+}
+.oferta-icon-title {
+    @apply w-50 h-50 p-5 rounded-normal bg-primary text-white
+}
+
+.oferta-title {
+    font-family: var(--font-league-spartan);
+    @apply text-logo text-white font-semibold p-20 bg-primary rounded-normal mx-20 text-center uppercase shadow-xl
+
+}
+
+
+.title {
+    font-family: var(--font-league-spartan);
+    @apply text-logo text-text font-semibold p-20 bg-foreground rounded-normal mx-20 text-center uppercase my-70 shadow-xl
+}
+
+
+
+
+body {
+    scroll-behavior: smooth;
+    font-family:
+      var(--font-quicksand),
+      sans-serif;
+    background: var(--color-background);
+  }
+  

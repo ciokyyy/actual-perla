@@ -1,0 +1,288 @@
+{
+  "Footer": {
+    "pages": "Pagini",
+    "offer_halfboard": "Ofertă demipensiune",
+    "offer_christmas": "Ofertă Crăciun",
+    "offer_newyear": "Ofertă Revelion",
+    "book_halfboard": "Rezervă Acum Demipensiune",
+    "contact": "Contact",
+    "phone_label": "Număr de telefon",
+    "whatsapp_label": "Whatsapp",
+    "email_label": "Email",
+    "address_label": "Adresă",
+    "company_data": "Datele Firmei",
+    "company_name": "SC GORIOAN PROD COM SRL",
+    "company_cui": "RO7086751",
+    "company_reg": "J33/243/1995",
+    "company_address": "Strada Principală 1A, Frumosu, Suceava"
+  },
+  "LocaleSwitcher": {
+    "label": "Schimbă limba",
+    "locale": "Română"
+  },
+  "LocaleLayout": {
+    "title": "Acasă"
+  },
+  "Menu": {
+    "menu": "Meniu",
+    "home": "Acasă",
+    "book_halfboard": "Rezervă Acum Demipensiune",
+    "rooms": "Camerele noastre",
+    "food": "Mâncarea de la noi",
+    "spa": "Spa-ul nostru",
+    "offer_halfboard": "Ofertă Demipensiune",
+    "offer_christmas": "Ofertă Craciun",
+    "offer_newyear": "Ofertă Revelion",
+    "contact": "Contact",
+    "about": "Despre Noi"
+  },
+  "OffersPage": {
+    "our_offers": "Ofertele Noastre",
+    "demipensiune_title": "Ofertă Demipensiune",
+    "demipensiune_more": "Află mai multe !",
+    "craciun_title": "Crăciun 2025 în Bucovina",
+    "craciun_more": "Află mai multe !",
+    "revelion_title": "Revelion 2025-2026 în Bucovina",
+    "revelion_more": "Află mai multe !"
+  },
+  "Rooms": {
+    "APB": {
+      "title": "Apartament Cu Balcon",
+      "description": "Apartamentul are două camere bine definite, cu baia situată central pentru acces facil din ambele. Prima cameră este dotată cu un pat matrimonial. A doua cameră oferă atât un pat matrimonial, cât și o canapea extensibilă. Această structură asigură confort și flexibilitate maximă pentru oaspeți."
+    },
+    "DBB": {
+      "title": "Cameră Dublă Cu Balcon",
+      "description": "Toate camerele duble cu balcon oferă priveliști încântătoare și sunt echipate cu băi proprii cu duș, asigurând intimitate și confort deplin. Fiecare cameră dispune de un pat matrimonial, creând un spațiu generos și comod pentru relaxare și admirarea peisajului."
+    },
+    "DB": {
+      "title": "Cameră Dublă Fără Balcon",
+      "description": "Camerele noastre duble, fără balcon, sunt confortabile și intime și includ băi proprii cu duș, garantând intimitate și comoditate. Fiecare dintre aceste camere oferă un pat matrimonial generos, creând un spațiu ideal pentru odihnă și relaxare."
+    },
+    "SB": {
+      "title": "Suită Cu Balcon",
+      "description": "Suita noastră exclusivă include două camere interconectate cu balcon, creând un spațiu amplu și privat cu acces la aer liber. Fiecare dintre aceste camere primitoare este dotată cu un pat matrimonial confortabil, garantând o ședere relaxantă și intimă pentru oaspeții noștri."
+    },
+    "TPB": {
+      "title": "Cameră Triplă Cu Balcon",
+      "description": "Toate camerele triple cu balcon sunt dotate cu un pat matrimonial confortabil și o canapea extensibilă, oferind spațiu suplimentar generos pentru relaxare și cazare adițională. Perfecte pentru familii sau grupuri mai mari, aceste camere cu balcon adaugă un plus de confort și o perspectivă plăcută pentru o ședere minunată."
+    },
+    "TP": {
+      "title": "Cameră Triplă Fără Balcon",
+      "description": "Camerele noastre triple, fără balcon, sunt dotate cu un pat matrimonial confortabil și un pat simplu ingenios, care se integrează în dulap pentru a maximiza spațiul. Această amenajare inteligentă oferă oaspeților noștri flexibilitate și confort sporit pe durata șederii lor."
+    },
+    "7101": {
+      "image1Alt": "Cameră Agro Balcon, prima vedere",
+      "image2Alt": "Cameră Agro Balcon, a doua vedere",
+      "image3Alt": "Cameră Agro Balcon, a treia vedere"
+    },
+    "7087": {
+      "image1Alt": "Camera 1, prima vedere",
+      "image2Alt": "Camera 1, a doua vedere",
+      "image3Alt": "Camera 1, a treia vedere",
+      "image4Alt": "Camera 1, a patra vedere"
+    },
+    "7097": {
+      "image1Alt": "Camera 11, prima vedere",
+      "image2Alt": "Camera 11, a doua vedere",
+      "image3Alt": "Camera 11, a treia vedere",
+      "image4Alt": "Camera 11, a patra vedere"
+    },
+    "7102": {
+      "image1Alt": "Camera 18, prima vedere",
+      "image2Alt": "Camera 18, a doua vedere"
+    },
+    "7090": {
+      "image1Alt": "Camera 4, prima vedere",
+      "image2Alt": "Camera 4, a doua vedere",
+      "image3Alt": "Camera 4, a treia vedere"
+    },
+    "7091": {
+      "image1Alt": "Camera 5, prima vedere",
+      "image2Alt": "Camera 5, a doua vedere",
+      "image3Alt": "Camera 5, a treia vedere"
+    },
+    "7092": {
+      "image1Alt": "Camera 6, prima vedere",
+      "image2Alt": "Camera 6, a doua vedere",
+      "image3Alt": "Camera 6, a treia vedere"
+    },
+    "7093": {
+      "image1Alt": "Camera 7, prima vedere",
+      "image2Alt": "Camera 7, a doua vedere",
+      "image3Alt": "Camera 7, a treia vedere"
+    },
+    "7094": {
+      "image1Alt": "Camera 8, prima vedere",
+      "image2Alt": "Camera 8, a doua vedere",
+      "image3Alt": "Camera 8, a treia vedere"
+    },
+    "7095": {
+      "image1Alt": "Camera 9, prima vedere",
+      "image2Alt": "Camera 9, a doua vedere",
+      "image3Alt": "Camera 9, a treia vedere",
+      "image4Alt": "Camera 9, a patra vedere"
+    },
+    "7098": {
+      "image1Alt": "Camera 12, prima vedere",
+      "image2Alt": "Camera 12, a doua vedere",
+      "image3Alt": "Camera 12, a treia vedere",
+      "image4Alt": "Camera 12, a patra vedere",
+      "image5Alt": "Camera 12, a cincea vedere"
+    },
+    "7099": {
+      "image1Alt": "Camera 13, prima vedere",
+      "image2Alt": "Camera 13, a doua vedere",
+      "image3Alt": "Camera 13, a treia vedere"
+    },
+    "7100": {
+      "image1Alt": "Camera 14, prima vedere",
+      "image2Alt": "Camera 14, a doua vedere",
+      "image3Alt": "Camera 14, a treia vedere",
+      "image4Alt": "Camera 14, a patra vedere"
+    },
+    "7088": {
+      "image1Alt": "Camera 2, prima vedere",
+      "image2Alt": "Camera 2, a doua vedere",
+      "image3Alt": "Camera 2, a treia vedere",
+      "image4Alt": "Camera 2, a patra vedere",
+      "image5Alt": "Camera 2, a cincea vedere",
+      "image6Alt": "Camera 2, a șasea vedere"
+    },
+    "7103": {
+      "image1Alt": "Camera 17, prima vedere",
+      "image2Alt": "Camera 17, a doua vedere",
+      "image3Alt": "Camera 17, a treia vedere"
+    },
+    "7104": {
+      "image1Alt": "Camera 18, prima vedere",
+      "image2Alt": "Camera 18, a doua vedere"
+    },
+    "7089": {
+      "image1Alt": "Camera 3, prima vedere",
+      "image2Alt": "Camera 3, a doua vedere",
+      "image3Alt": "Camera 3, a treia vedere",
+      "image4Alt": "Camera 3, a patra vedere",
+      "image5Alt": "Camera 3, a cincea vedere"
+    }
+  },
+  "HalfBoardPage": {
+    "title": "Ofertă Cazare Cu Demipensiune",
+    "book_now": "Rezervă Acum !",
+    "food_included": "Oferta include micul dejun si cina la bufet suedez",
+    "food_traditional": "Mâncare tradițională 60% din producție proprie",
+    "food_card_title": "Mâncare",
+    "food_card_desc": "Află ce bunătățuri avem !",
+    "spa_included": "Oferta include accesul la spa. Bucură-te de starea de bine în ciubărul cu apă sărată, piscină, salină, saună, sau jacuzzi.",
+    "spa_card_title": "Spa",
+    "spa_card_desc": "Unde te vei relaxa?",
+    "rooms_card_title": "Camere",
+    "rooms_card_desc": "Priveliște și facilități",
+    "offers_card_title": "Alte oferte",
+    "offers_card_desc": "Crăciun sau Revelion în Bucovina"
+  },
+  "Spa": {
+    "ciubar_1_alt": "Ciubăr din lemn cu apă sărată, prima vedere",
+    "jacuzzi_1_alt": "Zona de jacuzzi, prima vedere",
+    "piscina_1_alt": "Zona piscinei, prima vedere",
+    "salina_1_alt": "Camera cu sare, prima vedere",
+    "sauna_1_alt": "Camera de saună, prima vedere"
+  },
+  "Sala": {
+    "sala_1_alt": "Fitness room, first view",
+    "sala_4_alt": "Fitness room, fourth view"
+  },
+  "BookNow": {
+    "book_now": "Rezervă Acum !"
+  },
+  "Calculate": {
+    "adults": "Adulți",
+    "children_6_12": "Copii între 6 și 12 ani",
+    "children_4_6": "Copii între 4 și 6 ani",
+    "calculate": "Calculează!",
+    "result": "Rezultat"
+  },
+  "ChristmasPage": {
+    "title": "Sărbătorește Crăciun 2025 în Bucovina",
+    "pricing": "4 nopți / 5 zile la doar 3000 lei/pers",
+    "food_drink": {
+      "title": "Mâncare și băutură",
+      "subtitle": "All inclusive !!!",
+      "desc1": "Totul este inclus, de la mâncare, la băutură, ai ce alege în sejurul tău în Bucovina",
+      "desc2": "Mâncare tradițională 60% din producție proprie"
+    },
+    "spa": {
+      "title": "Spa",
+      "subtitle": "Oaza ta de relaxare !",
+      "desc": "Oferta include accesul la spa. Bucură-te de starea de bine în ciubărul cu apă sărată, piscină, salină, saună, sau jacuzzi."
+    },
+    "schedule": {
+      "title": "Programul Sejurului La Noi",
+      "dec23": {
+        "title": "23 Decembrie",
+        "desc": "Bucură-te de o primire călduroasă, cu tradiții ca în Bucovina."
+      },
+      "dec24": {
+        "title": "24 Decembrie",
+        "desc": "La ora 10, pornește într-o plimbare cu sănii trase de cai, apoi savurează o masă în aer liber cu pomana porcului, grătar și friptură la ceaun, alături de vin fiert, țuică fiartă și delicioasele Poale-n Brâu. Seara, la cină, Colindătorii și Moș Crăciun vor aduce magia sărbătorilor."
+      },
+      "dec25": {
+        "title": "25 Decembrie",
+        "desc": "Într-o atmosferă festivă, bucură-te de bucate tradiționale, băuturi alese și voie bună alături de cei dragi, de la ora 14:30, pe ritmurile unei orchestre live."
+      },
+      "dec26": {
+        "title": "26 Decembrie",
+        "desc": "Ai libertatea de a-ți petrece ziua după bunul plac – fie pe pârtia de schi din Câmpulung Moldovenesc, fie explorând frumusețile locale, precum mănăstirile Moldovița și Voroneț, olăria de la Marginea (Ceramica Neagră) sau o plimbare cu Mocanița Huțulca de la Moldovița."
+      }
+    },
+    "book_now": "Rezervă Acum !",
+    "calculate": {
+      "title": "Calculează prețul sejurului tău !",
+      "discounts": {
+        "title": "Reduceri Speciale",
+        "desc": "Copiii până în 12 ani beneficiază de 50% reducere, cei între 4 și 6 ani de 70%, iar pentru cei cu vârsta între 0 și 3 ani, accesul este gratuit."
+      }
+    }
+  },
+  "NewYearPage": {
+    "title": "Sărbătorește Revelion 2025-2026 în Bucovina",
+    "pricing": "4 nopți / 5 zile la doar 3200 lei/pers",
+    "food_drink": {
+      "title": "Mâncare și băutură",
+      "subtitle": "All inclusive !!!",
+      "desc1": "Totul este inclus, de la mâncare, la băutură, ai ce alege în sejurul tău în Bucovina",
+      "desc2": "Mâncare tradițională 60% din producție proprie"
+    },
+    "spa": {
+      "title": "Spa",
+      "subtitle": "Oaza ta de relaxare !",
+      "desc": "Oferta include accesul la spa. Bucură-te de starea de bine în ciubărul cu apă sărată, piscină, salină, saună, sau jacuzzi."
+    },
+    "schedule": {
+      "title": "Programul Sejurului La Noi",
+      "dec29": {
+        "title": "29 Decembrie",
+        "desc": "Începeți vacanța într-o atmosferă autentică bucovineană, cu o primire tradițională și o cină festivă de bun venit, unde veți descoperi primele arome ale bucătăriei noastre locale."
+      },
+      "dec30": {
+        "title": "30 Decembrie",
+        "desc": "La ora 10, porniți într-o aventură de neuitat cu săniile trase de cai prin peisajul hivernal al Bucovinei. Urmează o masă în aer liber cu specific tradițional: pomana porcului, preparate la grătar și friptură la ceaun, toate însoțite de vin fiert aromat, țuică fiartă și celebrele noastre Poale-n Brâu, care vor încălzi atmosfera acestei zile speciale."
+      },
+      "dec31": {
+        "title": "31 Decembrie",
+        "desc": "După prânz, vă veți bucura de un spectacol extraordinar al datinelor bucovinene de Anul Nou, cu grupuri de urători, dansuri tradiționale ale caprei și ursului, și alte obiceiuri locale autentice. La ora 21:00, începe marea petrecere de Revelion, unde veți savura un festin culinar deosebit: aperitive rafinate reci și calde, inclusiv piftie de curcan, salată de boeuf, pifteluțe marinate, specialități din pește, preparate calde din curcan, purcel și vițel, toate acompaniate de muzică live și dans până în zori."
+      },
+      "jan1": {
+        "title": "1 Ianuarie",
+        "desc": "Prima zi din an vă oferă libertatea de a explora frumusețile Bucovinei după propriul ritm. Puteți alege între: o zi dinamică pe pârtiile de schi din stațiunea Câmpulung Moldovenesc; un circuit cultural la renumitele mănăstiri pictate UNESCO (Moldovița, Voroneț - cunoscută pentru albastrul său unic, Humor și Sucevița); o vizită la atelierele meșteșugărești din Marginea, celebre pentru ceramica neagră unică în lume; sau o călătorie pitorească cu trenul cu aburi Mocanița Huțulca prin valea Moldoviței, oferind priveliști spectaculoase ale Obcinelor Bucovinei."
+      }
+    },
+    "book_now": "Rezervă Acum !",
+    "calculate": {
+      "title": "Calculează prețul sejurului tău !",
+      "discounts": {
+        "title": "Reduceri Speciale",
+        "desc": "Copiii până în 12 ani beneficiază de 50% reducere, cei între 4 și 6 ani de 70%, iar pentru cei cu vârsta între 0 și 3 ani, accesul este gratuit."
+      }
+    }
+  }
+}
