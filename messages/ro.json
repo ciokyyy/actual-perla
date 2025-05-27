@@ -53,6 +53,10 @@
     "revelion_title": "Revelion 2025-2026 în Bucovina",
     "revelion_more": "Află mai multe !"
   },
+  "ErrorNotFound": {
+    "title": "Ne pare rău dar această pagină nu există sau este în lucru.",
+    "go_home": "Înapoi pe pagina acasă"
+  },
   "Rooms": {
     "APB": {
       "title": "Apartament Cu Balcon",

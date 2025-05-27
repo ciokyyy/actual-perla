@@ -12,10 +12,10 @@ import { Button } from "./ui/Button";
 export function RoomCarousel({
   room,
 }: Readonly<{
-  room: Room
+  room: Room;
 }>) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-    const t_types = useTranslations("Rooms");
+  const t_types = useTranslations("Rooms");
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -26,7 +26,7 @@ export function RoomCarousel({
   return (
     <C.Container className="relative *:rounded-normal" key={room.id}>
       <div className="overflow-hidden" ref={emblaRef}>
-        <C.Embla_Slide_Container className="flex max-w-800 sm:aspect-auto md:aspect-16/12 pointer-events-auto">
+        <C.Embla_Slide_Container className="flex max-w-800 aspect-16/12 pointer-events-auto">
           {room.images.map((img, index) => (
             <C.Container
               key={room.id + "_" + index}
@@ -66,25 +66,25 @@ export function RoomCarousel({
 }
 
 function ImagesCarousel() {
-    const {data : rooms}= useRooms();
-    function getGroupedRoomsByType(rooms: Room[] | undefined) {
-        if (!rooms) return {};
-        const grouped = rooms.reduce<Record<string, Room[]>>((acc, room) => {
-            if (!acc[room.typeId]) {
-                acc[room.typeId] = [];
-            }
-            acc[room.typeId].push(room);
-            return acc;
-        }, {});
-        // Sort each group by room.id
-        Object.values(grouped).forEach(roomArr => {
-            roomArr.sort((a, b) => a.id.localeCompare(b.id));
-        });
-        return grouped;
-    }  
+  const { data: rooms } = useRooms();
+  function getGroupedRoomsByType(rooms: Room[] | undefined) {
+    if (!rooms) return {};
+    const grouped = rooms.reduce<Record<string, Room[]>>((acc, room) => {
+      if (!acc[room.typeId]) {
+        acc[room.typeId] = [];
+      }
+      acc[room.typeId].push(room);
+      return acc;
+    }, {});
+    // Sort each group by room.id
+    Object.values(grouped).forEach((roomArr) => {
+      roomArr.sort((a, b) => a.id.localeCompare(b.id));
+    });
+    return grouped;
+  }
 
-    const groupedRooms = getGroupedRoomsByType(rooms);
-    const t_descs = useTranslations("Rooms");
+  const groupedRooms = getGroupedRoomsByType(rooms);
+  const t_descs = useTranslations("Rooms");
   return (
     <div>
       {Object.entries(groupedRooms).map(([typeId, rooms]) => {
@@ -96,7 +96,7 @@ function ImagesCarousel() {
             <p className="text-desc mb-70 max-w-700 rounded-normal mx-auto bg-foreground p-50 text-text shadow-xl">
               {t_descs(typeId + ".description")}
             </p>
-            <div className="flex flex-col gap-100 p-10 bg-foreground md:p-20 rounded-normal shadow-xl">
+            <div className="flex flex-col gap-20 p-10 bg-foreground md:p-20 rounded-normal shadow-xl">
               {rooms.map((room) => (
                 <C.Container
                   className="relative text-desc rounded-normal "

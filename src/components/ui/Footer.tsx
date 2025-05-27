@@ -56,12 +56,12 @@ export default function Footer() {
             <span>
               {t("phone_label")} :{" "}
               <C.NrTel
-                href="tel:+40750406594"
+                href="tel:+40750490838"
                 target="_blank"
                 as={Link}
                 className="font-bold cursor-pointer transition-all hover:underline"
               >
-                +40 750 406 594
+                +40 750 490 838
               </C.NrTel>
             </span>{" "}
             <span>
@@ -69,10 +69,10 @@ export default function Footer() {
               <C.Wapp
                 as={Link}
                 className="font-bold cursor-pointer transition-all hover:underline"
-                href="https://wa.me/+4050406594"
+                href="https://wa.me/+40750490838"
                 target="_blank"
               >
-                +40 750 406 594
+                +40 750 490 838
               </C.Wapp>
             </span>{" "}
             <span>

@@ -18,12 +18,12 @@ export default function Page() {
               {t("contact_for_rezervation")}
             </C.TextRezerva>
             <Link
-              href="tel:+40750406594"
+              href="tel:++40750490838"
               type="primary-button"
               className="inline-flex items-center gap-4 hover:bg-primary/90 transition px-15 py-7 text-md font-medium"
             >
               <FaPhone />
-              +40 750 406 594
+              +40 750 490 838
             </Link>
           </div>
 

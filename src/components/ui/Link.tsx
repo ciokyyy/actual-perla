@@ -9,11 +9,7 @@ type Props = ComponentProps<typeof Lnk> & {
 export function Link({ className, type = "ghost", ...props }: Props) {
   // Dictionary of classNames for each type
   const classNames = {
-    ghost: cn(
-      "bg-primary text-white transition-all",
-      "hover:text-white hover:scale-110",
-      "active:text-white active:scale-90"
-    ),
+    ghost: cn("transition-all", "hover:scale-110", "active:scale-90"),
     primary: cn(),
     card: cn(
       "bg-primary text-white",
