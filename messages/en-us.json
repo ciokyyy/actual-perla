@@ -17,7 +17,10 @@
     "company_address": "Strada Principală 1A, Frumosu, Suceava"
   },
   "LocaleLayout": {
-    "title": "Home"
+    "default": {
+      "title": "Pensiunea Perla Brazilor",
+      "description": "Discover Pensiunea Perla Brazilor, a cozy mountain guesthouse nestled among the fir trees of northern Romania. Enjoy warm hospitality, traditional cuisine, and a peaceful escape into nature—perfect for family getaways or romantic weekends."
+    }
   },
   "LocaleSwitcher": {
     "label": "Change language",

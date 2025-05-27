@@ -1,14 +1,25 @@
-
 import AnimatedWidget from "@/components/AnimatedWidget";
 import C from "@/components/ComponentNames";
 import { Locale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import OfertePage from "./oferte/page";
 type Props = {
-  params: Promise<{locale: Locale}>;
+  params: Promise<{ locale: Locale }>;
 };
-export default function Home({params} : Readonly<Props>) {
+
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
+
+  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
+
+  return {
+    title: t("home.title"),
+    description: t("home.description"),
+  };
+}
+
+export default function Home({ params }: Readonly<Props>) {
   const { locale } = use(params);
 
   setRequestLocale(locale);

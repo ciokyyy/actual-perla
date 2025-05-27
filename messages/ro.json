@@ -21,12 +21,19 @@
     "locale": "Română"
   },
   "LocaleLayout": {
-    "title": "Acasă"
+    "default": {
+      "title": "Pensiunea Perla Brazilor",
+      "description": "Descoperă Pensiunea Perla Brazilor, o pensiune primitoare situată între brazii munților din nordul României. Bucură-te de ospitalitate autentică, mâncare tradițională și liniște deplină—ideală pentru vacanțe în familie sau escapade romantice."
+    },
+    "home": {
+      "title": "Acasă",
+      "description": "Bine ai venit la Pensiunea Perla Brazilor – refugiul tău de liniște în inima naturii. Descoperă pensiunea noastră plină de farmec, înconjurată de păduri de brazi, cu camere confortabile, mâncare tradițională și momente de neuitat în orice anotimp."
+    }
   },
   "Menu": {
     "menu": "Meniu",
     "home": "Acasă",
-    "book_halfboard": "Rezervă Acum Demipensiune",
+    "book_now": "Rezervă Acum",
     "rooms": "Camerele noastre",
     "food": "Mâncarea de la noi",
     "spa": "Spa-ul nostru",
@@ -34,7 +41,8 @@
     "offer_christmas": "Ofertă Craciun",
     "offer_newyear": "Ofertă Revelion",
     "contact": "Contact",
-    "about": "Despre Noi"
+    "about": "Despre Noi",
+    "verify_availability": "Verifică valabilitatea"
   },
   "OffersPage": {
     "our_offers": "Ofertele Noastre",
@@ -192,7 +200,11 @@
     "sala_4_alt": "Fitness room, fourth view"
   },
   "BookNow": {
-    "book_now": "Rezervă Acum !"
+    "book_now": "Rezervă Acum !",
+    "contact_for_rezervation": "Pentru a rezerva o cameră, vă rugăm să ne contactați la numărul de telefon",
+    "contact_whatsapp": "Contactați-ne pe WhatsApp",
+    "verify_availability": "Verifică mai întai valabilitatea",
+    "or_separator": "sau"
   },
   "Calculate": {
     "adults": "Adulți",

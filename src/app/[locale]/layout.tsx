@@ -37,7 +37,8 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
   return {
-    title: t("title"),
+    title: t("default.title"),
+    description: t("default.description"),
   };
 }
 
@@ -57,6 +58,7 @@ export default async function Layout({
 
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${quickSand.variable} ${aleo.variable} antialiased`}>
         <NextIntlClientProvider>
           <QueryProvider>

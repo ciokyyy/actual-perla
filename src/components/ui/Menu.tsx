@@ -23,8 +23,12 @@ export default function Menu() {
       separator: true,
     },
     {
-      href: "/rezerva-acum-demipensiune",
-      text: t("book_halfboard"),
+      href: "/rezerva-acum",
+      text: t("book_now"),
+    },
+    {
+      href: "/preturi-valabilitate",
+      text: t("verify_availability"),
     },
     {
       href: "/camere",
