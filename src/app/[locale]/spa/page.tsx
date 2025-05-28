@@ -1,7 +1,9 @@
 import C from "@/components/ComponentNames";
-import Video from "@/components/ui/Video";
 import { cn } from "@/libs/utils";
 import { IoMdWater } from "react-icons/io";
+import Instaplay from "player.style/instaplay/react";
+import CiubarOne from "/videos/ciubar-video-3.mp4";
+import Video from "next-video";
 export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center gap-10">
@@ -17,11 +19,11 @@ export default function Page() {
         </div>
       </div>
       <C.CiubarContainer className={cn()}>
-        <C.VideoContainer className="max-w-400 relative mx-20 rounded-normal overflow-hidden">
+        <C.VideoContainer className="w-400 relative mx-20 rounded-normal overflow-hidden">
           <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             Ciubere cu apă sărată de la Cacica !
           </C.CiubarText>
-          <Video src="/videos/ciubar-video-1.mp4"></Video>
+          <Video theme={Instaplay} autoplay src={CiubarOne}></Video>
         </C.VideoContainer>
       </C.CiubarContainer>
       <C.CiubarContainer className={cn()}>
@@ -29,7 +31,6 @@ export default function Page() {
           <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             Ciubere cu apă sărată de la Cacica !
           </C.CiubarText>
-          <Video src="/videos/jacuzzi-video-2.mp4"></Video>
         </C.VideoContainer>
       </C.CiubarContainer>
     </div>

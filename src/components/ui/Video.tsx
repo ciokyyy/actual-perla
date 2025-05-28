@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import ReactPlayer from "react-player";
+import { useState, useRef, useEffect } from "react";
+import NextVideo from "next-video";
 import { LuPlay, LuPause, LuVolumeX, LuVolume2 } from "react-icons/lu";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion"; // use framer instead of motion/react
 
 type Props = {
-  src: string;
+  src: any; // must be a static import for next-video
   hasAudio?: boolean;
 };
 
@@ -14,23 +14,49 @@ export default function Video({ src, hasAudio = false }: Readonly<Props>) {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(!hasAudio);
   const [showControls, setShowControls] = useState(false);
-  let timeout: NodeJS.Timeout;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout>();
 
   const togglePlay = () => {
-    setIsPlaying((prev) => !prev);
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      video.play();
+      setIsPlaying(true);
+    } else {
+      video.pause();
+      setIsPlaying(false);
+    }
     showControlsTemporarily();
   };
 
   const toggleMute = () => {
-    setIsMuted((prev) => !prev);
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
     showControlsTemporarily();
   };
 
   const showControlsTemporarily = () => {
     setShowControls(true);
-    clearTimeout(timeout);
-    timeout = setTimeout(() => setShowControls(false), 1000);
+    clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => setShowControls(false), 1000);
   };
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = isMuted;
+    if (isPlaying) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }, [isMuted, isPlaying]);
 
   return (
     <div
@@ -38,19 +64,16 @@ export default function Video({ src, hasAudio = false }: Readonly<Props>) {
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >
-      <ReactPlayer
-        url={src}
-        playing={isPlaying}
-        muted={isMuted}
+      <NextVideo
+        ref={videoRef}
+        src={src}
         loop
-        width="100%"
-        height="100%"
-        controls={false}
-        playsinline
-        style={{ pointerEvents: "none" }}
+        muted={isMuted}
+        autoPlay
+        playsInline
+        className="pointer-events-none w-full h-full"
       />
 
-      {/* Overlay Play/Pause button */}
       <button
         type="button"
         onClick={togglePlay}
@@ -79,7 +102,6 @@ export default function Video({ src, hasAudio = false }: Readonly<Props>) {
         )}
       </button>
 
-      {/* Mute/Unmute toggle */}
       {hasAudio && (
         <AnimatePresence>
           {showControls && (
@@ -91,7 +113,7 @@ export default function Video({ src, hasAudio = false }: Readonly<Props>) {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.2 }}
               onClick={(e) => {
-                e.stopPropagation(); // prevent triggering play/pause
+                e.stopPropagation();
                 toggleMute();
               }}
               aria-label={isMuted ? "Unmute video" : "Mute video"}
