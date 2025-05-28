@@ -23,7 +23,8 @@ export default function Page() {
           </C.CiubarText>
           <Video src="/videos/ciubar-video-1.mp4"></Video>
         </C.VideoContainer>
-        <C.CiubarContainer className={cn()}>
+      </C.CiubarContainer>
+      <C.CiubarContainer className={cn()}>
         <C.VideoContainer className="max-w-400 relative mx-20 rounded-normal overflow-hidden">
           <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             Ciubere cu apă sărată de la Cacica !
