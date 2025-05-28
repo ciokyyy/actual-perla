@@ -53,6 +53,132 @@
     "revelion_title": "Revelion 2025-2026 în Bucovina",
     "revelion_more": "Află mai multe !"
   },
+  "SpaPage": {
+    "jacuzzi": {
+      "title": "Beneficiile Jacuzzi-ului modern",
+      "subtitle": "Jacuzzi Cu Apă Dulce Și Hidromasaj",
+      "intro": "Experimentează confortul suprem într-un jacuzzi echipat cu jeturi de hidromasaj adaptate nevoilor tale. Ideal pentru reîncărcarea bateriilor și echilibrarea corpului și minții.",
+      "benefits": {
+        "hydrotherapy": {
+          "title": "Terapie prin hidromasaj",
+          "description": "Jeturile de apă masează delicat musculatura, stimulând circulația și accelerând recuperarea fizică."
+        },
+        "stressRelief": {
+          "title": "Reducerea stresului",
+          "description": "Apa caldă și atmosfera calmă induc o stare profundă de relaxare și reduc tensiunea mentală."
+        },
+        "cardioHealth": {
+          "title": "Îmbunătățirea sănătății cardiovasculare",
+          "description": "Băile în jacuzzi ajută la scăderea tensiunii arteriale și la îmbunătățirea funcției inimii."
+        },
+        "betterSleep": {
+          "title": "Somn de calitate",
+          "description": "O sesiune regulată ajută la reglarea ciclului somn-veghe, asigurând un somn odihnitor."
+        },
+        "generalWellbeing": {
+          "title": "Stare generală de bine",
+          "description": "Îmbunătățește dispoziția și energizează, aducând un plus de bucurie vieții tale zilnice."
+        }
+      },
+      "footer": "Perfect după o zi plină, pentru o regenerare completă și o stare excelentă de spirit."
+    },
+    "piscina": {
+      "title_video": "Piscină cu apă dulce!",
+      "title": "Beneficiile piscinei noastre moderne",
+      "description": "Relaxează-te și revigorează-ți corpul în piscina noastră curată și bine întreținută, ideală pentru orice anotimp.",
+      "benefits": {
+        "swimming_title": "Activitate fizică",
+        "swimming_desc": "Înot pentru tonifierea corpului și îmbunătățirea rezistenței fizice",
+        "waterQuality_title": "Apă curată",
+        "waterQuality_desc": "Apă filtrată și tratată pentru un mediu sigur și sănătos",
+        "relaxation_title": "Relaxare totală",
+        "relaxation_desc": "Momente de relaxare completă, pentru minte și trup",
+        "health_title": "Beneficii pentru sănătate",
+        "health_desc": "Stimularea circulației sanguine și reducerea stresului"
+      }
+    },
+    "sauna": {
+      "title_video": "Saună Finlandeză !",
+      "title": "Beneficiile saunei noastre",
+      "description": "Bucură-te de o experiență tradițională de saună care îmbunătățește sănătatea și relaxarea totală.",
+      "benefits": {
+        "detox": {
+          "title": "Detoxifiere profundă",
+          "desc": "Transpirația intensă ajută la eliminarea toxinelor și impurităților din organism."
+        },
+        "hydration": {
+          "title": "Hidratare și regenerare",
+          "desc": "Datorită aburului, pielea rămâne suplă și hidratată."
+        },
+        "circulation": {
+          "title": "Stimularea circulației sanguine",
+          "desc": "Îmbunătățește fluxul sanguin și oxigenarea țesuturilor."
+        },
+        "relaxation": {
+          "title": "Relaxare mentală și fizică",
+          "desc": "Reduce stresul și anxietatea, inducând o stare de calm profund."
+        },
+        "skinCare": {
+          "title": "Îngrijirea pielii",
+          "desc": "Curăță porii și ajută la revitalizarea tenului."
+        }
+      }
+    },
+    "salina": {
+      "title_video": "Salnă Cu Drob De Sare De La Cacica !",
+      "title": "Beneficiile terapiei în Salina noastră",
+      "description": "Respiră adânc aerul pur și sărat din salina noastră, un remediu natural pentru sănătatea ta și starea de bine.",
+      "benefits": {
+        "naturalEnvironment": {
+          "title": "Mediu natural și relaxant",
+          "desc": "Ideal pentru refacere și revitalizare completă."
+        },
+        "respiratoryHealth": {
+          "title": "Sănătatea aparatului respirator",
+          "desc": "Îmbunătățește funcția plămânilor și facilitează respirația."
+        },
+        "circulation": {
+          "title": "Stimularea circulației sanguine",
+          "desc": "Promovează oxigenarea țesuturilor și sănătatea inimii."
+        },
+        "immunity": {
+          "title": "Creșterea imunității",
+          "desc": "Sprijină sistemul imunitar pentru o protecție naturală."
+        },
+        "stressRelief": {
+          "title": "Reducerea stresului",
+          "desc": "Atmosferă calmantă ce relaxează corpul și mintea."
+        }
+      }
+    },
+    "ciubar": {
+      "title": "Beneficiile ciubarului cu apă sărată și hidromasaj",
+      "description": "Transformă-ți escapada într-o experiență de neuitat cu ciubărul nostru tradițional, umplut cu apă sărată de la Mina de Sare Cacica și dotat cu sistem de hidromasaj modern. Bucură-te de relaxare profundă, revigorare și un strop de magie bucovineană!",
+      "benefits": {
+        "detox": {
+          "title": "Detoxifiere naturală",
+          "desc": "Apa sărată ajută la eliminarea toxinelor, stimulează circulația sângelui și oferă o senzație de purificare."
+        },
+        "muscleRelax": {
+          "title": "Relaxare musculară și articulară",
+          "desc": "Hidromasajul reduce tensiunea, calmează durerile și grăbește recuperarea."
+        },
+        "healthySkin": {
+          "title": "Piele mai sănătoasă",
+          "desc": "Sarea naturală are efecte antiseptice și remineralizante, lăsând pielea catifelată."
+        },
+        "betterSleep": {
+          "title": "Somn mai odihnitor",
+          "desc": "O sesiune în ciubăr favorizează un somn adânc și liniștit."
+        },
+        "authenticExperience": {
+          "title": "Experiență autentică",
+          "desc": "Tradiția se îmbină cu confortul modern în mijlocul naturii."
+        }
+      },
+      "note": "Ideal după o zi de drumeții, schi sau muncă intensă. Lasă grijile să se dizolve în aburul sărat!"
+    }
+  },
   "ErrorNotFound": {
     "title": "Ne pare rău dar această pagină nu există sau este în lucru.",
     "go_home": "Înapoi pe pagina acasă"
