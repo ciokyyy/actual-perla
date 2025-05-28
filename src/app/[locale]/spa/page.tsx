@@ -65,7 +65,7 @@ export default function Page() {
             loop
             muted
             playsInline
-            preferPlayback="native"
+            preferPlayback="mse"
             src={CiubarOne}
           />
         </C.VideoContainer>
@@ -136,7 +136,7 @@ export default function Page() {
             loop
             muted
             playsInline
-            preferPlayback="native"
+            preferPlayback="mse"
             src={JacuzziOne}
           />
         </C.VideoContainer>
@@ -201,7 +201,7 @@ export default function Page() {
             loop
             muted
             playsInline
-            preferPlayback="native"
+            preferPlayback="mse"
             src={PiscinaOne}
           />
         </C.VideoContainer>
