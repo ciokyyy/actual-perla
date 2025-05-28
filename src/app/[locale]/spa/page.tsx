@@ -64,6 +64,7 @@ export default function Page() {
             autoplay
             loop
             muted
+            playsInline
             src={CiubarOne}
           />
         </C.VideoContainer>
@@ -120,9 +121,23 @@ export default function Page() {
       <C.JacuzziContainer
         className={cn(
           "grid place-items-center",
-          "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20"
+          "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20 l"
         )}
       >
+        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 lg:order-2">
+          <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
+            {t("jacuzzi.subtitle")}
+          </C.CiubarText>
+          <Video
+            className="w-full h-full"
+            theme={Instaplay}
+            autoplay
+            loop
+            muted
+            playsInline
+            src={JacuzziOne}
+          />
+        </C.VideoContainer>
         <C.ContainerDescription className="shadow-xl bg-foreground rounded-normal p-40 text-[20px]">
           <h2 className="text-2xl font-bold flex items-center gap-2">
             {t("jacuzzi.title")}
@@ -166,19 +181,6 @@ export default function Page() {
             </li>
           </ul>
         </C.ContainerDescription>
-        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16">
-          <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
-            {t("jacuzzi.subtitle")}
-          </C.CiubarText>
-          <Video
-            className="w-full h-full"
-            theme={Instaplay}
-            autoplay
-            loop
-            muted
-            src={JacuzziOne}
-          />
-        </C.VideoContainer>
       </C.JacuzziContainer>
       <C.PiscinaContainer
         className={cn(
@@ -196,6 +198,7 @@ export default function Page() {
             autoplay
             loop
             muted
+            playsInline
             src={PiscinaOne}
           />
         </C.VideoContainer>
@@ -243,6 +246,23 @@ export default function Page() {
           "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20"
         )}
       >
+        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 lg:order-2">
+          <C.SaunaText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
+            {t("sauna.title_video")}
+          </C.SaunaText>
+          <ImageSlideshow
+            images={[
+              {
+                src: "/images/spa/sauna-1.webp",
+                alt: "",
+              },
+              {
+                src: "/images/spa/sauna-2.webp",
+                alt: "",
+              },
+            ]}
+          ></ImageSlideshow>
+        </C.VideoContainer>
         <C.SaunaDescription className="shadow-xl bg-foreground rounded-normal p-40 text-[20px] max-w-600 mx-auto">
           <h2 className="text-2xl font-bold flex items-center gap-2">
             {t("sauna.title")}
@@ -286,23 +306,6 @@ export default function Page() {
             </li>
           </ul>
         </C.SaunaDescription>
-        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16">
-          <C.SaunaText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
-            {t("sauna.title_video")}
-          </C.SaunaText>
-          <ImageSlideshow
-            images={[
-              {
-                src: "/images/spa/sauna-1.webp",
-                alt: "",
-              },
-              {
-                src: "/images/spa/sauna-2.webp",
-                alt: "",
-              },
-            ]}
-          ></ImageSlideshow>
-        </C.VideoContainer>
       </C.SaunaContainer>
       <C.SalinaContainer
         className={cn(
