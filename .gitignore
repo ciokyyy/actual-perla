@@ -17,6 +17,8 @@
 /.next/
 /out/
 
+*.mp4.*
+
 # production
 /build
 
@@ -35,6 +37,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
 
 # typescript
 *.tsbuildinfo
