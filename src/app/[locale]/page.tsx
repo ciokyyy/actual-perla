@@ -10,12 +10,8 @@ type Props = {
 
 export async function generateMetadata(props: Omit<Props, "children">) {
   const { locale } = await props.params;
-  const baseUrl =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : "https://perla.cioky.dev";
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
-  const ogImageUrl = `${baseUrl}/images/demipensiune/demipensiune-2.webp`;
+  const ogImageUrl = `https://perla.cioky.dev/images/demipensiune/demipensiune-2.webp`;
 
   return {
     title: t("book_now.title"),
@@ -25,7 +21,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
       description: t("book_now.description"),
       type: "website",
       locale: locale,
-      url: `${baseUrl}/${locale}/rezerva-acum`,
+      url: `https://perla.cioky.dev/${locale}/rezerva-acum`,
       siteName: "Pensiunea Perla Brazilor",
       images: [
         {
