@@ -11,7 +11,7 @@ type Props = {
 export async function generateMetadata(props: Omit<Props, "children">) {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
-  const ogImageUrl = `https://perla.cioky.dev/images/demipensiune/demipensiune-2.webp`;
+  const ogImageUrl = `https://perla.cioky.dev/images/ui/header.jpg`;
 
   return {
     title: t("book_now.title"),
