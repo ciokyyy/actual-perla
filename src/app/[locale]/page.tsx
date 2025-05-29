@@ -13,7 +13,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   const baseUrl =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://perla-brazilor.ro";
+      : "https://perla.cioky.dev";
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
   const ogImageUrl = `${baseUrl}/images/demipensiune/demipensiune-2.webp`;
 
