@@ -10,12 +10,38 @@ type Props = {
 
 export async function generateMetadata(props: Omit<Props, "children">) {
   const { locale } = await props.params;
-
+  const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : "https://perla-brazilor.ro";
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
+  const ogImageUrl = `${baseUrl}/images/demipensiune/demipensiune-2.webp`;
 
   return {
-    title: t("home.title"),
-    description: t("home.description"),
+    title: t("book_now.title"),
+    description: t("book_now.description"),
+    openGraph: {
+      title: t("book_now.title"),
+      description: t("book_now.description"),
+      type: "website",
+      locale: locale,
+      url: `${baseUrl}/${locale}/rezerva-acum`,
+      siteName: "Pensiunea Perla Brazilor",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: t("book_now.title"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("book_now.title"),
+      description: t("book_now.description"),
+      images: [ogImageUrl],
+    },
   };
 }
 
