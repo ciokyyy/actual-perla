@@ -28,6 +28,10 @@
     "home": {
       "title": "Acasă",
       "description": "Bine ai venit la Pensiunea Perla Brazilor – refugiul tău de liniște în inima naturii. Descoperă pensiunea noastră plină de farmec, înconjurată de păduri de brazi, cu camere confortabile, mâncare tradițională și momente de neuitat în orice anotimp."
+    },
+    "book_now": {
+      "title": "Rezervă Acum",
+      "description": "Asigură-ți sejurul la Pensiunea Perla Brazilor – un loc unde relaxarea și natura se întâlnesc. Rezervă simplu și rapid o cameră și bucură-te de confort, ospitalitate și experiențe autentice în inima Bucovinei."
     }
   },
   "Menu": {
@@ -54,6 +58,9 @@
     "revelion_more": "Află mai multe !"
   },
   "SpaPage": {
+    "title": "Fii pregătit pentru starea de bine din Bucovina la Pensiunea Perla Brazilor",
+    "desc_1": "Piscină, ciubăr cu apă sărată, jacuzzi, salină și saună",
+    "desc_2": "te așteaptă să uiți de griji și să te relaxezi.",
     "jacuzzi": {
       "title": "Beneficiile Jacuzzi-ului modern",
       "subtitle": "Jacuzzi Cu Apă Dulce Și Hidromasaj",
@@ -152,7 +159,8 @@
       }
     },
     "ciubar": {
-      "title": "Beneficiile ciubarului cu apă sărată și hidromasaj",
+      "title_video": "Ciubăr cu apă sărată și hidromasaj",
+      "title": "Beneficiile ciubărului cu apă sărată și hidromasaj",
       "description": "Transformă-ți escapada într-o experiență de neuitat cu ciubărul nostru tradițional, umplut cu apă sărată de la Mina de Sare Cacica și dotat cu sistem de hidromasaj modern. Bucură-te de relaxare profundă, revigorare și un strop de magie bucovineană!",
       "benefits": {
         "detox": {
@@ -403,19 +411,19 @@
       "title": "Programul Sejurului La Noi",
       "dec29": {
         "title": "29 Decembrie",
-        "desc": "Începeți vacanța într-o atmosferă autentică bucovineană, cu o primire tradițională și o cină festivă de bun venit, unde veți descoperi primele arome ale bucătăriei noastre locale."
+        "desc": "Începem vacanța cu o primire călduroasă în stil bucovinean și o cină de bun venit, ca să faceți cunoștință cu primele gusturi din bucătăria noastră locală."
       },
       "dec30": {
         "title": "30 Decembrie",
-        "desc": "La ora 10, porniți într-o aventură de neuitat cu săniile trase de cai prin peisajul hivernal al Bucovinei. Urmează o masă în aer liber cu specific tradițional: pomana porcului, preparate la grătar și friptură la ceaun, toate însoțite de vin fiert aromat, țuică fiartă și celebrele noastre Poale-n Brâu, care vor încălzi atmosfera acestei zile speciale."
+        "desc": "La ora 10, pornim la o plimbare cu căruțele trase de cai prin peisajul de iarnă al Bucovinei. După drum, ne oprim pentru o masă în aer liber cu mâncare tradițională: pomana porcului, grătare, friptură la ceaun, vin fiert, țuică fiartă și Poale-n Brâu - perfecte pentru o zi de iarnă adevărată."
       },
       "dec31": {
         "title": "31 Decembrie",
-        "desc": "După prânz, vă veți bucura de un spectacol extraordinar al datinelor bucovinene de Anul Nou, cu grupuri de urători, dansuri tradiționale ale caprei și ursului, și alte obiceiuri locale autentice. La ora 21:00, începe marea petrecere de Revelion, unde veți savura un festin culinar deosebit: aperitive rafinate reci și calde, inclusiv piftie de curcan, salată de boeuf, pifteluțe marinate, specialități din pește, preparate calde din curcan, purcel și vițel, toate acompaniate de muzică live și dans până în zori."
+        "desc": "Ziua e liberă pentru plimbări și vizite prin zonă, până la ora 21:00, când începe petrecerea de Revelion. Vă așteaptă un meniu bogat cu aperitive, mâncăruri calde din curcan, porc și vițel, pește și multe altele – totul cu muzică live și dans până dimineața."
       },
       "jan1": {
         "title": "1 Ianuarie",
-        "desc": "Prima zi din an vă oferă libertatea de a explora frumusețile Bucovinei după propriul ritm. Puteți alege între: o zi dinamică pe pârtiile de schi din stațiunea Câmpulung Moldovenesc; un circuit cultural la renumitele mănăstiri pictate UNESCO (Moldovița, Voroneț - cunoscută pentru albastrul său unic, Humor și Sucevița); o vizită la atelierele meșteșugărești din Marginea, celebre pentru ceramica neagră unică în lume; sau o călătorie pitorească cu trenul cu aburi Mocanița Huțulca prin valea Moldoviței, oferind priveliști spectaculoase ale Obcinelor Bucovinei."
+        "desc": "Prima zi din an e pentru relaxare, cum vreți voi. Puteți merge la schi în Câmpulung Moldovenesc, vizita mănăstirile din zonă (Moldovița, Voroneț, Humor, Sucevița), atelierele de ceramică neagră din Marginea sau face o plimbare cu Mocănița prin valea Moldoviței."
       }
     },
     "book_now": "Rezervă Acum !",

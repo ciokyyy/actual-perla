@@ -1,10 +1,27 @@
 import C from "@/components/ComponentNames";
 import { Link } from "@/components/ui/Link";
+import { Props } from "@/libs/props";
 import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { use } from "react";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
-export default function Page() {
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
+
+  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
+
+  return {
+    title: t("book_now.title"),
+    description: t("book_now.description"),
+  };
+}
+
+export default function Page({ params }: Readonly<Props>) {
   const t = useTranslations("BookNow");
+  const { locale } = use(params);
+
+  setRequestLocale(locale);
   return (
     <C.Container className="p-20 bg-foreground shadow-lg m-20 rounded-normal border-y-1 border-primary">
       <C.TitluRezerva className="text-white bg-primary mx-20 text-center rounded-normal text-logo p-20">

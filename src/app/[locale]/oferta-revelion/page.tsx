@@ -7,18 +7,22 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import Dansuri from "~/images/revelion/revelion-pg-1.webp";
-import FestivOne from "~/images/revelion/revelion-pg-2.webp";
-import FestivTwo from "~/images/revelion/revelion-pg-3.webp";
 import FestivThree from "~/images/revelion/revelion-pg-4.webp";
 import FestivFour from "~/images/revelion/revelion-pg-5.webp";
+import FestivTwo from "~/images/revelion/revelion-pg-3.webp";
 import Cai from "~/images/craciun/cai.webp";
-import Pomana from "~/images/craciun/pomana.webp";
+import Pomana from "/videos/pomana.mp4";
 
 import Calculate from "@/components/Calculate";
 import { Button } from "@/components/ui/Button";
-export default function RevelionPage() {
+import Video from "@/components/ui/Video";
+import { Props } from "@/libs/props";
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
+export default function RevelionPage({ params }: Readonly<Props>) {
   const t = useTranslations("NewYearPage");
-
+  const { locale } = use(params);
+  setRequestLocale(locale);
   return (
     <>
       <C.CraciunIcon as={TbChristmasTreeFilled} className="oferta-icon-title" />
@@ -73,16 +77,9 @@ export default function RevelionPage() {
             <h3 className="text-logo">{t("schedule.dec30.title")}</h3>
             <p className="text-desc">{t("schedule.dec30.desc")}</p>
             <div className="rounded-normal mt-50 grid grid-cols-1 grid-rows-2 overflow-hidden border-2 border-white">
-              <Image
-                src={Cai}
-                alt=""
-                className="aspect-2/1 object-cover object-center"
-              />
-              <Image
-                src={Pomana}
-                alt=""
-                className="aspect-2/1 object-cover object-center"
-              />
+              <C.VideoContainer className="row-span-2 aspect-square">
+                <Video src={Pomana}></Video>
+              </C.VideoContainer>
             </div>
           </C.Container2>
           <C.Container3 className="flex-col">
@@ -90,13 +87,13 @@ export default function RevelionPage() {
             <p className="text-desc">{t("schedule.dec31.desc")}</p>
             <div className="rounded-normal mt-50 grid grid-cols-2 grid-rows-2 overflow-hidden border-2 border-white">
               <Image
-                src={FestivOne}
+                src={FestivTwo}
                 alt=""
                 className="aspect-1/1 object-cover object-center"
               />
               <Image
                 alt=""
-                src={FestivTwo}
+                src={Cai}
                 className="aspect-1/1 object-cover object-center"
               />
               <Image

@@ -6,9 +6,9 @@ import C from "@/components/ComponentNames";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import Colindatori from "/videos/colindatori.mp4";
+
 import Cadou from "~/images/craciun/cadou.webp";
-import FestivOne from "~/images/craciun/craciun-festiv-1.webp";
-import FestivTwo from "~/images/craciun/craciun-festiv-2.webp";
 import FestivThree from "~/images/craciun/craciun-festiv-3.webp";
 import FestivFour from "~/images/craciun/craciun-festiv-4.webp";
 import Cai from "~/images/craciun/cai.webp";
@@ -16,6 +16,7 @@ import Pomana from "~/images/craciun/pomana.webp";
 
 import Calculate from "@/components/Calculate";
 import { Button } from "@/components/ui/Button";
+import Video from "@/components/ui/Video";
 export default function CraciunPage() {
   const t = useTranslations("ChristmasPage");
 
@@ -89,16 +90,13 @@ export default function CraciunPage() {
             <h3 className="text-logo">{t("schedule.dec25.title")}</h3>
             <p className="text-desc">{t("schedule.dec25.desc")}</p>
             <div className="rounded-normal mt-50 grid grid-cols-2 grid-rows-2 overflow-hidden border-2 border-white">
-              <Image
-                src={FestivOne}
-                alt=""
-                className="aspect-1/1 object-cover object-center"
-              />
-              <Image
-                alt=""
-                src={FestivTwo}
-                className="aspect-1/1 object-cover object-center"
-              />
+              <C.ContainerVideo className="row-span-2 aspect-1/2 w-full h-full relative">
+                <Video
+                  src={Colindatori}
+                  className="absolute inset-0 w-full h-full !object-cover !object-center *:object-cover"
+                  muted={false}
+                ></Video>
+              </C.ContainerVideo>
               <Image
                 alt=""
                 src={FestivThree}

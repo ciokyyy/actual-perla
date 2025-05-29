@@ -15,19 +15,18 @@ import {
   FaHotTub,
   FaLeaf,
   FaLungs,
+  FaMoon,
   FaMountain,
   FaSeedling,
+  FaSmile,
   FaSpa,
   FaSwimmer,
+  FaSwimmingPool,
   FaTint,
   FaWater,
   FaWind,
 } from "react-icons/fa";
-import { IoWaterSharp } from "react-icons/io5";
-import { LuDroplet, LuHeartPulse, LuLeaf, LuMoon } from "react-icons/lu";
 import { useTranslations } from "next-intl";
-import { BiHappyAlt } from "react-icons/bi";
-import { MdPool } from "react-icons/md";
 import { ImageSlideshow } from "@/components/ImageSlideshow";
 import Image from "next/image";
 export default function Page() {
@@ -39,12 +38,11 @@ export default function Page() {
         <IoMdWater className="oferta-icon-title" />
         <div className="shadow-xl sm:mx-50 leading-40 bg-foreground rounded-normal max-w-450 m-20 p-40 text-center text-[20px]">
           <div>
-            Fii pregătit pentru starea de bine din Bucovina la Pensiunea Perla
-            Brazilor
+            {t("title")}
             <br />
-            <span className="font-bold"> Piscină, ciubăr cu apă sărată </span>
+            <span className="font-bold"> {t("desc_1")} </span>
             {` `}
-            te așteaptă să uiți de griji și să te relaxezi.
+            {t("desc_2")}
           </div>
         </div>
       </div>
@@ -56,7 +54,7 @@ export default function Page() {
       >
         <C.VideoContainer className="w-full grow relative  rounded-normal overflow-hidden aspect-9/16">
           <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
-            {t("ciubar.title")}
+            {t("ciubar.title_video")}
           </C.CiubarText>
           <Video
             className="w-full h-full"
@@ -76,28 +74,28 @@ export default function Page() {
           <p className="my-20">{t("ciubar.description")}</p>
           <ul className="space-y-3 pl-4">
             <li className="flex flex-col items-center gap-3">
-              <LuDroplet className="text-blue-500 mt-1 text-5xl" />
+              <FaWater className="text-blue-500 mt-1 text-5xl" />
               <span>
                 <strong>{t("ciubar.benefits.detox.title")}:</strong>{" "}
                 {t("ciubar.benefits.detox.desc")}
               </span>
             </li>
             <li className="flex gap-3 flex-col items-center">
-              <LuHeartPulse className="text-red-500 mt-1 text-5xl" />
+              <FaHeartbeat className="text-red-500 mt-1 text-5xl" />
               <span>
                 <strong>{t("ciubar.benefits.muscleRelax.title")}:</strong>{" "}
                 {t("ciubar.benefits.muscleRelax.desc")}
               </span>
             </li>
             <li className="flex flex-col items-center gap-3">
-              <LuLeaf className="text-green-500 mt-1 text-5xl" />
+              <FaLeaf className="text-green-500 mt-1 text-5xl" />
               <span>
                 <strong>{t("ciubar.benefits.healthySkin.title")}:</strong>{" "}
                 {t("ciubar.benefits.healthySkin.desc")}
               </span>
             </li>
             <li className="flex flex-col items-center gap-3">
-              <LuMoon className="text-purple-500 mt-1 text-5xl" />
+              <FaMoon className="text-purple-500 mt-1 text-5xl" />
               <span>
                 <strong>{t("ciubar.benefits.betterSleep.title")}:</strong>{" "}
                 {t("ciubar.benefits.betterSleep.desc")}
@@ -114,7 +112,7 @@ export default function Page() {
             </li>
           </ul>
           <p className="pt-4 italic mt-20">
-            <IoWaterSharp className="inline text-cyan-500 mr-2" />
+            <FaWater className="inline text-cyan-500 mr-2" />
             {t("ciubar.note")}
           </p>
         </C.ContainerDescription>
@@ -126,9 +124,9 @@ export default function Page() {
         )}
       >
         <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 lg:order-2">
-          <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
+          <C.JacuzziText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             {t("jacuzzi.subtitle")}
-          </C.CiubarText>
+          </C.JacuzziText>
           <Video
             className="w-full h-full"
             theme={Instaplay}
@@ -154,7 +152,7 @@ export default function Page() {
               </span>
             </li>
             <li className="flex flex-col items-center gap-3">
-              <MdPool className="text-teal-500 mt-1 text-5xl" />
+              <FaSwimmingPool className="text-teal-500 mt-1 text-5xl" />
               <span>
                 <strong>{t("jacuzzi.benefits.stressRelief.title")}:</strong>{" "}
                 {t("jacuzzi.benefits.stressRelief.description")}
@@ -175,7 +173,7 @@ export default function Page() {
               </span>
             </li>
             <li className="flex flex-col items-center gap-3">
-              <BiHappyAlt className="text-yellow-500 mt-1 text-5xl" />
+              <FaSmile className="text-yellow-500 mt-1 text-5xl" />
               <span>
                 <strong>{t("jacuzzi.benefits.generalWellbeing.title")}:</strong>{" "}
                 {t("jacuzzi.benefits.generalWellbeing.description")}

@@ -5,7 +5,6 @@ import Header from "@/components/ui/Header";
 import { QueryProvider } from "@/libs/QueryProvider";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ReactNode } from "react";
 
 const quickSand = Quicksand({
   variable: "--font-quicksand",
@@ -16,20 +15,16 @@ const aleo = League_Spartan({
   subsets: ["latin"],
 });
 
-import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import Menu from "@/components/ui/Menu";
 import LocaleSwitcher from "@/components/LocaleSwitcherOptions";
 import { BookNow } from "@/components/ui/BookNow";
+import { Props } from "@/libs/props";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
-
-type Props = {
-  children: ReactNode;
-  params: Promise<{ locale: Locale }>;
-};
 
 export async function generateMetadata(props: Omit<Props, "children">) {
   const { locale } = await props.params;
