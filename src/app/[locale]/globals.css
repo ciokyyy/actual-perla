@@ -23,72 +23,43 @@
 }
 
 .oferte-gradient {
-  background: rgb(202, 224, 189);
+  background: #cae0bd; /* Fallback solid color */
   background: -webkit-linear-gradient(
     0deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(173, 224, 145, 1) 70%,
-    rgba(202, 224, 189, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(173, 224, 145, 1) 70%,
-    rgba(202, 224, 189, 1) 100%
+    #cae0bd 0%,
+    #ade091 30%,
+    #ade091 70%,
+    #cae0bd 100%
   );
   background: linear-gradient(
     0deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(173, 224, 145, 1) 70%,
-    rgba(202, 224, 189, 1) 100%
+    #cae0bd 0%,
+    #ade091 30%,
+    #ade091 70%,
+    #cae0bd 100%
   );
 }
 
 .header-gradient {
-  background: rgb(202, 224, 189);
+  background: #cae0bd;
   background: -webkit-linear-gradient(
     0deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(29, 91, 23, 1) 100%
+    #cae0bd 0%,
+    #ade091 30%,
+    #1d5b17 100%
   );
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(29, 91, 23, 1) 100%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(29, 91, 23, 1) 100%
-  );
+  background: linear-gradient(0deg, #cae0bd 0%, #ade091 30%, #1d5b17 100%);
 }
 
 .footer-gradient {
-  background: rgb(202, 224, 189);
+  background: #cae0bd;
   background: -webkit-linear-gradient(
     180deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(29, 91, 23, 1) 100%
+    #cae0bd 0%,
+    #ade091 30%,
+    #1d5b17 100%
   );
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(29, 91, 23, 1) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(202, 224, 189, 1) 0%,
-    rgba(173, 224, 145, 1) 30%,
-    rgba(29, 91, 23, 1) 100%
-  );
+  background: linear-gradient(180deg, #cae0bd 0%, #ade091 30%, #1d5b17 100%);
 }
 
 .oferta-icon-title {

@@ -26,12 +26,37 @@
       "description": "Descoperă Pensiunea Perla Brazilor, o pensiune primitoare situată între brazii munților din nordul României. Bucură-te de ospitalitate autentică, mâncare tradițională și liniște deplină—ideală pentru vacanțe în familie sau escapade romantice."
     },
     "home": {
-      "title": "Acasă",
+      "title": "Acasă - Pensiunea Perla Brazilor",
       "description": "Bine ai venit la Pensiunea Perla Brazilor – refugiul tău de liniște în inima naturii. Descoperă pensiunea noastră plină de farmec, înconjurată de păduri de brazi, cu camere confortabile, mâncare tradițională și momente de neuitat în orice anotimp."
     },
     "book_now": {
-      "title": "Rezervă Acum",
+      "title": "Rezervă Acum - Pensiunea Perla Brazilor",
       "description": "Asigură-ți sejurul la Pensiunea Perla Brazilor – un loc unde relaxarea și natura se întâlnesc. Rezervă simplu și rapid o cameră și bucură-te de confort, ospitalitate și experiențe autentice în inima Bucovinei."
+    },
+
+    "offers": {
+      "title": "Ofertele Noastre - Pensiunea Perla Brazilor",
+      "description": "Descoperiți ofertele noastre speciale la Pensiunea Perla Brazilor: Pachet Demipensiune, Pachet de Crăciun și sărbătorirea Revelionului. Rezervați-vă vacanța la munte astăzi."
+    },
+    "new_years_offer": {
+      "title": "Revelion 2025-2026 în Bucovina - Pensiunea Perla Brazilor",
+      "description": "Petreceți un Revelion de neuitat în Bucovina la Pensiunea Perla Brazilor. Pachet all-inclusive cu 4 nopți de cazare, mese festive, plimbări cu sania, muzică live și acces la spa. Rezervați acum pentru o experiență tradițională autentică de Anul Nou!"
+    },
+    "half_board_offer": {
+      "title": "Ofertă Demipensiune - Pensiunea Perla Brazilor",
+      "description": "Bucurați-vă de cazare cu demipensiune la Pensiunea Perla Brazilor. Pachetul include mic dejun și cină la bufet suedez, preparate tradiționale, acces la spa și facilități moderne. Experiență autentică în Bucovina cu mâncare 60% din producție proprie."
+    },
+    "christmas_offer": {
+      "title": "Crăciun 2025 în Bucovina - Pensiunea Perla Brazilor",
+      "description": "Petreceți un Crăciun tradițional în Bucovina la Pensiunea Perla Brazilor. Pachet all-inclusive cu 4 nopți de cazare, mese festive, colindători, plimbări cu sania, pomana porcului și acces la spa. O experiență autentică de sărbători!"
+    },
+    "spa": {
+      "title": "Spa & Wellness - Pensiunea Perla Brazilor",
+      "description": "Relaxați-vă în zona noastră spa cu piscină, ciubăr cu apă sărată, jacuzzi, salină și saună finlandeză. O oază de liniște și stare de bine în inima Bucovinei, pentru revigorare completă."
+    },
+    "our_rooms": {
+      "title": "Camerele Noastre - Pensiunea Perla Brazilor",
+      "description": "Descoperiți camerele și apartamentele noastre confortabile, cu vedere la munte. De la camere duble până la apartamente spațioase, toate dotate modern pentru o ședere perfectă în Bucovina."
     }
   },
   "Menu": {

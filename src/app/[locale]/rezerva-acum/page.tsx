@@ -1,20 +1,18 @@
 import C from "@/components/ComponentNames";
 import { Link } from "@/components/ui/Link";
+import { generatePageMetadata } from "@/libs/metadata";
 import { Props } from "@/libs/props";
 import { useTranslations } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
 export async function generateMetadata(props: Omit<Props, "children">) {
-  const { locale } = await props.params;
-
-  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
-
-  return {
-    title: t("book_now.title"),
-    description: t("book_now.description"),
-  };
+  return generatePageMetadata({
+    params: await props.params,
+    pageName: "book_now",
+    imageName: "rezerva.png",
+  });
 }
 
 export default function Page({ params }: Readonly<Props>) {

@@ -1,4 +1,3 @@
-"use client";
 import { BiSolidOffer } from "react-icons/bi";
 import { TbChristmasTreeFilled } from "react-icons/tb";
 import { motion } from "motion/react";
@@ -8,6 +7,14 @@ import C from "@/components/ComponentNames";
 import { Link } from "@/components/ui/Link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+
+export async function generateMetadata(props: Omit<Props, "children">) {
+  return generatePageMetadata({
+    params: await props.params,
+    pageName: "offers",
+    imageName: "rezerva.png",
+  });
+}
 
 import DemipensiuneOne from "~/images/demipensiune/demipensiune-1.webp";
 import DemipensiuneTwo from "~/images/demipensiune/demipensiune-2.webp";
@@ -20,6 +27,8 @@ import CraciunThree from "~/images/craciun/craciun-3.webp";
 import RevelionOne from "~/images/revelion/revelion-1.webp";
 import RevelionTwo from "~/images/revelion/revelion-2.webp";
 import RevelionThree from "~/images/revelion/revelion-3.webp";
+import { generatePageMetadata } from "@/libs/metadata";
+import { Props } from "@/libs/props";
 
 export default function OfertePage() {
   const t = useTranslations("OffersPage");

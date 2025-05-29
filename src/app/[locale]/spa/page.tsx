@@ -29,6 +29,17 @@ import {
 import { useTranslations } from "next-intl";
 import { ImageSlideshow } from "@/components/ImageSlideshow";
 import Image from "next/image";
+import { generatePageMetadata } from "@/libs/metadata";
+import { Props } from "@/libs/props";
+
+export async function generateMetadata(props: Omit<Props, "children">) {
+  return generatePageMetadata({
+    params: await props.params,
+    pageName: "spa",
+    imageName: "spa.png",
+  });
+}
+
 export default function Page() {
   const t = useTranslations("SpaPage");
   return (

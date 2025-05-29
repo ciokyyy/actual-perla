@@ -1,4 +1,3 @@
-"use client";
 import { IoIosBed, IoMdWater } from "react-icons/io";
 import { ImSpoonKnife } from "react-icons/im";
 import { BiSolidOffer } from "react-icons/bi";
@@ -7,6 +6,16 @@ import { Link } from "@/components/ui/Link";
 import { useTranslations } from "next-intl";
 import { ImageSlideshow } from "@/components/ImageSlideshow";
 import { cn } from "@/libs/utils";
+import { generatePageMetadata } from "@/libs/metadata";
+import { Props } from "@/libs/props";
+
+export async function generateMetadata(props: Omit<Props, "children">) {
+  return generatePageMetadata({
+    params: await props.params,
+    pageName: "half_board_offer",
+    imageName: "rezerva.png",
+  });
+}
 
 export default function Page() {
   const t = useTranslations("HalfBoardPage");

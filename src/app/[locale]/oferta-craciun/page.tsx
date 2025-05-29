@@ -5,6 +5,14 @@ import { FaCalculator, FaCalendarAlt } from "react-icons/fa";
 import C from "@/components/ComponentNames";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Instaplay from "player.style/instaplay/react";
+export async function generateMetadata(props: Omit<Props, "children">) {
+  return generatePageMetadata({
+    params: await props.params,
+    pageName: "christmas_offer",
+    imageName: "christmas.png",
+  });
+}
 
 import Colindatori from "/videos/colindatori.mp4";
 
@@ -15,8 +23,10 @@ import Cai from "~/images/craciun/cai.webp";
 import Pomana from "~/images/craciun/pomana.webp";
 
 import Calculate from "@/components/Calculate";
-import { Button } from "@/components/ui/Button";
-import Video from "@/components/ui/Video";
+import { generatePageMetadata } from "@/libs/metadata";
+import { Props } from "@/libs/props";
+import Video from "next-video";
+import Link from "next/link";
 export default function CraciunPage() {
   const t = useTranslations("ChristmasPage");
 
@@ -93,8 +103,12 @@ export default function CraciunPage() {
               <C.ContainerVideo className="row-span-2 aspect-1/2 w-full h-full relative">
                 <Video
                   src={Colindatori}
-                  className="absolute inset-0 w-full h-full !object-cover !object-center *:object-cover"
-                  muted={false}
+                  theme={Instaplay}
+                  autoplay
+                  loop
+                  muted
+                  playsInline
+                  preferPlayback="mse"
                 ></Video>
               </C.ContainerVideo>
               <Image
@@ -126,7 +140,13 @@ export default function CraciunPage() {
         {t("calculate.discounts.desc")}
       </div>
       <Calculate basePrice={3000}></Calculate>
-      <Button className="mx-20 sm:mx-50 p-50 text-logo">{t("book_now")}</Button>
+      <Link
+        type="primary-button"
+        href="/rezerva-acum"
+        className="mx-20 sm:mx-50 p-50 text-logo"
+      >
+        {t("book_now")}
+      </Link>{" "}
     </>
   );
 }

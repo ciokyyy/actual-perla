@@ -13,12 +13,21 @@ import FestivTwo from "~/images/revelion/revelion-pg-3.webp";
 import Cai from "~/images/craciun/cai.webp";
 import Pomana from "/videos/pomana.mp4";
 
+export async function generateMetadata(props: Omit<Props, "children">) {
+  return generatePageMetadata({
+    params: await props.params,
+    pageName: "new_years_offer",
+    imageName: "new_years_eve.png",
+  });
+}
+
 import Calculate from "@/components/Calculate";
-import { Button } from "@/components/ui/Button";
 import Video from "@/components/ui/Video";
 import { Props } from "@/libs/props";
 import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
+import { generatePageMetadata } from "@/libs/metadata";
+import { Link } from "@/components/ui/Link";
 export default function RevelionPage({ params }: Readonly<Props>) {
   const t = useTranslations("NewYearPage");
   const { locale } = use(params);
@@ -125,7 +134,13 @@ export default function RevelionPage({ params }: Readonly<Props>) {
         {t("calculate.discounts.desc")}
       </div>
       <Calculate basePrice={3200}></Calculate>
-      <Button className="mx-20 sm:mx-50 p-50 text-logo">{t("book_now")}</Button>
+      <Link
+        type="primary-button"
+        href="/rezerva-acum"
+        className="mx-20 sm:mx-50 p-50 text-logo"
+      >
+        {t("book_now")}
+      </Link>
     </>
   );
 }
