@@ -1,82 +1,249 @@
 {
   "Footer": {
     "pages": "Pages",
-    "offer_halfboard": "Half-board Offer",
+    "offer_halfboard": "Half Board Offer",
     "offer_christmas": "Christmas Offer",
-    "offer_newyear": "New Year's Offer",
-    "book_halfboard": "Book Half-board Now",
+    "offer_newyear": "New Year Offer",
+    "book_halfboard": "Book Half Board Now",
     "contact": "Contact",
     "phone_label": "Phone number",
     "whatsapp_label": "Whatsapp",
     "email_label": "Email",
     "address_label": "Address",
-    "company_data": "Company Data",
+    "company_data": "Company Details",
     "company_name": "SC GORIOAN PROD COM SRL",
     "company_cui": "RO7086751",
     "company_reg": "J33/243/1995",
     "company_address": "Strada Principală 1A, Frumosu, Suceava"
   },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "English"
+  },
   "LocaleLayout": {
     "default": {
       "title": "Pensiunea Perla Brazilor",
-      "description": "Discover Pensiunea Perla Brazilor, a cozy mountain guesthouse nestled among the fir trees of northern Romania. Enjoy warm hospitality, traditional cuisine, and a peaceful escape into nature—perfect for family getaways or romantic weekends."
+      "description": "Discover Pensiunea Perla Brazilor, a welcoming guesthouse nestled among the fir trees of northern Romania's mountains. Enjoy authentic hospitality, traditional food, and complete tranquility—ideal for family vacations or romantic getaways."
+    },
+    "home": {
+      "title": "Home - Pensiunea Perla Brazilor",
+      "description": "Welcome to Pensiunea Perla Brazilor – your haven of peace in the heart of nature. Discover our charming guesthouse, surrounded by fir forests, with comfortable rooms, traditional food, and unforgettable moments in any season."
+    },
+    "book_now": {
+      "title": "Book Now - Pensiunea Perla Brazilor",
+      "description": "Secure your stay at Pensiunea Perla Brazilor – a place where relaxation and nature meet. Book a room simply and quickly and enjoy comfort, hospitality, and authentic experiences in the heart of Bucovina."
+    },
+    "offers": {
+      "title": "Our Offers - Pensiunea Perla Brazilor",
+      "description": "Discover our special offers at Pensiunea Perla Brazilor: Half Board Package, Christmas Package, and New Year's Eve celebration. Book your mountain vacation today."
+    },
+    "new_years_offer": {
+      "title": "New Year 2025-2026 in Bucovina - Pensiunea Perla Brazilor",
+      "description": "Spend an unforgettable New Year in Bucovina at Pensiunea Perla Brazilor. All-inclusive package with 4 nights accommodation, festive meals, sleigh rides, live music and access to the spa. Book now for an authentic traditional New Year experience!"
+    },
+    "half_board_offer": {
+      "title": "Half Board Offer - Pensiunea Perla Brazilor",
+      "description": "Enjoy accommodation with half board at Pensiunea Perla Brazilor. The package includes breakfast and dinner buffet, traditional dishes, access to the spa and modern facilities. Authentic experience in Bucovina with 60% of the food from our own production."
+    },
+    "christmas_offer": {
+      "title": "Christmas 2025 in Bucovina - Pensiunea Perla Brazilor",
+      "description": "Spend a traditional Christmas in Bucovina at Pensiunea Perla Brazilor. All-inclusive package with 4 nights accommodation, festive meals, carolers, sleigh rides, traditional pig slaughter and access to the spa. An authentic holiday experience!"
+    },
+    "spa": {
+      "title": "Spa & Wellness - Pensiunea Perla Brazilor",
+      "description": "Relax in our spa area with swimming pool, salt water tub, jacuzzi, salt mine and Finnish sauna. An oasis of peace and well-being in the heart of Bucovina, for complete rejuvenation."
+    },
+    "our_rooms": {
+      "title": "Our Rooms - Pensiunea Perla Brazilor",
+      "description": "Discover our comfortable rooms and apartments with mountain views. From double rooms to spacious apartments, all modernly equipped for a perfect stay in Bucovina."
     }
-  },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "English (US)"
   },
   "Menu": {
     "menu": "Menu",
     "home": "Home",
-    "book_halfboard": "Book Half-board Now",
-    "rooms": "Our Rooms",
-    "food": "Our Food",
+    "book_now": "Book Now",
+    "rooms": "Our rooms",
+    "food": "Our food",
     "spa": "Our Spa",
-    "offer_halfboard": "Half-board Offer",
+    "offer_halfboard": "Half Board Offer",
     "offer_christmas": "Christmas Offer",
-    "offer_newyear": "New Year's Offer",
+    "offer_newyear": "New Year Offer",
     "contact": "Contact",
-    "about": "About Us"
+    "about": "About Us",
+    "verify_availability": "Check availability"
   },
   "OffersPage": {
     "our_offers": "Our Offers",
-    "demipensiune_title": "Half-board Offer",
+    "demipensiune_title": "Half Board Offer",
     "demipensiune_more": "Find out more!",
     "craciun_title": "Christmas 2025 in Bucovina",
     "craciun_more": "Find out more!",
-    "revelion_title": "New Year's Eve 2025-2026 in Bucovina",
+    "revelion_title": "New Year 2025-2026 in Bucovina",
     "revelion_more": "Find out more!"
+  },
+  "SpaPage": {
+    "title": "Get ready for well-being in Bucovina at Pensiunea Perla Brazilor",
+    "desc_1": "Swimming pool, salt water tub, jacuzzi, salt mine and sauna",
+    "desc_2": "are waiting for you to forget your worries and relax.",
+    "jacuzzi": {
+      "title": "The benefits of the modern Jacuzzi",
+      "subtitle": "Freshwater Jacuzzi with Hydromassage",
+      "intro": "Experience ultimate comfort in a jacuzzi equipped with hydromassage jets tailored to your needs. Ideal for recharging your batteries and balancing body and mind.",
+      "benefits": {
+        "hydrotherapy": {
+          "title": "Hydromassage therapy",
+          "description": "The water jets gently massage the muscles, stimulating circulation and accelerating physical recovery."
+        },
+        "stressRelief": {
+          "title": "Stress reduction",
+          "description": "Warm water and a calm atmosphere induce a deep state of relaxation and reduce mental tension."
+        },
+        "cardioHealth": {
+          "title": "Improving cardiovascular health",
+          "description": "Jacuzzi baths help lower blood pressure and improve heart function."
+        },
+        "betterSleep": {
+          "title": "Quality sleep",
+          "description": "A regular session helps regulate the sleep-wake cycle, ensuring a restful sleep."
+        },
+        "generalWellbeing": {
+          "title": "General well-being",
+          "description": "Improves mood and energizes, bringing more joy to your daily life."
+        }
+      },
+      "footer": "Perfect after a busy day, for complete regeneration and an excellent state of mind."
+    },
+    "piscina": {
+      "title_video": "Freshwater pool!",
+      "title": "The benefits of our modern pool",
+      "description": "Relax and invigorate your body in our clean and well-maintained pool, ideal for any season.",
+      "benefits": {
+        "swimming_title": "Physical activity",
+        "swimming_desc": "Swimming for body toning and improved physical endurance",
+        "waterQuality_title": "Clean water",
+        "waterQuality_desc": "Filtered and treated water for a safe and healthy environment",
+        "relaxation_title": "Total relaxation",
+        "relaxation_desc": "Moments of complete relaxation, for mind and body",
+        "health_title": "Health benefits",
+        "health_desc": "Stimulating blood circulation and reducing stress"
+      }
+    },
+    "sauna": {
+      "title_video": "Finnish Sauna!",
+      "title": "The benefits of our sauna",
+      "description": "Enjoy a traditional sauna experience that improves health and total relaxation.",
+      "benefits": {
+        "detox": {
+          "title": "Deep detoxification",
+          "desc": "Intense sweating helps eliminate toxins and impurities from the body."
+        },
+        "hydration": {
+          "title": "Hydration and regeneration",
+          "desc": "Thanks to the steam, the skin remains supple and hydrated."
+        },
+        "circulation": {
+          "title": "Stimulating blood circulation",
+          "desc": "Improves blood flow and tissue oxygenation."
+        },
+        "relaxation": {
+          "title": "Mental and physical relaxation",
+          "desc": "Reduces stress and anxiety, inducing a state of deep calm."
+        },
+        "skinCare": {
+          "title": "Skin care",
+          "desc": "Cleans pores and helps revitalize the complexion."
+        }
+      }
+    },
+    "salina": {
+      "title_video": "Salt Mine With Salt Droppings From Cacica!",
+      "title": "The benefits of therapy in our Salt Mine",
+      "description": "Breathe deeply the pure and salty air from our salt mine, a natural remedy for your health and well-being.",
+      "benefits": {
+        "naturalEnvironment": {
+          "title": "Natural and relaxing environment",
+          "desc": "Ideal for complete recovery and revitalization."
+        },
+        "respiratoryHealth": {
+          "title": "Respiratory health",
+          "desc": "Improves lung function and facilitates breathing."
+        },
+        "circulation": {
+          "title": "Stimulating blood circulation",
+          "desc": "Promotes tissue oxygenation and heart health."
+        },
+        "immunity": {
+          "title": "Increasing immunity",
+          "desc": "Supports the immune system for natural protection."
+        },
+        "stressRelief": {
+          "title": "Stress reduction",
+          "desc": "Calming atmosphere that relaxes the body and mind."
+        }
+      }
+    },
+    "ciubar": {
+      "title_video": "Hot tub with salt water and hydromassage",
+      "title": "The benefits of the hot tub with salt water and hydromassage",
+      "description": "Turn your getaway into an unforgettable experience with our traditional hot tub, filled with salt water from the Cacica Salt Mine and equipped with a modern hydromassage system. Enjoy deep relaxation, rejuvenation and a touch of Bucovina magic!",
+      "benefits": {
+        "detox": {
+          "title": "Natural detoxification",
+          "desc": "Salt water helps eliminate toxins, stimulates blood circulation and provides a feeling of purification."
+        },
+        "muscleRelax": {
+          "title": "Muscle and joint relaxation",
+          "desc": "Hydromassage reduces tension, soothes pain and speeds up recovery."
+        },
+        "healthySkin": {
+          "title": "Healthier skin",
+          "desc": "Natural salt has antiseptic and remineralizing effects, leaving the skin velvety."
+        },
+        "betterSleep": {
+          "title": "More restful sleep",
+          "desc": "A session in the hot tub promotes deep and restful sleep."
+        },
+        "authenticExperience": {
+          "title": "Authentic experience",
+          "desc": "Tradition meets modern comfort in the middle of nature."
+        }
+      },
+      "note": "Ideal after a day of hiking, skiing or intense work. Let your worries dissolve in the salty steam!"
+    }
+  },
+  "ErrorNotFound": {
+    "title": "We are sorry but this page does not exist or is under construction.",
+    "go_home": "Back to home page"
   },
   "Rooms": {
     "APB": {
-      "title": "Apartment with Balcony",
-      "description": "The apartment has two well-defined rooms, with the bathroom centrally located for easy access from both. The first room is equipped with a double bed. The second room offers both a double bed and a sofa bed. This layout ensures maximum comfort and flexibility for guests."
+      "title": "Apartment With Balcony",
+      "description": "The apartment has two well-defined rooms, with the bathroom centrally located for easy access from both. The first room is equipped with a double bed. The second room offers both a double bed and a sofa bed. This structure ensures maximum comfort and flexibility for guests."
     },
     "DBB": {
-      "title": "Double Room with Balcony",
-      "description": "All double rooms with a balcony offer delightful views and are equipped with private bathrooms with showers, ensuring complete privacy and comfort. Each room features a double bed, creating a spacious and comfortable area for relaxation and enjoying the scenery."
+      "title": "Double Room With Balcony",
+      "description": "All double rooms with balcony offer enchanting views and are equipped with private bathrooms with shower, ensuring privacy and complete comfort. Each room has a double bed, creating a generous and comfortable space for relaxation and admiring the landscape."
     },
     "DB": {
-      "title": "Double Room without Balcony",
-      "description": "Our double rooms without a balcony are comfortable and intimate, including private bathrooms with showers, guaranteeing privacy and convenience. Each of these rooms offers a generous double bed, creating an ideal space for rest and relaxation."
+      "title": "Double Room Without Balcony",
+      "description": "Our double rooms, without balcony, are comfortable and intimate and include private bathrooms with shower, guaranteeing privacy and convenience. Each of these rooms offers a generous double bed, creating an ideal space for rest and relaxation."
     },
     "SB": {
-      "title": "Suite with Balcony",
-      "description": "Our exclusive suite includes two interconnected rooms with a balcony, creating a spacious and private area with outdoor access. Each of these welcoming rooms is equipped with a comfortable double bed, ensuring a relaxing and intimate stay for our guests."
+      "title": "Suite With Balcony",
+      "description": "Our exclusive suite includes two interconnected rooms with a balcony, creating a spacious and private space with access to the outdoors. Each of these welcoming rooms is equipped with a comfortable double bed, guaranteeing a relaxing and intimate stay for our guests."
     },
     "TPB": {
-      "title": "Triple Room with Balcony",
-      "description": "All triple rooms with a balcony are equipped with a comfortable double bed and a sofa bed, providing extra generous space for relaxation and additional accommodation. Perfect for families or larger groups, these rooms with a balcony add extra comfort and a pleasant perspective for a wonderful stay."
+      "title": "Triple Room With Balcony",
+      "description": "All triple rooms with balcony are equipped with a comfortable double bed and a sofa bed, offering generous additional space for relaxation and additional accommodation. Perfect for families or larger groups, these rooms with balcony add extra comfort and a pleasant perspective for a wonderful stay."
     },
     "TP": {
-      "title": "Triple Room without Balcony",
-      "description": "Our triple rooms without a balcony are equipped with a comfortable double bed and a cleverly integrated single bed in the wardrobe to maximize space. This smart arrangement offers our guests increased flexibility and comfort during their stay."
+      "title": "Triple Room Without Balcony",
+      "description": "Our triple rooms, without balcony, are equipped with a comfortable double bed and an ingenious single bed, which integrates into the closet to maximize space. This smart layout offers our guests flexibility and increased comfort during their stay."
     },
     "7101": {
-      "image1Alt": "Agro Balcon room, first view",
-      "image2Alt": "Agro Balcon room, second view",
-      "image3Alt": "Agro Balcon room, third view"
+      "image1Alt": "Agro Balcony Room, first view",
+      "image2Alt": "Agro Balcony Room, second view",
+      "image3Alt": "Agro Balcony Room, third view"
     },
     "7087": {
       "image1Alt": "Room 1, first view",
@@ -169,24 +336,24 @@
     }
   },
   "HalfBoardPage": {
-    "title": "Half-board Accommodation Offer",
+    "title": "Accommodation Offer With Half Board",
+    "book_now": "Book Now!",
     "food_included": "The offer includes breakfast and dinner buffet",
-    "book_now": "Book Now !",
-    "food_traditional": "Traditional food, 60% from our own production",
+    "food_traditional": "Traditional food 60% from our own production",
     "food_card_title": "Food",
-    "food_card_desc": "See what goodies we have!",
-    "spa_included": "The offer includes access to the spa. Enjoy well-being in the saltwater tub, pool, salt room, sauna, or jacuzzi.",
+    "food_card_desc": "Find out what goodies we have!",
+    "spa_included": "The offer includes access to the spa. Enjoy well-being in the salt water tub, swimming pool, salt mine, sauna, or jacuzzi.",
     "spa_card_title": "Spa",
     "spa_card_desc": "Where will you relax?",
     "rooms_card_title": "Rooms",
     "rooms_card_desc": "View and facilities",
     "offers_card_title": "Other offers",
-    "offers_card_desc": "Christmas or New Year's Eve in Bucovina"
+    "offers_card_desc": "Christmas or New Year in Bucovina"
   },
   "Spa": {
-    "ciubar_1_alt": "Wooden hot tub with salted water, first view",
+    "ciubar_1_alt": "Wooden tub with salt water, first view",
     "jacuzzi_1_alt": "Jacuzzi area, first view",
-    "piscina_1_alt": "Swimming pool area, first view",
+    "piscina_1_alt": "Pool area, first view",
     "salina_1_alt": "Salt room, first view",
     "sauna_1_alt": "Sauna room, first view"
   },
@@ -195,38 +362,42 @@
     "sala_4_alt": "Fitness room, fourth view"
   },
   "BookNow": {
-    "book_now": "Book Now !"
+    "book_now": "Book Now!",
+    "contact_for_rezervation": "To book a room, please contact us at the phone number",
+    "contact_whatsapp": "Contact us on WhatsApp",
+    "verify_availability": "Check availability first",
+    "or_separator": "or"
   },
   "Calculate": {
     "adults": "Adults",
-    "children_6_12": "Children between 6 and 12 years",
-    "children_4_6": "Children between 4 and 6 years",
+    "children_6_12": "Children between 6 and 12 years old",
+    "children_4_6": "Children between 4 and 6 years old",
     "calculate": "Calculate!",
     "result": "Result"
   },
   "ChristmasPage": {
     "title": "Celebrate Christmas 2025 in Bucovina",
-    "pricing": "4 nights / 5 days for just 3000 lei/person",
+    "pricing": "4 nights / 5 days for only 3000 lei/person",
     "food_drink": {
-      "title": "Food and Drinks",
-      "subtitle": "All inclusive!!!",
-      "desc1": "Everything is included, from food to drinks, you have plenty to choose from during your stay in Bucovina",
-      "desc2": "Traditional food, 60% from our own production"
+      "title": "Food and drink",
+      "subtitle": "All inclusive !!!",
+      "desc1": "Everything is included, from food to drinks, you have what to choose during your stay in Bucovina",
+      "desc2": "Traditional food 60% from our own production"
     },
     "spa": {
       "title": "Spa",
-      "subtitle": "Your relaxation oasis!",
-      "desc": "The offer includes access to the spa. Enjoy well-being in the saltwater tub, pool, salt room, sauna, or jacuzzi."
+      "subtitle": "Your oasis of relaxation!",
+      "desc": "The offer includes access to the spa. Enjoy well-being in the salt water tub, swimming pool, salt mine, sauna, or jacuzzi."
     },
     "schedule": {
-      "title": "Stay Schedule With Us",
+      "title": "Our Stay Schedule",
       "dec23": {
         "title": "December 23",
-        "desc": "Enjoy a warm welcome with Bucovina traditions."
+        "desc": "Enjoy a warm welcome, with traditions like in Bucovina."
       },
       "dec24": {
         "title": "December 24",
-        "desc": "At 10 AM, take a horse-drawn sleigh ride, then enjoy an outdoor meal with pork feast, barbecue and cauldron roast, along with mulled wine, hot plum brandy and delicious Poale-n Brau. In the evening, at dinner, Carolers and Santa Claus will bring the magic of holidays."
+        "desc": "At 10 AM, start with a horse-drawn sleigh ride, then enjoy an outdoor meal with traditional pig slaughter, barbecue and stewed steak, along with mulled wine, boiled brandy and delicious Poale-n Brâu. In the evening, at dinner, Carolers and Santa Claus will bring the magic of the holidays."
       },
       "dec25": {
         "title": "December 25",
@@ -234,58 +405,58 @@
       },
       "dec26": {
         "title": "December 26",
-        "desc": "You have the freedom to spend the day as you please - either on the ski slope in Campulung Moldovenesc, or exploring local beauties such as Moldovita and Voronet monasteries, pottery in Marginea (Black Ceramics) or a ride with Hutulca Steam Train from Moldovita."
+        "desc": "You are free to spend the day as you wish – either on the ski slope in Câmpulung Moldovenesc, or exploring the local beauties, such as the Moldovița and Voroneț monasteries, the pottery from Marginea (Black Ceramics) or a ride with the Huțulca Mocanița from Moldovița."
       }
     },
+    "book_now": "Book Now!",
     "calculate": {
       "title": "Calculate the price of your stay!",
       "discounts": {
         "title": "Special Discounts",
-        "desc": "Children up to 12 years get 50% discount, those between 4 and 6 years get 70% discount, and those between 0 and 3 years have free access."
+        "desc": "Children up to 12 years old benefit from a 50% discount, those between 4 and 6 years old from 70%, and for those between 0 and 3 years old, access is free."
       }
-    },
-    "book_now": "Book Now !"
+    }
   },
   "NewYearPage": {
-    "title": "Celebrate New Year's Eve 2025-2026 in Bucovina",
-    "pricing": "4 nights / 5 days for just 3200 lei/person",
+    "title": "Celebrate New Year 2025-2026 in Bucovina",
+    "pricing": "4 nights / 5 days for only 3200 lei/person",
     "food_drink": {
-      "title": "Food and Drinks",
-      "subtitle": "All inclusive!!!",
-      "desc1": "Everything is included, from food to drinks, you have plenty to choose from during your stay in Bucovina",
-      "desc2": "Traditional food, 60% from our own production"
+      "title": "Food and drink",
+      "subtitle": "All inclusive !!!",
+      "desc1": "Everything is included, from food to drinks, you have what to choose during your stay in Bucovina",
+      "desc2": "Traditional food 60% from our own production"
     },
     "spa": {
       "title": "Spa",
-      "subtitle": "Your relaxation oasis!",
-      "desc": "The offer includes access to the spa. Enjoy well-being in the saltwater tub, pool, salt room, sauna, or jacuzzi."
+      "subtitle": "Your oasis of relaxation!",
+      "desc": "The offer includes access to the spa. Enjoy well-being in the salt water tub, swimming pool, salt mine, sauna, or jacuzzi."
     },
     "schedule": {
-      "title": "Stay Schedule With Us",
+      "title": "Our Stay Schedule",
       "dec29": {
         "title": "December 29",
-        "desc": "Begin your holiday immersed in authentic Bucovina atmosphere, with a traditional welcome reception and a festive dinner where you'll discover the first flavors of our local cuisine."
+        "desc": "We start the vacation with a warm welcome in Bucovina style and a welcome dinner, so you can get acquainted with the first tastes of our local cuisine."
       },
       "dec30": {
         "title": "December 30",
-        "desc": "At 10 AM, embark on an unforgettable horse-drawn sleigh adventure through Bucovina's winter landscape. Following this, enjoy a traditional outdoor feast featuring local specialties: 'pomana porcului' (traditional pork feast), barbecue and cauldron-cooked dishes, all accompanied by aromatic mulled wine, hot plum brandy, and our famous 'Poale-n Brau' pastries that will warm the atmosphere of this special day."
+        "desc": "At 10 AM, we start with a horse-drawn cart ride through the winter landscape of Bucovina. After the road, we stop for an outdoor meal with traditional food: pig slaughter, barbecues, stewed steak, mulled wine, boiled brandy and Poale-n Brâu - perfect for a real winter day."
       },
       "dec31": {
         "title": "December 31",
-        "desc": "After lunch, enjoy an extraordinary spectacle of Bucovina's New Year traditions, featuring groups of carolers, traditional goat and bear dances, and other authentic local customs. At 9:00 PM, the grand New Year's Eve party begins, where you'll savor an exceptional culinary feast: refined cold and hot appetizers, including turkey aspic, beef salad, marinated meatballs, fish specialties, hot dishes of turkey, piglet, and veal, all accompanied by live music and dancing until dawn."
+        "desc": "The day is free for walks and visits around the area, until 9:00 PM, when the New Year's Eve party begins. A rich menu awaits you with appetizers, hot dishes of turkey, pork and veal, fish and much more – all with live music and dancing until morning."
       },
       "jan1": {
         "title": "January 1",
-        "desc": "The first day of the year offers you the freedom to explore Bucovina's beauty at your own pace. Choose between: an active day on the ski slopes in Campulung Moldovenesc resort; a cultural circuit to the famous UNESCO painted monasteries (Moldovita, Voronet - known for its unique blue, Humor, and Sucevita); a visit to the craft workshops in Marginea, famous for their unique black pottery; or a picturesque journey on the Hutulca Steam Train through Moldovita Valley, offering spectacular views of Bucovina's rolling hills."
+        "desc": "The first day of the year is for relaxation, as you wish. You can go skiing in Câmpulung Moldovenesc, visit the monasteries in the area (Moldovița, Voroneț, Humor, Sucevița), the black ceramics workshops in Marginea or take a ride with the Mocănița through the Moldovița valley."
       }
     },
+    "book_now": "Book Now!",
     "calculate": {
       "title": "Calculate the price of your stay!",
       "discounts": {
         "title": "Special Discounts",
-        "desc": "Children up to 12 years get 50% discount, those between 4 and 6 years get 70% discount, and those between 0 and 3 years have free access."
+        "desc": "Children up to 12 years old benefit from a 50% discount, those between 4 and 6 years old from 70%, and for those between 0 and 3 years old, access is free."
       }
-    },
-    "book_now": "Book Now !"
+    }
   }
 }

@@ -55,7 +55,8 @@ export default function Page({ params }: Readonly<Props>) {
               {t("contact_whatsapp")}
             </C.TextRezerva>
             <Link
-              href="https://wa.me/40750406594"
+              target="_blank"
+              href="https://wa.me/+40750490838"
               type="primary-button"
               className="inline-flex items-center gap-4 bg-[#25D366] hover:bg-[#25D366]/90 transition text-md px-15 py-7 rounded-normal font-medium text-shadow-2xs"
             >

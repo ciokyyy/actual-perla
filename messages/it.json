@@ -1,0 +1,462 @@
+{
+  "Footer": {
+    "pages": "Pagine",
+    "offer_halfboard": "Offerta Mezza Pensione",
+    "offer_christmas": "Offerta Natale",
+    "offer_newyear": "Offerta Capodanno",
+    "book_halfboard": "Prenota Ora Mezza Pensione",
+    "contact": "Contatti",
+    "phone_label": "Numero di telefono",
+    "whatsapp_label": "Whatsapp",
+    "email_label": "Email",
+    "address_label": "Indirizzo",
+    "company_data": "Dati Aziendali",
+    "company_name": "SC GORIOAN PROD COM SRL",
+    "company_cui": "RO7086751",
+    "company_reg": "J33/243/1995",
+    "company_address": "Strada Principală 1A, Frumosu, Suceava"
+  },
+  "LocaleSwitcher": {
+    "label": "Cambia lingua",
+    "locale": "Italiano"
+  },
+  "LocaleLayout": {
+    "default": {
+      "title": "Pensiunea Perla Brazilor",
+      "description": "Scopri Pensiunea Perla Brazilor, un'accogliente pensione immersa tra gli abeti delle montagne della Romania settentrionale. Goditi l'autentica ospitalità, la cucina tradizionale e la completa tranquillità, ideale per vacanze in famiglia o fughe romantiche."
+    },
+    "home": {
+      "title": "Home - Pensiunea Perla Brazilor",
+      "description": "Benvenuti a Pensiunea Perla Brazilor – il tuo rifugio di pace nel cuore della natura. Scopri la nostra affascinante pensione, circondata da foreste di abeti, con camere confortevoli, cucina tradizionale e momenti indimenticabili in ogni stagione."
+    },
+    "book_now": {
+      "title": "Prenota Ora - Pensiunea Perla Brazilor",
+      "description": "Assicura il tuo soggiorno a Pensiunea Perla Brazilor – un luogo dove relax e natura si incontrano. Prenota una camera in modo semplice e veloce e goditi comfort, ospitalità ed esperienze autentiche nel cuore della Bucovina."
+    },
+    "offers": {
+      "title": "Le Nostre Offerte - Pensiunea Perla Brazilor",
+      "description": "Scopri le nostre offerte speciali a Pensiunea Perla Brazilor: Pacchetto Mezza Pensione, Pacchetto Natale e celebrazione di Capodanno. Prenota oggi la tua vacanza in montagna."
+    },
+    "new_years_offer": {
+      "title": "Capodanno 2025-2026 in Bucovina - Pensiunea Perla Brazilor",
+      "description": "Trascorri un Capodanno indimenticabile in Bucovina a Pensiunea Perla Brazilor. Pacchetto all-inclusive con 4 notti di alloggio, pasti festivi, gite in slitta, musica dal vivo e accesso alla spa. Prenota ora per un'autentica esperienza tradizionale di Capodanno!"
+    },
+    "half_board_offer": {
+      "title": "Offerta Mezza Pensione - Pensiunea Perla Brazilor",
+      "description": "Goditi l'alloggio con mezza pensione a Pensiunea Perla Brazilor. Il pacchetto include colazione e cena a buffet, piatti tradizionali, accesso alla spa e servizi moderni. Autentica esperienza in Bucovina con cibo al 60% di produzione propria."
+    },
+    "christmas_offer": {
+      "title": "Natale 2025 in Bucovina - Pensiunea Perla Brazilor",
+      "description": "Trascorri un Natale tradizionale in Bucovina a Pensiunea Perla Brazilor. Pacchetto all-inclusive con 4 notti di alloggio, pasti festivi, cantanti natalizi, gite in slitta, tradizionale macellazione del maiale e accesso alla spa. Un'autentica esperienza di vacanza!"
+    },
+    "spa": {
+      "title": "Spa & Wellness - Pensiunea Perla Brazilor",
+      "description": "Rilassati nella nostra area spa con piscina, vasca idromassaggio con acqua salata, jacuzzi, salina e sauna finlandese. Un'oasi di pace e benessere nel cuore della Bucovina, per un completo rigeneramento."
+    },
+    "our_rooms": {
+      "title": "Le Nostre Camere - Pensiunea Perla Brazilor",
+      "description": "Scopri le nostre confortevoli camere e appartamenti con vista sulle montagne. Dalle camere doppie agli spaziosi appartamenti, tutti modernamente attrezzati per un soggiorno perfetto in Bucovina."
+    }
+  },
+  "Menu": {
+    "menu": "Menù",
+    "home": "Home",
+    "book_now": "Prenota Ora",
+    "rooms": "Le nostre camere",
+    "food": "La nostra cucina",
+    "spa": "La nostra Spa",
+    "offer_halfboard": "Offerta Mezza Pensione",
+    "offer_christmas": "Offerta Natale",
+    "offer_newyear": "Offerta Capodanno",
+    "contact": "Contatti",
+    "about": "Chi Siamo",
+    "verify_availability": "Verifica disponibilità"
+  },
+  "OffersPage": {
+    "our_offers": "Le Nostre Offerte",
+    "demipensiune_title": "Offerta Mezza Pensione",
+    "demipensiune_more": "Scopri di più!",
+    "craciun_title": "Natale 2025 in Bucovina",
+    "craciun_more": "Scopri di più!",
+    "revelion_title": "Capodanno 2025-2026 in Bucovina",
+    "revelion_more": "Scopri di più!"
+  },
+  "SpaPage": {
+    "title": "Preparati per il benessere in Bucovina a Pensiunea Perla Brazilor",
+    "desc_1": "Piscina, vasca idromassaggio con acqua salata, jacuzzi, salina e sauna",
+    "desc_2": "ti aspettano per dimenticare le preoccupazioni e rilassarti.",
+    "jacuzzi": {
+      "title": "I benefici della Jacuzzi moderna",
+      "subtitle": "Jacuzzi con acqua dolce e idromassaggio",
+      "intro": "Prova il massimo comfort in una jacuzzi dotata di getti idromassaggio su misura per le tue esigenze. Ideale per ricaricare le batterie e bilanciare corpo e mente.",
+      "benefits": {
+        "hydrotherapy": {
+          "title": "Terapia con idromassaggio",
+          "description": "I getti d'acqua massaggiano delicatamente i muscoli, stimolando la circolazione e accelerando il recupero fisico."
+        },
+        "stressRelief": {
+          "title": "Riduzione dello stress",
+          "description": "L'acqua calda e l'atmosfera calma inducono un profondo stato di rilassamento e riducono la tensione mentale."
+        },
+        "cardioHealth": {
+          "title": "Miglioramento della salute cardiovascolare",
+          "description": "I bagni nella jacuzzi aiutano ad abbassare la pressione sanguigna e a migliorare la funzione cardiaca."
+        },
+        "betterSleep": {
+          "title": "Sonno di qualità",
+          "description": "Una sessione regolare aiuta a regolare il ciclo sonno-veglia, garantendo un sonno riposante."
+        },
+        "generalWellbeing": {
+          "title": "Benessere generale",
+          "description": "Migliora l'umore e dà energia, portando più gioia nella tua vita quotidiana."
+        }
+      },
+      "footer": "Perfetto dopo una giornata intensa, per un completo rigeneramento e un eccellente stato d'animo."
+    },
+    "piscina": {
+      "title_video": "Piscina con acqua dolce!",
+      "title": "I benefici della nostra piscina moderna",
+      "description": "Rilassa e rinvigorisci il tuo corpo nella nostra piscina pulita e ben tenuta, ideale per ogni stagione.",
+      "benefits": {
+        "swimming_title": "Attività fisica",
+        "swimming_desc": "Nuoto per tonificare il corpo e migliorare la resistenza fisica",
+        "waterQuality_title": "Acqua pulita",
+        "waterQuality_desc": "Acqua filtrata e trattata per un ambiente sicuro e sano",
+        "relaxation_title": "Relax totale",
+        "relaxation_desc": "Momenti di completo relax, per mente e corpo",
+        "health_title": "Benefici per la salute",
+        "health_desc": "Stimolazione della circolazione sanguigna e riduzione dello stress"
+      }
+    },
+    "sauna": {
+      "title_video": "Sauna Finlandese!",
+      "title": "I benefici della nostra sauna",
+      "description": "Goditi una tradizionale esperienza di sauna che migliora la salute e il rilassamento totale.",
+      "benefits": {
+        "detox": {
+          "title": "Disintossicazione profonda",
+          "desc": "La sudorazione intensa aiuta a eliminare tossine e impurità dal corpo."
+        },
+        "hydration": {
+          "title": "Idratazione e rigenerazione",
+          "desc": "Grazie al vapore, la pelle rimane elastica e idratata."
+        },
+        "circulation": {
+          "title": "Stimolazione della circolazione sanguigna",
+          "desc": "Migliora il flusso sanguigno e l'ossigenazione dei tessuti."
+        },
+        "relaxation": {
+          "title": "Rilassamento mentale e fisico",
+          "desc": "Riduce lo stress e l'ansia, inducendo uno stato di profonda calma."
+        },
+        "skinCare": {
+          "title": "Cura della pelle",
+          "desc": "Pulisce i pori e aiuta a rivitalizzare la carnagione."
+        }
+      }
+    },
+    "salina": {
+      "title_video": "Salina con gocce di sale da Cacica!",
+      "title": "I benefici della terapia nella nostra Salina",
+      "description": "Respira profondamente l'aria pura e salata della nostra salina, un rimedio naturale per la tua salute e il tuo benessere.",
+      "benefits": {
+        "naturalEnvironment": {
+          "title": "Ambiente naturale e rilassante",
+          "desc": "Ideale per un completo recupero e rivitalizzazione."
+        },
+        "respiratoryHealth": {
+          "title": "Salute respiratoria",
+          "desc": "Migliora la funzione polmonare e facilita la respirazione."
+        },
+        "circulation": {
+          "title": "Stimolazione della circolazione sanguigna",
+          "desc": "Promuove l'ossigenazione dei tessuti e la salute del cuore."
+        },
+        "immunity": {
+          "title": "Aumento dell'immunità",
+          "desc": "Supporta il sistema immunitario per una protezione naturale."
+        },
+        "stressRelief": {
+          "title": "Riduzione dello stress",
+          "desc": "Atmosfera calmante che rilassa il corpo e la mente."
+        }
+      }
+    },
+    "ciubar": {
+      "title_video": "Vasca idromassaggio con acqua salata e idromassaggio",
+      "title": "I benefici della vasca idromassaggio con acqua salata e idromassaggio",
+      "description": "Trasforma la tua vacanza in un'esperienza indimenticabile con la nostra tradizionale vasca idromassaggio, riempita con acqua salata della miniera di sale di Cacica e dotata di un moderno sistema di idromassaggio. Goditi un profondo rilassamento, il ringiovanimento e un tocco di magia della Bucovina!",
+      "benefits": {
+        "detox": {
+          "title": "Disintossicazione naturale",
+          "desc": "L'acqua salata aiuta a eliminare le tossine, stimola la circolazione sanguigna e fornisce una sensazione di purificazione."
+        },
+        "muscleRelax": {
+          "title": "Rilassamento muscolare e articolare",
+          "desc": "L'idromassaggio riduce la tensione, allevia il dolore e accelera il recupero."
+        },
+        "healthySkin": {
+          "title": "Pelle più sana",
+          "desc": "Il sale naturale ha effetti antisettici e rimineralizzanti, lasciando la pelle vellutata."
+        },
+        "betterSleep": {
+          "title": "Sonno più riposante",
+          "desc": "Una sessione nella vasca idromassaggio favorisce un sonno profondo e riposante."
+        },
+        "authenticExperience": {
+          "title": "Esperienza autentica",
+          "desc": "La tradizione incontra il comfort moderno in mezzo alla natura."
+        }
+      },
+      "note": "Ideale dopo una giornata di escursioni, sci o lavoro intenso. Lascia che le tue preoccupazioni si dissolvano nel vapore salato!"
+    }
+  },
+  "ErrorNotFound": {
+    "title": "Siamo spiacenti, ma questa pagina non esiste o è in costruzione.",
+    "go_home": "Torna alla home page"
+  },
+  "Rooms": {
+    "APB": {
+      "title": "Appartamento Con Balcone",
+      "description": "L'appartamento ha due stanze ben definite, con il bagno situato in posizione centrale per un facile accesso da entrambe. La prima stanza è dotata di letto matrimoniale. La seconda stanza offre sia un letto matrimoniale che un divano letto. Questa struttura garantisce il massimo comfort e flessibilità per gli ospiti."
+    },
+    "DBB": {
+      "title": "Camera Matrimoniale Con Balcone",
+      "description": "Tutte le camere matrimoniali con balcone offrono viste incantevoli e sono dotate di bagno privato con doccia, garantendo privacy e comfort completo. Ogni camera ha un letto matrimoniale, creando uno spazio generoso e confortevole per rilassarsi e ammirare il paesaggio."
+    },
+    "DB": {
+      "title": "Camera Matrimoniale Senza Balcone",
+      "description": "Le nostre camere matrimoniali, senza balcone, sono confortevoli e intime e includono bagno privato con doccia, garantendo privacy e comodità. Ognuna di queste camere offre un generoso letto matrimoniale, creando uno spazio ideale per il riposo e il relax."
+    },
+    "SB": {
+      "title": "Suite Con Balcone",
+      "description": "La nostra esclusiva suite comprende due camere comunicanti con balcone, creando uno spazio ampio e privato con accesso all'esterno. Ognuna di queste accoglienti camere è dotata di un comodo letto matrimoniale, garantendo un soggiorno rilassante e intimo per i nostri ospiti."
+    },
+    "TPB": {
+      "title": "Camera Tripla Con Balcone",
+      "description": "Tutte le camere triple con balcone sono dotate di un comodo letto matrimoniale e un divano letto, offrendo un generoso spazio aggiuntivo per il relax e l'alloggio aggiuntivo. Perfette per famiglie o gruppi più numerosi, queste camere con balcone aggiungono un comfort extra e una piacevole prospettiva per un soggiorno meraviglioso."
+    },
+    "TP": {
+      "title": "Camera Tripla Senza Balcone",
+      "description": "Le nostre camere triple, senza balcone, sono dotate di un comodo letto matrimoniale e un ingegnoso letto singolo, che si integra nell'armadio per massimizzare lo spazio. Questa disposizione intelligente offre ai nostri ospiti flessibilità e maggiore comfort durante il loro soggiorno."
+    },
+    "7101": {
+      "image1Alt": "Camera Agro con balcone, prima vista",
+      "image2Alt": "Camera Agro con balcone, seconda vista",
+      "image3Alt": "Camera Agro con balcone, terza vista"
+    },
+    "7087": {
+      "image1Alt": "Camera 1, prima vista",
+      "image2Alt": "Camera 1, seconda vista",
+      "image3Alt": "Camera 1, terza vista",
+      "image4Alt": "Camera 1, quarta vista"
+    },
+    "7097": {
+      "image1Alt": "Camera 11, prima vista",
+      "image2Alt": "Camera 11, seconda vista",
+      "image3Alt": "Camera 11, terza vista",
+      "image4Alt": "Camera 11, quarta vista"
+    },
+    "7102": {
+      "image1Alt": "Camera 18, prima vista",
+      "image2Alt": "Camera 18, seconda vista"
+    },
+    "7090": {
+      "image1Alt": "Camera 4, prima vista",
+      "image2Alt": "Camera 4, seconda vista",
+      "image3Alt": "Camera 4, terza vista"
+    },
+    "7091": {
+      "image1Alt": "Camera 5, prima vista",
+      "image2Alt": "Camera 5, seconda vista",
+      "image3Alt": "Camera 5, terza vista"
+    },
+    "7092": {
+      "image1Alt": "Camera 6, prima vista",
+      "image2Alt": "Camera 6, seconda vista",
+      "image3Alt": "Camera 6, terza vista"
+    },
+    "7093": {
+      "image1Alt": "Camera 7, prima vista",
+      "image2Alt": "Camera 7, seconda vista",
+      "image3Alt": "Camera 7, terza vista"
+    },
+    "7094": {
+      "image1Alt": "Camera 8, prima vista",
+      "image2Alt": "Camera 8, seconda vista",
+      "image3Alt": "Camera 8, terza vista"
+    },
+    "7095": {
+      "image1Alt": "Camera 9, prima vista",
+      "image2Alt": "Camera 9, seconda vista",
+      "image3Alt": "Camera 9, terza vista",
+      "image4Alt": "Camera 9, quarta vista"
+    },
+    "7098": {
+      "image1Alt": "Camera 12, prima vista",
+      "image2Alt": "Camera 12, seconda vista",
+      "image3Alt": "Camera 12, terza vista",
+      "image4Alt": "Camera 12, quarta vista",
+      "image5Alt": "Camera 12, quinta vista"
+    },
+    "7099": {
+      "image1Alt": "Camera 13, prima vista",
+      "image2Alt": "Camera 13, seconda vista",
+      "image3Alt": "Camera 13, terza vista"
+    },
+    "7100": {
+      "image1Alt": "Camera 14, prima vista",
+      "image2Alt": "Camera 14, seconda vista",
+      "image3Alt": "Camera 14, terza vista",
+      "image4Alt": "Camera 14, quarta vista"
+    },
+    "7088": {
+      "image1Alt": "Camera 2, prima vista",
+      "image2Alt": "Camera 2, seconda vista",
+      "image3Alt": "Camera 2, terza vista",
+      "image4Alt": "Camera 2, quarta vista",
+      "image5Alt": "Camera 2, quinta vista",
+      "image6Alt": "Camera 2, sesta vista"
+    },
+    "7103": {
+      "image1Alt": "Camera 17, prima vista",
+      "image2Alt": "Camera 17, seconda vista",
+      "image3Alt": "Camera 17, terza vista"
+    },
+    "7104": {
+      "image1Alt": "Camera 18, prima vista",
+      "image2Alt": "Camera 18, seconda vista"
+    },
+    "7089": {
+      "image1Alt": "Camera 3, prima vista",
+      "image2Alt": "Camera 3, seconda vista",
+      "image3Alt": "Camera 3, terza vista",
+      "image4Alt": "Camera 3, quarta vista",
+      "image5Alt": "Camera 3, quinta vista"
+    }
+  },
+  "HalfBoardPage": {
+    "title": "Offerta Alloggio Con Mezza Pensione",
+    "book_now": "Prenota Ora!",
+    "food_included": "L'offerta include colazione e cena a buffet",
+    "food_traditional": "Cucina tradizionale al 60% di produzione propria",
+    "food_card_title": "Cucina",
+    "food_card_desc": "Scopri quali prelibatezze abbiamo!",
+    "spa_included": "L'offerta include l'accesso alla spa. Goditi il benessere nella vasca idromassaggio con acqua salata, piscina, salina, sauna o jacuzzi.",
+    "spa_card_title": "Spa",
+    "spa_card_desc": "Dove ti rilasserai?",
+    "rooms_card_title": "Camere",
+    "rooms_card_desc": "Vista e servizi",
+    "offers_card_title": "Altre offerte",
+    "offers_card_desc": "Natale o Capodanno in Bucovina"
+  },
+  "Spa": {
+    "ciubar_1_alt": "Vasca di legno con acqua salata, prima vista",
+    "jacuzzi_1_alt": "Area jacuzzi, prima vista",
+    "piscina_1_alt": "Area piscina, prima vista",
+    "salina_1_alt": "Stanza del sale, prima vista",
+    "sauna_1_alt": "Stanza sauna, prima vista"
+  },
+  "Sala": {
+    "sala_1_alt": "Sala fitness, prima vista",
+    "sala_4_alt": "Sala fitness, quarta vista"
+  },
+  "BookNow": {
+    "book_now": "Prenota Ora!",
+    "contact_for_rezervation": "Per prenotare una camera, contattaci al numero di telefono",
+    "contact_whatsapp": "Contattaci su WhatsApp",
+    "verify_availability": "Verifica prima la disponibilità",
+    "or_separator": "o"
+  },
+  "Calculate": {
+    "adults": "Adulti",
+    "children_6_12": "Bambini tra 6 e 12 anni",
+    "children_4_6": "Bambini tra 4 e 6 anni",
+    "calculate": "Calcola!",
+    "result": "Risultato"
+  },
+  "ChristmasPage": {
+    "title": "Festeggia il Natale 2025 in Bucovina",
+    "pricing": "4 notti / 5 giorni a soli 3000 lei/persona",
+    "food_drink": {
+      "title": "Cibo e bevande",
+      "subtitle": "Tutto incluso !!!",
+      "desc1": "Tutto è incluso, dal cibo alle bevande, hai cosa scegliere durante il tuo soggiorno in Bucovina",
+      "desc2": "Cucina tradizionale al 60% di produzione propria"
+    },
+    "spa": {
+      "title": "Spa",
+      "subtitle": "La tua oasi di relax!",
+      "desc": "L'offerta include l'accesso alla spa. Goditi il benessere nella vasca idromassaggio con acqua salata, piscina, salina, sauna o jacuzzi."
+    },
+    "schedule": {
+      "title": "Il Nostro Programma di Soggiorno",
+      "dec23": {
+        "title": "23 Dicembre",
+        "desc": "Goditi un caloroso benvenuto, con tradizioni come in Bucovina."
+      },
+      "dec24": {
+        "title": "24 Dicembre",
+        "desc": "Alle 10:00, inizia con una gita in slitta trainata da cavalli, poi goditi un pasto all'aperto con la tradizionale macellazione del maiale, barbecue e bistecca in umido, insieme a vin brulé, grappa bollita e deliziosi Poale-n Brâu. In serata, a cena, i cantanti natalizi e Babbo Natale porteranno la magia delle feste."
+      },
+      "dec25": {
+        "title": "25 Dicembre",
+        "desc": "In un'atmosfera festosa, goditi piatti tradizionali, bevande selezionate e buona allegria con i tuoi cari, dalle 14:30, al ritmo di un'orchestra dal vivo."
+      },
+      "dec26": {
+        "title": "26 Dicembre",
+        "desc": "Sei libero di trascorrere la giornata come desideri – sia sulla pista da sci di Câmpulung Moldovenesc, sia esplorando le bellezze locali, come i monasteri di Moldovița e Voroneț, la ceramica di Marginea (Ceramica Nera) o un giro con la Mocănița Huțulca dalla Moldovița."
+      }
+    },
+    "book_now": "Prenota Ora!",
+    "calculate": {
+      "title": "Calcola il prezzo del tuo soggiorno!",
+      "discounts": {
+        "title": "Sconti Speciali",
+        "desc": "I bambini fino a 12 anni beneficiano di uno sconto del 50%, quelli tra i 4 e i 6 anni del 70% e per quelli tra 0 e 3 anni l'accesso è gratuito."
+      }
+    }
+  },
+  "NewYearPage": {
+    "title": "Festeggia il Capodanno 2025-2026 in Bucovina",
+    "pricing": "4 notti / 5 giorni a soli 3200 lei/persona",
+    "food_drink": {
+      "title": "Cibo e bevande",
+      "subtitle": "Tutto incluso !!!",
+      "desc1": "Tutto è incluso, dal cibo alle bevande, hai cosa scegliere durante il tuo soggiorno in Bucovina",
+      "desc2": "Cucina tradizionale al 60% di produzione propria"
+    },
+    "spa": {
+      "title": "Spa",
+      "subtitle": "La tua oasi di relax!",
+      "desc": "L'offerta include l'accesso alla spa. Goditi il benessere nella vasca idromassaggio con acqua salata, piscina, salina, sauna o jacuzzi."
+    },
+    "schedule": {
+      "title": "Il Nostro Programma di Soggiorno",
+      "dec29": {
+        "title": "29 Dicembre",
+        "desc": "Iniziamo la vacanza con un caloroso benvenuto in stile bucovineano e una cena di benvenuto, così potrai conoscere i primi sapori della nostra cucina locale."
+      },
+      "dec30": {
+        "title": "30 Dicembre",
+        "desc": "Alle 10:00, partiamo con un giro in carrozza trainata da cavalli attraverso il paesaggio invernale della Bucovina. Dopo la strada, ci fermiamo per un pasto all'aperto con cibo tradizionale: macellazione del maiale, barbecue, bistecca in umido, vin brulé, grappa bollita e Poale-n Brâu - perfetto per una vera giornata invernale."
+      },
+      "dec31": {
+        "title": "31 Dicembre",
+        "desc": "La giornata è libera per passeggiate e visite nei dintorni, fino alle 21:00, quando inizia la festa di Capodanno. Un ricco menù ti aspetta con antipasti, piatti caldi di tacchino, maiale e vitello, pesce e molto altro – il tutto con musica dal vivo e balli fino al mattino."
+      },
+      "jan1": {
+        "title": "1 Gennaio",
+        "desc": "Il primo giorno dell'anno è per il relax, come desideri. Puoi andare a sciare a Câmpulung Moldovenesc, visitare i monasteri della zona (Moldovița, Voroneț, Humor, Sucevița), i laboratori di ceramica nera a Marginea o fare un giro con la Mocănița attraverso la valle di Moldovița."
+      }
+    },
+    "book_now": "Prenota Ora!",
+    "calculate": {
+      "title": "Calcola il prezzo del tuo soggiorno!",
+      "discounts": {
+        "title": "Sconti Speciali",
+        "desc": "I bambini fino a 12 anni beneficiano di uno sconto del 50%, quelli tra i 4 e i 6 anni del 70% e per quelli tra 0 e 3 anni l'accesso è gratuito."
+      }
+    }
+  }
+}
