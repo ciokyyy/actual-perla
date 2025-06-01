@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getEntries("/spa"),
     ...getEntries("/mancare"),
     ...getEntries("/preturi-valabilitate"),
+    ...getEntries("/oferte"),
   ];
 }
 

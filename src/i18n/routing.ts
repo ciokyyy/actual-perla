@@ -48,5 +48,10 @@ export const routing = defineRouting({
       "en-us": "/prices-availability",
       it: "/prezzi-disponibilita",
     },
+    "/oferte": {
+      ro: "/oferte",
+      "en-us": "/offers",
+      it: "/offerte",
+    },
   },
 });
