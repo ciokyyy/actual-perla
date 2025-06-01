@@ -143,16 +143,33 @@ export default function Menu() {
                           {isSeparator ? (
                             <div className="rounded-normal w-100 my-4 border-t-2 border-white" />
                           ) : (
-                            <Link onClick={() => setOpen(false)} href={el.href}>
-                              <Button
-                                className={`${
-                                  el.href === pathname &&
-                                  "bg-secondary !text-text"
-                                }`}
+                            typeof el.href === "string" && (
+                              <Link
+                                onClick={() => setOpen(false)}
+                                href={
+                                  el.href as
+                                    | "/"
+                                    | "/rezerva-acum"
+                                    | "/oferta-craciun"
+                                    | "/oferta-revelion"
+                                    | "/oferta-demipensiune"
+                                    | "/camere"
+                                    | "/spa"
+                                    | "/mancare"
+                                    | "/preturi-valabilitate"
+                                    | "/oferte"
+                                }
                               >
-                                {el.text}
-                              </Button>
-                            </Link>
+                                <Button
+                                  className={`${
+                                    el.href === pathname &&
+                                    "bg-secondary !text-text"
+                                  }`}
+                                >
+                                  {el.text}
+                                </Button>
+                              </Link>
+                            )
                           )}
                         </motion.div>
                       );
