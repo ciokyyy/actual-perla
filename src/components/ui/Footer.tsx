@@ -43,7 +43,7 @@ export default function Footer() {
             <C.RezervaDemi
               as={Link}
               className="underline cursor-pointer transition-all"
-              href="/rezerva-oferta-demipensiune"
+              href="/rezerva-acum"
             >
               {t("book_halfboard")}
             </C.RezervaDemi>
@@ -58,7 +58,7 @@ export default function Footer() {
               <C.NrTel
                 href="tel:+40750490838"
                 target="_blank"
-                as={Link}
+                as="a"
                 className="font-bold cursor-pointer transition-all hover:underline"
               >
                 +40 750 490 838
@@ -67,7 +67,7 @@ export default function Footer() {
             <span>
               {t("whatsapp_label")} :{" "}
               <C.Wapp
-                as={Link}
+                as="a"
                 className="font-bold cursor-pointer transition-all hover:underline"
                 href="https://wa.me/+40750490838"
                 target="_blank"
@@ -80,7 +80,7 @@ export default function Footer() {
               <C.Mail
                 href="mailto:perlabrazilor@gmail.com"
                 target="_blank"
-                as={Link}
+                as="a"
                 className="font-bold cursor-pointer transition-all hover:underline"
               >
                 perlabrazilor@gmail.com
@@ -91,8 +91,8 @@ export default function Footer() {
               <C.Adresa
                 href="https://maps.app.goo.gl/J6AStxsiHV5M2soQ7"
                 target="_blank"
-                as={Link}
-                className="font-bold cursor-pointer transition-all"
+                as="a"
+                className="font-bold cursor-pointer transition-all hover:underline"
               >
                 {t("company_address")}
               </C.Adresa>

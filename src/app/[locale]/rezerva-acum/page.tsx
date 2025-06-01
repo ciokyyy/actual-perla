@@ -32,14 +32,14 @@ export default function Page({ params }: Readonly<Props>) {
             <C.TextRezerva className="text-desc mb-6 text-lg">
               {t("contact_for_rezervation")}
             </C.TextRezerva>
-            <Link
+            <a
               href="tel:++40750490838"
               type="primary-button"
-              className="inline-flex items-center gap-4 hover:bg-primary/90 transition px-15 py-7 text-md font-medium"
+              className="text-desc inline-flex items-center gap-4 hover:bg-primary/90 transition px-15 py-7 text-md font-medium rounded-normal text-white bg-primary hover:scale-110 active:scale-90"
             >
               <FaPhone />
               +40 750 490 838
-            </Link>
+            </a>
           </div>
 
           <div className="relative py-6">
@@ -54,15 +54,15 @@ export default function Page({ params }: Readonly<Props>) {
             <C.TextRezerva className="text-desc mb-6 text-lg">
               {t("contact_whatsapp")}
             </C.TextRezerva>
-            <Link
-              target="_blank"
+            <a
               href="https://wa.me/+40750490838"
-              type="primary-button"
-              className="inline-flex items-center gap-4 bg-[#25D366] hover:bg-[#25D366]/90 transition text-md px-15 py-7 rounded-normal font-medium text-shadow-2xs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-desc inline-flex items-center gap-4 bg-[#25D366] hover:bg-[#25D366]/90 transition text-md px-15 py-7 rounded-normal font-medium text-shadow-2xs hover:scale-110 active:scale-90"
             >
               <FaWhatsapp />
               @PerlaBrazilor
-            </Link>
+            </a>
           </div>
 
           <div className="relative py-6">
