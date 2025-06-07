@@ -13,6 +13,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     params: await props.params,
     pageName: "offers",
     imageName: "rezerva.png",
+    pathSegment: "oferte",
   });
 }
 
@@ -35,9 +36,9 @@ export default function OfertePage() {
 
   return (
     <>
-      <h2 className="title mb-40 flex items-center gap-6">
+      <h1 className="title mb-40 flex items-center gap-6">
         {t("our_offers")} <BiSolidOffer size="35" />
-      </h2>
+      </h1>
       <C.ContainerWGradient className="relative w-full grid place-items-center">
         <C.Gradient className="absolute inset-0 oferte-gradient -z-10"></C.Gradient>
 

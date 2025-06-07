@@ -18,6 +18,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     params: await props.params,
     pageName: "new_years_offer",
     imageName: "new_years_eve.png",
+    pathSegment: "oferta-revelion",
   });
 }
 

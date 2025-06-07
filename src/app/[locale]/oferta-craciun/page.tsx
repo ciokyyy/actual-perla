@@ -11,6 +11,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     params: await props.params,
     pageName: "christmas_offer",
     imageName: "christmas.png",
+    pathSegment: "oferta-craciun",
   });
 }
 

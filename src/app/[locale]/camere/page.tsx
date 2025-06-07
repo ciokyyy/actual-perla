@@ -6,7 +6,8 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
     params: await props.params,
     pageName: "our_rooms",
-    imageName: "rooms.pmg",
+    imageName: "rooms.png",
+    pathSegment: "camere",
   });
 }
 

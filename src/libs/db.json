@@ -41,10 +41,7 @@
       "number": "16",
       "typeId": "DBB",
       "max": 2,
-      "images": [
-        { "src": "/images/camere/camera-18/camera-18-1.webp" },
-        { "src": "/images/camere/camera-18/camera-18-2.webp" }
-      ]
+      "images": []
     },
     {
       "id": "7090",
@@ -167,11 +164,7 @@
       "number": "17",
       "typeId": "TP",
       "max": 3,
-      "images": [
-        { "src": "/images/camere/agro-fara-balcon/agro-fara-balcon-1.webp" },
-        { "src": "/images/camere/agro-fara-balcon/agro-fara-balcon-2.webp" },
-        { "src": "/images/camere/agro-fara-balcon/agro-fara-balcon-3.webp" }
-      ]
+      "images": []
     },
     {
       "id": "7104",

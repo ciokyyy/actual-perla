@@ -12,6 +12,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     params: await props.params,
     pageName: "book_now",
     imageName: "rezerva.png",
+    pathSegment: "rezerva-acum",
   });
 }
 
