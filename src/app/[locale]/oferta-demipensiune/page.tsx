@@ -24,7 +24,7 @@ export default function Page() {
   const sala = useTranslations("Sala");
   return (
     <>
-      <C.MainTitle as={"h3"} className="title">
+      <C.MainTitle as={"h1"} className="title">
         {t("title")}
       </C.MainTitle>
       <C.PicturesContainer

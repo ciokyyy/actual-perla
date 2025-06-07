@@ -34,7 +34,9 @@ export default function CraciunPage() {
   return (
     <>
       <C.CraciunIcon as={TbChristmasTreeFilled} className="oferta-icon-title" />
-      <C.TitluCraciun className="oferta-title">{t("title")}</C.TitluCraciun>
+      <C.TitluCraciun className="oferta-title" as="h1">
+        {t("title")}
+      </C.TitluCraciun>
       <C.TitluPret as="h4" className="title font-light">
         {t("pricing")}
       </C.TitluPret>

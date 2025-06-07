@@ -23,7 +23,10 @@ export default function Page({ params }: Readonly<Props>) {
   setRequestLocale(locale);
   return (
     <C.Container className="p-20 bg-foreground shadow-lg m-20 rounded-normal border-y-1 border-primary">
-      <C.TitluRezerva className="text-white bg-primary mx-20 text-center rounded-normal text-logo p-20">
+      <C.TitluRezerva
+        className="text-white bg-primary mx-20 text-center rounded-normal text-logo p-20"
+        as="h1"
+      >
         {t("book_now")}
       </C.TitluRezerva>
 
