@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Max-video-preview: -1
+Max-snippet: -1
