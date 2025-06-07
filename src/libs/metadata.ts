@@ -10,7 +10,7 @@ interface MetadataProps {
   };
   pageName?: string; // Used for translation keys (e.g., "home", "about", "book-now-page")
   imageName?: string;
-  pathSegment: string; // The actual URL segment for the current page in the current locale (e.g., "rezerva-acum", "book-now")
+  pathSegment?: string; // The actual URL segment for the current page in the current locale (e.g., "rezerva-acum", "book-now")
 }
 export async function generatePageMetadata({
   params,
