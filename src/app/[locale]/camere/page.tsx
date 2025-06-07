@@ -1,6 +1,8 @@
 import { ImagesCarousel } from "@/components/ImagesCarousel";
 import { generatePageMetadata } from "@/libs/metadata";
 import { Props } from "@/libs/props";
+import { useTranslations } from "next-intl";
+import { MdBedroomParent } from "react-icons/md";
 
 export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
@@ -12,5 +14,14 @@ export async function generateMetadata(props: Omit<Props, "children">) {
 }
 
 export default function Camere() {
-  return <ImagesCarousel></ImagesCarousel>;
+  const t = useTranslations("Rooms");
+  return (
+    <>
+      <h1 className="oferta-title flex gap-10 items-center justify-center">
+        <MdBedroomParent />
+        {t("title")}
+      </h1>
+      <ImagesCarousel></ImagesCarousel>
+    </>
+  );
 }
