@@ -52,7 +52,7 @@ export default async function Layout({
   setRequestLocale(locale);
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${quickSand.variable} ${aleo.variable} antialiased`}>
         <NextIntlClientProvider>
