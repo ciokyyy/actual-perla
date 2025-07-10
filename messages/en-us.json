@@ -216,6 +216,21 @@
     "go_home": "Back to home page"
   },
   "Rooms": {
+    "pricesAndAvailability": "Prezzi e disponibilità",
+    "choosePeriodToSeePrices": "Scegli il periodo di soggiorno per vedere prezzi e disponibilità",
+    "selectValidRange": "Please select a valid date range.",
+    "selectValidRangeBeforeCheck": "Please select a valid date range before checking.",
+    "checking": "Checking...",
+    "checkAvailability": "Check Availability",
+    "unknownError": "An unknown error occurred during the check.",
+    "noAvailability": "No availability for the selected period.",
+    "holidayPhoneOnly": "If you tried to search for availability during Christmas or New Year's, please note that reservations are only made by phone.",
+    "easterMinNights": "During Easter, we have a minimum of 3 nights. Please make sure you selected the correct dates.",
+    "selectDatesAndCheck": "Select dates and press to see availability and prices.",
+    "secondaryBuildingNote": "Secondary building, 50m from the main building.",
+    "price": "Price:",
+    "room": "{count, plural, one {room available} other {rooms available}}",
+    "person": "{count, plural, one {person} other {people}}",
     "title": "Our Rooms",
     "APB": {
       "title": "Apartment With Balcony",

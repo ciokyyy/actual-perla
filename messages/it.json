@@ -216,6 +216,21 @@
     "go_home": "Torna alla home page"
   },
   "Rooms": {
+    "pricesAndAvailability": "Prezzi e disponibilità",
+    "choosePeriodToSeePrices": "Scegli il periodo di soggiorno per vedere prezzi e disponibilità",
+    "selectValidRange": "Seleziona un intervallo di date valido.",
+    "selectValidRangeBeforeCheck": "Seleziona un intervallo di date valido prima di verificare.",
+    "checking": "Verifica...",
+    "checkAvailability": "Verifica Disponibilità",
+    "unknownError": "Si è verificato un errore sconosciuto durante la verifica.",
+    "noAvailability": "Nessuna disponibilità per il periodo selezionato.",
+    "holidayPhoneOnly": "Se hai cercato disponibilità per Natale o Capodanno, le prenotazioni si fanno solo telefonicamente.",
+    "easterMinNights": "Durante Pasqua abbiamo un minimo di 3 notti. Assicurati di aver selezionato le date corrette.",
+    "selectDatesAndCheck": "Seleziona le date e premi per vedere disponibilità e prezzi.",
+    "secondaryBuildingNote": "Edificio secondario, a 50m dall'edificio principale.",
+    "price": "Prezzo:",
+    "room": "{count, plural, one {camera disponibile} other {camere disponibili}}",
+    "person": "{count, plural, one {persona} other {persone}}",
     "title": "Le nostre camere",
     "APB": {
       "title": "Appartamento Con Balcone",
