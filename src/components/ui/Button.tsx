@@ -11,22 +11,26 @@ export function Button({ className, variant = "primary", ...props }: Props) {
     ghost: cn(
       "bg-primary text-white transition-all",
       "hover:text-white hover:scale-110",
-      "active:text-white active:scale-90"
+      "active:text-white active:scale-90",
+      "disabled:opacity-50 disabled:pointer-events-none"
     ),
     card: cn(
       "bg-primary text-white",
       "hover:text-white hover:bg-primary hover:scale-110",
-      "active:text-white active:scale-90 active:bg-primary"
+      "active:text-white active:scale-90 active:bg-primary",
+      "disabled:opacity-50 disabled:pointer-events-none"
     ),
     "card-inverse": cn(
       "bg-white text-primary",
       "hover:text-white hover:bg-foreground hover:scale-110",
-      "active:text-white active:scale-90 active:bg-foreground"
+      "active:text-white active:scale-90 active:bg-foreground",
+      "disabled:opacity-50 disabled:pointer-events-none"
     ),
-    "primary": cn(
+    primary: cn(
       "rounded-normal !text-white px-10 py-10 cursor-pointer bg-primary transition-all text-desc",
       "hover:bg-text hover:scale-110",
-      "active:bg-text active:scale-90"
+      "active:bg-text active:scale-90",
+      "disabled:opacity-50 disabled:pointer-events-none"
     ),
   };
 

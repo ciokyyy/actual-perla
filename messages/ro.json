@@ -217,6 +217,21 @@
     "go_home": "Înapoi pe pagina acasă"
   },
   "Rooms": {
+    "pricesAndAvailability": "Preturi și valabilitate",
+    "choosePeriodToSeePrices": "Alege perioada de ședere pentru a vedea prețurile și disponibilitatea",
+    "selectValidRange": "Te rugăm să selectezi un interval de date valid.",
+    "selectValidRangeBeforeCheck": "Te rugăm să selectezi un interval de date valid înainte de a verifica.",
+    "checking": "Verifică...",
+    "checkAvailability": "Verifică Disponibilitatea",
+    "unknownError": "O eroare necunoscută a apărut la verificare.",
+    "noAvailability": "Nu există disponibilitate pentru perioada selectată.",
+    "holidayPhoneOnly": "Dacă ai încercat să cauți valabilitate în perioada Crăciunului sau a Revelionului, să știi că atunci rezervările se fac doar telefonic.",
+    "easterMinNights": "În perioada Paștelui avem un minim de 3 nopți, asigură-te că ai ales data corect.",
+    "selectDatesAndCheck": "Selectează datele și apasă pentru a vedea disponibilitatea și prețurile.",
+    "secondaryBuildingNote": "Clădirea secundară, la 50m de corpul principal.",
+    "price": "Preț:",
+    "room": "{count, plural, one {cameră disponibilă} other {camere disponibile}}",
+    "person": "{count, plural, one {persoană} other {persoane}}",
     "title": "Camerele Noastre",
     "APB": {
       "title": "Apartament Cu Balcon",
