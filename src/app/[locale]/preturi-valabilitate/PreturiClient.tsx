@@ -59,7 +59,7 @@ export function PreturiClient() {
       roomArr.sort((a, b) => a.id.localeCompare(b.id));
     });
     return Object.entries(grouped)
-      .filter(([_, rooms]) => rooms.length > 0)
+      .filter(([, rooms]) => rooms.length > 0)
       .map(([type, rooms]) => ({
         type,
         rooms,
