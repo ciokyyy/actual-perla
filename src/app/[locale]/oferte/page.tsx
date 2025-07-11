@@ -1,6 +1,6 @@
 import { BiSolidOffer } from "react-icons/bi";
 import { TbChristmasTreeFilled } from "react-icons/tb";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { PiSparkleFill } from "react-icons/pi";
 import { FaConciergeBell } from "react-icons/fa";
 import C from "@/components/ComponentNames";

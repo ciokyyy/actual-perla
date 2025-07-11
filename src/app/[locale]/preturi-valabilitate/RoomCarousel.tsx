@@ -1,5 +1,4 @@
 // @/components/RoomCarousel.tsx
-"use client";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { useCallback } from "react";
