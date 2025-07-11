@@ -1,3 +1,4 @@
+"use client";
 import C from "@/components/ComponentNames";
 import { Link } from "@/components/ui/Link";
 import { motion } from "motion/react";

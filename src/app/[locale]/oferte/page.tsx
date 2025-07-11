@@ -1,7 +1,9 @@
 import { BiSolidOffer } from "react-icons/bi";
 
 import { useTranslations } from "next-intl";
-
+import { generatePageMetadata } from "@/libs/metadata";
+import { Props } from "@/libs/props";
+import { ClientComponent } from "./ClientComponent";
 export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
     params: await props.params,
@@ -10,10 +12,6 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     pathSegment: "oferte",
   });
 }
-
-import { generatePageMetadata } from "@/libs/metadata";
-import { Props } from "@/libs/props";
-import { ClientComponent } from "./ClientComponent";
 
 export default function OfertePage() {
   const t = useTranslations("OffersPage");
