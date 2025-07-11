@@ -216,8 +216,8 @@
     "go_home": "Back to home page"
   },
   "Rooms": {
-    "pricesAndAvailability": "Prezzi e disponibilità",
-    "choosePeriodToSeePrices": "Scegli il periodo di soggiorno per vedere prezzi e disponibilità",
+    "pricesAndAvailability": "Prices and Availability",
+    "choosePeriodToSeePrices": "Choose your stay period to see prices and availability",
     "selectValidRange": "Please select a valid date range.",
     "selectValidRangeBeforeCheck": "Please select a valid date range before checking.",
     "checking": "Checking...",
