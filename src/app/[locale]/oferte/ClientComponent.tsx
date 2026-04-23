@@ -171,32 +171,34 @@ export function ClientComponent() {
 }
 
 function CompactOfferCard({ title, icon: Icon, images, href }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string }) {
-  const [idx, setIdx] = useState(0);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => setIdx((i) => (i + 1) % images.length), 3000);
+    const interval = setInterval(() => setIndex((i) => (i + 1) % images.length), 3500);
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
     <Link
       href={href as "/"}
-      className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer"
+      className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer block"
     >
       <div className="relative" style={{ paddingBottom: "140%" }}>
-        <Image 
-          src={images[idx]} 
-          alt={title} 
-          fill 
-          className="object-cover transition-transform duration-700 group-hover:scale-110" 
-        />
-        <motion.div
-          key={idx}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
-        />
+        {images.map((img, i) => (
+          <motion.div
+            key={i}
+            className="absolute inset-0"
+            initial={false}
+            animate={{
+              opacity: i === index ? 1 : 0,
+              scale: i === index ? 1 : 1.15,
+            }}
+            transition={{ duration: 0.7 }}
+          >
+            <Image src={img} alt="" fill className="object-cover" />
+          </motion.div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-15 flex items-center gap-10">
           <Icon className="w-20 h-20 text-white" />
           <h3 className="font-[family-name:var(--font-heading)] text-white font-semibold">{title}</h3>
