@@ -33,15 +33,11 @@ export function Calendar({
           Chevron: ({ ...chevronProps }) => {
             if (chevronProps.orientation === "left") {
               return (
-                <button className="w-36 h-36 rounded-full bg-primary/10 flex items-center justify-center text-primary cursor-pointer transition-all duration-200 hover:bg-primary/20 active:scale-90">
-                  <FaChevronLeft className="w-16 h-16" />
-                </button>
+                <FaChevronLeft className="w-16 h-16" />
               );
             }
             return (
-              <button className="w-36 h-36 rounded-full bg-primary/10 flex items-center justify-center text-primary cursor-pointer transition-all duration-200 hover:bg-primary/20 active:scale-90">
-                <FaChevronRight className="w-16 h-16" />
-              </button>
+              <FaChevronRight className="w-16 h-16" />
             );
           },
         }}
