@@ -174,7 +174,7 @@ function CompactOfferCard({ title, icon: Icon, images, href }: { title: string; 
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => setIndex((i) => (i + 1) % images.length), 3500);
+    const interval = setInterval(() => setIndex((i) => (i + 1) % images.length), 4000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -191,9 +191,9 @@ function CompactOfferCard({ title, icon: Icon, images, href }: { title: string; 
             initial={false}
             animate={{
               opacity: i === index ? 1 : 0,
-              scale: i === index ? 1 : 1.15,
+              scale: i === index ? 1 : 1.2,
             }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <Image src={img} alt="" fill className="object-cover" />
           </motion.div>
