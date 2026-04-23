@@ -15,8 +15,8 @@ export default function Header() {
   const isOfferPage = pathname.startsWith("/oferta-");
   const t = useTranslations("Hero");
 
-  // Offer pages, book page, and pricing page handle their own hero
-  if (isOfferPage || pathname === "/rezerva-acum" || pathname === "/preturi-valabilitate") return null;
+// Offer pages, book page, and pricing page handle their own hero
+  if (isOfferPage || pathname === "/rezerva-acum" || pathname === "/preturi-valabilitate" || pathname === "/spa") return null;
 
   const features = [
     { icon: FaBed, label: t("feature_rooms") },
