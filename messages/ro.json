@@ -87,10 +87,10 @@
     "title": "Facilități",
     "wifi": "WiFi gratuit",
     "parking": "Parcare gratuită",
-    "ac": "Aer condiționat",
     "tv": "TV LCD",
     "shower": "Baie proprie",
-    "breakfast": "Mic dejun inclus"
+    "breakfast": "Mic dejun inclus",
+    "dinner": "Cină inclusă"
   },
   "OffersPage": {
     "our_offers": "Ofertele Noastre",

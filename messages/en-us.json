@@ -86,10 +86,10 @@
     "title": "Amenities",
     "wifi": "Free WiFi",
     "parking": "Free parking",
-    "ac": "Air conditioning",
     "tv": "LCD TV",
     "shower": "Private bathroom",
-    "breakfast": "Breakfast included"
+    "breakfast": "Breakfast included",
+    "dinner": "Dinner included"
   },
   "OffersPage": {
     "our_offers": "Our Offers",

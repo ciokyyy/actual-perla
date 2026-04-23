@@ -86,10 +86,10 @@
     "title": "Servizi",
     "wifi": "WiFi gratuito",
     "parking": "Parcheggio gratuito",
-    "ac": "Aria condizionata",
     "tv": "TV LCD",
     "shower": "Bagno privato",
-    "breakfast": "Colazione inclusa"
+    "breakfast": "Colazione inclusa",
+    "dinner": "Cena inclusa"
   },
   "OffersPage": {
     "our_offers": "Le Nostre Offerte",
