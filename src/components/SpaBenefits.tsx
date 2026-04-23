@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { FaWater, FaHotTub, FaSwimmer, FaFire, FaTree, FaMountain } from "react-icons/fa";
+import { FaWater, FaHotTub, FaHeart, FaFire, FaTree, FaMountain, FaLeaf, FaTint, FaLungs, FaBrain } from "react-icons/fa";
+import { IoMdWater, IoMdLeaf } from "react-icons/io";
 import { motion } from "motion/react";
 import Image from "next/image";
 import SalinaOne from "~/images/spa/salina-1.webp";
@@ -56,8 +57,8 @@ export function SpaBenefits({ locale }: BenefitsProps) {
         <SectionTitle>{t("ciubar.title")}</SectionTitle>
         <p className="text-text/70 text-center">{t("ciubar.description")}</p>
         <div className="grid grid-cols-2 gap-10">
-          <BenefitCard icon={FaWater} title={t("ciubar.benefits.detox.title")} description={t("ciubar.benefits.detox.desc")} />
-          <BenefitCard icon={FaHotTub} title={t("ciubar.benefits.muscleRelax.title")} description={t("ciubar.benefits.muscleRelax.desc")} />
+          <BenefitCard icon={IoMdWater} title={t("ciubar.benefits.detox.title")} description={t("ciubar.benefits.detox.desc")} />
+          <BenefitCard icon={FaHeart} title={t("ciubar.benefits.muscleRelax.title")} description={t("ciubar.benefits.muscleRelax.desc")} />
         </div>
       </div>
     </section>
@@ -81,8 +82,8 @@ export function JacuzziBenefits({ locale }: BenefitsProps) {
         <SectionTitle>{t("jacuzzi.title")}</SectionTitle>
         <p className="text-text/70 text-center">{t("jacuzzi.intro")}</p>
         <div className="grid grid-cols-2 gap-10">
-          <BenefitCard icon={FaSwimmer} title={t("jacuzzi.benefits.hydrotherapy.title")} description={t("jacuzzi.benefits.hydrotherapy.description")} />
-          <BenefitCard icon={FaWater} title={t("jacuzzi.benefits.stressRelief.title")} description={t("jacuzzi.benefits.stressRelief.description")} />
+          <BenefitCard icon={FaHotTub} title={t("jacuzzi.benefits.hydrotherapy.title")} description={t("jacuzzi.benefits.hydrotherapy.description")} />
+          <BenefitCard icon={FaBrain} title={t("jacuzzi.benefits.stressRelief.title")} description={t("jacuzzi.benefits.stressRelief.description")} />
         </div>
       </div>
       <div className="rounded-2xl overflow-hidden shadow-xl aspect-video relative order-first md:order-last">
@@ -104,8 +105,8 @@ export function PiscinaBenefits({ locale }: BenefitsProps) {
         <SectionTitle>{t("piscina.title")}</SectionTitle>
         <p className="text-text/70 text-center">{t("piscina.description")}</p>
         <div className="grid grid-cols-2 gap-10">
-          <BenefitCard icon={FaSwimmer} title={t("piscina.benefits.swimming_title")} description={t("piscina.benefits.swimming_desc")} />
-          <BenefitCard icon={FaWater} title={t("piscina.benefits.waterQuality_title")} description={t("piscina.benefits.waterQuality_desc")} />
+          <BenefitCard icon={IoMdLeaf} title={t("piscina.benefits.swimming_title")} description={t("piscina.benefits.swimming_desc")} />
+          <BenefitCard icon={FaTint} title={t("piscina.benefits.waterQuality_title")} description={t("piscina.benefits.waterQuality_desc")} />
         </div>
       </div>
     </section>
@@ -122,7 +123,7 @@ export function SaunaBenefits({ locale }: BenefitsProps) {
         <p className="text-text/70 text-center">{t("sauna.description")}</p>
         <div className="grid grid-cols-2 gap-10">
           <BenefitCard icon={FaFire} title={t("sauna.benefits.detox.title")} description={t("sauna.benefits.detox.desc")} />
-          <BenefitCard icon={FaTree} title={t("sauna.benefits.hydration.title")} description={t("sauna.benefits.hydration.desc")} />
+          <BenefitCard icon={FaLeaf} title={t("sauna.benefits.hydration.title")} description={t("sauna.benefits.hydration.desc")} />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-5 rounded-2xl overflow-hidden shadow-xl">
@@ -150,7 +151,7 @@ export function SalinaBenefits({ locale }: BenefitsProps) {
         <p className="text-text/70 text-center">{t("salina.description")}</p>
         <div className="grid grid-cols-2 gap-10">
           <BenefitCard icon={FaMountain} title={t("salina.benefits.naturalEnvironment.title")} description={t("salina.benefits.naturalEnvironment.desc")} />
-          <BenefitCard icon={FaWater} title={t("salina.benefits.respiratoryHealth.title")} description={t("salina.benefits.respiratoryHealth.desc")} />
+          <BenefitCard icon={FaLungs} title={t("salina.benefits.respiratoryHealth.title")} description={t("salina.benefits.respiratoryHealth.desc")} />
         </div>
       </div>
     </section>
