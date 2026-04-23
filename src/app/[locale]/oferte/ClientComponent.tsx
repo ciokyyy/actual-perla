@@ -170,7 +170,7 @@ export function ClientComponent() {
   );
 }
 
-function CompactOfferCardLarge({ title, icon: Icon, images, href, subtitle, price }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string; subtitle: string; price: string }) {
+function CompactOfferCardClassic({ title, icon: Icon, images, href, subtitle, price, cta }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string; subtitle: string; price: string; cta: string }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -179,8 +179,8 @@ function CompactOfferCardLarge({ title, icon: Icon, images, href, subtitle, pric
   }, [images.length]);
 
   return (
-    <Link href={href as "/oferta-craciun"} className="flex-1 group relative rounded-3xl overflow-hidden shadow-lg cursor-pointer">
-      <div className="relative h-full min-h-350 md:min-h-400" style={{ paddingBottom: "80%" }}>
+    <Link href={href as any} className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer block">
+      <div className="relative aspect-[4/5]">
         {images.map((img, i) => (
           <motion.div
             key={i}
@@ -193,34 +193,13 @@ function CompactOfferCardLarge({ title, icon: Icon, images, href, subtitle, pric
           </motion.div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-20 flex flex-col items-center gap-10">
-          <Icon className="w-40 h-40 text-white" />
-          <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl font-bold text-center">{title}</h3>
-          <p className="text-white/80 text-center">{subtitle}</p>
-          <p className="text-white/60 text-center text-sm">{price}</p>
-          <button className="px-20 py-10 bg-primary text-white rounded-2xl font-medium">
-            Rezervă acum !
-          </button>
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-function CompactOfferCardSmall({ title, icon: Icon, image, href, price }: { title: string; icon: React.ElementType; image: StaticImageData; href: string; price: string }) {
-  return (
-    <Link href={href as any} className="group flex-1 relative rounded-2xl overflow-hidden shadow-md cursor-pointer">
-      <div className="relative h-150">
-        <Image src={image} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-15 flex flex-col items-center gap-5">
-          <Icon className="w-20 h-20 text-white" />
-          <div>
-            <h3 className="font-[family-name:var(--font-heading)] text-white text-base font-bold text-center">{title}</h3>
-            <p className="text-white/60 text-center text-xs">{price}</p>
-          </div>
-          <button className="px-10 py-5 bg-primary text-white rounded-xl text-xs">
-            Rezervă acum !
+        <div className="absolute bottom-0 left-0 right-0 p-15 flex flex-col items-center gap-8">
+          <Icon className="w-30 h-30 text-white" />
+          <h3 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold text-center">{title}</h3>
+          <p className="text-white/80 text-center text-sm">{subtitle}</p>
+          <p className="text-white/60 text-center text-xs">{price}</p>
+          <button className="px-15 py-8 bg-primary text-white rounded-full text-sm font-medium">
+            {cta}
           </button>
         </div>
       </div>
@@ -252,34 +231,34 @@ export function CompactOfferCards() {
         {t("section_subtitle")}
       </motion.p>
 
-      <div className="flex flex-col md:flex-row gap-15 max-w-1200 mx-auto">
-        {/* Main large card */}
-        <CompactOfferCardLarge 
-          title={t("craciun_title")} 
-          icon={TbChristmasTreeFilled} 
-          images={[CraciunOne, CraciunTwo, CraciunThree]} 
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-1200 mx-auto">
+        <CompactOfferCardClassic
+          title={t("craciun_title")}
+          icon={TbChristmasTreeFilled}
+          images={[CraciunOne, CraciunTwo, CraciunThree]}
           href="/oferta-craciun"
-          subtitle="Bucate pe-ndelete, distracție și tradiții"
-          price="De la 3,200 lei de persoană"
+          subtitle={t("craciun_subtitle")}
+          price={t("craciun_price")}
+          cta={t("cta_book")}
         />
-        
-        {/* Small cards stack */}
-        <div className="flex flex-col gap-15">
-          <CompactOfferCardSmall
-            title={t("revelion_title")}
-            icon={PiSparkleFill}
-            image={RevelionOne}
-            href="/oferta-revelion"
-            price="De la 3,500 lei de persoană"
-          />
-          <CompactOfferCardSmall
-            title={t("demipensiune_title")}
-            icon={FaConciergeBell}
-            image={DemipensiuneOne}
-            href="/oferta-demipensiune"
-            price="De la 650 lei pe noapte"
-          />
-        </div>
+        <CompactOfferCardClassic
+          title={t("revelion_title")}
+          icon={PiSparkleFill}
+          images={[RevelionOne, RevelionTwo, RevelionThree]}
+          href="/oferta-revelion"
+          subtitle={t("revelion_subtitle")}
+          price={t("revelion_price")}
+          cta={t("cta_book")}
+        />
+        <CompactOfferCardClassic
+          title={t("demipensiune_title")}
+          icon={FaConciergeBell}
+          images={[DemipensiuneOne, DemipensiuneTwo, DemipensiuneThree]}
+          href="/oferta-demipensiune"
+          subtitle={t("demipensiune_subtitle")}
+          price={t("demipensiune_price")}
+          cta={t("cta_book")}
+        />
       </div>
     </section>
   );
