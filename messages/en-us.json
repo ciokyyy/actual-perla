@@ -38,7 +38,7 @@
       "description": "Discover our special offers at Pensiunea Perla Brazilor: Half Board Package, Christmas Package, and New Year's Eve celebration. Book your mountain vacation today."
     },
     "new_years_offer": {
-      "title": "New Year 2025-2026 in Bucovina - Pensiunea Perla Brazilor",
+      "title": "New Year 2026-2027 in Bucovina - Pensiunea Perla Brazilor",
       "description": "Spend an unforgettable New Year in Bucovina at Pensiunea Perla Brazilor. All-inclusive package with 4 nights accommodation, festive meals, sleigh rides, live music and access to the spa. Book now for an authentic traditional New Year experience!"
     },
     "half_board_offer": {
@@ -46,7 +46,7 @@
       "description": "Enjoy accommodation with half board at Pensiunea Perla Brazilor. The package includes breakfast and dinner buffet, traditional dishes, access to the spa and modern facilities. Authentic experience in Bucovina with 60% of the food from our own production."
     },
     "christmas_offer": {
-      "title": "Christmas 2025 in Bucovina - Pensiunea Perla Brazilor",
+      "title": "Christmas 2026 in Bucovina - Pensiunea Perla Brazilor",
       "description": "Spend a traditional Christmas in Bucovina at Pensiunea Perla Brazilor. All-inclusive package with 4 nights accommodation, festive meals, carolers, sleigh rides, traditional pig slaughter and access to the spa. An authentic holiday experience!"
     },
     "spa": {
@@ -72,16 +72,46 @@
     "about": "About Us",
     "verify_availability": "Check availability"
   },
+  "Hero": {
+    "title": "Pensiunea Perla Brazilor",
+    "subtitle": "Relaxation and comfort in the heart of nature",
+    "feature_rooms": "Modern rooms",
+    "feature_food": "Traditional food",
+    "feature_spa": "Complete SPA",
+    "feature_location": "Picturesque location",
+    "cta_book": "Book now",
+    "cta_call": "Call us"
+  },
+  "Features": {
+    "title": "Amenities",
+    "wifi": "Free WiFi",
+    "parking": "Free parking",
+    "ac": "Air conditioning",
+    "tv": "LCD TV",
+    "shower": "Private bathroom",
+    "breakfast": "Breakfast included"
+  },
   "OffersPage": {
     "our_offers": "Our Offers",
+    "section_title": "Our special offers",
     "demipensiune_title": "Half Board Offer",
     "demipensiune_more": "Find out more!",
-    "craciun_title": "Christmas 2025 in Bucovina",
+    "demipensiune_alt_1": "Half Board 1",
+    "demipensiune_alt_2": "Half Board 2",
+    "demipensiune_alt_3": "Half Board 3",
+    "craciun_title": "Christmas 2026 in Bucovina",
     "craciun_more": "Find out more!",
-    "revelion_title": "New Year 2025-2026 in Bucovina",
-    "revelion_more": "Find out more!"
+    "craciun_alt_1": "Christmas 1",
+    "craciun_alt_2": "Christmas 2",
+    "craciun_alt_3": "Christmas 3",
+    "revelion_title": "New Year 2026-2027 in Bucovina",
+    "revelion_more": "Find out more!",
+    "revelion_alt_1": "New Year 1",
+    "revelion_alt_2": "New Year 2",
+    "revelion_alt_3": "New Year 3"
   },
   "SpaPage": {
+    "header_title": "Our relaxation oasis!",
     "title": "Get ready for well-being in Bucovina at Pensiunea Perla Brazilor",
     "desc_1": "Swimming pool, salt water tub, jacuzzi, salt mine and sauna",
     "desc_2": "are waiting for you to forget your worries and relax.",
@@ -392,8 +422,8 @@
     "result": "Result"
   },
   "ChristmasPage": {
-    "title": "Celebrate Christmas 2025 in Bucovina",
-    "pricing": "4 nights / 5 days for only 3000 lei/person",
+    "title": "Celebrate Christmas 2026 in Bucovina",
+    "pricing": "4 nights / 5 days for only 3500 lei/person",
     "food_drink": {
       "title": "Food and drink",
       "subtitle": "All inclusive !!!",
@@ -434,8 +464,8 @@
     }
   },
   "NewYearPage": {
-    "title": "Celebrate New Year 2025-2026 in Bucovina",
-    "pricing": "4 nights / 5 days for only 3200 lei/person",
+    "title": "Celebrate New Year 2026-2027 in Bucovina",
+    "pricing": "4 nights / 5 days for only 3700 lei/person",
     "food_drink": {
       "title": "Food and drink",
       "subtitle": "All inclusive !!!",

@@ -1,12 +1,10 @@
 import C from "@/components/ComponentNames";
 import { cn } from "@/libs/utils";
-import { IoMdWater } from "react-icons/io";
-import Instaplay from "player.style/instaplay/react";
-import CiubarOne from "/videos/ciubar-video-3.mp4";
-import JacuzziOne from "/videos/jacuzzi-video-1.mp4";
-import PiscinaOne from "/videos/piscina-video-1.mp4";
 import SalinaOne from "~/images/spa/salina-1.webp";
-import Video from "next-video";
+import Video from "@/components/ui/Video";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 import {
   FaBed,
   FaBrain,
@@ -26,11 +24,11 @@ import {
   FaWater,
   FaWind,
 } from "react-icons/fa";
-import { useTranslations } from "next-intl";
 import { ImageSlideshow } from "@/components/ImageSlideshow";
 import Image from "next/image";
 import { generatePageMetadata } from "@/libs/metadata";
 import { Props } from "@/libs/props";
+import PageHero from "@/components/PageHero";
 
 export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
@@ -40,13 +38,15 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   });
 }
 
-export default function Page() {
+export default function Page({ params }: Readonly<Props>) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   const t = useTranslations("SpaPage");
   return (
-    <div className="flex flex-col items-center justify-center gap-50">
+    <section className="w-full px-20 py-30 flex flex-col items-center gap-30">
+      <PageHero icon={<FaSpa />} title={t("header_title")} />
+
       <div className="flex flex-col items-center justify-center gap-20">
-        <C.Text className="oferta-title">Oaza de relaxare de la noi !</C.Text>
-        <IoMdWater className="oferta-icon-title" />
         <div className="shadow-xl sm:mx-50 leading-40 bg-foreground rounded-normal max-w-450 m-20 p-40 text-center text-[20px]">
           <div>
             {t("title")}
@@ -57,26 +57,18 @@ export default function Page() {
           </div>
         </div>
       </div>
+
       <C.CiubarContainer
         className={cn(
           "grid place-items-center",
           "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20"
         )}
       >
-        <C.VideoContainer className="w-full grow relative  rounded-normal overflow-hidden aspect-9/16">
+        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 cursor-pointer">
           <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             {t("ciubar.title_video")}
           </C.CiubarText>
-          <Video
-            className="w-full h-full"
-            theme={Instaplay}
-            autoplay
-            loop
-            muted
-            playsInline
-            preferPlayback="mse"
-            src={CiubarOne}
-          />
+          <Video className="w-full h-full" src="/videos/ciubar-video-3.mp4" />
         </C.VideoContainer>
         <C.ContainerDescription className="shadow-xl bg-foreground rounded-normal p-40 text-[20px]">
           <h2 className="text-2xl font-bold flex items-center gap-2">
@@ -128,26 +120,18 @@ export default function Page() {
           </p>
         </C.ContainerDescription>
       </C.CiubarContainer>
+
       <C.JacuzziContainer
         className={cn(
           "grid place-items-center",
           "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20 l"
         )}
       >
-        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 lg:order-2">
+        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 lg:order-2 cursor-pointer">
           <C.JacuzziText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             {t("jacuzzi.subtitle")}
           </C.JacuzziText>
-          <Video
-            className="w-full h-full"
-            theme={Instaplay}
-            autoplay
-            loop
-            muted
-            playsInline
-            preferPlayback="mse"
-            src={JacuzziOne}
-          />
+          <Video className="w-full h-full" src="/videos/jacuzzi-video-1.mp4" />
         </C.VideoContainer>
         <C.ContainerDescription className="shadow-xl bg-foreground rounded-normal p-40 text-[20px]">
           <h2 className="text-2xl font-bold flex items-center gap-2">
@@ -186,33 +170,27 @@ export default function Page() {
             <li className="flex flex-col items-center gap-3">
               <FaSmile className="text-yellow-500 mt-1 text-5xl" />
               <span>
-                <strong>{t("jacuzzi.benefits.generalWellbeing.title")}:</strong>{" "}
+                <strong>
+                  {t("jacuzzi.benefits.generalWellbeing.title")}:
+                </strong>{" "}
                 {t("jacuzzi.benefits.generalWellbeing.description")}
               </span>
             </li>
           </ul>
         </C.ContainerDescription>
       </C.JacuzziContainer>
+
       <C.PiscinaContainer
         className={cn(
           "grid place-items-center",
           "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20"
         )}
       >
-        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16">
+        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 cursor-pointer">
           <C.CiubarText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             {t("piscina.title_video")}
           </C.CiubarText>
-          <Video
-            className="w-full h-full"
-            theme={Instaplay}
-            autoplay
-            loop
-            muted
-            playsInline
-            preferPlayback="mse"
-            src={PiscinaOne}
-          />
+          <Video className="w-full h-full" src="/videos/piscina-video-1.mp4" />
         </C.VideoContainer>
 
         <C.PiscinaDescription className="shadow-xl bg-foreground rounded-normal p-40 text-[20px] max-w-600">
@@ -252,13 +230,14 @@ export default function Page() {
           </ul>
         </C.PiscinaDescription>
       </C.PiscinaContainer>
+
       <C.SaunaContainer
         className={cn(
           "grid place-items-center",
           "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20"
         )}
       >
-        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 lg:order-2">
+        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 lg:order-2 cursor-pointer">
           <C.SaunaText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             {t("sauna.title_video")}
           </C.SaunaText>
@@ -273,7 +252,7 @@ export default function Page() {
                 alt: "",
               },
             ]}
-          ></ImageSlideshow>
+          />
         </C.VideoContainer>
         <C.SaunaDescription className="shadow-xl bg-foreground rounded-normal p-40 text-[20px] max-w-600 mx-auto">
           <h2 className="text-2xl font-bold flex items-center gap-2">
@@ -319,13 +298,14 @@ export default function Page() {
           </ul>
         </C.SaunaDescription>
       </C.SaunaContainer>
+
       <C.SalinaContainer
         className={cn(
           "grid place-items-center",
           "lg:grid-cols-2 mx-20 md:max-w-600 md:mx-none lg:max-w-1200 gap-20"
         )}
       >
-        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16">
+        <C.VideoContainer className="w-full grow relative rounded-normal overflow-hidden aspect-9/16 cursor-pointer">
           <C.SaunaText className="text-white font-light capitalize absolute top-20 left-0 flex w-full px-20 text-center items-center justify-center text-logo z-10">
             {t("salina.title_video")}
           </C.SaunaText>
@@ -334,10 +314,10 @@ export default function Page() {
             alt=""
             fill
             className="object-cover object-center"
-          ></Image>
+          />
         </C.VideoContainer>
 
-        <C.SalinaDescription className="shadow-xl  bg-foreground rounded-normal p-40 text-[20px] max-w-600">
+        <C.SalinaDescription className="shadow-xl bg-foreground rounded-normal p-40 text-[20px] max-w-600">
           <h2 className="text-2xl font-bold flex items-center gap-2">
             {t("salina.title")}
           </h2>
@@ -355,7 +335,9 @@ export default function Page() {
             <li className="flex flex-col items-center gap-3">
               <FaLungs className="text-teal-600 mt-1 text-5xl" />
               <span>
-                <strong>{t("salina.benefits.respiratoryHealth.title")}:</strong>{" "}
+                <strong>
+                  {t("salina.benefits.respiratoryHealth.title")}:
+                </strong>{" "}
                 {t("salina.benefits.respiratoryHealth.desc")}
               </span>
             </li>
@@ -383,6 +365,6 @@ export default function Page() {
           </ul>
         </C.SalinaDescription>
       </C.SalinaContainer>
-    </div>
+    </section>
   );
 }

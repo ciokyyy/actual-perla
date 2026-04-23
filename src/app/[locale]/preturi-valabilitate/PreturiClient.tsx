@@ -3,15 +3,13 @@
 import { Room } from "@/libs/db";
 import { useGetAvailability } from "@/libs/hooks/useGetAvail";
 import { useRooms } from "@/libs/hooks/useGetRooms";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Calendar } from "./Calendar";
 import { DateRange } from "react-day-picker";
-import C from "@/components/ComponentNames";
-import { Button } from "@/components/ui/Button";
 import { format } from "date-fns";
 import { RoomCarousel } from "./RoomCarousel";
 import { useTranslations } from "next-intl";
-import { IoPerson } from "react-icons/io5";
+import { FaSearch, FaBed, FaUsers, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 
 export function PreturiClient() {
   const { data: rooms } = useRooms();
@@ -19,11 +17,10 @@ export function PreturiClient() {
     from: new Date(),
     to: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
   });
-  const [error, setError] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [shouldFetchAvailability, setShouldFetchAvailability] = useState(false);
   const [hasAttemptedFetch, setHasAttemptedFetch] = useState(false);
 
-  // Translations
   const t = useTranslations("Rooms");
 
   const formatCustomDate = (date?: Date) => {
@@ -68,19 +65,18 @@ export function PreturiClient() {
 
   const groupedRooms = getGroupedRoomsByType(rooms);
 
-  useEffect(() => {
-    if (
-      !dateRange?.from ||
-      !dateRange?.to ||
-      dateRange.to.getTime() <= dateRange.from.getTime()
-    ) {
-      setError(t("selectValidRange"));
-    } else {
-      setError(null);
-    }
+  const dateError =
+    !dateRange?.from ||
+    !dateRange?.to ||
+    dateRange.to.getTime() <= dateRange.from.getTime()
+      ? t("selectValidRange")
+      : null;
+
+  const handleDateSelect = (range: DateRange | undefined) => {
+    setDateRange(range);
     setShouldFetchAvailability(false);
     setHasAttemptedFetch(false);
-  }, [dateRange, t]);
+  };
 
   const handleVerifica = () => {
     if (
@@ -91,25 +87,26 @@ export function PreturiClient() {
       setShouldFetchAvailability(true);
       setHasAttemptedFetch(true);
       refetch();
-      setError(null);
+      setSubmitError(null);
     } else {
-      setError(t("selectValidRangeBeforeCheck"));
+      setSubmitError(t("selectValidRangeBeforeCheck"));
       setHasAttemptedFetch(true);
     }
   };
 
   return (
-    <div className="flex flex-col items-center gap-5 p-5 max-w-1200 w-full">
-      {/* Calendar for date range selection */}
+    <div className="flex flex-col items-center gap-25 px-20 max-w-1200 w-full">
+      {/* Calendar */}
       <Calendar
         mode="range"
         required
-        onSelect={setDateRange}
+        onSelect={handleDateSelect}
         selected={dateRange}
       />
-      {/* Button to trigger availability check */}
-      <Button
-        className="w-full"
+
+      {/* Check button */}
+      <button
+        className="w-full max-w-800 bg-primary text-white rounded-full px-25 py-12 shadow-md transition-all duration-200 hover:brightness-110 hover:shadow-lg active:scale-95 cursor-pointer text-sm font-medium flex items-center justify-center gap-8 disabled:opacity-50 disabled:cursor-not-allowed"
         onClick={handleVerifica}
         disabled={
           isFetching ||
@@ -118,126 +115,104 @@ export function PreturiClient() {
           dateRange.to.getTime() <= dateRange.from.getTime()
         }
       >
+        <FaSearch className="w-14 h-14" />
         {isFetching ? t("checking") : t("checkAvailability")}
-      </Button>
+      </button>
 
-      {/* Display general date range or fetch-related error messages */}
-      {(error || (isError && hasAttemptedFetch)) && (
-        <C.Eroare className="text-desc bg-foreground p-20 rounded-normal mx-20 max-w-500 text-text flex flex-col gap-20">
-          <span>{error ?? fetchError?.message ?? t("unknownError")}</span>
-          {hasAttemptedFetch && (isError || error === t("noAvailability")) && (
+      {/* Error messages */}
+      {(dateError || submitError || (isError && hasAttemptedFetch)) && (
+        <div className="bg-surface rounded-2xl p-20 shadow-md border border-foreground/30 max-w-500 w-full text-center flex flex-col gap-10">
+          <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+            <FaExclamationTriangle className="w-20 h-20 text-primary" />
+          </div>
+          <span className="text-sm text-text">{dateError || submitError || fetchError?.message || t("unknownError")}</span>
+          {hasAttemptedFetch && (isError || (dateError || submitError) === t("noAvailability")) && (
             <>
-              <span>{t("holidayPhoneOnly")}</span>
-              <span>{t("easterMinNights")}</span>
+              <span className="text-xs text-text/60">{t("holidayPhoneOnly")}</span>
+              <span className="text-xs text-text/60">{t("easterMinNights")}</span>
             </>
           )}
-        </C.Eroare>
+        </div>
       )}
 
-      {/* Display rooms and their availability only if a fetch has been attempted and there are no critical errors */}
-      {hasAttemptedFetch && !error && !isError && (
-        <div className="w-full mt-10">
+      {/* Room results */}
+      {hasAttemptedFetch && !(dateError || submitError) && !isError && (
+        <div className="w-full">
           {groupedRooms.map((roomTypeGroup) => (
-            <div key={roomTypeGroup.type} className="mb-10">
-              {/* Room Type Title */}
-              <h2 className="title" id={roomTypeGroup.type}>
+            <div key={roomTypeGroup.type} className="mb-30">
+              <h2 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-text text-center mb-12">
                 {t(`${roomTypeGroup.type}.title`)}
               </h2>
-              {/* Room Type Description */}
-              <p className="text-desc mb-70 max-w-700 rounded-normal mx-auto bg-foreground p-50 text-text shadow-xl">
+              <p className="text-sm text-text/70 text-center mb-25 max-w-600 mx-auto">
                 {t(`${roomTypeGroup.type}.description`)}
               </p>
-              <div className="flex flex-col gap-8 p-10 md:p-20">
+              <div className="flex flex-col gap-15">
                 {roomTypeGroup.rooms.map((room) => {
                   const roomAvailability = availabilityResults
                     ? availabilityResults[room.id]
                     : undefined;
+                  const availableCount = roomAvailability?.numar_camere ?? 0;
 
                   return (
                     <div
                       key={room.id}
-                      className="flex flex-col lg:flex-row gap-8 items-center-safe"
+                      className="bg-surface rounded-2xl shadow-md border border-foreground/30 overflow-hidden flex flex-col lg:flex-row"
                     >
-                      {/* Left Bubble: Room Carousel */}
-                      <div className="w-full lg:w-1/2">
-                        <C.Container className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 w-full h-full">
-                          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-50/30 pointer-events-none" />
-                          <div className="w-full h-full">
-                            <RoomCarousel room={room} />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                          </div>
-                          <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/20 transition-colors duration-300 pointer-events-none" />
-                        </C.Container>
+                      {/* Room carousel */}
+                      <div className="w-full lg:w-1/2 min-h-200">
+                        <RoomCarousel room={room} />
                       </div>
 
-                      {/* Right Bubble: Room Details */}
-                      <C.Container className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 w-full p-20">
-                        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-50/30 pointer-events-none" />
-                        <div className="relative p-8">
-                          {/* Room title and number */}
-                          <div className="mb-8">
-                            <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
-                              {t(`${room.typeId}.title`)} {room.number}
-                            </h3>
-                          </div>
-                          {/* Available rooms count */}
-                          <div className="mb-8">
-                            <div className="flex items-center gap-3 text-gray-700">
-                              <div className="flex items-center justify-center w-10 h-10 bg-green-100 rounded-full">
-                                <svg
-                                  className="w-5 h-5 text-green-600"
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                </svg>
-                              </div>
-                              <span className="text-lg font-semibold">
-                                {roomAvailability?.numar_camere ?? 0}{" "}
-                                {t("room", {
-                                  count: roomAvailability?.numar_camere ?? 0,
-                                })}
-                              </span>
+                      {/* Room details */}
+                      <div className="w-full lg:w-1/2 p-20 flex flex-col justify-between gap-15">
+                        <div>
+                          <h3 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-text mb-10">
+                            {t(`${room.typeId}.title`)} {room.number}
+                          </h3>
+
+                          {/* Availability */}
+                          <div className="flex items-center gap-10 mb-10">
+                            <div className={`w-28 h-28 rounded-full flex items-center justify-center ${availableCount > 0 ? 'bg-primary/15' : 'bg-red-100'}`}>
+                              {availableCount > 0 ? (
+                                <FaCheckCircle className="w-14 h-14 text-primary" />
+                              ) : (
+                                <FaBed className="w-14 h-14 text-red-500" />
+                              )}
                             </div>
+                            <span className="text-sm font-medium text-text">
+                              {availableCount}{" "}
+                              {t("room", { count: availableCount })}
+                            </span>
                           </div>
+
                           {/* Capacity */}
-                          <div className="mb-8">
-                            <div className="flex items-center gap-3 text-gray-700">
-                              <div className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full">
-                                <IoPerson className="text-gray-600 text-lg" />
-                              </div>
-                              <span className="text-lg font-semibold">
-                                {room.max} {t("person", { count: room.max })}
-                              </span>
+                          <div className="flex items-center gap-10 mb-10">
+                            <div className="w-28 h-28 rounded-full bg-primary/10 flex items-center justify-center">
+                              <FaUsers className="w-14 h-14 text-primary" />
                             </div>
+                            <span className="text-sm font-medium text-text">
+                              {room.max} {t("person", { count: room.max })}
+                            </span>
                           </div>
-                          {/* Location note for Agropensiune */}
+
+                          {/* Agropensiune note */}
                           {room.number.includes("Agropensiune") && (
-                            <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
-                              <div className="flex items-start gap-3">
-                                <div className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-full mt-1 flex items-center justify-center">
-                                  <div className="w-2 h-2 bg-white rounded-full" />
-                                </div>
-                                <p className="text-sm text-blue-800 leading-relaxed">
-                                  {t("secondaryBuildingNote")}
-                                </p>
-                              </div>
+                            <div className="mt-10 p-12 bg-primary/5 border border-primary/15 rounded-xl">
+                              <p className="text-xs text-primary/80 leading-relaxed">
+                                {t("secondaryBuildingNote")}
+                              </p>
                             </div>
                           )}
                         </div>
-                        {/* Price highlight */}
-                        <div className="">
-                          <div className="inline-flex items-center bg-gradient-to-r from-primary to-primary/90 text-white px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200">
-                            <span className="text-sm font-medium opacity-90 mr-3">
-                              {t("price")}
-                            </span>
-                            <span className="text-xl font-bold">
-                              {roomAvailability?.pret_camera} RON
-                            </span>
-                          </div>
+
+                        {/* Price */}
+                        <div className="bg-primary/8 rounded-xl p-15 text-center border border-primary/15">
+                          <span className="text-xs font-medium text-primary/60 block mb-3">{t("price")}</span>
+                          <span className="font-[family-name:var(--font-heading)] text-xl font-bold text-primary">
+                            {roomAvailability?.pret_camera} RON
+                          </span>
                         </div>
-                        <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/20 transition-colors duration-300 pointer-events-none" />
-                      </C.Container>
+                      </div>
                     </div>
                   );
                 })}
@@ -247,25 +222,31 @@ export function PreturiClient() {
         </div>
       )}
 
-      {/* Initial message displayed before any fetch attempt */}
+      {/* Initial message */}
       {!hasAttemptedFetch && rooms && groupedRooms.length > 0 && (
-        <p className="mt-50 text-text text-lg text-center">
-          {t("selectDatesAndCheck")}
-        </p>
+        <div className="bg-surface rounded-2xl p-25 shadow-md border border-foreground/30 max-w-500 w-full text-center">
+          <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-15">
+            <FaSearch className="w-20 h-20 text-primary" />
+          </div>
+          <p className="text-sm text-text/70">{t("selectDatesAndCheck")}</p>
+        </div>
       )}
 
-      {/* Message displayed if a fetch was attempted, completed, no error, but no rooms were available */}
+      {/* No availability */}
       {hasAttemptedFetch &&
         !isFetching &&
-        !error &&
+        !(dateError || submitError) &&
         !isError &&
         (!availabilityResults ||
           Object.keys(availabilityResults).length === 0) && (
-          <C.Eroare className="text-desc bg-foreground p-20 rounded-normal mx-20 max-w-500 text-text flex flex-col gap-20">
-            <span>{t("noAvailability")}</span>
-            <span>{t("holidayPhoneOnly")}</span>
-            <span>{t("easterMinNights")}</span>
-          </C.Eroare>
+          <div className="bg-surface rounded-2xl p-20 shadow-md border border-foreground/30 max-w-500 w-full text-center flex flex-col gap-10">
+            <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+              <FaExclamationTriangle className="w-20 h-20 text-primary" />
+            </div>
+            <span className="text-sm text-text">{t("noAvailability")}</span>
+            <span className="text-xs text-text/60">{t("holidayPhoneOnly")}</span>
+            <span className="text-xs text-text/60">{t("easterMinNights")}</span>
+          </div>
         )}
     </div>
   );

@@ -45,13 +45,13 @@ export function RoomCarousel({
       </div>
       <C.ButtonsContainer className="absolute inset-0 z-20 flex items-center justify-between px-20 py-2 pointer-events-auto">
         <Button
-          className="bg-white/50 hover:bg-white/70 rounded-full p-2"
+          className="bg-surface/50 hover:bg-surface/70 rounded-full p-2"
           onClick={scrollPrev}
         >
           <FaChevronCircleLeft />
         </Button>
         <Button
-          className="bg-white/50 hover:bg-white/70 rounded-full p-2"
+          className="bg-surface/50 hover:bg-surface/70 rounded-full p-2"
           onClick={scrollNext}
         >
           <FaChevronCircleRight />

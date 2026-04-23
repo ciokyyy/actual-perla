@@ -9,22 +9,34 @@ type Props = ComponentProps<typeof Lnk> & {
 export function Link({ className, type = "ghost", ...props }: Props) {
   // Dictionary of classNames for each type
   const classNames = {
-    ghost: cn("transition-all", "hover:scale-110", "active:scale-90"),
-    primary: cn(),
+    ghost: cn(
+      "transition-all duration-200 ease-out",
+      "hover:brightness-110 hover:underline",
+      "active:brightness-90"
+    ),
+    primary: cn(
+      "transition-all duration-200 ease-out",
+      "hover:brightness-110",
+      "active:brightness-90"
+    ),
     card: cn(
-      "bg-primary text-white",
-      "hover:text-white hover:bg-primary hover:scale-110",
-      "active:text-white active:scale-90 active:bg-primary"
+      "bg-primary text-white rounded-normal",
+      "transition-all duration-200 ease-out",
+      "hover:shadow-lg hover:brightness-110",
+      "active:brightness-90 active:shadow-md"
     ),
     "card-inverse": cn(
-      "bg-white text-primary",
-      "hover:text-white hover:bg-foreground hover:scale-110",
-      "active:text-white active:scale-90 active:bg-foreground"
+      "bg-surface text-primary rounded-normal",
+      "transition-all duration-200 ease-out",
+      "hover:shadow-lg hover:bg-foreground hover:text-white",
+      "active:brightness-90 active:shadow-md"
     ),
     "primary-button": cn(
-      "rounded-normal !text-white px-10 py-10 cursor-pointer bg-primary transition-all text-desc",
-      "hover:bg-text hover:scale-110",
-      "active:bg-text active:scale-90"
+      "rounded-normal !text-white px-10 py-10 cursor-pointer bg-primary",
+      "transition-all duration-200 ease-out text-desc font-medium",
+      "hover:bg-text hover:shadow-lg hover:brightness-105",
+      "active:bg-text active:brightness-95 active:shadow-md",
+      "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
     ),
   };
 

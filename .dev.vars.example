@@ -1,0 +1,5 @@
+# Copy this file to .dev.vars and fill in the real values for local development
+# These are used by the Cloudflare Pages Function at functions/api/availability.js
+
+STARDESK_T1=your_t1_token_here
+STARDESK_T=your_t_token_here

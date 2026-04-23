@@ -1,183 +1,140 @@
 "use client";
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
-import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { IoCloseCircleOutline } from "react-icons/io5";
 import { Link } from "@/components/ui/Link";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
 import Logo from "@/components/ui/Logo";
-import { Button } from "./Button";
 import { useTranslations } from "next-intl";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
+import { FaCalendarCheck } from "react-icons/fa";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations("Menu");
-  const links = [
+
+  const sections = [
     {
-      href: "/",
-      text: t("home"),
+      label: null,
+      links: [
+        { href: "/", text: t("home") },
+      ],
     },
     {
-      separator: true,
+      label: t("book_now"),
+      links: [
+        { href: "/rezerva-acum", text: t("book_now") },
+        { href: "/preturi-valabilitate", text: t("verify_availability") },
+      ],
     },
+      {
+        label: null,
+        links: [
+          { href: "/camere", text: t("rooms") },
+          { href: "/spa", text: t("spa") },
+        ],
+      },
     {
-      href: "/rezerva-acum",
-      text: t("book_now"),
-    },
-    {
-      href: "/preturi-valabilitate",
-      text: t("verify_availability"),
-    },
-    {
-      href: "/camere",
-      text: t("rooms"),
-    },
-    {
-      href: "/mancare",
-      text: t("food"),
-    },
-    {
-      href: "/spa",
-      text: t("spa"),
-    },
-    {
-      separator: true,
-    },
-    {
-      href: "/oferta-demipensiune",
-      text: t("offer_halfboard"),
-    },
-    {
-      href: "/oferta-craciun",
-      text: t("offer_christmas"),
-    },
-    {
-      href: "/oferta-revelion",
-      text: t("offer_newyear"),
-    },
-    {
-      separator: true,
-    },
-    {
-      href: "#contact",
-      text: t("contact"),
-    },
-    {
-      href: "#datele-firmei",
-      text: t("about"),
+      label: null,
+      links: [
+        { href: "/oferta-demipensiune", text: t("offer_halfboard") },
+        { href: "/oferta-craciun", text: t("offer_christmas") },
+        { href: "/oferta-revelion", text: t("offer_newyear") },
+      ],
     },
   ];
 
   return (
     <>
-      <Button
-        onClick={() => {
-          setOpen(true);
-        }}
-        className="rounded-normal md:text-desc fixed right-20 top-20 z-30 flex items-center p-10 px-10 text-xs font-light shadow-xl"
+      {/* Trigger button */}
+      <button
+        onClick={() => setOpen(true)}
+        className="fixed top-20 right-20 z-30 flex items-center gap-8 bg-surface/90 backdrop-blur-sm text-primary rounded-full px-16 py-10 shadow-lg transition-all duration-200 hover:bg-surface hover:shadow-xl active:scale-95 cursor-pointer"
+        aria-label="Open menu"
       >
-        {t("menu")} <CiMenuKebab className="md:h-30 md:w-30 h-20 w-20" />
-      </Button>
+        <span className="text-sm font-medium hidden md:inline">{t("menu")}</span>
+        <HiMenuAlt3 className="w-22 h-22" />
+      </button>
+
+      {/* Overlay + Panel */}
       <AnimatePresence>
         {open && (
           <Dialog open={open} onClose={() => setOpen(false)} className="z-50">
-            <div className="overflow-x-hidden">
-              <motion.div
-                key="modal"
-                initial={{ x: "100vw" }}
-                animate={{ x: "0" }}
-                exit={{ x: "100vw" }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="bg-primary py-50 fixed left-0 top-0 z-40 grid h-full min-h-dvh place-items-center overflow-y-auto"
-              >
-                <DialogPanel className="w-screen relative">
-                  <motion.div
-                    initial={{ x: "25%", opacity: 0 }}
-                    animate={{
-                      x: "0",
-                      opacity: 1,
-                    }}
-                    transition={{ duration: 0.2, ease: "easeOut", delay: 0.2 }}
-                    className="fixed z-50 right-20 top-20"
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+              aria-hidden="true"
+            />
+
+            {/* Slide-in panel */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              className="fixed top-0 right-0 h-full w-300 max-w-[85vw] z-50"
+            >
+              <DialogPanel className="h-full bg-surface/95 backdrop-blur-md shadow-2xl flex flex-col">
+                {/* Header */}
+                <div className="flex items-center justify-between p-20 border-b border-primary/10">
+                  <Logo className="w-45" />
+                  <CloseButton className="w-36 h-36 rounded-full bg-primary/5 flex items-center justify-center text-primary cursor-pointer transition-all duration-200 hover:bg-primary/10 active:scale-90">
+                    <IoClose className="w-20 h-20" />
+                  </CloseButton>
+                </div>
+
+                {/* Navigation */}
+                <nav className="flex-1 overflow-y-auto py-20">
+                  {sections.map((section, sIdx) => (
+                    <div key={sIdx} className="mb-10">
+                      {section.label && (
+                        <div className="px-25 py-8 text-xs font-semibold uppercase tracking-wider text-primary/50">
+                          {section.label}
+                        </div>
+                      )}
+                      {section.links.map((link) => {
+                        const isActive = link.href === pathname;
+                        return (
+                          <Link
+                            key={link.href}
+                            onClick={() => setOpen(false)}
+                            href={link.href as "/"}
+                            className={`flex items-center px-25 py-12 text-sm font-medium transition-all duration-150 cursor-pointer ${
+                              isActive
+                                ? "bg-primary/8 text-primary border-l-3 border-primary"
+                                : "text-text hover:bg-primary/5 hover:text-primary"
+                            }`}
+                          >
+                            {link.text}
+                          </Link>
+                        );
+                      })}
+                      {sIdx < sections.length - 1 && (
+                        <div className="mx-25 my-8 border-t border-foreground/30" />
+                      )}
+                    </div>
+                  ))}
+                </nav>
+
+                {/* Footer */}
+                <div className="p-20 border-t border-primary/10">
+                  <Link
+                    onClick={() => setOpen(false)}
+                    href="/rezerva-acum"
+                    className="flex items-center justify-center gap-8 bg-primary text-white rounded-full px-18 py-10 shadow-md transition-all duration-200 hover:brightness-110 hover:shadow-lg active:scale-95 cursor-pointer text-sm font-medium"
                   >
-                    <CloseButton className="rounded-normal text-primary bg-white p-7 hover:cursor-pointer z-50">
-                      <IoCloseCircleOutline size="25" />
-                    </CloseButton>
-                  </motion.div>
-
-                  <div className="relative flex flex-col items-center justify-around gap-20">
-                    <motion.div
-                      initial={{ y: -20, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{
-                        duration: 0.2,
-                        ease: "easeOut",
-                        delay: 1.2,
-                      }}
-                      className="mb-20"
-                    >
-                      <Logo white className="w-70" />
-                    </motion.div>
-
-                    {links.map((el, index) => {
-                      const isSeparator = el.separator !== undefined;
-
-                      return (
-                        <motion.div
-                          key={isSeparator ? `separator-${index}` : el.href}
-                          initial={{ x: "25%", opacity: 0 }}
-                          animate={{
-                            x: "0",
-                            opacity: 1,
-                            scale:
-                              !isSeparator && el.href === pathname ? 1.2 : 1,
-                          }}
-                          transition={{
-                            duration: 0.3,
-                            ease: "easeInOut",
-                            delay: index * 0.2 + 0.5,
-                          }}
-                        >
-                          {isSeparator ? (
-                            <div className="rounded-normal w-100 my-4 border-t-2 border-white" />
-                          ) : (
-                            typeof el.href === "string" && (
-                              <Link
-                                onClick={() => setOpen(false)}
-                                href={
-                                  el.href as
-                                    | "/"
-                                    | "/rezerva-acum"
-                                    | "/oferta-craciun"
-                                    | "/oferta-revelion"
-                                    | "/oferta-demipensiune"
-                                    | "/camere"
-                                    | "/spa"
-                                    | "/mancare"
-                                    | "/preturi-valabilitate"
-                                    | "/oferte"
-                                }
-                              >
-                                <Button
-                                  className={`${
-                                    el.href === pathname &&
-                                    "bg-secondary !text-text"
-                                  }`}
-                                >
-                                  {el.text}
-                                </Button>
-                              </Link>
-                            )
-                          )}
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </DialogPanel>
-              </motion.div>
-            </div>
+                    <FaCalendarCheck className="w-14 h-14" />
+                    {t("book_now")}
+                  </Link>
+                </div>
+              </DialogPanel>
+            </motion.div>
           </Dialog>
         )}
       </AnimatePresence>

@@ -1,5 +1,4 @@
 "use client";
-import C from "@/components/ComponentNames";
 import { Link } from "@/components/ui/Link";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -18,227 +17,154 @@ import RevelionOne from "~/images/revelion/revelion-1.webp";
 import RevelionTwo from "~/images/revelion/revelion-2.webp";
 import RevelionThree from "~/images/revelion/revelion-3.webp";
 import { useTranslations } from "next-intl";
+import type { StaticImageData } from "next/image";
+
+interface OfferCardProps {
+  title: string;
+  icon: React.ElementType;
+  images: [StaticImageData, StaticImageData, StaticImageData];
+  imageAlts: [string, string, string];
+  href: "/oferta-demipensiune" | "/oferta-craciun" | "/oferta-revelion";
+  ctaText: string;
+  variant: "primary" | "inverse";
+}
+
+function OfferCard({ title, icon: Icon, images, imageAlts, href, ctaText, variant }: OfferCardProps) {
+  const isPrimary = variant === "primary";
+
+  return (
+    <motion.div
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="w-full max-w-900 mx-auto rounded-normal overflow-hidden shadow-xl cursor-pointer"
+    >
+      {/* Card Header */}
+      <Link
+        href={href}
+        type={isPrimary ? "card" : "card-inverse"}
+        className="w-full flex flex-col items-center gap-15 p-25 md:p-30"
+      >
+        <Icon className="w-40 h-40 md:w-50 md:h-50" />
+        <h3 className="font-[family-name:var(--font-heading)] text-logo text-center font-semibold">
+          {title}
+        </h3>
+      </Link>
+
+      {/* Image Grid */}
+      <div className="grid grid-cols-2 gap-0">
+        <motion.div
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="relative aspect-square overflow-hidden"
+        >
+          <Image
+            src={images[0]}
+            alt={imageAlts[0]}
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="relative aspect-square overflow-hidden"
+        >
+          <Image
+            src={images[1]}
+            alt={imageAlts[1]}
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="relative aspect-[2/1] overflow-hidden col-span-2"
+        >
+          <Image
+            src={images[2]}
+            alt={imageAlts[2]}
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+          />
+          {/* CTA Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end justify-center pb-30">
+            <Link
+              href={href}
+              type="primary-button"
+              className="shadow-xl"
+            >
+              {ctaText}
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+export function OfferCards() {
+  const t = useTranslations("OffersPage");
+
+  return (
+    <div className="flex flex-col gap-60 md:gap-80 max-w-1000 mx-auto px-20">
+      <OfferCard
+        title={t("demipensiune_title")}
+        icon={FaConciergeBell}
+        images={[DemipensiuneOne, DemipensiuneTwo, DemipensiuneThree]}
+        imageAlts={[t("demipensiune_alt_1"), t("demipensiune_alt_2"), t("demipensiune_alt_3")]}
+        href="/oferta-demipensiune"
+        ctaText={t("demipensiune_more")}
+        variant="primary"
+      />
+
+      <OfferCard
+        title={t("craciun_title")}
+        icon={TbChristmasTreeFilled}
+        images={[CraciunOne, CraciunTwo, CraciunThree]}
+        imageAlts={[t("craciun_alt_1"), t("craciun_alt_2"), t("craciun_alt_3")]}
+        href="/oferta-craciun"
+        ctaText={t("craciun_more")}
+        variant="inverse"
+      />
+
+      <OfferCard
+        title={t("revelion_title")}
+        icon={PiSparkleFill}
+        images={[RevelionOne, RevelionTwo, RevelionThree]}
+        imageAlts={[t("revelion_alt_1"), t("revelion_alt_2"), t("revelion_alt_3")]}
+        href="/oferta-revelion"
+        ctaText={t("revelion_more")}
+        variant="primary"
+      />
+    </div>
+  );
+}
+
 export function ClientComponent() {
   const t = useTranslations("OffersPage");
 
   return (
-    <>
-      <C.ContainerWGradient className="relative w-full grid place-items-center">
-        <C.Gradient className="absolute inset-0 oferte-gradient -z-10"></C.Gradient>
+    <section className="w-full py-50">
+      <motion.h2
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl text-text font-bold text-center mb-50"
+      >
+        {t("section_title")}
+      </motion.h2>
 
-        <C.ContainerDemipensiune className="grid place-items-center overflow-hidden p-20 sm:grid-cols-2 with-drop-shadow ">
-          <C.AnimateFromTop
-            as={motion.div}
-            initial={{ y: "-15%" }}
-            whileInView={{ y: "0" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, ease: "easeIn" }}
-            className="sm:col-span-2 max-w-500 w-full"
-          >
-            <C.Link
-              as={Link}
-              href="/oferta-demipensiune"
-              type="card"
-              className=" square-card bg-foreground rounded-t-normal transition-all  sm:!max-w-350 text-text mx-auto flex flex-col items-center gap-10 p-20"
-            >
-              <FaConciergeBell className="w-35 h-35 md:w-50 md:h-50" />
-              <h3 className="text-logo text-center">
-                {t("demipensiune_title")}
-              </h3>
-            </C.Link>
-          </C.AnimateFromTop>
-
-          <C.AnimateFromLeft
-            as={motion.div}
-            initial={{ x: -100, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="max-w-500"
-          >
-            <Image
-              src={DemipensiuneOne}
-              alt="Demipensiune 1"
-              className="sm:rounded-l-normal aspect-square object-cover object-center"
-            />
-          </C.AnimateFromLeft>
-          <C.AnimateFromRight
-            as={motion.div}
-            initial={{ x: 100, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="max-w-500"
-          >
-            <Image
-              src={DemipensiuneTwo}
-              alt="Demipensiune 2"
-              className="sm:rounded-r-normal aspect-square w-full object-cover object-center"
-            />
-          </C.AnimateFromRight>
-          <C.AnimateFromBottom
-            as={motion.div}
-            initial={{ y: 100, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative flex flex-col items-center sm:col-span-2 max-w-500"
-          >
-            <Image
-              src={DemipensiuneThree}
-              alt="Demipensiune 3"
-              className="rounded-b-normal aspect-square w-full object-cover object-center"
-            />
-            <C.LinkAflaMaiMulte
-              as={Link}
-              href="/oferta-demipensiune"
-              type="primary-button"
-              className=" bottom-1/10 absolute"
-            >
-              {t("demipensiune_more")}
-            </C.LinkAflaMaiMulte>
-          </C.AnimateFromBottom>
-        </C.ContainerDemipensiune>
-      </C.ContainerWGradient>
-      <C.ContainerWGradient className="relative w-full grid place-items-center">
-        <C.Gradient className="absolute inset-0 oferte-gradient -z-10"></C.Gradient>
-        <C.ContainerCraciun className="*:max-w-500 *:w-full grid place-items-center overflow-hidden p-20 sm:grid-cols-2 with-drop-shadow with-drop-shadow">
-          <C.AnimateFromTop
-            as={motion.div}
-            initial={{ y: "-15%" }}
-            whileInView={{ y: "0" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, ease: "easeIn" }}
-            className="sm:col-span-2"
-          >
-            <C.Link
-              type="card-inverse"
-              as={Link}
-              href="/oferta-craciun"
-              className="square-card bg-primary rounded-t-normal transition-all sm:!max-w-350 mx-auto flex flex-col items-center gap-10 p-20 text-white"
-            >
-              <TbChristmasTreeFilled className="w-35 h-35 md:w-50 md:h-50" />
-              <h3 className="text-logo text-center">{t("craciun_title")}</h3>
-            </C.Link>
-          </C.AnimateFromTop>
-          <C.AnimateFromLeft
-            as={motion.div}
-            initial={{ x: -100, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <Image
-              src={CraciunOne}
-              alt="Craciun 1"
-              className="sm:rounded-l-normal aspect-square w-full object-cover object-center"
-            />
-          </C.AnimateFromLeft>
-          <C.AnimateFromRight
-            as={motion.div}
-            initial={{ x: 100, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <Image
-              src={CraciunTwo}
-              alt="Craciun 2"
-              className="sm:rounded-r-normal aspect-square w-full object-cover object-center"
-            />
-          </C.AnimateFromRight>
-          <C.AnimateFromBottom
-            as={motion.div}
-            initial={{ y: 100, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative flex flex-col items-center sm:col-span-2"
-          >
-            <Image
-              src={CraciunThree}
-              alt="Craciun 3"
-              className="rounded-b-normal aspect-square w-full object-cover object-center"
-            />
-            <C.LinkAflaMaiMulte
-              as={Link}
-              type="primary-button"
-              href="/oferta-craciun"
-              className="bottom-1/10 absolute"
-            >
-              {t("craciun_more")}
-            </C.LinkAflaMaiMulte>
-          </C.AnimateFromBottom>
-        </C.ContainerCraciun>
-      </C.ContainerWGradient>
-      <C.ContainerRevelion className="*:max-w-500 *:w-full grid place-items-center overflow-hidden p-20 sm:grid-cols-2 with-drop-shadow">
-        <C.AnimateFromTop
-          as={motion.div}
-          initial={{ y: "-15%" }}
-          whileInView={{ y: "0" }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: "easeIn" }}
-          className="sm:col-span-2"
-        >
-          <C.Link
-            type="card-inverse"
-            as={Link}
-            href="/oferta-revelion"
-            className="square-card bg-primary rounded-t-normal transition-all sm:!max-w-350 mx-auto flex flex-col items-center gap-10 p-20 text-white"
-          >
-            <PiSparkleFill className="w-35 h-35 md:w-50 md:h-50" />
-            <h3 className="text-logo text-center">{t("revelion_title")}</h3>
-          </C.Link>
-        </C.AnimateFromTop>
-        <C.AnimateFromLeft
-          as={motion.div}
-          initial={{ x: -100, opacity: 0 }}
-          viewport={{ once: true }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <Image
-            src={RevelionOne}
-            alt="Revelion 1"
-            className="sm:rounded-l-normal aspect-square w-full object-cover object-center"
-          />
-        </C.AnimateFromLeft>
-        <C.AnimateFromRight
-          as={motion.div}
-          initial={{ x: 100, opacity: 0 }}
-          viewport={{ once: true }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <Image
-            src={RevelionTwo}
-            alt="Revelion 2"
-            className="sm:rounded-r-normal aspect-square w-full object-cover object-center"
-          />
-        </C.AnimateFromRight>
-        <C.AnimateFromBottom
-          as={motion.div}
-          initial={{ y: 100, opacity: 0 }}
-          viewport={{ once: true }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative flex flex-col items-center sm:col-span-2"
-        >
-          <Image
-            src={RevelionThree}
-            alt="Revelion 3"
-            className="rounded-b-normal aspect-square w-full object-cover object-center"
-          />
-          <C.LinkAflaMaiMulte
-            as={Link}
-            type="primary-button"
-            href="/oferta-revelion"
-            className="bottom-1/10 absolute"
-          >
-            {t("revelion_more")}
-          </C.LinkAflaMaiMulte>
-        </C.AnimateFromBottom>
-      </C.ContainerRevelion>
-    </>
+      <OfferCards />
+    </section>
   );
 }
