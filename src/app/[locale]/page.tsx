@@ -5,7 +5,6 @@ import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { CompactOfferCards } from "./oferte/ClientComponent";
 import { generatePageMetadata } from "@/libs/metadata";
-import FeaturesSection from "@/components/FeaturesSection";
 import AboutSection from "@/components/AboutSection";
 
 type Props = {
@@ -28,7 +27,6 @@ export default function Home({ params }: Readonly<Props>) {
       <section className="w-full py-30">
         <CompactOfferCards />
       </section>
-      <FeaturesSection />
       <AboutSection />
       <C.HomePageContainer className="gap-30 flex flex-col items-center w-full max-w-1400 mx-auto px-20">
         <AnimatedWidget />

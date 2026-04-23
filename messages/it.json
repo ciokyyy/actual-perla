@@ -101,9 +101,10 @@
     "feature_3_title": "Relax completo",
     "feature_3_desc": "Piscina, vasca con acqua salata, sauna e miniera di sale — tutto ciò di cui hai bisogno per disconnetterti."
   },
-  "OffersPage": {
-    "our_offers": "Le Nostre Offerte",
-    "section_title": "Le nostre offerte speciali",
+"OffersPage": {
+    "our_offers": "Le nostre offerte",
+    "section_title": "La Bucovina, come dovrebbe essere",
+    "section_subtitle": "Tradizioni autentiche, buon cibo e la pace delle montagne",
     "demipensiune_title": "Offerta Mezza Pensione",
     "demipensiune_more": "Scopri di più!",
     "demipensiune_alt_1": "Mezza Pensione 1",
