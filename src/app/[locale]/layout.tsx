@@ -37,12 +37,6 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     title: t("default.title"),
     description: t("default.description"),
     metadataBase: new URL(baseUrl),
-    viewport: {
-      width: "device-width",
-      initialScale: 1,
-      viewportFit: "cover",
-    },
-    themeColor: "#1d5b17",
     robots: {
       index: true,
       follow: true,
@@ -58,6 +52,15 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     verification: {
       google: "google-site-verification-code",
     },
+  };
+}
+
+export function generateViewport() {
+  return {
+    width: "device-width",
+    initialScale: 1,
+    viewportFit: "cover",
+    themeColor: "#1d5b17",
   };
 }
 
