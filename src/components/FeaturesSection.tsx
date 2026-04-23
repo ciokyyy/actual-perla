@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { FaWifi, FaParking, FaSnowflake, FaTv, FaShower, FaCoffee } from "react-icons/fa";
+import { FaWifi, FaParking, FaTv, FaShower, FaCoffee, FaUtensils } from "react-icons/fa";
 
 export default function FeaturesSection() {
   const t = useTranslations("Features");
@@ -9,7 +9,7 @@ export default function FeaturesSection() {
   const amenities = [
     { icon: FaWifi, label: t("wifi") },
     { icon: FaParking, label: t("parking") },
-    { icon: FaSnowflake, label: t("ac") },
+    { icon: FaUtensils, label: t("dinner") },
     { icon: FaTv, label: t("tv") },
     { icon: FaShower, label: t("shower") },
     { icon: FaCoffee, label: t("breakfast") },

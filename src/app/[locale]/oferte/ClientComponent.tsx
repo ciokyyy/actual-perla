@@ -168,3 +168,33 @@ export function ClientComponent() {
     </section>
   );
 }
+
+function CompactOfferCard({ title, icon: Icon, image, href }: { title: string; icon: React.ElementType; image: StaticImageData; href: string }) {
+  return (
+    <Link
+      href={href as "/"}
+      className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer"
+    >
+      <div className="aspect-video relative">
+        <Image src={image} alt={title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-15 flex items-center gap-10">
+          <Icon className="w-20 h-20 text-white" />
+          <h3 className="font-[family-name:var(--font-heading)] text-white font-semibold">{title}</h3>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+export function CompactOfferCards() {
+  const t = useTranslations("OffersPage");
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-15 max-w-1000 mx-auto px-20">
+      <CompactOfferCard title={t("demipensiune_title")} icon={FaConciergeBell} image={DemipensiuneOne} href="/oferta-demipensiune" />
+      <CompactOfferCard title={t("craciun_title")} icon={TbChristmasTreeFilled} image={CraciunOne} href="/oferta-craciun" />
+      <CompactOfferCard title={t("revelion_title")} icon={PiSparkleFill} image={RevelionOne} href="/oferta-revelion" />
+    </div>
+  );
+}
