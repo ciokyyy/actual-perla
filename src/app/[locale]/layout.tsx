@@ -5,6 +5,7 @@ import Header from "@/components/ui/Header";
 import { QueryProvider } from "@/libs/QueryProvider";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { OrganizationJsonLd, LocalBusinessJsonLd } from "@/components/JsonLd";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-body",
@@ -28,12 +29,35 @@ export function generateStaticParams() {
 
 export async function generateMetadata(props: Omit<Props, "children">) {
   const { locale } = await props.params;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.perlabrazilor.com";
 
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
   return {
     title: t("default.title"),
     description: t("default.description"),
+    metadataBase: new URL(baseUrl),
+    viewport: {
+      width: "device-width",
+      initialScale: 1,
+      viewportFit: "cover",
+    },
+    themeColor: "#1d5b17",
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: baseUrl,
+      languages: {
+        en: "https://www.perlabrazilor.com/en-us",
+        ro: "https://www.perlabrazilor.com/ro",
+        it: "https://www.perlabrazilor.com/it",
+      },
+    },
+    verification: {
+      google: "google-site-verification-code",
+    },
   };
 }
 
@@ -53,7 +77,11 @@ export default async function Layout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <OrganizationJsonLd />
+        <LocalBusinessJsonLd />
+      </head>
       <body className={`${spaceGrotesk.variable} ${robotoSerif.variable} antialiased`}>
         <NextIntlClientProvider>
           <QueryProvider>
