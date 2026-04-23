@@ -42,9 +42,9 @@ interface ReviewsSectionProps {
 
 function Stars({ count = 5 }: { count?: number }) {
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-2">
       {Array.from({ length: count }).map((_, i) => (
-        <FaStar key={i} className="w-5 h-5 text-primary" />
+        <FaStar key={i} className="w-8 h-8 text-primary" />
       ))}
     </div>
   );
