@@ -170,7 +170,7 @@ export function ClientComponent() {
   );
 }
 
-function CompactOfferCard({ title, icon: Icon, images, href }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string }) {
+function CompactOfferCardLarge({ title, icon: Icon, images, href, subtitle, price }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string; subtitle: string; price: string }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -179,29 +179,49 @@ function CompactOfferCard({ title, icon: Icon, images, href }: { title: string; 
   }, [images.length]);
 
   return (
-    <Link
-      href={href as "/"}
-      className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer block"
-    >
-      <div className="relative" style={{ paddingBottom: "140%" }}>
+    <Link href={href as "/oferta-craciun"} className="flex-1 group relative rounded-3xl overflow-hidden shadow-lg cursor-pointer">
+      <div className="relative h-full min-h-350 md:min-h-400" style={{ paddingBottom: "80%" }}>
         {images.map((img, i) => (
           <motion.div
             key={i}
             className="absolute inset-0"
             initial={false}
-            animate={{
-              opacity: i === index ? 1 : 0,
-              scale: i === index ? 1 : 1.2,
-            }}
+            animate={{ opacity: i === index ? 1 : 0, scale: i === index ? 1 : 1.2 }}
             transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <Image src={img} alt="" fill className="object-cover" />
           </motion.div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-15 flex items-center gap-10">
+        <div className="absolute bottom-0 left-0 right-0 p-20 flex flex-col items-center gap-10">
+          <Icon className="w-40 h-40 text-white" />
+          <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl font-bold text-center">{title}</h3>
+          <p className="text-white/80 text-center">{subtitle}</p>
+          <p className="text-white/60 text-center text-sm">{price}</p>
+          <button className="px-20 py-10 bg-primary text-white rounded-2xl font-medium">
+            Rezervă acum !
+          </button>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function CompactOfferCardSmall({ title, icon: Icon, image, href, price }: { title: string; icon: React.ElementType; image: StaticImageData; href: string; price: string }) {
+  return (
+    <Link href={href as any} className="group flex-1 relative rounded-2xl overflow-hidden shadow-md cursor-pointer">
+      <div className="relative h-150">
+        <Image src={image} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-15 flex flex-col items-center gap-5">
           <Icon className="w-20 h-20 text-white" />
-          <h3 className="font-[family-name:var(--font-heading)] text-white font-semibold">{title}</h3>
+          <div>
+            <h3 className="font-[family-name:var(--font-heading)] text-white text-base font-bold text-center">{title}</h3>
+            <p className="text-white/60 text-center text-xs">{price}</p>
+          </div>
+          <button className="px-10 py-5 bg-primary text-white rounded-xl text-xs">
+            Rezervă acum !
+          </button>
         </div>
       </div>
     </Link>
@@ -212,7 +232,7 @@ export function CompactOfferCards() {
   const t = useTranslations("OffersPage");
 
   return (
-    <section className="w-full py-30">
+    <section className="w-full py-30 px-5">
       <motion.h2
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -232,10 +252,34 @@ export function CompactOfferCards() {
         {t("section_subtitle")}
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-25 max-w-1200 mx-auto px-20">
-        <CompactOfferCard title={t("demipensiune_title")} icon={FaConciergeBell} images={[DemipensiuneOne, DemipensiuneTwo, DemipensiuneThree]} href="/oferta-demipensiune" />
-        <CompactOfferCard title={t("craciun_title")} icon={TbChristmasTreeFilled} images={[CraciunOne, CraciunTwo, CraciunThree]} href="/oferta-craciun" />
-        <CompactOfferCard title={t("revelion_title")} icon={PiSparkleFill} images={[RevelionOne, RevelionTwo, RevelionThree]} href="/oferta-revelion" />
+      <div className="flex flex-col md:flex-row gap-15 max-w-1200 mx-auto">
+        {/* Main large card */}
+        <CompactOfferCardLarge 
+          title={t("craciun_title")} 
+          icon={TbChristmasTreeFilled} 
+          images={[CraciunOne, CraciunTwo, CraciunThree]} 
+          href="/oferta-craciun"
+          subtitle="Bucate pe-ndelete, distracție și tradiții"
+          price="De la 3,200 lei de persoană"
+        />
+        
+        {/* Small cards stack */}
+        <div className="flex flex-col gap-15">
+          <CompactOfferCardSmall
+            title={t("revelion_title")}
+            icon={PiSparkleFill}
+            image={RevelionOne}
+            href="/oferta-revelion"
+            price="De la 3,500 lei de persoană"
+          />
+          <CompactOfferCardSmall
+            title={t("demipensiune_title")}
+            icon={FaConciergeBell}
+            image={DemipensiuneOne}
+            href="/oferta-demipensiune"
+            price="De la 650 lei pe noapte"
+          />
+        </div>
       </div>
     </section>
   );
