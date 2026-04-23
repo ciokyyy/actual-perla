@@ -39,7 +39,7 @@
       "description": "Descoperiți ofertele noastre speciale la Pensiunea Perla Brazilor: Pachet Demipensiune, Pachet de Crăciun și sărbătorirea Revelionului. Rezervați-vă vacanța la munte astăzi."
     },
     "new_years_offer": {
-      "title": "Revelion 2025-2026 în Bucovina - Pensiunea Perla Brazilor",
+      "title": "Revelion 2026-2027 în Bucovina - Pensiunea Perla Brazilor",
       "description": "Petreceți un Revelion de neuitat în Bucovina la Pensiunea Perla Brazilor. Pachet all-inclusive cu 4 nopți de cazare, mese festive, plimbări cu sania, muzică live și acces la spa. Rezervați acum pentru o experiență tradițională autentică de Anul Nou!"
     },
     "half_board_offer": {
@@ -47,7 +47,7 @@
       "description": "Bucurați-vă de cazare cu demipensiune la Pensiunea Perla Brazilor. Pachetul include mic dejun și cină la bufet suedez, preparate tradiționale, acces la spa și facilități moderne. Experiență autentică în Bucovina cu mâncare 60% din producție proprie."
     },
     "christmas_offer": {
-      "title": "Crăciun 2025 în Bucovina - Pensiunea Perla Brazilor",
+      "title": "Crăciun 2026 în Bucovina - Pensiunea Perla Brazilor",
       "description": "Petreceți un Crăciun tradițional în Bucovina la Pensiunea Perla Brazilor. Pachet all-inclusive cu 4 nopți de cazare, mese festive, colindători, plimbări cu sania, pomana porcului și acces la spa. O experiență autentică de sărbători!"
     },
     "spa": {
@@ -73,16 +73,46 @@
     "about": "Despre Noi",
     "verify_availability": "Verifică valabilitatea"
   },
+  "Hero": {
+    "title": "Pensiunea Perla Brazilor",
+    "subtitle": "Relaxare și comfort în inima naturii",
+    "feature_rooms": "Camere moderne",
+    "feature_food": "Mâncare tradițională",
+    "feature_spa": "SPA complet",
+    "feature_location": "Locație pitorească",
+    "cta_book": "Rezervă acum",
+    "cta_call": "Sună-ne"
+  },
+  "Features": {
+    "title": "Facilități",
+    "wifi": "WiFi gratuit",
+    "parking": "Parcare gratuită",
+    "ac": "Aer condiționat",
+    "tv": "TV LCD",
+    "shower": "Baie proprie",
+    "breakfast": "Mic dejun inclus"
+  },
   "OffersPage": {
     "our_offers": "Ofertele Noastre",
+    "section_title": "Ofertele noastre speciale",
     "demipensiune_title": "Ofertă Demipensiune",
     "demipensiune_more": "Află mai multe !",
-    "craciun_title": "Crăciun 2025 în Bucovina",
+    "demipensiune_alt_1": "Demipensiune 1",
+    "demipensiune_alt_2": "Demipensiune 2",
+    "demipensiune_alt_3": "Demipensiune 3",
+    "craciun_title": "Crăciun 2026 în Bucovina",
     "craciun_more": "Află mai multe !",
-    "revelion_title": "Revelion 2025-2026 în Bucovina",
-    "revelion_more": "Află mai multe !"
+    "craciun_alt_1": "Craciun 1",
+    "craciun_alt_2": "Craciun 2",
+    "craciun_alt_3": "Craciun 3",
+    "revelion_title": "Revelion 2026-2027 în Bucovina",
+    "revelion_more": "Află mai multe !",
+    "revelion_alt_1": "Revelion 1",
+    "revelion_alt_2": "Revelion 2",
+    "revelion_alt_3": "Revelion 3"
   },
   "SpaPage": {
+    "header_title": "Oaza de relaxare de la noi!",
     "title": "Fii pregătit pentru starea de bine din Bucovina la Pensiunea Perla Brazilor",
     "desc_1": "Piscină, ciubăr cu apă sărată, jacuzzi, salină și saună",
     "desc_2": "te așteaptă să uiți de griji și să te relaxezi.",
@@ -393,8 +423,8 @@
     "result": "Rezultat"
   },
   "ChristmasPage": {
-    "title": "Sărbătorește Crăciun 2025 în Bucovina",
-    "pricing": "4 nopți / 5 zile la doar 3000 lei/pers",
+    "title": "Sărbătorește Crăciun 2026 în Bucovina",
+    "pricing": "4 nopți / 5 zile la doar 3500 lei/pers",
     "food_drink": {
       "title": "Mâncare și băutură",
       "subtitle": "All inclusive !!!",
@@ -435,8 +465,8 @@
     }
   },
   "NewYearPage": {
-    "title": "Sărbătorește Revelion 2025-2026 în Bucovina",
-    "pricing": "4 nopți / 5 zile la doar 3200 lei/pers",
+    "title": "Sărbătorește Revelion 2026-2027 în Bucovina",
+    "pricing": "4 nopți / 5 zile la doar 3700 lei/pers",
     "food_drink": {
       "title": "Mâncare și băutură",
       "subtitle": "All inclusive !!!",

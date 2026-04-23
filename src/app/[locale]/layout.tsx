@@ -1,17 +1,17 @@
 import "./globals.css";
-import { League_Spartan, Quicksand } from "next/font/google";
+import { Roboto_Serif, Space_Grotesk } from "next/font/google";
 import Footer from "@/components/ui/Footer";
 import Header from "@/components/ui/Header";
 import { QueryProvider } from "@/libs/QueryProvider";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-const quickSand = Quicksand({
-  variable: "--font-quicksand",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-body",
   subsets: ["latin"],
 });
-const aleo = League_Spartan({
-  variable: "--font-league-spartan",
+const robotoSerif = Roboto_Serif({
+  variable: "--font-heading",
   subsets: ["latin"],
 });
 
@@ -54,7 +54,7 @@ export default async function Layout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={`${quickSand.variable} ${aleo.variable} antialiased`}>
+      <body className={`${spaceGrotesk.variable} ${robotoSerif.variable} antialiased`}>
         <NextIntlClientProvider>
           <QueryProvider>
             <div className="text-text flex min-h-screen flex-col items-center gap-20">

@@ -5,26 +5,22 @@ import { ListboxOption } from "@headlessui/react";
 import ReactCountryFlag from "react-country-flag";
 import { getLanguageNameInOwnLanguage } from "@/libs/locale";
 import { cn } from "@/libs/utils";
+
 export default function LocaleSwitcher() {
-const locale = useLocale();
+  const locale = useLocale();
   return (
     <LocaleSwitcherSelect
       defaultValue={locale}
       label={
-        
-          <ReactCountryFlag
-            countryCode={
-              locale.includes("-")
-                ? locale.split("-")[1].toUpperCase()
-                : locale.toUpperCase()
-            }
-            svg
-            style={{
-              width: "1.5em",
-              height: "1.5em",
-            }}
-          />
-        
+        <ReactCountryFlag
+          countryCode={
+            locale.includes("-")
+              ? locale.split("-")[1].toUpperCase()
+              : locale.toUpperCase()
+          }
+          svg
+          style={{ width: "1.2em", height: "1.2em" }}
+        />
       }
     >
       {routing.locales.map((cur) => (
@@ -32,8 +28,10 @@ const locale = useLocale();
           key={cur}
           value={cur}
           className={cn(
-            "text-label capitalize cursor-pointer",
-            "hover:underline hover:scale-110 active:scale-90 transition"
+            "flex items-center gap-8 px-12 py-8 rounded-xl text-sm cursor-pointer",
+            "transition-all duration-150",
+            "hover:bg-primary/8 hover:text-primary",
+            "data-[selected]:bg-primary/10 data-[selected]:text-primary data-[selected]:font-medium"
           )}
         >
           <ReactCountryFlag
@@ -43,13 +41,9 @@ const locale = useLocale();
                 : cur.toUpperCase()
             }
             svg
-            style={{
-              width: "1.5em",
-              height: "1.5em",
-              marginRight: "0.5em",
-            }}
-          />{" "}
-          {getLanguageNameInOwnLanguage(cur.toString())}
+            style={{ width: "1.2em", height: "1.2em" }}
+          />
+          <span>{getLanguageNameInOwnLanguage(cur.toString())}</span>
         </ListboxOption>
       ))}
     </LocaleSwitcherSelect>

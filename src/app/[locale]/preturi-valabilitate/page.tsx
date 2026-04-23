@@ -1,18 +1,26 @@
 import { PreturiClient } from "./PreturiClient";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
+import { Props } from "@/libs/props";
+import OfferHero from "@/components/OfferHero";
+import HeaderImage from "~/images/ui/header.jpg";
 
-export default function PreturiValabilitate() {
+export default function PreturiValabilitate({ params }: Readonly<Props>) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   const t = useTranslations("Rooms");
 
   return (
     <>
-      <h1 className="title mb-40 flex items-center gap-6 ">
-        {t("pricesAndAvailability")}
-      </h1>
-      <p className="text-center mb-20 text-lg drop-shadow-md font-bold max-w-sm p-20">
-        {t("choosePeriodToSeePrices")}
-      </p>
-      <PreturiClient />
+      <OfferHero
+        image={HeaderImage}
+        title={t("pricesAndAvailability")}
+        pricing={t("choosePeriodToSeePrices")}
+      />
+      <section className="w-full py-30 flex justify-center">
+        <PreturiClient />
+      </section>
     </>
   );
 }

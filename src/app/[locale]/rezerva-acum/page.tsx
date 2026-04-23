@@ -1,11 +1,12 @@
-import C from "@/components/ComponentNames";
 import { Link } from "@/components/ui/Link";
 import { generatePageMetadata } from "@/libs/metadata";
 import { Props } from "@/libs/props";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import { FaWhatsapp, FaPhone } from "react-icons/fa";
+import { FaWhatsapp, FaPhone, FaCalendarCheck } from "react-icons/fa";
+import OfferHero from "@/components/OfferHero";
+import HeaderImage from "~/images/ui/header.jpg";
 
 export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
@@ -17,73 +18,85 @@ export async function generateMetadata(props: Omit<Props, "children">) {
 }
 
 export default function Page({ params }: Readonly<Props>) {
-  const t = useTranslations("BookNow");
   const { locale } = use(params);
-
   setRequestLocale(locale);
+  const t = useTranslations("BookNow");
   return (
-    <C.Container className="p-20 bg-foreground shadow-lg m-20 rounded-normal border-y-1 border-primary">
-      <C.TitluRezerva
-        className="text-white bg-primary mx-20 text-center rounded-normal text-logo p-20"
-        as="h1"
-      >
-        {t("book_now")}
-      </C.TitluRezerva>
+    <>
+      <OfferHero
+        image={HeaderImage}
+        title={t("book_now")}
+        pricing=""
+      />
+      <section className="w-full px-20 py-30">
+        <div className="max-w-500 mx-auto flex flex-col gap-25">
 
-      <C.ContainerText className="flex flex-col items-center gap-10 p-10 md:p-16 rounded-normal ">
-        <div className="space-y-10 w-full max-w-md">
-          <div className="text-center">
-            <C.TextRezerva className="text-desc mb-6 text-lg">
+          {/* Phone card */}
+          <div className="bg-surface rounded-2xl p-25 shadow-md text-center border border-foreground/30">
+            <div className="w-50 h-50 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-15">
+              <FaPhone className="w-22 h-22 text-primary" />
+            </div>
+            <h2 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-text mb-12">
               {t("contact_for_rezervation")}
-            </C.TextRezerva>
+            </h2>
             <a
-              href="tel:++40750490838"
-              type="primary-button"
-              className="text-desc inline-flex items-center gap-4 hover:bg-primary/90 transition px-15 py-7 text-md font-medium rounded-normal text-white bg-primary hover:scale-110 active:scale-90"
+              href="tel:+40750490838"
+              className="inline-flex items-center gap-8 bg-primary text-white rounded-full px-20 py-10 shadow-md transition-all duration-200 hover:brightness-110 hover:shadow-lg active:scale-95 cursor-pointer text-sm font-medium"
             >
-              <FaPhone />
+              <FaPhone className="w-14 h-14" />
               +40 750 490 838
             </a>
           </div>
 
-          <div className="relative py-6">
-            <hr className="border-gray-600" />
-            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-foreground px-6 text-text">
+          {/* Divider */}
+          <div className="flex items-center gap-12">
+            <div className="flex-1 h-px bg-primary/15" />
+            <span className="text-primary/60 text-xs font-semibold uppercase tracking-wider">
               {t("or_separator")}
             </span>
+            <div className="flex-1 h-px bg-primary/15" />
           </div>
 
-          {/* WhatsApp Section */}
-          <div className="text-center">
-            <C.TextRezerva className="text-desc mb-6 text-lg">
+          {/* WhatsApp card */}
+          <div className="bg-surface rounded-2xl p-25 shadow-md text-center border border-foreground/30">
+            <div className="w-50 h-50 rounded-full bg-[#25D366]/10 flex items-center justify-center mx-auto mb-15">
+              <FaWhatsapp className="w-22 h-22 text-[#25D366]" />
+            </div>
+            <h2 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-text mb-12">
               {t("contact_whatsapp")}
-            </C.TextRezerva>
+            </h2>
             <a
               href="https://wa.me/+40750490838"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-desc inline-flex items-center gap-4 bg-[#25D366] hover:bg-[#25D366]/90 transition text-md px-15 py-7 rounded-normal font-medium text-shadow-2xs hover:scale-110 active:scale-90"
+              className="inline-flex items-center gap-8 bg-[#25D366] text-white rounded-full px-20 py-10 shadow-md transition-all duration-200 hover:brightness-110 hover:shadow-lg active:scale-95 cursor-pointer text-sm font-medium"
             >
-              <FaWhatsapp />
+              <FaWhatsapp className="w-14 h-14" />
               @PerlaBrazilor
             </a>
           </div>
 
-          <div className="relative py-6">
-            <hr className="border-gray-600" />
-            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-foreground px-6 text-text">
+          {/* Divider */}
+          <div className="flex items-center gap-12">
+            <div className="flex-1 h-px bg-primary/15" />
+            <span className="text-primary/60 text-xs font-semibold uppercase tracking-wider">
               {t("or_separator")}
             </span>
+            <div className="flex-1 h-px bg-primary/15" />
+          </div>
+
+          {/* Check availability */}
+          <div className="text-center">
+            <Link
+              href="/preturi-valabilitate"
+              type="primary-button"
+              className="inline-flex items-center gap-8 text-sm px-20 py-10 !rounded-full"
+            >
+              {t("verify_availability")}
+            </Link>
           </div>
         </div>
-        <Link
-          href="/preturi-valabilitate"
-          type="primary-button"
-          className="inline-flex items-center gap-4 transition text-md px-15 py-7 rounded-normal font-medium text-shadow-2xs"
-        >
-          {t("verify_availability")}
-        </Link>
-      </C.ContainerText>
-    </C.Container>
+      </section>
+    </>
   );
 }

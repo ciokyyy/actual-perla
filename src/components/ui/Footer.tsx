@@ -1,112 +1,115 @@
 import Logo from "@/components/ui/Logo";
-import C from "@/components/ComponentNames";
 import { Link } from "./Link";
 import { useTranslations } from "next-intl";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const t = useTranslations("Footer");
   return (
-    <footer className="mt-20 relative">
-      <C.GradientFill className="absolute bottom-0 w-full h-[50dvh] footer-gradient -z-10"></C.GradientFill>
+    <footer className="mt-30 relative">
+      {/* Top accent line */}
+      <div className="h-3 bg-primary/60" />
 
-      <div className="rounded-t-normal bg-primary md:max-w-1200 mx-auto h-full w-full place-items-center p-20 shadow-wcolor">
-        <div className="h-120 flex flex-col">
-          <Logo white className="m-auto w-60"></Logo>
-        </div>
-        <div className="grid h-full w-full gap-20 sm:grid-cols-2 xl:grid-cols-3">
-          <div className="text-desc flex flex-col place-items-center gap-10 text-center text-white">
-            <p className="font-bold">{t("pages")}</p>
-            <div className="rounded-normal w-100 h-1 bg-white" />
-            <C.LinkDemi
-              href="/oferta-demipensiune"
-              as={Link}
-              className="underline cursor-pointer transition-all"
-            >
-              {t("offer_halfboard")}
-            </C.LinkDemi>
-            <C.LinkCraciun
-              as={Link}
-              className="underline cursor-pointer transition-all"
-              href="/oferta-craciun"
-            >
-              {t("offer_christmas")}
-            </C.LinkCraciun>
-            <C.LinkRev
-              as={Link}
-              className="underline cursor-pointer transition-all"
-              href="/oferta-revelion"
-            >
-              {t("offer_newyear")}
-            </C.LinkRev>
-            <div className="rounded-normal w-100 h-1 bg-white" />
-
-            <C.RezervaDemi
-              as={Link}
-              className="underline cursor-pointer transition-all"
-              href="/rezerva-acum"
-            >
-              {t("book_halfboard")}
-            </C.RezervaDemi>
+      <div className="bg-primary/95 w-full">
+        <div className="max-w-1200 mx-auto px-25 py-40">
+          {/* Logo */}
+          <div className="flex flex-col items-center gap-10 mb-35">
+            <Logo white className="w-55" />
+            <span className="text-white/60 text-xs tracking-wider uppercase">
+              Pensiunea Perla Brazilor
+            </span>
           </div>
-          <div className="text-desc flex flex-col place-items-center gap-10 text-center text-white">
-            <p className="font-bold" id="contact">
-              {t("contact")}
-            </p>
-            <div className="rounded-normal w-100 h-1 bg-white" />
-            <span>
-              {t("phone_label")} :{" "}
-              <C.NrTel
-                href="tel:+40750490838"
-                target="_blank"
-                as="a"
-                className="font-bold cursor-pointer transition-all hover:underline"
+
+          {/* Three columns */}
+          <div className="grid gap-30 sm:grid-cols-2 xl:grid-cols-3 mb-35">
+            {/* Pages */}
+            <div className="flex flex-col items-center gap-12 text-center">
+              <p className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+                {t("pages")}
+              </p>
+              <Link
+                href="/oferta-demipensiune"
+                className="text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
               >
+                {t("offer_halfboard")}
+              </Link>
+              <Link
+                href="/oferta-craciun"
+                className="text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
+              >
+                {t("offer_christmas")}
+              </Link>
+              <Link
+                href="/oferta-revelion"
+                className="text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
+              >
+                {t("offer_newyear")}
+              </Link>
+              <div className="w-40 h-px bg-white/15 my-5" />
+              <Link
+                href="/rezerva-acum"
+                className="text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
+              >
+                {t("book_halfboard")}
+              </Link>
+            </div>
+
+            {/* Contact */}
+            <div className="flex flex-col items-center gap-12 text-center">
+              <p className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+                {t("contact")}
+              </p>
+              <a
+                href="tel:+40750490838"
+                className="flex items-center gap-8 text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
+              >
+                <FaPhone className="w-12 h-12" />
                 +40 750 490 838
-              </C.NrTel>
-            </span>{" "}
-            <span>
-              {t("whatsapp_label")} :{" "}
-              <C.Wapp
-                as="a"
-                className="font-bold cursor-pointer transition-all hover:underline"
+              </a>
+              <a
                 href="https://wa.me/+40750490838"
                 target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-8 text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
               >
-                +40 750 490 838
-              </C.Wapp>
-            </span>{" "}
-            <span>
-              {t("email_label")} :{" "}
-              <C.Mail
+                <FaWhatsapp className="w-12 h-12" />
+                WhatsApp
+              </a>
+              <a
                 href="mailto:perlabrazilor@gmail.com"
-                target="_blank"
-                as="a"
-                className="font-bold cursor-pointer transition-all hover:underline"
+                className="flex items-center gap-8 text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
               >
+                <FaEnvelope className="w-12 h-12" />
                 perlabrazilor@gmail.com
-              </C.Mail>
-            </span>
-            <span>
-              {t("address_label")} :{" "}
-              <C.Adresa
+              </a>
+              <a
                 href="https://maps.app.goo.gl/J6AStxsiHV5M2soQ7"
                 target="_blank"
-                as="a"
-                className="font-bold cursor-pointer transition-all hover:underline"
+                rel="noopener noreferrer"
+                className="flex items-center gap-8 text-white/70 text-sm cursor-pointer transition-all duration-200 hover:text-white"
               >
+                <FaMapMarkerAlt className="w-12 h-12 flex-shrink-0" />
                 {t("company_address")}
-              </C.Adresa>
-            </span>
+              </a>
+            </div>
+
+            {/* Company data */}
+            <div className="flex flex-col items-center gap-10 text-center sm:col-span-2 xl:col-span-1">
+              <p className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+                {t("company_data")}
+              </p>
+              <p className="text-white/70 text-sm">{t("company_name")}</p>
+              <p className="text-white/70 text-sm">{t("company_cui")}</p>
+              <p className="text-white/70 text-sm">{t("company_reg")}</p>
+              <p className="text-white/70 text-sm">{t("company_address")}</p>
+            </div>
           </div>
-          <div className="text-desc flex flex-col place-items-center gap-10 text-center text-white sm:col-span-2 xl:col-span-1">
-            <p className="font-bold" id="datele-firmei">
-              {t("company_data")}
+
+          {/* Bottom */}
+          <div className="border-t border-white/10 pt-20 text-center">
+            <p className="text-white/40 text-xs">
+              &copy; {new Date().getFullYear()} Pensiunea Perla Brazilor. Toate drepturile rezervate.
             </p>
-            <div className="rounded-normal w-100 h-1 bg-white" />
-            <p>{t("company_name")}</p>
-            <p>{t("company_cui")}</p>
-            <p>{t("company_reg")}</p>
-            <p>{t("company_address")}</p>
           </div>
         </div>
       </div>

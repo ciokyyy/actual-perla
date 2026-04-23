@@ -20,7 +20,7 @@ export default function Input({
       )}
       <Inpt
         {...inputProps} // Spread only valid input props
-        className={`px-20 py-10 border-primary border-2 rounded-normal bg-white w-full max-w-150 placeholder:text-center text-center ${
+        className={`px-20 py-10 border-primary border-2 rounded-normal bg-surface w-full max-w-150 placeholder:text-center text-center ${
           inputProps.className ?? ""
         }`}
       />

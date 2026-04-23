@@ -1,5 +1,3 @@
-"use server";
-
 export type Camera = {
   nume_camera: string;
   ocupare_standard: string;
@@ -41,16 +39,10 @@ export async function getAvailability(
   checkIn: string,
   checkOut: string
 ): Promise<AvailabilityResult> {
-  const response = await fetch("https://www.5stardesk.ro/apih.php", {
+  const response = await fetch("/api/availability", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      t1: "^3cvbat^zgHHssGHAfh5cc7etrmvcgyse4lkgvc",
-      t: "bEgjMRyzWtlwFjWVGqGiHdSiA91LNLiLxzSraMxl",
-      actiune: "get_avail",
-      checkin: checkIn,
-      checkout: checkOut,
-    }),
+    body: JSON.stringify({ checkIn, checkOut }),
   });
 
   const data: AvailabilityResponse = await response.json();

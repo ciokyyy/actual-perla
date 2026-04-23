@@ -3,8 +3,10 @@ import C from "@/components/ComponentNames";
 import { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import OfertePage from "./oferte/page";
+import { OfferCards } from "./oferte/ClientComponent";
 import { generatePageMetadata } from "@/libs/metadata";
+import FeaturesSection from "@/components/FeaturesSection";
+
 type Props = {
   params: Promise<{ locale: Locale }>;
 };
@@ -22,10 +24,13 @@ export default function Home({ params }: Readonly<Props>) {
 
   return (
     <>
-      <C.HomePageContainer className="gap-30 flex flex-col items-center">
+      <FeaturesSection />
+      <C.HomePageContainer className="gap-30 flex flex-col items-center w-full max-w-1400 mx-auto px-20">
         <AnimatedWidget />
       </C.HomePageContainer>
-      <OfertePage />
+      <section className="w-full py-50">
+        <OfferCards />
+      </section>
     </>
   );
 }

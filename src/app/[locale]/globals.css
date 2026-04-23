@@ -3,6 +3,8 @@
 @theme inline {
   --color-primary: #1d5b17;
   --color-secondary: #9fcaa6;
+  --color-surface: #e8f2e2;
+  --color-surface-hover: #dcebd4;
   --radius-normal: 30px;
   --spacing: 1px;
   --color-background: #cae0bd;
@@ -13,6 +15,28 @@
   --text-label: 15px;
   --shadow-wcolor: var(--color-foreground) 0 0 50px 10px;
 }
+
+/* Base transition for interactive elements */
+a, button {
+  @apply transition-all duration-200 ease-out;
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-white rounded-normal;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .with-drop-shadow {
   -webkit-filter: drop-shadow(0 0 50px var(--color-primary));
   filter: drop-shadow(0 0 50px var(--color-primary));
@@ -20,6 +44,9 @@
 
 .square-card {
   @apply aspect-square w-full h-full flex flex-col gap-10 justify-center items-center cursor-pointer;
+  @apply transition-all duration-200 ease-out;
+  @apply hover:shadow-lg hover:brightness-105;
+  @apply active:brightness-95;
 }
 
 .oferte-gradient {
@@ -64,23 +91,28 @@
 
 .oferta-icon-title {
   @apply w-50 h-50 p-5 rounded-normal bg-primary text-white;
+  @apply transition-transform duration-200 ease-out;
 }
 
 .oferta-title {
-  font-family: var(--font-league-spartan);
-  @apply text-logo text-white font-semibold p-20 bg-primary rounded-normal mx-20 text-center uppercase shadow-xl;
+  font-family: var(--font-heading);
+  @apply text-logo text-white font-semibold p-20 bg-primary rounded-normal mx-20 text-center uppercase;
+  @apply shadow-xl transition-all duration-200 ease-out;
+  @apply hover:shadow-2xl hover:brightness-105;
 }
 
 .title {
-  font-family: var(--font-league-spartan);
-  @apply text-logo text-text font-semibold p-20 bg-foreground rounded-normal mx-20 text-center uppercase my-70 shadow-xl;
+  font-family: var(--font-heading);
+  @apply text-logo text-text font-semibold p-20 bg-foreground rounded-normal mx-20 text-center uppercase my-70;
+  @apply shadow-xl transition-all duration-200 ease-out;
+  @apply hover:shadow-2xl hover:brightness-105;
 }
 
 body {
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   scroll-behavior: smooth;
-  font-family: var(--font-quicksand), -apple-system, BlinkMacSystemFont,
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont,
     sans-serif;
   background: var(--color-background);
   -webkit-font-smoothing: antialiased;

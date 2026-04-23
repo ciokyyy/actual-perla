@@ -38,7 +38,7 @@
       "description": "Scopri le nostre offerte speciali a Pensiunea Perla Brazilor: Pacchetto Mezza Pensione, Pacchetto Natale e celebrazione di Capodanno. Prenota oggi la tua vacanza in montagna."
     },
     "new_years_offer": {
-      "title": "Capodanno 2025-2026 in Bucovina - Pensiunea Perla Brazilor",
+      "title": "Capodanno 2026-2027 in Bucovina - Pensiunea Perla Brazilor",
       "description": "Trascorri un Capodanno indimenticabile in Bucovina a Pensiunea Perla Brazilor. Pacchetto all-inclusive con 4 notti di alloggio, pasti festivi, gite in slitta, musica dal vivo e accesso alla spa. Prenota ora per un'autentica esperienza tradizionale di Capodanno!"
     },
     "half_board_offer": {
@@ -46,7 +46,7 @@
       "description": "Goditi l'alloggio con mezza pensione a Pensiunea Perla Brazilor. Il pacchetto include colazione e cena a buffet, piatti tradizionali, accesso alla spa e servizi moderni. Autentica esperienza in Bucovina con cibo al 60% di produzione propria."
     },
     "christmas_offer": {
-      "title": "Natale 2025 in Bucovina - Pensiunea Perla Brazilor",
+      "title": "Natale 2026 in Bucovina - Pensiunea Perla Brazilor",
       "description": "Trascorri un Natale tradizionale in Bucovina a Pensiunea Perla Brazilor. Pacchetto all-inclusive con 4 notti di alloggio, pasti festivi, cantanti natalizi, gite in slitta, tradizionale macellazione del maiale e accesso alla spa. Un'autentica esperienza di vacanza!"
     },
     "spa": {
@@ -72,16 +72,46 @@
     "about": "Chi Siamo",
     "verify_availability": "Verifica disponibilità"
   },
+  "Hero": {
+    "title": "Pensiunea Perla Brazilor",
+    "subtitle": "Relax e comfort nel cuore della natura",
+    "feature_rooms": "Camere moderne",
+    "feature_food": "Cucina tradizionale",
+    "feature_spa": "SPA completo",
+    "feature_location": "Location pittoresca",
+    "cta_book": "Prenota ora",
+    "cta_call": "Chiamaci"
+  },
+  "Features": {
+    "title": "Servizi",
+    "wifi": "WiFi gratuito",
+    "parking": "Parcheggio gratuito",
+    "ac": "Aria condizionata",
+    "tv": "TV LCD",
+    "shower": "Bagno privato",
+    "breakfast": "Colazione inclusa"
+  },
   "OffersPage": {
     "our_offers": "Le Nostre Offerte",
+    "section_title": "Le nostre offerte speciali",
     "demipensiune_title": "Offerta Mezza Pensione",
     "demipensiune_more": "Scopri di più!",
-    "craciun_title": "Natale 2025 in Bucovina",
+    "demipensiune_alt_1": "Mezza Pensione 1",
+    "demipensiune_alt_2": "Mezza Pensione 2",
+    "demipensiune_alt_3": "Mezza Pensione 3",
+    "craciun_title": "Natale 2026 in Bucovina",
     "craciun_more": "Scopri di più!",
-    "revelion_title": "Capodanno 2025-2026 in Bucovina",
-    "revelion_more": "Scopri di più!"
+    "craciun_alt_1": "Natale 1",
+    "craciun_alt_2": "Natale 2",
+    "craciun_alt_3": "Natale 3",
+    "revelion_title": "Capodanno 2026-2027 in Bucovina",
+    "revelion_more": "Scopri di più!",
+    "revelion_alt_1": "Capodanno 1",
+    "revelion_alt_2": "Capodanno 2",
+    "revelion_alt_3": "Capodanno 3"
   },
   "SpaPage": {
+    "header_title": "La nostra oasi di relax!",
     "title": "Preparati per il benessere in Bucovina a Pensiunea Perla Brazilor",
     "desc_1": "Piscina, vasca idromassaggio con acqua salata, jacuzzi, salina e sauna",
     "desc_2": "ti aspettano per dimenticare le preoccupazioni e rilassarti.",
@@ -392,8 +422,8 @@
     "result": "Risultato"
   },
   "ChristmasPage": {
-    "title": "Festeggia il Natale 2025 in Bucovina",
-    "pricing": "4 notti / 5 giorni a soli 3000 lei/persona",
+    "title": "Festeggia il Natale 2026 in Bucovina",
+    "pricing": "4 notti / 5 giorni a soli 3500 lei/persona",
     "food_drink": {
       "title": "Cibo e bevande",
       "subtitle": "Tutto incluso !!!",
@@ -434,8 +464,8 @@
     }
   },
   "NewYearPage": {
-    "title": "Festeggia il Capodanno 2025-2026 in Bucovina",
-    "pricing": "4 notti / 5 giorni a soli 3200 lei/persona",
+    "title": "Festeggia il Capodanno 2026-2027 in Bucovina",
+    "pricing": "4 notti / 5 giorni a soli 3700 lei/persona",
     "food_drink": {
       "title": "Cibo e bevande",
       "subtitle": "Tutto incluso !!!",

@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
 import { useForm } from "@tanstack/react-form";
-import Input from "./ui/Input";
-import { Button } from "./ui/Button";
 import { useTranslations } from "next-intl";
+import { FaCalculator } from "react-icons/fa";
 
 export default function Calculate(props: Readonly<{ basePrice: number }>) {
   const t = useTranslations("Calculate");
-  const [lastValue, setLastValue] = useState<string>("0 lei");
+  const [result, setResult] = useState<string | null>(null);
+
   const form = useForm({
     onSubmit: async ({ value }) => {
       const calcValue =
@@ -15,8 +15,7 @@ export default function Calculate(props: Readonly<{ basePrice: number }>) {
         (Number(value.adulti) +
           Number(value.copii1) * 0.5 +
           Number(value.copii2) * 0.7);
-
-      setLastValue(calcValue.toFixed(0).toString() + " lei");
+      setResult(calcValue.toFixed(0).toString() + " lei");
     },
     defaultValues: {
       adulti: "0",
@@ -29,76 +28,95 @@ export default function Calculate(props: Readonly<{ basePrice: number }>) {
     (field: { handleChange: (value: string) => void }) =>
     (e: React.ChangeEvent<HTMLInputElement>) => {
       let value = e.target.value;
-
-      // Strip leading zeros for non-empty inputs
       if (value !== "" && value !== "0") {
         value = value.replace(/^0+/, "");
       }
-
-      // Call the field's change handler
       field.handleChange(value === "" ? "0" : value);
     };
 
   return (
     <form
-      className="sm:mx-50 shadow-lg bg-foreground rounded-normal m-20 grid place-items-center gap-20 p-40 sm:grid-cols-3 sm:grid-rows-3"
+      className="w-full max-w-500 mx-auto bg-surface rounded-2xl shadow-md border border-foreground/30 overflow-hidden"
       onSubmit={(e) => {
         e.preventDefault();
         e.stopPropagation();
         form.handleSubmit();
       }}
     >
-      <form.Field name="adulti">
-        {(field) => (
-          <Input
-            label={t("adults")}
-            name={field.name}
-            value={field.state.value}
-            type="number" // Input type is number
-            onChange={handleInputChange(field)}
-          />
+      {/* Header */}
+      <div className="bg-primary px-25 py-15 flex items-center gap-10">
+        <FaCalculator className="w-18 h-18 text-white/80" />
+        <span className="text-white font-medium text-sm">{t("calculate")}</span>
+      </div>
+
+      {/* Inputs */}
+      <div className="p-25 flex flex-col gap-20">
+        <form.Field name="adulti">
+          {(field) => (
+            <div className="flex flex-col gap-6">
+              <label className="text-sm font-medium text-text/70">{t("adults")}</label>
+              <input
+                name={field.name}
+                value={field.state.value}
+                type="number"
+                min="0"
+                onChange={handleInputChange(field)}
+                className="w-full px-16 py-10 rounded-xl bg-white border border-foreground/20 text-center text-text font-medium focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40 transition-all duration-200"
+              />
+            </div>
+          )}
+        </form.Field>
+
+        <form.Field name="copii1">
+          {(field) => (
+            <div className="flex flex-col gap-6">
+              <label className="text-sm font-medium text-text/70">{t("children_6_12")}</label>
+              <input
+                name={field.name}
+                value={field.state.value}
+                type="number"
+                min="0"
+                onChange={handleInputChange(field)}
+                className="w-full px-16 py-10 rounded-xl bg-white border border-foreground/20 text-center text-text font-medium focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40 transition-all duration-200"
+              />
+            </div>
+          )}
+        </form.Field>
+
+        <form.Field name="copii2">
+          {(field) => (
+            <div className="flex flex-col gap-6">
+              <label className="text-sm font-medium text-text/70">{t("children_4_6")}</label>
+              <input
+                name={field.name}
+                value={field.state.value}
+                type="number"
+                min="0"
+                onChange={handleInputChange(field)}
+                className="w-full px-16 py-10 rounded-xl bg-white border border-foreground/20 text-center text-text font-medium focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40 transition-all duration-200"
+              />
+            </div>
+          )}
+        </form.Field>
+
+        <form.Subscribe>
+          <button
+            type="submit"
+            className="w-full bg-primary text-white rounded-full px-20 py-12 shadow-md transition-all duration-200 hover:brightness-110 hover:shadow-lg active:scale-95 cursor-pointer text-sm font-medium flex items-center justify-center gap-8 mt-5"
+          >
+            <FaCalculator className="w-14 h-14" />
+            {t("calculate")}
+          </button>
+        </form.Subscribe>
+
+        {/* Result */}
+        {result && (
+          <div className="bg-primary/8 rounded-xl p-20 text-center border border-primary/15">
+            <span className="text-sm font-medium text-primary/70 block mb-5">{t("result")}</span>
+            <span className="font-[family-name:var(--font-heading)] text-2xl font-bold text-primary">{result}</span>
+          </div>
         )}
-      </form.Field>
-
-      <form.Field name="copii1">
-        {(field) => (
-          <Input
-            label={t("children_6_12")}
-            name={field.name}
-            value={field.state.value}
-            type="number"
-            onChange={handleInputChange(field)}
-          />
-        )}
-      </form.Field>
-
-      <form.Field name="copii2">
-        {(field) => (
-          <Input
-            label={t("children_4_6")}
-            name={field.name}
-            value={field.state.value}
-            type="number"
-            onChange={handleInputChange(field)}
-          />
-        )}
-      </form.Field>
-
-      <form.Subscribe>
-        <Button
-          className="pointer-events-auto !w-full sm:col-[2/3]"
-          type="submit"
-        >
-          {t("calculate")}
-        </Button>
-      </form.Subscribe>
-
-      <Input
-        label={t("result")}
-        parentClassName="sm:row-[3/4] sm:col-span-3"
-        value={lastValue}
-        disabled
-      />
+      </div>
     </form>
   );
 }

@@ -1,9 +1,12 @@
 import { BiSolidOffer } from "react-icons/bi";
-
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 import { generatePageMetadata } from "@/libs/metadata";
 import { Props } from "@/libs/props";
 import { ClientComponent } from "./ClientComponent";
+import PageHero from "@/components/PageHero";
+
 export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
     params: await props.params,
@@ -13,14 +16,17 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   });
 }
 
-export default function OfertePage() {
+export default function OfertePage({ params }: Readonly<Props>) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
   const t = useTranslations("OffersPage");
 
   return (
     <>
-      <h1 className="title mb-40 flex items-center gap-6">
-        {t("our_offers")} <BiSolidOffer size="35" />
-      </h1>
+      <PageHero
+        icon={<BiSolidOffer />}
+        title={t("our_offers")}
+      />
       <ClientComponent />
     </>
   );
