@@ -183,9 +183,20 @@ function CompactOfferCard({ title, icon: Icon, images, href }: { title: string; 
       href={href as "/"}
       className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer"
     >
-      <div className="aspect-video relative overflow-hidden">
-        <Image src={images[idx]} alt={title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      <div className="relative" style={{ paddingBottom: "140%" }}>
+        <Image 
+          src={images[idx]} 
+          alt={title} 
+          fill 
+          className="object-cover transition-transform duration-700 group-hover:scale-110" 
+        />
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+        />
         <div className="absolute bottom-0 left-0 right-0 p-15 flex items-center gap-10">
           <Icon className="w-20 h-20 text-white" />
           <h3 className="font-[family-name:var(--font-heading)] text-white font-semibold">{title}</h3>
