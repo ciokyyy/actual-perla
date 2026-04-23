@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import { Link } from "@/components/ui/Link";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -169,14 +170,21 @@ export function ClientComponent() {
   );
 }
 
-function CompactOfferCard({ title, icon: Icon, image, href }: { title: string; icon: React.ElementType; image: StaticImageData; href: string }) {
+function CompactOfferCard({ title, icon: Icon, images, href }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string }) {
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setIdx((i) => (i + 1) % images.length), 3000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <Link
       href={href as "/"}
       className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer"
     >
-      <div className="aspect-video relative">
-        <Image src={image} alt={title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="aspect-video relative overflow-hidden">
+        <Image src={images[idx]} alt={title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-15 flex items-center gap-10">
           <Icon className="w-20 h-20 text-white" />
@@ -191,10 +199,22 @@ export function CompactOfferCards() {
   const t = useTranslations("OffersPage");
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-15 max-w-1000 mx-auto px-20">
-      <CompactOfferCard title={t("demipensiune_title")} icon={FaConciergeBell} image={DemipensiuneOne} href="/oferta-demipensiune" />
-      <CompactOfferCard title={t("craciun_title")} icon={TbChristmasTreeFilled} image={CraciunOne} href="/oferta-craciun" />
-      <CompactOfferCard title={t("revelion_title")} icon={PiSparkleFill} image={RevelionOne} href="/oferta-revelion" />
-    </div>
+    <section className="w-full py-30">
+      <motion.h2
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl text-text font-bold text-center mb-30"
+      >
+        {t("section_title")}
+      </motion.h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-25 max-w-1200 mx-auto px-20">
+        <CompactOfferCard title={t("demipensiune_title")} icon={FaConciergeBell} images={[DemipensiuneOne, DemipensiuneTwo, DemipensiuneThree]} href="/oferta-demipensiune" />
+        <CompactOfferCard title={t("craciun_title")} icon={TbChristmasTreeFilled} images={[CraciunOne, CraciunTwo, CraciunThree]} href="/oferta-craciun" />
+        <CompactOfferCard title={t("revelion_title")} icon={PiSparkleFill} images={[RevelionOne, RevelionTwo, RevelionThree]} href="/oferta-revelion" />
+      </div>
+    </section>
   );
 }

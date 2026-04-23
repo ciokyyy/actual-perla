@@ -16,13 +16,13 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="w-full py-50 px-20">
+    <section className="w-full py-30 px-20">
       <motion.h2
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl text-text font-bold text-center mb-40"
+        className="font-[family-name:var(--font-heading)] text-xl md:text-2xl text-text font-bold text-center mb-25"
       >
         {t("title")}
       </motion.h2>
