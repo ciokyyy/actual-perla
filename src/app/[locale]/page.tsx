@@ -1,11 +1,10 @@
-import AnimatedWidget from "@/components/AnimatedWidget";
-import C from "@/components/ComponentNames";
 import { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { CompactOfferCards } from "./oferte/ClientComponent";
 import { generatePageMetadata } from "@/libs/metadata";
 import AboutSection from "@/components/AboutSection";
+import ReviewsSection from "@/components/ReviewsSection";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -28,9 +27,7 @@ export default function Home({ params }: Readonly<Props>) {
         <CompactOfferCards />
       </section>
       <AboutSection />
-      <C.HomePageContainer className="gap-30 flex flex-col items-center w-full max-w-1400 mx-auto px-20">
-        <AnimatedWidget />
-      </C.HomePageContainer>
+      <ReviewsSection locale={locale} />
     </>
   );
 }
