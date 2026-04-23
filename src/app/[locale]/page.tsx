@@ -6,6 +6,7 @@ import { use } from "react";
 import { CompactOfferCards } from "./oferte/ClientComponent";
 import { generatePageMetadata } from "@/libs/metadata";
 import FeaturesSection from "@/components/FeaturesSection";
+import AboutSection from "@/components/AboutSection";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -28,6 +29,7 @@ export default function Home({ params }: Readonly<Props>) {
         <CompactOfferCards />
       </section>
       <FeaturesSection />
+      <AboutSection />
       <C.HomePageContainer className="gap-30 flex flex-col items-center w-full max-w-1400 mx-auto px-20">
         <AnimatedWidget />
       </C.HomePageContainer>

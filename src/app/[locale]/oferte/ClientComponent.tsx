@@ -218,10 +218,19 @@ export function CompactOfferCards() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl text-text font-bold text-center mb-30"
+        className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl text-text font-bold text-center"
       >
-        {t("section_title")}
+        Bucovina, așa cum ar trebui să fie
       </motion.h2>
+      <motion.p
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="text-center text-text/70 mt-8 mb-30 max-w-600 mx-auto"
+      >
+        Tradiții autentice, mâncare bună și liniștea munților
+      </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-25 max-w-1200 mx-auto px-20">
         <CompactOfferCard title={t("demipensiune_title")} icon={FaConciergeBell} images={[DemipensiuneOne, DemipensiuneTwo, DemipensiuneThree]} href="/oferta-demipensiune" />

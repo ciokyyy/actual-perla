@@ -91,6 +91,16 @@
     "breakfast": "Colazione inclusa",
     "dinner": "Cena inclusa"
   },
+  "AboutSection": {
+    "title": "Chi siamo",
+    "description": "Pensiunea Perla Brazilor è il luogo che la nostra famiglia ha costruito con amore nel 2003, a Frumosu — circondati da boschi di abete, sulla valle Moldovita, a pochi chilometri dal Monastero di Moldovita.",
+    "feature_1_title": "Cucina tradizionale",
+    "feature_1_desc": "Cuciniamo in casa, con i nostri ingredienti. Ricette autentiche della Bucovina, a ogni pasto.",
+    "feature_2_title": "Pace e natura",
+    "feature_2_desc": "Aria di montagna, boschi di abete e quella sensazione che il tempo si ferma un po'.",
+    "feature_3_title": "Relax completo",
+    "feature_3_desc": "Piscina, vasca con acqua salata, sauna e miniera di sale — tutto ciò di cui hai bisogno per disconnetterti."
+  },
   "OffersPage": {
     "our_offers": "Le Nostre Offerte",
     "section_title": "Le nostre offerte speciali",

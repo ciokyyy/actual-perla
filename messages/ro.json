@@ -92,6 +92,16 @@
     "breakfast": "Mic dejun inclus",
     "dinner": "Cină inclusă"
   },
+  "AboutSection": {
+    "title": "Despre noi",
+    "description": "Pensiunea Perla Brazilor este locul pe care familia noastră l-a construit cu drag, în 2003, în Frumosu — înconjurați de păduri de brad, pe Valea Moldoviței, la câțiva kilometri de Mănăstirea Moldovița.",
+    "feature_1_title": "Mâncare tradițională",
+    "feature_1_desc": "Gătim în casă, din ingrediente proprii. Rețete bucovinene autentice, la fiecare masă.",
+    "feature_2_title": "Liniște și natură",
+    "feature_2_desc": "Aer de munte, păduri de brad și acel sentiment că timpul stă puțin pe loc.",
+    "feature_3_title": "Relaxare completă",
+    "feature_3_desc": "Piscină, ciubăr cu apă sărată, saună și salină — tot ce ai nevoie să te deconectezi."
+  },
   "OffersPage": {
     "our_offers": "Ofertele Noastre",
     "section_title": "Ofertele noastre speciale",
