@@ -37,7 +37,9 @@ export default function FeaturesSection() {
             transition={{ duration: 0.4, delay: index * 0.08 }}
             className="flex flex-col items-center p-20 rounded-normal bg-foreground shadow-md transition-all duration-200 hover:shadow-xl hover:brightness-105 cursor-pointer min-h-100"
           >
-            <amenity.icon className="w-25 h-25 text-primary mt-10" />
+            <div className="w-50 h-50 rounded-full bg-primary/10 flex items-center justify-center">
+              <amenity.icon className="w-25 h-25 text-primary" />
+            </div>
             <span className="text-desc text-text text-center mt-auto mb-10">{amenity.label}</span>
           </motion.div>
         ))}
