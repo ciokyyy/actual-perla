@@ -8,7 +8,9 @@ import Logo from "@/components/ui/Logo";
 import { useTranslations } from "next-intl";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import { FaCalendarCheck } from "react-icons/fa";
+import { FaHome, FaBed, FaSpa, FaCalendarCheck, FaConciergeBell } from "react-icons/fa";
+import { TbChristmasTreeFilled } from "react-icons/tb";
+import { BiSolidOffer } from "react-icons/bi";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
@@ -19,29 +21,29 @@ export default function Menu() {
     {
       label: null,
       links: [
-        { href: "/", text: t("home") },
+        { href: "/", text: t("home"), icon: FaHome },
       ],
     },
     {
       label: t("book_now"),
       links: [
-        { href: "/rezerva-acum", text: t("book_now") },
-        { href: "/preturi-valabilitate", text: t("verify_availability") },
+        { href: "/rezerva-acum", text: t("book_now"), icon: FaCalendarCheck },
+        { href: "/preturi-valabilitate", text: t("verify_availability"), icon: FaConciergeBell },
       ],
     },
-      {
-        label: null,
-        links: [
-          { href: "/camere", text: t("rooms") },
-          { href: "/spa", text: t("spa") },
-        ],
-      },
     {
       label: null,
       links: [
-        { href: "/oferta-demipensiune", text: t("offer_halfboard") },
-        { href: "/oferta-craciun", text: t("offer_christmas") },
-        { href: "/oferta-revelion", text: t("offer_newyear") },
+        { href: "/camere", text: t("rooms"), icon: FaBed },
+        { href: "/spa", text: t("spa"), icon: FaSpa },
+      ],
+    },
+    {
+      label: null,
+      links: [
+        { href: "/oferta-demipensiune", text: t("offer_halfboard"), icon: BiSolidOffer },
+        { href: "/oferta-craciun", text: t("offer_christmas"), icon: TbChristmasTreeFilled },
+        { href: "/oferta-revelion", text: t("offer_newyear"), icon: TbChristmasTreeFilled },
       ],
     },
   ];
@@ -100,17 +102,19 @@ export default function Menu() {
                       )}
                       {section.links.map((link) => {
                         const isActive = link.href === pathname;
+                        const Icon = link.icon;
                         return (
                           <Link
                             key={link.href}
                             onClick={() => setOpen(false)}
                             href={link.href as "/"}
-                            className={`flex items-center px-25 py-12 text-sm font-medium transition-all duration-150 cursor-pointer ${
+                            className={`flex items-center gap-12 px-25 py-12 text-sm font-medium transition-all duration-150 cursor-pointer ${
                               isActive
                                 ? "bg-primary/8 text-primary border-l-3 border-primary"
                                 : "text-text hover:bg-primary/5 hover:text-primary"
                             }`}
                           >
+                            {Icon && <Icon className="w-18 h-18" />}
                             {link.text}
                           </Link>
                         );
