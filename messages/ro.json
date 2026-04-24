@@ -282,7 +282,7 @@
     "selectDatesAndCheck": "Selectează datele și apasă pentru a vedea disponibilitatea și prețurile.",
     "secondaryBuildingNote": "Clădirea secundară, la 50m de corpul principal.",
     "price": "Preț:",
-    "room": "{count, plural, one {cameră disponibilă} other {camere disponibile}}",
+    "room": "{count, plural, =0 {0 camere disponibile} =1 {1 cameră disponibilă} other {# camere disponibile}}",
     "person": "{count, plural, one {persoană} other {persoane}}",
     "title": "Camerele Noastre",
     "APB": {
