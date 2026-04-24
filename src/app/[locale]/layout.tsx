@@ -95,7 +95,6 @@ export default async function Layout({
             <Footer></Footer>
             <Menu />
             <LocaleSwitcher />
-            <BookNow />
           </QueryProvider>
         </NextIntlClientProvider>
       </body>

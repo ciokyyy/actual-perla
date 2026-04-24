@@ -23,9 +23,10 @@ export default function Camere({ params }: Readonly<Props>) {
 
   return (
     <>
-      <OfferHero
+<OfferHero
         image={RoomImg}
         title={t("title")}
+        pricing=""
       />
       <RoomSection />
     </>

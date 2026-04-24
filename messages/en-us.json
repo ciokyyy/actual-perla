@@ -404,19 +404,52 @@
     }
   },
   "HalfBoardPage": {
-    "title": "Accommodation Offer With Half Board",
-    "book_now": "Book Now!",
-    "food_included": "The offer includes breakfast and dinner buffet",
-    "food_traditional": "Traditional food 60% from our own production",
-    "food_card_title": "Food",
-    "food_card_desc": "Find out what goodies we have!",
-    "spa_included": "The offer includes access to the spa. Enjoy well-being in the salt water tub, swimming pool, salt mine, sauna, or jacuzzi.",
-    "spa_card_title": "Spa",
-    "spa_card_desc": "Where will you relax?",
+    "title": "Half Board Accommodation Offer",
+    "book_now": "Book now!",
+    "food_included": "Daily buffet breakfast and dinner, always fresh and homemade",
+    "food_traditional": "60% of our ingredients come from our own farm",
+    "food_card_title": "Kitchen",
+    "food_card_desc": "Discover the goodness of our Bucovina kitchen!",
+    "food_image_alt": "Our guesthouse kitchen with traditional homemade dishes",
+    "local_gastronomy": "Bucovina gastronomy",
+    "breakfast_included": "Breakfast included",
+    "dinner_included": "Dinner included",
+    "traditional_cooking": "Recipes passed down through generations",
+    "own_production": "Homemade products, 60% from our own production",
+    "spa_included": "Full spa access included: salt water tub, heated pool, salt room, sauna and jacuzzi.",
+    "spa_card_title": "Spa & Wellness",
+    "spa_card_desc": "Where will you fully unwind?",
+    "spa_image_alt": "Relaxation zone with jacuzzi and salt water",
+    "wellness_relaxare": "Good for body and soul",
+    "jacuzzi_title": "Salt water wooden tub",
+    "piscina_title": "Heated indoor pool",
+    "sauna_title": "Finnish dry sauna",
+    "salina_title": "Salt room",
     "rooms_card_title": "Rooms",
-    "rooms_card_desc": "View and facilities",
+    "rooms_card_desc": "Comfort and fairy-tale views",
+    "rooms_image_alt": "Double room with a view of the guesthouse meadow",
+    "fairy_accommodation": "A room where dreams come true",
+    "mountain_view": "Clear Bucovina views",
+    "forest_atmosphere": "Fir forest atmosphere",
+    "private_bathroom": "Private eco-friendly bathroom",
     "offers_card_title": "Other offers",
-    "offers_card_desc": "Christmas or New Year in Bucovina"
+    "offers_card_desc": "Christmas and New Year in the heart of Bucovina",
+    "why_halfboard_title": "Why choose half board?",
+    "why_halfboard_desc": "When your holiday already includes breakfast and dinner, all that's left is to relax. No worries, no supermarket runs - just you and the mountains.",
+    "halfboard_title": "Half board",
+    "halfboard_desc": "Breakfast + dinner included, daily buffet",
+    "nature_relax_title": "Nature & tranquility",
+    "nature_relax_desc": "Fresh mountain air, fir forests and waterfalls nearby",
+    "wellness_title": "Spa access included",
+    "wellness_desc": "Pool, sauna, salt room and salt tub - free for guests",
+    "local_products_title": "Homestead products",
+    "local_products_desc": "Sausages, cheese, jam and cider - all made in-house",
+    "check_availability_title": "Check availability",
+    "check_availability_desc": "Find out which rooms are free and the prices for your desired dates.",
+    "see_prices": "View prices and calendar",
+    "discover_offers_title": "Discover our other offers",
+    "see_offers": "Our Christmas and New Year special offers",
+    "spa_cta": "See all spa facilities"
   },
   "Spa": {
     "ciubar_1_alt": "Wooden tub with salt water, first view",
@@ -533,5 +566,35 @@
         "desc": "Children up to 12 years old benefit from a 50% discount, those between 4 and 6 years old from 70%, and for those between 0 and 3 years old, access is free."
       }
     }
+  },
+  "ReviewsSection": {
+    "title": "What Our Guests Say",
+    "reviews": [
+      {
+        "text": "We were warmly welcomed by the guesthouse owner, a woman worth a 10. We've had previous stays in 4-star hotels and never felt like we do here. It's impeccable!",
+        "author": "Familia Darius",
+        "location": "Miercurea Ciuc"
+      },
+      {
+        "text": "We spent Easter holidays in a fascinating Bucovina region, together with a welcoming host and staff rated 10 plus! The food is irresistible!",
+        "author": "Georgică R.",
+        "location": "Peceneaga"
+      },
+      {
+        "text": "I recommend to all who want a relaxing vacation where mountain tranquility harmoniously blends with resort-like conditions. Mrs. Ioana and all staff are welcoming people.",
+        "author": "Nicoleta C.",
+        "location": "Iași"
+      },
+      {
+        "text": "It was like a dream - a host worth 10+, excellent accommodation, a menu I have no words for. Our whole group felt great!",
+        "author": "Familia Marian G.",
+        "location": "București"
+      },
+      {
+        "text": "Whenever I feel an acute need for relaxation, I come here, to Perla Brazilor. The hosts are extraordinary people!",
+        "author": "Mitrea",
+        "location": "Țăndărei"
+      }
+    ]
   }
 }

@@ -38,7 +38,9 @@ function BenefitCard({ icon: Icon, title, description }: { icon: React.ElementTy
       transition={{ duration: 0.4 }}
       className="bg-surface rounded-2xl p-20 text-center border border-foreground/30 shadow-md"
     >
-      <Icon className="w-30 h-30 mx-auto mb-10 text-primary" />
+      <div className="w-50 h-50 rounded-xl bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center mx-auto mb-10">
+        <Icon className="w-30 h-30 text-primary" />
+      </div>
       <h4 className="font-semibold mb-5">{title}</h4>
       <p className="text-sm text-text/70">{description}</p>
     </motion.div>

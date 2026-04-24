@@ -14,7 +14,7 @@
     "company_name": "SC GORIOAN PROD COM SRL",
     "company_cui": "RO7086751",
     "company_reg": "J33/243/1995",
-    "company_address": "Strada Principală 1A, Frumosu, Suceava"
+    "company_address": "Strada Principal\u0103 1A, Frumosu, Suceava"
   },
   "LocaleSwitcher": {
     "label": "Cambia lingua",
@@ -23,15 +23,15 @@
   "LocaleLayout": {
     "default": {
       "title": "Pensiunea Perla Brazilor",
-      "description": "Scopri Pensiunea Perla Brazilor, un'accogliente pensione immersa tra gli abeti delle montagne della Romania settentrionale. Goditi l'autentica ospitalità, la cucina tradizionale e la completa tranquillità, ideale per vacanze in famiglia o fughe romantiche."
+      "description": "Scopri Pensiunea Perla Brazilor, un'accogliente pensione immersa tra gli abeti delle montagne della Romania settentrionale. Goditi l'autentica ospitalit\u00e0, la cucina tradizionale e la completa tranquillit\u00e0, ideale per vacanze in famiglia o fughe romantiche."
     },
     "home": {
       "title": "Home - Pensiunea Perla Brazilor",
-      "description": "Benvenuti a Pensiunea Perla Brazilor – il tuo rifugio di pace nel cuore della natura. Scopri la nostra affascinante pensione, circondata da foreste di abeti, con camere confortevoli, cucina tradizionale e momenti indimenticabili in ogni stagione."
+      "description": "Benvenuti a Pensiunea Perla Brazilor \u2013 il tuo rifugio di pace nel cuore della natura. Scopri la nostra affascinante pensione, circondata da foreste di abeti, con camere confortevoli, cucina tradizionale e momenti indimenticabili in ogni stagione."
     },
     "book_now": {
       "title": "Prenota Ora - Pensiunea Perla Brazilor",
-      "description": "Assicura il tuo soggiorno a Pensiunea Perla Brazilor – un luogo dove relax e natura si incontrano. Prenota una camera in modo semplice e veloce e goditi comfort, ospitalità ed esperienze autentiche nel cuore della Bucovina."
+      "description": "Assicura il tuo soggiorno a Pensiunea Perla Brazilor \u2013 un luogo dove relax e natura si incontrano. Prenota una camera in modo semplice e veloce e goditi comfort, ospitalit\u00e0 ed esperienze autentiche nel cuore della Bucovina."
     },
     "offers": {
       "title": "Le Nostre Offerte - Pensiunea Perla Brazilor",
@@ -59,7 +59,7 @@
     }
   },
   "Menu": {
-    "menu": "Menù",
+    "menu": "Men\u00f9",
     "home": "Home",
     "book_now": "Prenota Ora",
     "rooms": "Le nostre camere",
@@ -70,7 +70,7 @@
     "offer_newyear": "Offerta Capodanno",
     "contact": "Contatti",
     "about": "Chi Siamo",
-    "verify_availability": "Verifica disponibilità"
+    "verify_availability": "Verifica disponibilit\u00e0"
   },
   "Hero": {
     "title": "Pensiunea Perla Brazilor",
@@ -93,39 +93,37 @@
   },
   "AboutSection": {
     "title": "Chi siamo",
-    "description": "Pensiunea Perla Brazilor è il luogo che la nostra famiglia ha costruito con amore nel 2003, a Frumosu — circondati da boschi di abete, sulla valle Moldovita, a pochi chilometri dal Monastero di Moldovita.",
+    "description": "Pensiunea Perla Brazilor \u00e8 il luogo che la nostra famiglia ha costruito con amore nel 2003, a Frumosu \u2014 circondati da boschi di abete, sulla valle Moldovita, a pochi chilometri dal Monastero di Moldovita.",
     "feature_1_title": "Cucina tradizionale",
     "feature_1_desc": "Cuciniamo in casa, con i nostri ingredienti. Ricette autentiche della Bucovina, a ogni pasto.",
     "feature_2_title": "Pace e natura",
     "feature_2_desc": "Aria di montagna, boschi di abete e quella sensazione che il tempo si ferma un po'.",
     "feature_3_title": "Relax completo",
-    "feature_3_desc": "Piscina, vasca con acqua salata, sauna e miniera di sale — tutto ciò di cui hai bisogno per disconnetterti."
+    "feature_3_desc": "Piscina, vasca con acqua salata, sauna e miniera di sale \u2014 tutto ci\u00f2 di cui hai bisogno per disconnetterti."
   },
-"OffersPage": {
+  "OffersPage": {
     "our_offers": "Le nostre offerte",
     "section_title": "La Bucovina, come dovrebbe essere",
     "section_subtitle": "Tradizioni autentiche, buon cibo e la pace delle montagne",
     "cta_book": "Prenota ora!",
-    "craciun_title": "Offerta Natale",
+    "craciun_title": "Natale 2026 in Bucovina",
     "craciun_subtitle": "Cibo tradizionale, divertimento e tradizioni",
     "craciun_price": "Da 3.500 lei a persona",
-    "revelion_title": "Capodanno",
+    "revelion_title": "Capodanno 2026-2027 in Bucovina",
     "revelion_subtitle": "Cena festiva, musica e tradizioni",
     "revelion_price": "Da 3.700 lei a persona",
     "demipensiune_title": "Mezza Pensione",
     "demipensiune_subtitle": "Colazione e cena a buffet",
     "demipensiune_price": "Da 650 lei a notte",
-    "demipensiune_more": "Scopri di più!",
+    "demipensiune_more": "Scopri di pi\u00f9!",
     "demipensiune_alt_1": "Mezza Pensione 1",
     "demipensiune_alt_2": "Mezza Pensione 2",
     "demipensiune_alt_3": "Mezza Pensione 3",
-    "craciun_title": "Natale 2026 in Bucovina",
-    "craciun_more": "Scopri di più!",
+    "craciun_more": "Scopri di pi\u00f9!",
     "craciun_alt_1": "Natale 1",
     "craciun_alt_2": "Natale 2",
     "craciun_alt_3": "Natale 3",
-    "revelion_title": "Capodanno 2026-2027 in Bucovina",
-    "revelion_more": "Scopri di più!",
+    "revelion_more": "Scopri di pi\u00f9!",
     "revelion_alt_1": "Capodanno 1",
     "revelion_alt_2": "Capodanno 2",
     "revelion_alt_3": "Capodanno 3"
@@ -153,12 +151,12 @@
           "description": "I bagni nella jacuzzi aiutano ad abbassare la pressione sanguigna e a migliorare la funzione cardiaca."
         },
         "betterSleep": {
-          "title": "Sonno di qualità",
+          "title": "Sonno di qualit\u00e0",
           "description": "Una sessione regolare aiuta a regolare il ciclo sonno-veglia, garantendo un sonno riposante."
         },
         "generalWellbeing": {
           "title": "Benessere generale",
-          "description": "Migliora l'umore e dà energia, portando più gioia nella tua vita quotidiana."
+          "description": "Migliora l'umore e d\u00e0 energia, portando pi\u00f9 gioia nella tua vita quotidiana."
         }
       },
       "footer": "Perfetto dopo una giornata intensa, per un completo rigeneramento e un eccellente stato d'animo."
@@ -168,7 +166,7 @@
       "title": "I benefici della nostra piscina moderna",
       "description": "Rilassa e rinvigorisci il tuo corpo nella nostra piscina pulita e ben tenuta, ideale per ogni stagione.",
       "benefits": {
-        "swimming_title": "Attività fisica",
+        "swimming_title": "Attivit\u00e0 fisica",
         "swimming_desc": "Nuoto per tonificare il corpo e migliorare la resistenza fisica",
         "waterQuality_title": "Acqua pulita",
         "waterQuality_desc": "Acqua filtrata e trattata per un ambiente sicuro e sano",
@@ -185,7 +183,7 @@
       "benefits": {
         "detox": {
           "title": "Disintossicazione profonda",
-          "desc": "La sudorazione intensa aiuta a eliminare tossine e impurità dal corpo."
+          "desc": "La sudorazione intensa aiuta a eliminare tossine e impurit\u00e0 dal corpo."
         },
         "hydration": {
           "title": "Idratazione e rigenerazione",
@@ -223,7 +221,7 @@
           "desc": "Promuove l'ossigenazione dei tessuti e la salute del cuore."
         },
         "immunity": {
-          "title": "Aumento dell'immunità",
+          "title": "Aumento dell'immunit\u00e0",
           "desc": "Supporta il sistema immunitario per una protezione naturale."
         },
         "stressRelief": {
@@ -246,11 +244,11 @@
           "desc": "L'idromassaggio riduce la tensione, allevia il dolore e accelera il recupero."
         },
         "healthySkin": {
-          "title": "Pelle più sana",
+          "title": "Pelle pi\u00f9 sana",
           "desc": "Il sale naturale ha effetti antisettici e rimineralizzanti, lasciando la pelle vellutata."
         },
         "betterSleep": {
-          "title": "Sonno più riposante",
+          "title": "Sonno pi\u00f9 riposante",
           "desc": "Una sessione nella vasca idromassaggio favorisce un sonno profondo e riposante."
         },
         "authenticExperience": {
@@ -262,23 +260,23 @@
     }
   },
   "ErrorNotFound": {
-    "title": "Siamo spiacenti, ma questa pagina non esiste o è in costruzione.",
+    "title": "Siamo spiacenti, ma questa pagina non esiste o \u00e8 in costruzione.",
     "go_home": "Torna alla home page"
   },
   "Rooms": {
-    "pricesAndAvailability": "Prezzi e disponibilità",
+    "pricesAndAvailability": "Prezzi e disponibilit\u00e0",
     "select_room": "Seleziona camera",
-    "verify_availability": "Verifica disponibilità",
-    "choosePeriodToSeePrices": "Scegli il periodo di soggiorno per vedere prezzi e disponibilità",
+    "verify_availability": "Verifica disponibilit\u00e0",
+    "choosePeriodToSeePrices": "Scegli il periodo di soggiorno per vedere prezzi e disponibilit\u00e0",
     "selectValidRange": "Seleziona un intervallo di date valido.",
     "selectValidRangeBeforeCheck": "Seleziona un intervallo di date valido prima di verificare.",
     "checking": "Verifica...",
-    "checkAvailability": "Verifica Disponibilità",
-    "unknownError": "Si è verificato un errore sconosciuto durante la verifica.",
-    "noAvailability": "Nessuna disponibilità per il periodo selezionato.",
-    "holidayPhoneOnly": "Se hai cercato disponibilità per Natale o Capodanno, le prenotazioni si fanno solo telefonicamente.",
+    "checkAvailability": "Verifica Disponibilit\u00e0",
+    "unknownError": "Si \u00e8 verificato un errore sconosciuto durante la verifica.",
+    "noAvailability": "Nessuna disponibilit\u00e0 per il periodo selezionato.",
+    "holidayPhoneOnly": "Se hai cercato disponibilit\u00e0 per Natale o Capodanno, le prenotazioni si fanno solo telefonicamente.",
     "easterMinNights": "Durante Pasqua abbiamo un minimo di 3 notti. Assicurati di aver selezionato le date corrette.",
-    "selectDatesAndCheck": "Seleziona le date e premi per vedere disponibilità e prezzi.",
+    "selectDatesAndCheck": "Seleziona le date e premi per vedere disponibilit\u00e0 e prezzi.",
     "secondaryBuildingNote": "Edificio secondario, a 50m dall'edificio principale.",
     "price": "Prezzo:",
     "room": "{count, plural, one {camera disponibile} other {camere disponibili}}",
@@ -286,7 +284,7 @@
     "title": "Le nostre camere",
     "APB": {
       "title": "Appartamento Con Balcone",
-      "description": "L'appartamento ha due stanze ben definite, con il bagno situato in posizione centrale per un facile accesso da entrambe. La prima stanza è dotata di letto matrimoniale. La seconda stanza offre sia un letto matrimoniale che un divano letto. Questa struttura garantisce il massimo comfort e flessibilità per gli ospiti."
+      "description": "L'appartamento ha due stanze ben definite, con il bagno situato in posizione centrale per un facile accesso da entrambe. La prima stanza \u00e8 dotata di letto matrimoniale. La seconda stanza offre sia un letto matrimoniale che un divano letto. Questa struttura garantisce il massimo comfort e flessibilit\u00e0 per gli ospiti."
     },
     "DBB": {
       "title": "Camera Matrimoniale Con Balcone",
@@ -294,19 +292,19 @@
     },
     "DB": {
       "title": "Camera Matrimoniale Senza Balcone",
-      "description": "Le nostre camere matrimoniali, senza balcone, sono confortevoli e intime e includono bagno privato con doccia, garantendo privacy e comodità. Ognuna di queste camere offre un generoso letto matrimoniale, creando uno spazio ideale per il riposo e il relax."
+      "description": "Le nostre camere matrimoniali, senza balcone, sono confortevoli e intime e includono bagno privato con doccia, garantendo privacy e comodit\u00e0. Ognuna di queste camere offre un generoso letto matrimoniale, creando uno spazio ideale per il riposo e il relax."
     },
     "SB": {
       "title": "Suite Con Balcone",
-      "description": "La nostra esclusiva suite comprende due camere comunicanti con balcone, creando uno spazio ampio e privato con accesso all'esterno. Ognuna di queste accoglienti camere è dotata di un comodo letto matrimoniale, garantendo un soggiorno rilassante e intimo per i nostri ospiti."
+      "description": "La nostra esclusiva suite comprende due camere comunicanti con balcone, creando uno spazio ampio e privato con accesso all'esterno. Ognuna di queste accoglienti camere \u00e8 dotata di un comodo letto matrimoniale, garantendo un soggiorno rilassante e intimo per i nostri ospiti."
     },
     "TPB": {
       "title": "Camera Tripla Con Balcone",
-      "description": "Tutte le camere triple con balcone sono dotate di un comodo letto matrimoniale e un divano letto, offrendo un generoso spazio aggiuntivo per il relax e l'alloggio aggiuntivo. Perfette per famiglie o gruppi più numerosi, queste camere con balcone aggiungono un comfort extra e una piacevole prospettiva per un soggiorno meraviglioso."
+      "description": "Tutte le camere triple con balcone sono dotate di un comodo letto matrimoniale e un divano letto, offrendo un generoso spazio aggiuntivo per il relax e l'alloggio aggiuntivo. Perfette per famiglie o gruppi pi\u00f9 numerosi, queste camere con balcone aggiungono un comfort extra e una piacevole prospettiva per un soggiorno meraviglioso."
     },
     "TP": {
       "title": "Camera Tripla Senza Balcone",
-      "description": "Le nostre camere triple, senza balcone, sono dotate di un comodo letto matrimoniale e un ingegnoso letto singolo, che si integra nell'armadio per massimizzare lo spazio. Questa disposizione intelligente offre ai nostri ospiti flessibilità e maggiore comfort durante il loro soggiorno."
+      "description": "Le nostre camere triple, senza balcone, sono dotate di un comodo letto matrimoniale e un ingegnoso letto singolo, che si integra nell'armadio per massimizzare lo spazio. Questa disposizione intelligente offre ai nostri ospiti flessibilit\u00e0 e maggiore comfort durante il loro soggiorno."
     },
     "7101": {
       "image1Alt": "Camera Agro con balcone, prima vista",
@@ -403,20 +401,53 @@
       "image5Alt": "Camera 3, quinta vista"
     }
   },
-  "HalfBoardPage": {
-    "title": "Offerta Alloggio Con Mezza Pensione",
-    "book_now": "Prenota Ora!",
-    "food_included": "L'offerta include colazione e cena a buffet",
-    "food_traditional": "Cucina tradizionale al 60% di produzione propria",
+"HalfBoardPage": {
+    "title": "Offerta di Alloggio con Mezza Pensione",
+    "book_now": "Prenota ora!",
+    "food_included": "Colazione e cena a buffet ogni giorno, sempre fresche e fatte in casa",
+    "food_traditional": "Il 60% degli ingredienti proviene dalla nostra fattoria",
     "food_card_title": "Cucina",
-    "food_card_desc": "Scopri quali prelibatezze abbiamo!",
-    "spa_included": "L'offerta include l'accesso alla spa. Goditi il benessere nella vasca idromassaggio con acqua salata, piscina, salina, sauna o jacuzzi.",
-    "spa_card_title": "Spa",
-    "spa_card_desc": "Dove ti rilasserai?",
+    "food_card_desc": "Scopri le prelibatezze della cucina di Bucovina!",
+    "food_image_alt": "La nostra cucina con piatti tradizionali fatti in casa",
+    "local_gastronomy": "Gastronomia di Bucovina",
+    "breakfast_included": "Colazione inclusa",
+    "dinner_included": "Cena inclusa",
+    "traditional_cooking": "Ricette tramandate di generazione in generazione",
+    "own_production": "Prodotti fatti in casa, il 60% dalla nostra produzione",
+    "spa_included": "Accesso completo allo spa: vasca con acqua salata, piscina coperta, salina, sauna e jacuzzi.",
+    "spa_card_title": "Spa & Benessere",
+    "spa_card_desc": "Dove ti rilasserai completamente?",
+    "spa_image_alt": "Zona relax con jacuzzi e acqua salata",
+    "wellness_relaxare": "Benessere per corpo e anima",
+    "jacuzzi_title": "Vasca in legno con acqua salata",
+    "piscina_title": "Piscina coperta riscaldata",
+    "sauna_title": "Sauna finlandese a secco",
+    "salina_title": "Stanza del sale",
     "rooms_card_title": "Camere",
-    "rooms_card_desc": "Vista e servizi",
+    "rooms_card_desc": "Comfort e panorami da fiaba",
+    "rooms_image_alt": "Camera doppia con vista sul prato della pensione",
+    "fairy_accommodation": "Una camera dove i sogni diventano realtà",
+    "mountain_view": "Vista pulita della Bucovina",
+    "forest_atmosphere": "Atmosfera di foresta di abeti",
+    "private_bathroom": "Bagno privato eco-compatibile",
     "offers_card_title": "Altre offerte",
-    "offers_card_desc": "Natale o Capodanno in Bucovina"
+    "offers_card_desc": "Natale e Capodanno nel cuore della Bucovina",
+    "why_halfboard_title": "Perché scegliere la mezza pensione?",
+    "why_halfboard_desc": "Quando la tua vacanza include già colazione e cena, tutto ciò che devi fare è rilassarti. Nessuna preoccupazione, nessuna corsa al supermercato - solo tu e le montagne.",
+    "halfboard_title": "Mezza pensione",
+    "halfboard_desc": "Colazione + cena incluse, buffet ogni giorno",
+    "nature_relax_title": "Natura e tranquillità",
+    "nature_relax_desc": "Aria di montagna fresca, foreste di abeti e cascate nelle vicinanze",
+    "wellness_title": "Accesso spa incluso",
+    "wellness_desc": "Piscina, sauna, stanza del sale e vasca salata - gratis per gli ospiti",
+    "local_products_title": "Prodotti della fattoria",
+    "local_products_desc": "Salsicce, formaggio, marmellata e sidro - tutto fatto in casa",
+    "check_availability_title": "Verifica disponibilità",
+    "check_availability_desc": "Scopri quali camere sono disponibili e i prezzi per il tuo periodo.",
+    "see_prices": "Vedi prezzi e calendario",
+    "discover_offers_title": "Scopri le nostre altre offerte",
+    "see_offers": "Le nostre offerte speciali di Natale e Capodanno",
+    "spa_cta": "Vedi tutte le strutture spa"
   },
   "Spa": {
     "ciubar_1_alt": "Vasca di legno con acqua salata, prima vista",
@@ -439,9 +470,9 @@
     "email_us": "Email",
     "email_us_desc": "Rispondiamo entro 24h",
     "send_email": "Invia email",
-    "check_availability": "Verifica disponibilità",
+    "check_availability": "Verifica disponibilit\u00e0",
     "selectDatesAndCheck": "Seleziona le date per vedere i prezzi",
-    "verify_availability": "Verifica disponibilità"
+    "verify_availability": "Verifica disponibilit\u00e0"
   },
   "Calculate": {
     "adults": "Adulti",
@@ -456,7 +487,7 @@
     "food_drink": {
       "title": "Cibo e bevande",
       "subtitle": "Tutto incluso !!!",
-      "desc1": "Tutto è incluso, dal cibo alle bevande, hai cosa scegliere durante il tuo soggiorno in Bucovina",
+      "desc1": "Tutto \u00e8 incluso, dal cibo alle bevande, hai cosa scegliere durante il tuo soggiorno in Bucovina",
       "desc2": "Cucina tradizionale al 60% di produzione propria"
     },
     "spa": {
@@ -472,7 +503,7 @@
       },
       "dec24": {
         "title": "24 Dicembre",
-        "desc": "Alle 10:00, inizia con una gita in slitta trainata da cavalli, poi goditi un pasto all'aperto con la tradizionale macellazione del maiale, barbecue e bistecca in umido, insieme a vin brulé, grappa bollita e deliziosi Poale-n Brâu. In serata, a cena, i cantanti natalizi e Babbo Natale porteranno la magia delle feste."
+        "desc": "Alle 10:00, inizia con una gita in slitta trainata da cavalli, poi goditi un pasto all'aperto con la tradizionale macellazione del maiale, barbecue e bistecca in umido, insieme a vin brul\u00e9, grappa bollita e deliziosi Poale-n Br\u00e2u. In serata, a cena, i cantanti natalizi e Babbo Natale porteranno la magia delle feste."
       },
       "dec25": {
         "title": "25 Dicembre",
@@ -480,7 +511,7 @@
       },
       "dec26": {
         "title": "26 Dicembre",
-        "desc": "Sei libero di trascorrere la giornata come desideri – sia sulla pista da sci di Câmpulung Moldovenesc, sia esplorando le bellezze locali, come i monasteri di Moldovița e Voroneț, la ceramica di Marginea (Ceramica Nera) o un giro con la Mocănița Huțulca dalla Moldovița."
+        "desc": "Sei libero di trascorrere la giornata come desideri \u2013 sia sulla pista da sci di C\u00e2mpulung Moldovenesc, sia esplorando le bellezze locali, come i monasteri di Moldovi\u021ba e Vorone\u021b, la ceramica di Marginea (Ceramica Nera) o un giro con la Moc\u0103ni\u021ba Hu\u021bulca dalla Moldovi\u021ba."
       }
     },
     "book_now": "Prenota Ora!",
@@ -488,7 +519,7 @@
       "title": "Calcola il prezzo del tuo soggiorno!",
       "discounts": {
         "title": "Sconti Speciali",
-        "desc": "I bambini fino a 12 anni beneficiano di uno sconto del 50%, quelli tra i 4 e i 6 anni del 70% e per quelli tra 0 e 3 anni l'accesso è gratuito."
+        "desc": "I bambini fino a 12 anni beneficiano di uno sconto del 50%, quelli tra i 4 e i 6 anni del 70% e per quelli tra 0 e 3 anni l'accesso \u00e8 gratuito."
       }
     }
   },
@@ -498,7 +529,7 @@
     "food_drink": {
       "title": "Cibo e bevande",
       "subtitle": "Tutto incluso !!!",
-      "desc1": "Tutto è incluso, dal cibo alle bevande, hai cosa scegliere durante il tuo soggiorno in Bucovina",
+      "desc1": "Tutto \u00e8 incluso, dal cibo alle bevande, hai cosa scegliere durante il tuo soggiorno in Bucovina",
       "desc2": "Cucina tradizionale al 60% di produzione propria"
     },
     "spa": {
@@ -510,19 +541,19 @@
       "title": "Il Nostro Programma di Soggiorno",
       "dec29": {
         "title": "29 Dicembre",
-        "desc": "Iniziamo la vacanza con un caloroso benvenuto in stile bucovineano e una cena di benvenuto, così potrai conoscere i primi sapori della nostra cucina locale."
+        "desc": "Iniziamo la vacanza con un caloroso benvenuto in stile bucovineano e una cena di benvenuto, cos\u00ec potrai conoscere i primi sapori della nostra cucina locale."
       },
       "dec30": {
         "title": "30 Dicembre",
-        "desc": "Alle 10:00, partiamo con un giro in carrozza trainata da cavalli attraverso il paesaggio invernale della Bucovina. Dopo la strada, ci fermiamo per un pasto all'aperto con cibo tradizionale: macellazione del maiale, barbecue, bistecca in umido, vin brulé, grappa bollita e Poale-n Brâu - perfetto per una vera giornata invernale."
+        "desc": "Alle 10:00, partiamo con un giro in carrozza trainata da cavalli attraverso il paesaggio invernale della Bucovina. Dopo la strada, ci fermiamo per un pasto all'aperto con cibo tradizionale: macellazione del maiale, barbecue, bistecca in umido, vin brul\u00e9, grappa bollita e Poale-n Br\u00e2u - perfetto per una vera giornata invernale."
       },
       "dec31": {
         "title": "31 Dicembre",
-        "desc": "La giornata è libera per passeggiate e visite nei dintorni, fino alle 21:00, quando inizia la festa di Capodanno. Un ricco menù ti aspetta con antipasti, piatti caldi di tacchino, maiale e vitello, pesce e molto altro – il tutto con musica dal vivo e balli fino al mattino."
+        "desc": "La giornata \u00e8 libera per passeggiate e visite nei dintorni, fino alle 21:00, quando inizia la festa di Capodanno. Un ricco men\u00f9 ti aspetta con antipasti, piatti caldi di tacchino, maiale e vitello, pesce e molto altro \u2013 il tutto con musica dal vivo e balli fino al mattino."
       },
       "jan1": {
         "title": "1 Gennaio",
-        "desc": "Il primo giorno dell'anno è per il relax, come desideri. Puoi andare a sciare a Câmpulung Moldovenesc, visitare i monasteri della zona (Moldovița, Voroneț, Humor, Sucevița), i laboratori di ceramica nera a Marginea o fare un giro con la Mocănița attraverso la valle di Moldovița."
+        "desc": "Il primo giorno dell'anno \u00e8 per il relax, come desideri. Puoi andare a sciare a C\u00e2mpulung Moldovenesc, visitare i monasteri della zona (Moldovi\u021ba, Vorone\u021b, Humor, Sucevi\u021ba), i laboratori di ceramica nera a Marginea o fare un giro con la Moc\u0103ni\u021ba attraverso la valle di Moldovi\u021ba."
       }
     },
     "book_now": "Prenota Ora!",
@@ -530,8 +561,38 @@
       "title": "Calcola il prezzo del tuo soggiorno!",
       "discounts": {
         "title": "Sconti Speciali",
-        "desc": "I bambini fino a 12 anni beneficiano di uno sconto del 50%, quelli tra i 4 e i 6 anni del 70% e per quelli tra 0 e 3 anni l'accesso è gratuito."
+        "desc": "I bambini fino a 12 anni beneficiano di uno sconto del 50%, quelli tra i 4 e i 6 anni del 70% e per quelli tra 0 e 3 anni l'accesso \u00e8 gratuito."
       }
     }
+  },
+  "ReviewsSection": {
+    "title": "Cosa Dicono i Nostri Ospiti",
+    "reviews": [
+      {
+        "text": "Siamo stati accolti calorosamente dalla proprietaria della pensione, una donna da 10 e lode. \u00c8 impeccabile!",
+        "author": "Familia Darius",
+        "location": "Miercurea Ciuc"
+      },
+      {
+        "text": "Abbiamo trascorso le festivit\u00e0 pasquali in una affascinante regione della Bucovina! Il cibo \u00e8 irresistibile!",
+        "author": "Georgic\u0103 R.",
+        "location": "Peceneaga"
+      },
+      {
+        "text": "Raccomando a tutti coloro che desiderano una vacanza rilassante dove la tranquillit\u00e0 delle montagne si abbina alle condizioni del mare.",
+        "author": "Nicoleta C.",
+        "location": "Ia\u0219i"
+      },
+      {
+        "text": "\u00c8 stato come un sogno - un ospite da 10 e lode, un alloggio eccellente. Tutto il nostro gruppo si \u00e8 sentito benissimo!",
+        "author": "Familia Marian G.",
+        "location": "Bucure\u0219ti"
+      },
+      {
+        "text": "Ogni volta che sento il bisogno acuto di relaxazione, vengo qui, a Perla Brazilor. Gli ospiti sono persone straordinarie!",
+        "author": "Mitrea",
+        "location": "\u021a\u0103nd\u0103rei"
+      }
+    ]
   }
 }

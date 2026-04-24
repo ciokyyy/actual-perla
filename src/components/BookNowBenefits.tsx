@@ -17,7 +17,7 @@ function BenefitCard({ icon: Icon, title, description, button, buttonHref }: { i
       transition={{ duration: 0.4 }}
       className="bg-white/80 backdrop-blur-md rounded-3xl p-25 text-center border border-white/50 shadow-xl"
     >
-      <div className="w-50 h-50 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-15">
+      <div className="w-50 h-50 rounded-xl bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center mx-auto mb-15">
         <Icon className="w-22 h-22 text-primary" />
       </div>
       <h4 className="font-[family-name:var(--font-heading)] text-xl font-semibold mb-10 text-primary">{title}</h4>

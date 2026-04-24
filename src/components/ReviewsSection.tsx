@@ -1,47 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { FaStar } from "react-icons/fa";
 
-const reviews = [
-  {
-    text: {
-      ro: "Paștele petrecut în Bucovina, la Perla Brazilor, a fost o experiență autentică pe care o recomand oricui vrea să redescopere tradițiile românești.",
-      en: "Easter spent in Bucovina, at Perla Brazilor, was an authentic experience that I recommend to anyone who wants to rediscover Romanian traditions.",
-      it: "Pasqua trascorsa in Bucovina, alla Perla Brazilor, è stata un'esperienza autentica che raccomando a chi vuole riscoprire le tradizioni rumene.",
-    },
-    author: "Familia Ionescu",
-    location: "Iași",
-    period: "Paște 2025",
-  },
-  {
-    text: {
-      ro: "Am stat 3 nopți și a fost perfect. Mâncarea tradițională, aerul de munte și atmosfera familiale ne-au făcut să ne întoarcem cu drag.",
-      en: "We stayed 3 nights and it was perfect. Traditional food, mountain air and family atmosphere made us want to come back.",
-      it: "Abbiamo soggiornato 3 notti ed è stato perfetto. Il cibo tradizionale, l'aria di montagna e l'atmosfera familiare ci hanno fatto tornare volentieri.",
-    },
-    author: "Maria și Andrei",
-    location: "București",
-    period: "Octombrie 2025",
-  },
-  {
-    text: {
-      ro: "Cea mai frumoasă vacanță din ultimii ani. Copiii s-au bucurat de animale, iar noi ne-am relaxat la spa. Recomand cu drag!",
-      en: "The most beautiful vacation in recent years. The kids enjoyed the animals, and we relaxed at the spa. I highly recommend!",
-      it: "Le più belle vacanze degli ultimi anni. I bambini si sono goduti gli animali e noi ci siamo rilassati allo spa. Consiglio vivamente!",
-    },
-    author: "Familia Popescu",
-    location: "Cluj-Napoca",
-    period: "August 2025",
-  },
-];
-
 function Stars({ count = 5 }: { count?: number }) {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-4">
       {Array.from({ length: count }).map((_, i) => (
-        <FaStar key={i} className="w-8 h-8 text-primary" />
+        <FaStar key={i} className="w-12 h-12 text-primary fill-primary" />
       ))}
     </div>
   );
@@ -50,17 +17,22 @@ function Stars({ count = 5 }: { count?: number }) {
 export default function ReviewsSection() {
   const [index, setIndex] = useState(0);
   const t = useTranslations("ReviewsSection");
+  
+  const reviews = t.raw("reviews") as Array<{
+    text: string;
+    author: string;
+    location: string;
+  }>;
 
   useEffect(() => {
     const interval = setInterval(() => setIndex((i) => (i + 1) % reviews.length), 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [reviews.length]);
 
-  const lang = t("lang") as "ro" | "en" | "it";
   const review = reviews[index];
 
   return (
-    <section className="w-full px-5 py-40 flex flex-col items-center gap-20">
+    <section className="w-full px-5 py-50 flex flex-col items-center gap-20">
       <motion.h2
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -73,41 +45,30 @@ export default function ReviewsSection() {
 
       <Stars />
 
-      <div className="max-w-700 w-full relative h-100">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0 flex flex-col items-center gap-15"
-          >
-            <p className="text-center text-text text-xl md:text-2xl font-[family-name:var(--font-heading)] italic">
-              "{review.text[lang]}"
-            </p>
+      <div className="max-w-900 w-full flex flex-col items-center gap-15">
+        <p className="text-center text-text text-xl md:text-2xl font-[family-name:var(--font-heading)] italic leading-relaxed">
+          {review.text}
+        </p>
 
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-text font-semibold text-lg">{review.author}</span>
-              <span className="text-text/50 text-sm">
-                {review.location} — {review.period}
-              </span>
-            </div>
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-text font-semibold text-lg">{review.author}</span>
+          <span className="text-text/50 text-sm">
+            {review.location}
+          </span>
+        </div>
 
-            <div className="flex gap-3">
-              {reviews.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setIndex(i)}
-                  className={`w-10 h-10 rounded-full transition-all ${
-                    i === index ? "bg-primary" : "bg-primary/20"
-                  }`}
-                  aria-label={`Review ${i + 1}`}
-                />
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        <div className="flex gap-4 py-8">
+          {reviews.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`w-12 h-12 rounded-full transition-all cursor-pointer flex items-center justify-center text-white text-xs font-bold ${i === index ? "bg-primary scale-110" : "bg-primary/30 hover:bg-primary/50"}`}
+              aria-label={`Review ${i + 1}`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

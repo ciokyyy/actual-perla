@@ -48,7 +48,7 @@ export function Calendar({
           weeks: "flex flex-col gap-3",
           weekdays: "grid grid-cols-7 mb-8",
           weekday: "text-center text-xs font-semibold text-primary/50 uppercase tracking-wider py-8",
-          months: "flex gap-20 pt-50",
+          months: "flex flex-col md:flex-row gap-20 pt-50",
           month: "bg-transparent",
           month_caption: "text-center mb-15",
           caption_label: "font-[family-name:var(--font-heading)] text-lg font-semibold text-text capitalize",
