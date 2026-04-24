@@ -5,7 +5,7 @@ import { useGetAvailability } from "@/libs/hooks/useGetAvail";
 import { useRooms } from "@/libs/hooks/useGetRooms";
 import { useState } from "react";
 import { Calendar } from "./Calendar";
-import { DateRange } from "react-day-picker";
+import type { DateRange } from "react-day-picker";
 import { format } from "date-fns";
 import { useTranslations } from "next-intl";
 import { FaSearch, FaBed, FaUsers, FaCheckCircle, FaExclamationTriangle, FaArrowLeft, FaArrowRight, FaEye } from "react-icons/fa";

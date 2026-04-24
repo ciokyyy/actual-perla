@@ -1,6 +1,6 @@
 "use client";
 import Logo from "@/components/ui/Logo";
-import LogoWhiteText from "~/images/ui/logo-white-text.png";
+import LogoWhiteText from "~/images/ui/logo-white-text.webp";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "motion/react";
 import { FaCalendarCheck } from "react-icons/fa";

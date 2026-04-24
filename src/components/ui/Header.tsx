@@ -2,7 +2,7 @@
 import Logo from "@/components/ui/Logo";
 import Image from "next/image";
 import HeaderImage from "~/images/ui/header.jpg";
-import LogoWhiteText from "~/images/ui/logo-white-text.png";
+import LogoWhiteText from "~/images/ui/logo-white-text.webp";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/navigation";
 import { motion } from "motion/react";

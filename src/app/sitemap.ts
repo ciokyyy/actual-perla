@@ -16,9 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getEntries("/oferta-demipensiune"),
     ...getEntries("/camere"),
     ...getEntries("/spa"),
-    ...getEntries("/mancare"),
     ...getEntries("/preturi-valabilitate"),
-    ...getEntries("/oferte"),
   ];
 }
 

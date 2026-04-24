@@ -45,9 +45,11 @@ export default function AboutSection() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
-              className="flex flex-col items-center gap-10 p-20 bg-primary/20 rounded-2xl"
+              className="flex flex-col items-center gap-12 p-20 bg-primary/20 rounded-2xl"
             >
-              <card.icon className="w-24 h-24 text-white" />
+              <div className="w-44 h-44 rounded-xl flex items-center justify-center bg-white/15 ring-1 ring-white/20">
+                <card.icon className="w-20 h-20 text-white" />
+              </div>
               <h3 className="text-white font-semibold text-center">{card.title}</h3>
               <p className="text-white/80 text-center text-sm">{card.description}</p>
             </motion.div>

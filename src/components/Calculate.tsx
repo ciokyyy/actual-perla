@@ -32,7 +32,7 @@ export default function Calculate(props: Readonly<{ basePrice: number }>) {
     props.basePrice *
     (Number(values.adulti) +
       Number(values.copii1) * 0.5 +
-      Number(values.copii2) * 0.7);
+      Number(values.copii2) * 0.3);
   const result = `${calcValue.toFixed(0)} lei`;
 
   return (

@@ -33,30 +33,29 @@
       "title": "Rezervă Acum - Pensiunea Perla Brazilor",
       "description": "Asigură-ți sejurul la Pensiunea Perla Brazilor – un loc unde relaxarea și natura se întâlnesc. Rezervă simplu și rapid o cameră și bucură-te de confort, ospitalitate și experiențe autentice în inima Bucovinei."
     },
-
-    "offers": {
-      "title": "Ofertele Noastre - Pensiunea Perla Brazilor",
-      "description": "Descoperiți ofertele noastre speciale la Pensiunea Perla Brazilor: Pachet Demipensiune, Pachet de Crăciun și sărbătorirea Revelionului. Rezervați-vă vacanța la munte astăzi."
-    },
-    "new_years_offer": {
-      "title": "Revelion 2026-2027 în Bucovina - Pensiunea Perla Brazilor",
-      "description": "Petreceți un Revelion de neuitat în Bucovina la Pensiunea Perla Brazilor. Pachet all-inclusive cu 4 nopți de cazare, mese festive, plimbări cu sania, muzică live și acces la spa. Rezervați acum pentru o experiență tradițională autentică de Anul Nou!"
-    },
-    "half_board_offer": {
-      "title": "Ofertă Demipensiune - Pensiunea Perla Brazilor",
-      "description": "Bucurați-vă de cazare cu demipensiune la Pensiunea Perla Brazilor. Pachetul include mic dejun și cină la bufet suedez, preparate tradiționale, acces la spa și facilități moderne. Experiență autentică în Bucovina cu mâncare 60% din producție proprie."
-    },
-    "christmas_offer": {
-      "title": "Crăciun 2026 în Bucovina - Pensiunea Perla Brazilor",
-      "description": "Petreceți un Crăciun tradițional în Bucovina la Pensiunea Perla Brazilor. Pachet all-inclusive cu 4 nopți de cazare, mese festive, colindători, plimbări cu sania, pomana porcului și acces la spa. O experiență autentică de sărbători!"
-    },
-    "spa": {
-      "title": "Spa & Wellness - Pensiunea Perla Brazilor",
-      "description": "Relaxați-vă în zona noastră spa cu piscină, ciubăr cu apă sărată, jacuzzi, salină și saună finlandeză. O oază de liniște și stare de bine în inima Bucovinei, pentru revigorare completă."
+    "prices_availability": {
+      "title": "Preturi și Valabilitate - Pensiunea Perla Brazilor",
+      "description": "Verifică prețurile și disponibilitatea camerelor la Pensiunea Perla Brazilor. Alege perioada și vezi ofertele disponibile pentru sejurul tău în inima Bucovinei."
     },
     "our_rooms": {
       "title": "Camerele Noastre - Pensiunea Perla Brazilor",
-      "description": "Descoperiți camerele și apartamentele noastre confortabile, cu vedere la munte. De la camere duble până la apartamente spațioase, toate dotate modern pentru o ședere perfectă în Bucovina."
+      "description": "Descoperă camerele confortabile de la Pensiunea Perla Brazilor. Camere duble, triple și apartamente în inima Bucovinei."
+    },
+    "spa": {
+      "title": "Spa - Pensiunea Perla Brazilor",
+      "description": "Relaxare completă la Pensiunea Perla Brazilor: piscină, ciubăr cu apă sărată, saună și salină."
+    },
+    "christmas_offer": {
+      "title": "Ofertă de Crăciun 2026 - Pensiunea Perla Brazilor",
+      "description": "Sărbătorește Crăciunul 2026 în inima Bucovinei. Cină festivă, pachet cadou, muzică și tradiții la Pensiunea Perla Brazilor."
+    },
+    "new_years_offer": {
+      "title": "Ofertă Revelion 2026-2027 - Pensiunea Perla Brazilor",
+      "description": "Întâmpină noul an în Stil în inima Bucovinei. Cină festivă, muzică, foc de artificii și distracție la Pensiunea Perla Brazilor."
+    },
+    "half_board_offer": {
+      "title": "Ofertă Demipensiune - Pensiunea Perla Brazilor",
+      "description": "Cazare cu mic dejun și cină la Pensiunea Perla Brazilor. Descoperă bucătăria tradițională bucovineană."
     }
   },
   "Menu": {
@@ -107,10 +106,10 @@
     "section_title": "Bucovina, așa cum ar trebui să fie",
     "section_subtitle": "Tradiții autentice, mâncare bună și liniștea munților",
     "cta_book": "Rezervă acum !",
-    "craciun_title": "Ofertă de Crăciun",
+    "craciun_title": "Crăciun 2026 în Bucovina",
     "craciun_subtitle": "Bucate pe-ndelete, distracție și tradiții",
     "craciun_price": "De la 3,500 lei de persoană",
-    "revelion_title": "Revelion",
+    "revelion_title": "Revelion 2026-2027 în Bucovina",
     "revelion_subtitle": "Cină festiva, muzică și tradiții",
     "revelion_price": "De la 3,700 lei de persoană",
     "demipensiune_title": "Demipensiune",
@@ -120,12 +119,10 @@
     "demipensiune_alt_1": "Demipensiune 1",
     "demipensiune_alt_2": "Demipensiune 2",
     "demipensiune_alt_3": "Demipensiune 3",
-    "craciun_title": "Crăciun 2026 în Bucovina",
     "craciun_more": "Află mai multe !",
     "craciun_alt_1": "Craciun 1",
     "craciun_alt_2": "Craciun 2",
     "craciun_alt_3": "Craciun 3",
-    "revelion_title": "Revelion 2026-2027 în Bucovina",
     "revelion_more": "Află mai multe !",
     "revelion_alt_1": "Revelion 1",
     "revelion_alt_2": "Revelion 2",
@@ -475,7 +472,8 @@
     "send_email": "Trimite email",
     "check_availability": "Verifică disponibilitatea",
     "selectDatesAndCheck": "Selectează datele și vezi prețurile",
-    "verify_availability": "Verifică disponibilitatea"
+    "verify_availability": "Verifică disponibilitatea",
+    "title": "Rezervă Acum - Pensiunea Perla Brazilor"
   },
   "Calculate": {
     "adults": "Adulți",

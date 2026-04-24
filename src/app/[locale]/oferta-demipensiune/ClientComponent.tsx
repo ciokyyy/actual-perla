@@ -293,7 +293,7 @@ export default function ClientComponent() {
         </div>
       </section>
 
-      <section className="py-70 md:py-90 px-20 sm:px-30">
+      <section className="py-40 md:py-60 px-20 sm:px-30">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-20 md:gap-24">
             <motion.div
@@ -351,7 +351,7 @@ export default function ClientComponent() {
         </div>
       </section>
 
-      <section className="py-70 md:py-90 px-20 sm:px-30">
+      <section className="py-40 md:py-60 px-20 sm:px-30">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-20 md:gap-24">
             <CtaCard

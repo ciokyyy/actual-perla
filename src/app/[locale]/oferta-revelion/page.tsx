@@ -97,7 +97,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
     params: await props.params,
     pageName: "new_years_offer",
-    imageName: "new_years_eve.png",
+    imageName: "new_years_eve.webp",
     pathSegment: "oferta-revelion",
   });
 }
@@ -158,16 +158,16 @@ export default function RevelionPage({ params }: Readonly<Props>) {
             </div>
           </div>
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface">
-            <Image src={FestivTwo} alt="" className="aspect-square object-cover object-center size-full" />
+            <Image src={FestivTwo} alt="Petrecere de Revelion cu masa festiva in sala de mese" className="aspect-square object-cover object-center size-full" />
           </div>
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface">
-            <Image alt="" src={Cai} className="aspect-square object-cover object-center" />
+            <Image alt="Plimbare cu sania in peisajul de iarna al Bucovinei" src={Cai} className="aspect-square object-cover object-center" />
           </div>
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface">
-            <Image alt="" src={FestivThree} className="aspect-square object-cover object-center rotate-90" />
+            <Image alt="Masa festiva de Revelion in curtea pensiunii" src={FestivThree} className="aspect-square object-cover object-center rotate-90" />
           </div>
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface">
-            <Image alt="" src={FestivFour} className="aspect-square object-cover object-center" />
+            <Image alt="Decoratiuni si atmosfera de Revelion la Pensiunea Perla Brazilor" src={FestivFour} className="aspect-square object-cover object-center" />
           </div>
         </div>
 

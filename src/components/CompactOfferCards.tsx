@@ -1,0 +1,117 @@
+"use client";
+import { useState, useEffect } from "react";
+import { Link } from "@/components/ui/Link";
+import { motion } from "motion/react";
+import Image from "next/image";
+import { FaConciergeBell } from "react-icons/fa";
+import { PiSparkleFill } from "react-icons/pi";
+import { TbChristmasTreeFilled } from "react-icons/tb";
+import DemipensiuneOne from "~/images/demipensiune/demipensiune-1.webp";
+import DemipensiuneTwo from "~/images/demipensiune/demipensiune-2.webp";
+import DemipensiuneThree from "~/images/demipensiune/demipensiune-3.webp";
+
+import CraciunOne from "~/images/craciun/craciun-1.webp";
+import CraciunTwo from "~/images/craciun/craciun-2.webp";
+import CraciunThree from "~/images/craciun/craciun-3.webp";
+
+import RevelionOne from "~/images/revelion/revelion-1.webp";
+import RevelionTwo from "~/images/revelion/revelion-2.webp";
+import RevelionThree from "~/images/revelion/revelion-3.webp";
+import { useTranslations } from "next-intl";
+import type { StaticImageData } from "next/image";
+
+function CompactOfferCardClassic({ title, icon: Icon, images, href, subtitle, price, cta }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string; subtitle: string; price: string; cta: string }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setIndex((i) => (i + 1) % images.length), 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <Link href={href as any} className="group relative rounded-2xl overflow-hidden shadow-md cursor-pointer block">
+      <div className="relative aspect-[4/5]">
+        {images.map((img, i) => (
+          <motion.div
+            key={i}
+            className="absolute inset-0"
+            initial={false}
+            animate={{ opacity: i === index ? 1 : 0, scale: i === index ? 1 : 1.2 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Image src={img} alt={`${title} - imaginea ${i + 1}`} fill className="object-cover" />
+          </motion.div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-15 flex flex-col items-center gap-8">
+          <div className="w-44 h-44 rounded-xl flex items-center justify-center bg-white/15 ring-1 ring-white/20">
+            <Icon className="w-20 h-20 text-white" />
+          </div>
+          <h3 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold text-center">{title}</h3>
+          <p className="text-white/80 text-center text-sm">{subtitle}</p>
+          <p className="text-white/60 text-center text-xs">{price}</p>
+          <button className="px-15 py-8 bg-primary text-white rounded-full text-sm font-medium">
+            {cta}
+          </button>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+export function CompactOfferCards() {
+  const t = useTranslations("OffersPage");
+
+  return (
+    <section className="w-full py-30 px-5">
+      <motion.h2
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl text-text font-bold text-center"
+      >
+        {t("section_title")}
+      </motion.h2>
+      <motion.p
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="text-center text-text/70 mt-8 mb-30 max-w-600 mx-auto"
+      >
+        {t("section_subtitle")}
+      </motion.p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-1200 mx-auto">
+        <CompactOfferCardClassic
+          title={t("craciun_title")}
+          icon={TbChristmasTreeFilled}
+          images={[CraciunOne, CraciunTwo, CraciunThree]}
+          href="/oferta-craciun"
+          subtitle={t("craciun_subtitle")}
+          price={t("craciun_price")}
+          cta={t("cta_book")}
+        />
+        <CompactOfferCardClassic
+          title={t("revelion_title")}
+          icon={PiSparkleFill}
+          images={[RevelionOne, RevelionTwo, RevelionThree]}
+          href="/oferta-revelion"
+          subtitle={t("revelion_subtitle")}
+          price={t("revelion_price")}
+          cta={t("cta_book")}
+        />
+        <CompactOfferCardClassic
+          title={t("demipensiune_title")}
+          icon={FaConciergeBell}
+          images={[DemipensiuneOne, DemipensiuneTwo, DemipensiuneThree]}
+          href="/oferta-demipensiune"
+          subtitle={t("demipensiune_subtitle")}
+          price={t("demipensiune_price")}
+          cta={t("cta_book")}
+        />
+      </div>
+    </section>
+  );
+}

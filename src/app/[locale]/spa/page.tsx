@@ -19,7 +19,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
     params: await props.params,
     pageName: "spa",
-    imageName: "spa.png",
+    imageName: "spa.webp",
   });
 }
 
