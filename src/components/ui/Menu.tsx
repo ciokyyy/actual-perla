@@ -50,15 +50,28 @@ export default function Menu() {
 
   return (
     <>
-      {/* Trigger button */}
-      <button
-        onClick={() => setOpen(true)}
-        className="fixed top-20 right-20 z-30 flex items-center gap-8 bg-surface/90 backdrop-blur-sm text-primary rounded-full px-16 py-10 shadow-lg transition-all duration-200 hover:bg-surface hover:shadow-xl active:scale-95 cursor-pointer"
-        aria-label="Open menu"
-      >
-        <span className="text-sm font-medium hidden md:inline">{t("menu")}</span>
-        <HiMenuAlt3 className="w-22 h-22" />
-      </button>
+      {/* Fixed buttons container */}
+      <div className="fixed top-20 right-20 z-30 flex items-center gap-8">
+        {/* Menu trigger button */}
+        <button
+          onClick={() => setOpen(true)}
+          className="flex items-center gap-8 bg-surface/90 backdrop-blur-sm text-primary rounded-full px-16 py-10 shadow-lg transition-all duration-200 hover:bg-surface hover:shadow-xl active:scale-95 cursor-pointer"
+          aria-label="Open menu"
+        >
+          <span className="text-sm font-medium hidden md:inline">{t("menu")}</span>
+          <HiMenuAlt3 className="w-22 h-22" />
+        </button>
+
+        {/* Book Now trigger button */}
+        <Link
+          href="/rezerva-acum"
+          className="flex items-center gap-8 bg-surface/90 backdrop-blur-sm text-primary rounded-full px-16 py-10 shadow-lg transition-all duration-200 hover:bg-surface hover:shadow-xl active:scale-95 cursor-pointer"
+          aria-label="Book now"
+        >
+          <span className="text-sm font-medium hidden md:inline">{t("book_now")}</span>
+          <FaCalendarCheck className="w-22 h-22" />
+        </Link>
+      </div>
 
       {/* Overlay + Panel */}
       <AnimatePresence>

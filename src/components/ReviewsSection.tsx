@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useTranslations } from "next-intl";
 import { FaStar } from "react-icons/fa";
 
 const reviews = [
@@ -36,10 +37,6 @@ const reviews = [
   },
 ];
 
-interface ReviewsSectionProps {
-  locale: string;
-}
-
 function Stars({ count = 5 }: { count?: number }) {
   return (
     <div className="flex gap-2">
@@ -50,19 +47,20 @@ function Stars({ count = 5 }: { count?: number }) {
   );
 }
 
-export default function ReviewsSection({ locale }: ReviewsSectionProps) {
+export default function ReviewsSection() {
   const [index, setIndex] = useState(0);
+  const t = useTranslations("ReviewsSection");
 
   useEffect(() => {
     const interval = setInterval(() => setIndex((i) => (i + 1) % reviews.length), 6000);
     return () => clearInterval(interval);
   }, []);
 
-  const lang = locale === "it" ? "it" : locale === "en-us" ? "en" : "ro";
+  const lang = t("lang") as "ro" | "en" | "it";
   const review = reviews[index];
 
   return (
-    <section className="w-full px-5 py-30 flex flex-col items-center gap-20">
+    <section className="w-full px-5 py-40 flex flex-col items-center gap-20">
       <motion.h2
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -70,7 +68,7 @@ export default function ReviewsSection({ locale }: ReviewsSectionProps) {
         transition={{ duration: 0.5 }}
         className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl text-primary font-extrabold text-center"
       >
-        Ce spun oaspeții noștri
+        {t("title")}
       </motion.h2>
 
       <Stars />
@@ -86,7 +84,7 @@ export default function ReviewsSection({ locale }: ReviewsSectionProps) {
             className="absolute inset-0 flex flex-col items-center gap-15"
           >
             <p className="text-center text-text text-xl md:text-2xl font-[family-name:var(--font-heading)] italic">
-              "{review.text[lang as keyof typeof review.text]}"
+              "{review.text[lang]}"
             </p>
 
             <div className="flex flex-col items-center gap-2">
@@ -96,12 +94,12 @@ export default function ReviewsSection({ locale }: ReviewsSectionProps) {
               </span>
             </div>
 
-            <div className="flex gap-5">
+            <div className="flex gap-3">
               {reviews.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setIndex(i)}
-                  className={`w-8 h-8 rounded-full transition-all ${
+                  className={`w-10 h-10 rounded-full transition-all ${
                     i === index ? "bg-primary" : "bg-primary/20"
                   }`}
                   aria-label={`Review ${i + 1}`}

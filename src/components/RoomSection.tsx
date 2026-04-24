@@ -1,0 +1,147 @@
+"use client";
+import { useTranslations } from "next-intl";
+import { motion, AnimatePresence } from "motion/react";
+import { FaUser, FaArrowLeft, FaArrowRight, FaCheck, FaEye } from "react-icons/fa";
+import Image from "next/image";
+import rooms from "@/libs/db.json";
+import { useState } from "react";
+import { Link } from "@/components/ui/Link";
+
+interface RoomTypeSectionProps {
+  typeId: string;
+  title: string;
+  description: string;
+  typeKey: string;
+  reversed?: boolean;
+}
+
+function RoomTypeCard({ typeId, title, description, typeKey, reversed }: RoomTypeSectionProps) {
+  const typeRooms = rooms.rooms.filter(r => r.typeId === typeKey && r.images.length > 0);
+  
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const selectedRoom = typeRooms[selectedIdx];
+  const roomImages = selectedRoom?.images || [];
+  const firstImage = roomImages[0]?.src || "/images/ui/header.jpg";
+
+  const goNext = () => {
+    setSelectedIdx((prev) => (prev + 1) % typeRooms.length);
+  };
+
+  const goPrev = () => {
+    setSelectedIdx((prev) => (prev - 1 + typeRooms.length) % typeRooms.length);
+  };
+
+  return (
+    <motion.div
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="relative bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-xl border border-white/50"
+    >
+      <div className="grid lg:grid-cols-2">
+        <div className={`relative aspect-video lg:aspect-auto ${reversed ? 'lg:order-2' : 'lg:order-1'}`}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedRoom?.id}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute inset-0"
+            >
+              <Image src={firstImage} alt={`Camera ${selectedRoom?.number}`} fill className="object-cover" />
+            </motion.div>
+          </AnimatePresence>
+          
+          <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent" />
+          
+          <div className="absolute top-15 left-15 bg-primary/90 text-white px-14 py-6 rounded-full text-sm font-semibold z-10">
+            Camera {selectedRoom?.number}
+          </div>
+          
+          {typeRooms.length > 1 && (
+            <>
+              <button onClick={goPrev} className="absolute left-12 top-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg cursor-pointer hover:bg-white transition-all z-10">
+                <FaArrowLeft className="w-12 h-12 text-primary" />
+              </button>
+              <button onClick={goNext} className="absolute right-12 top-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg cursor-pointer hover:bg-white transition-all z-10">
+                <FaArrowRight className="w-12 h-12 text-primary" />
+              </button>
+              <div className="absolute bottom-15 left-1/2 -translate-x-1/2 flex gap-5 z-10">
+                {typeRooms.map((_, idx) => (
+                  <button key={idx} onClick={() => setSelectedIdx(idx)} className={`w-8 h-8 rounded-full transition-all cursor-pointer ${idx === selectedIdx ? "bg-primary" : "bg-white/50 hover:bg-white"}`} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className={`p-30 flex flex-col justify-center ${reversed ? 'lg:order-1' : 'lg:order-2'}`}>
+          <h3 className="font-[family-name:var(--font-heading)] text-2xl lg:text-3xl font-semibold mb-15 text-primary">
+            {title}
+          </h3>
+          
+          <p className="text-base text-text/80 mb-20 leading-relaxed">
+            {description}
+          </p>
+          
+          <div className="flex flex-wrap gap-15 mb-20">
+            <div className="flex items-center gap-8 text-sm">
+              <div className="w-22 h-22 rounded-full bg-primary/10 flex items-center justify-center">
+                <FaUser className="w-10 h-10 text-primary" />
+              </div>
+              <span className="text-text font-medium">Up to {selectedRoom?.max || 2} guests</span>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-8 text-xs text-text/50">
+            <span>Available rooms: </span>
+            {typeRooms.map((room, idx) => (
+              <button key={room.id} onClick={() => setSelectedIdx(idx)} className={`px-10 py-4 rounded-full transition-all cursor-pointer ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
+                {room.number}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+export default function RoomSection() {
+  const t = useTranslations("Rooms");
+  
+  const roomTypes = [
+    { typeId: "APB", typeKey: "APB", title: t("APB.title"), description: t("APB.description"), reversed: false },
+    { typeId: "DBB", typeKey: "DBB", title: t("DBB.title"), description: t("DBB.description"), reversed: true },
+    { typeId: "DB", typeKey: "DB", title: t("DB.title"), description: t("DB.description"), reversed: false },
+    { typeId: "SB", typeKey: "SB", title: t("SB.title"), description: t("SB.description"), reversed: true },
+    { typeId: "TPB", typeKey: "TPB", title: t("TPB.title"), description: t("TPB.description"), reversed: false },
+    { typeId: "TP", typeKey: "TP", title: t("TP.title"), description: t("TP.description"), reversed: true },
+  ];
+
+  return (
+    <section className="w-full px-5 py-15 md:py-25">
+      <div className="max-w-6xl mx-auto grid gap-25">
+        {roomTypes.map((type) => (
+          <RoomTypeCard
+            key={type.typeId}
+            typeId={type.typeId}
+            typeKey={type.typeKey}
+            title={type.title}
+            description={type.description}
+            reversed={type.reversed}
+          />
+        ))}
+        
+        <div className="flex justify-center">
+          <Link href="/preturi-valabilitate" className="group bg-primary text-white px-25 py-15 rounded-full text-lg font-medium shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-10">
+            <FaEye className="w-18 h-18" />
+            Verifica disponibilitatea
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
