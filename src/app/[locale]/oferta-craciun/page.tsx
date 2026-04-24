@@ -96,7 +96,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
     params: await props.params,
     pageName: "christmas_offer",
-    imageName: "christmas.png",
+    imageName: "christmas.webp",
     pathSegment: "oferta-craciun",
   });
 }
@@ -158,16 +158,16 @@ export default function CraciunPage({ params }: Readonly<Props>) {
           </div>
 
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface aspect-square relative">
-            <Image src={Cai} alt="" fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
+            <Image src={Cai} alt="Plimbare cu sania trasa de cai prin peisajul de iarna al Bucovinei" fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
           </div>
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface aspect-square relative">
-            <Image src={Pomana} alt="" fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
+            <Image src={Pomana} alt="Masa traditionala cu preparate specifice Bucovinei" fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
           </div>
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface aspect-square relative">
-            <Image alt="" src={FestivThree} fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
+            <Image alt="Masa festiva de Craciun decorata in stil traditional" src={FestivThree} fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
           </div>
           <div className="rounded-xl overflow-hidden border border-foreground/20 bg-surface aspect-square relative">
-            <Image alt="" src={FestivFour} fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
+            <Image alt="Decoratiuni de Craciun in incinta pensiunii" src={FestivFour} fill className="object-cover object-center" sizes="(max-width: 768px) 50vw, 33vw" />
           </div>
         </div>
 

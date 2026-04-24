@@ -15,7 +15,7 @@ interface MetadataProps {
 export async function generatePageMetadata({
   params,
   pageName = "home", // Default page name for translations and conceptual identifier
-  imageName = "home.jpg", // Default image name for Open Graph and Twitter cards
+  imageName = "home.jpg", // Default image name for Open Graph and Twitter cards (jpg stays jpg)
   pathSegment, // The actual URL segment for the current page in the current locale (e.g., "rezerva-acum", "book-now")
 }: MetadataProps): Promise<Metadata> {
   const { locale } = params;
@@ -26,7 +26,7 @@ export async function generatePageMetadata({
 
   // IMPORTANT: Set your production site URL. This is crucial for absolute URLs in metadata.
   // Using NEXT_PUBLIC_SITE_URL is a common convention for public-facing environment variables in Next.js.
-  const baseUrl = process.env.NEXT_PROJECT_URL ?? "http://localhost:3000"; // <<<< REPLACE with your actual production domain (e.g., "https://www.yourdomain.com")
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
   // Construct the full URL for the Open Graph image.
   const ogImageUrl = `${baseUrl}/images/ogImages/${imageName}`;

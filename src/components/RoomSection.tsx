@@ -82,10 +82,10 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
           {/* Room navigation */}
           {typeRooms.length > 1 && (
             <>
-              <button onClick={goPrevRoom} className="absolute left-12 top-1/2 -translate-y-1/2 w-30 h-30 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border border-primary/20">
+              <button onClick={goPrevRoom} aria-label="Previous room" className="absolute left-12 top-1/2 -translate-y-1/2 w-30 h-30 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border border-primary/20">
                 <FaArrowLeft className="w-12 h-12 text-primary" />
               </button>
-              <button onClick={goNextRoom} className="absolute right-12 top-1/2 -translate-y-1/2 w-30 h-30 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border border-primary/20">
+              <button onClick={goNextRoom} aria-label="Next room" className="absolute right-12 top-1/2 -translate-y-1/2 w-30 h-30 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border border-primary/20">
                 <FaArrowRight className="w-12 h-12 text-primary" />
               </button>
             </>
@@ -94,15 +94,15 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
           {/* Photo dots - only show when room has multiple photos */}
           {roomImages.length > 1 && (
             <div className="absolute bottom-15 left-1/2 -translate-x-1/2 flex gap-6 z-10">
-              <button onClick={goPrevPhoto} className="w-22 h-22 rounded-full bg-white/90 flex items-center justify-center shadow-md cursor-pointer hover:bg-white transition-all">
+              <button onClick={goPrevPhoto} aria-label="Previous photo" className="w-22 h-22 rounded-full bg-white/90 flex items-center justify-center shadow-md cursor-pointer hover:bg-white transition-all">
                 <FaArrowLeft className="w-10 h-10 text-primary" />
               </button>
               <div className="flex gap-5 items-center bg-white/90 px-12 py-6 rounded-full shadow-md">
                 {roomImages.map((_, idx) => (
-                  <button key={idx} onClick={() => setPhotoIdx(idx)} className={`w-8 h-8 rounded-full transition-all cursor-pointer ${idx === photoIdx ? "bg-primary" : "bg-primary/30 hover:bg-primary/50"}`} />
+                  <button key={idx} onClick={() => setPhotoIdx(idx)} aria-label={`Photo ${idx + 1}`} className={`w-8 h-8 rounded-full transition-all cursor-pointer ${idx === photoIdx ? "bg-primary" : "bg-primary/30 hover:bg-primary/50"}`} />
                 ))}
               </div>
-              <button onClick={goNextPhoto} className="w-22 h-22 rounded-full bg-white/90 flex items-center justify-center shadow-md cursor-pointer hover:bg-white transition-all">
+              <button onClick={goNextPhoto} aria-label="Next photo" className="w-22 h-22 rounded-full bg-white/90 flex items-center justify-center shadow-md cursor-pointer hover:bg-white transition-all">
                 <FaArrowRight className="w-10 h-10 text-primary" />
               </button>
             </div>
@@ -130,7 +130,7 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
           <div className="flex flex-wrap justify-center items-center gap-8 text-xs text-text/50 text-center">
             <span>{t("select_room")}: </span>
             {typeRooms.map((room, idx) => (
-              <button key={room.id} onClick={() => { setSelectedIdx(idx); setPhotoIdx(0); }} className={`px-14 py-8 rounded-full transition-all cursor-pointer font-semibold text-sm ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
+              <button key={room.id} onClick={() => { setSelectedIdx(idx); setPhotoIdx(0); }} aria-label={`Select room ${room.number}`} className={`px-14 py-8 rounded-full transition-all cursor-pointer font-semibold text-sm ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
                 {room.number}
               </button>
             ))}

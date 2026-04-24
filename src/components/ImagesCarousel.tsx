@@ -47,12 +47,14 @@ export function RoomCarousel({
         <Button
           className="bg-surface/50 hover:bg-surface/70 rounded-full p-2"
           onClick={scrollPrev}
+          aria-label="Previous image"
         >
           <FaChevronCircleLeft />
         </Button>
         <Button
           className="bg-surface/50 hover:bg-surface/70 rounded-full p-2"
           onClick={scrollNext}
+          aria-label="Next image"
         >
           <FaChevronCircleRight />
         </Button>

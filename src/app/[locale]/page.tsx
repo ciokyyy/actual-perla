@@ -1,7 +1,7 @@
 import { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import { CompactOfferCards } from "./oferte/ClientComponent";
+import { CompactOfferCards } from "@/components/CompactOfferCards";
 import { generatePageMetadata } from "@/libs/metadata";
 import AboutSection from "@/components/AboutSection";
 import ReviewsSection from "@/components/ReviewsSection";

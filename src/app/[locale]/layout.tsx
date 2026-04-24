@@ -5,6 +5,7 @@ import Header from "@/components/ui/Header";
 import { QueryProvider } from "@/libs/QueryProvider";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getPathname } from "@/i18n/navigation";
 import { OrganizationJsonLd, LocalBusinessJsonLd } from "@/components/JsonLd";
 
 const spaceGrotesk = Space_Grotesk({
@@ -33,6 +34,12 @@ export async function generateMetadata(props: Omit<Props, "children">) {
 
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
+  const alternatesLanguages: Record<string, string> = {};
+  for (const l of routing.locales) {
+    alternatesLanguages[l] = `${baseUrl}${getPathname({ locale: l, href: "/" })}`;
+  }
+  alternatesLanguages["x-default"] = `${baseUrl}${getPathname({ locale: "ro", href: "/" })}`;
+
   return {
     title: t("default.title"),
     description: t("default.description"),
@@ -42,15 +49,11 @@ export async function generateMetadata(props: Omit<Props, "children">) {
       follow: true,
     },
     alternates: {
-      canonical: baseUrl,
-      languages: {
-        en: "https://www.perlabrazilor.com/en-us",
-        ro: "https://www.perlabrazilor.com/ro",
-        it: "https://www.perlabrazilor.com/it",
-      },
+      canonical: `${baseUrl}${getPathname({ locale, href: "/" })}`,
+      languages: alternatesLanguages,
     },
     verification: {
-      google: "google-site-verification-code",
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "",
     },
   };
 }
@@ -82,16 +85,18 @@ export default async function Layout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <OrganizationJsonLd />
         <LocalBusinessJsonLd />
       </head>
       <body className={`${spaceGrotesk.variable} ${robotoSerif.variable} antialiased`}>
         <NextIntlClientProvider>
           <QueryProvider>
-            <div className="text-text flex min-h-screen flex-col items-center gap-20">
-              <Header></Header>
+            <main id="main-content" className="text-text flex min-h-screen flex-col items-center gap-20">
+              <Header />
               {children}
-            </div>
+            </main>
             <Footer></Footer>
             <Menu />
             <LocaleSwitcher />

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import LogoWhite from "~/images/ui/logo-white.png";
-import LogoGreen from "~/images/ui/logo.png";
+import LogoWhite from "~/images/ui/logo-white.webp";
+import LogoGreen from "~/images/ui/logo.webp";
 export default function Logo(props: Readonly<{ className?: string; white?: boolean }>) {
   return (
     <Image

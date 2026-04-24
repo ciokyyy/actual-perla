@@ -38,20 +38,10 @@ export const routing = defineRouting({
       "en-us": "/spa",
       it: "/spa",
     },
-    "/mancare": {
-      ro: "/mancare",
-      "en-us": "/food",
-      it: "/cibo",
-    },
     "/preturi-valabilitate": {
       ro: "/preturi-valabilitate",
       "en-us": "/prices-availability",
       it: "/prezzi-disponibilita",
-    },
-    "/oferte": {
-      ro: "/oferte",
-      "en-us": "/offers",
-      it: "/offerte",
     },
   },
 });

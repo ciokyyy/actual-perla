@@ -5,6 +5,16 @@ import { use } from "react";
 import { Props } from "@/libs/props";
 import OfferHero from "@/components/OfferHero";
 import HeaderImage from "~/images/ui/header.jpg";
+import { generatePageMetadata } from "@/libs/metadata";
+
+export async function generateMetadata(props: Omit<Props, "children">) {
+  return generatePageMetadata({
+    params: await props.params,
+    pageName: "prices_availability",
+    imageName: "camere.png",
+    pathSegment: "preturi-valabilitate",
+  });
+}
 
 export default function PreturiValabilitate({ params }: Readonly<Props>) {
   const { locale } = use(params);

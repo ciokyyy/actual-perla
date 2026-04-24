@@ -11,7 +11,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   return generatePageMetadata({
     params: await props.params,
     pageName: "half_board_offer",
-    imageName: "rezerva.png",
+    imageName: "rezerva.webp",
     pathSegment: "oferta-demipensiune",
   });
 }
