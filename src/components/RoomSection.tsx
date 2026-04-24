@@ -61,9 +61,7 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed }: RoomTyp
             Camera {selectedRoom?.number}
           </div>
           
-          const roomsWithImages = typeRooms.filter(r => r.images.length > 0);
-          
-          {roomsWithImages.length > 1 && (
+          {typeRooms.length > 1 && (
             <>
               <button onClick={goPrev} className="absolute left-12 top-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg cursor-pointer hover:bg-white transition-all z-10">
                 <FaArrowLeft className="w-12 h-12 text-primary" />
