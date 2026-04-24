@@ -13,9 +13,10 @@ interface RoomTypeSectionProps {
   description: string;
   typeKey: string;
   reversed?: boolean;
+  t: any;
 }
 
-function RoomTypeCard({ typeId, title, description, typeKey, reversed }: RoomTypeSectionProps) {
+function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: RoomTypeSectionProps) {
   const typeRooms = rooms.rooms.filter(r => r.typeId === typeKey);
   
   const [selectedIdx, setSelectedIdx] = useState(0);
@@ -135,13 +136,14 @@ export default function RoomSection() {
             title={type.title}
             description={type.description}
             reversed={type.reversed}
+            t={t}
           />
         ))}
         
         <div className="flex justify-center">
           <Link href="/preturi-valabilitate" className="group bg-primary text-white px-25 py-15 rounded-full text-lg font-medium shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-10">
             <FaEye className="w-18 h-18" />
-            {t("check_availability")}
+            {t("verify_availability")}
           </Link>
         </div>
       </div>
