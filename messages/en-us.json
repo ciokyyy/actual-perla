@@ -267,6 +267,8 @@
   },
   "Rooms": {
     "pricesAndAvailability": "Prices and Availability",
+    "select_room": "Select room",
+    "verify_availability": "Check availability",
     "choosePeriodToSeePrices": "Choose your stay period to see prices and availability",
     "selectValidRange": "Please select a valid date range.",
     "selectValidRangeBeforeCheck": "Please select a valid date range before checking.",

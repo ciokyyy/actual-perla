@@ -267,6 +267,8 @@
   },
   "Rooms": {
     "pricesAndAvailability": "Prezzi e disponibilità",
+    "select_room": "Seleziona camera",
+    "verify_availability": "Verifica disponibilità",
     "choosePeriodToSeePrices": "Scegli il periodo di soggiorno per vedere prezzi e disponibilità",
     "selectValidRange": "Seleziona un intervallo di date valido.",
     "selectValidRangeBeforeCheck": "Seleziona un intervallo di date valido prima di verificare.",
