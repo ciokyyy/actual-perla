@@ -30,7 +30,7 @@ function RoomTypeResult({ type, rooms, availabilityResults, t, reversed }: RoomT
   const [photoIdx, setPhotoIdx] = useState(0);
   const currentPhoto = roomImages[photoIdx]?.src || "/images/ui/header.jpg";
   const hasImages = roomImages.length > 0;
-  const totalAvailable = rooms.reduce((sum, r) => sum + (availabilityResults[r.id]?.numar_camere ?? 0), 0);
+  const totalAvailable = rooms.reduce((sum, r) => sum + Number(availabilityResults[r.id]?.numar_camere ?? 0), 0);
   const totalPrice = roomAvail?.pret_camera;
 
   const goNextRoom = () => setSelectedIdx((prev) => (prev + 1) % rooms.length);
