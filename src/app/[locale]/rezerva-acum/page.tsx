@@ -23,9 +23,10 @@ export default function Page({ params }: Readonly<Props>) {
 
   return (
     <>
-      <OfferHero
+<OfferHero
         image={HeaderImage}
-        title={t("book_now")}
+        title={t("title")}
+        pricing=""
       />
       <section className="w-full px-5 py-10 md:py-20">
         <div className="max-w-7xl mx-auto grid gap-30 md:gap-40">

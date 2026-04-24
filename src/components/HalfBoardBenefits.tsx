@@ -36,15 +36,15 @@ function FeatureCard({
       <Image src={image} alt={title} fill className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-[rgb(29,91,23)]/90 via-[rgb(29,91,23)]/50 to-transparent" />
       
-      <div className={`absolute inset-0 flex flex-col justify-end p-30 md:p-40 ${reversed ? 'md:items-end md:text-right' : 'md:items-start'}`}>
+      <div className="absolute inset-0 flex flex-col justify-end p-30 md:p-40">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="w-50 h-50 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-20"
+          className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-20"
         >
-          <Icon className="w-24 h-24 text-white" />
+          <Icon className="w-32 h-32 md:w-40 md:h-40 text-white" />
         </motion.div>
         
         <h3 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl font-bold text-white mb-15">
@@ -61,7 +61,7 @@ function FeatureCard({
               transition={{ duration: 0.3, delay: 0.3 + idx * 0.1 }}
               className="flex items-center gap-10 text-white/90"
             >
-              <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+              <div className="w-20 h-20 rounded-xl bg-white/20 backdrop-blur-sm ring-1 ring-white/20 flex items-center justify-center">
                 <FaCheck className="w-10 h-10" />
               </div>
               <span className="text-sm font-medium">{item}</span>
@@ -139,7 +139,7 @@ export function HalfBoardBenefits({ locale }: BenefitsProps) {
           </p>
           
           <a
-            href="/oferte"
+            href="/"
             className="inline-flex items-center gap-8 bg-white text-primary rounded-full px-20 py-12 shadow-lg transition-all duration-200 hover:brightness-110 hover:shadow-xl active:scale-95 cursor-pointer text-sm font-medium"
           >
             Vezi ofertele

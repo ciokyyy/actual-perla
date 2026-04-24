@@ -31,7 +31,7 @@ function ContactCard({
     >
       <div className="bg-surface rounded-2xl p-25 shadow-md border border-foreground/30 hover:shadow-xl transition-all duration-300 cursor-pointer">
         <div
-          className={`w-60 h-60 rounded-full ${iconBg} flex items-center justify-center mx-auto mb-20 transition-transform duration-300 group-hover:scale-110`}
+          className={`w-60 h-60 rounded-xl ${iconBg} ring-1 ring-white/20 flex items-center justify-center mx-auto mb-20 transition-transform duration-300 group-hover:scale-110`}
         >
           <Icon className="w-28 h-28 text-white" />
         </div>
@@ -54,7 +54,9 @@ function ContactCard({
 function InfoRow({ icon: Icon, text }: { icon: React.ElementType; text: string }) {
   return (
     <div className="flex items-center gap-10 text-sm">
-      <Icon className="w-16 h-16 text-primary" />
+      <div className="w-28 h-28 rounded-lg bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center">
+        <Icon className="w-14 h-14 text-primary" />
+      </div>
       <span>{text}</span>
     </div>
   );

@@ -107,7 +107,7 @@ function RoomTypeResult({ type, rooms, availabilityResults, t, reversed }: RoomT
           
           <div className="flex flex-wrap gap-15 mb-20">
             <div className="flex items-center gap-8 text-sm">
-              <div className={`w-22 h-22 rounded-full flex items-center justify-center ${totalAvailable > 0 ? "bg-primary/10" : "bg-red-100"}`}>
+              <div className={`w-22 h-22 rounded-xl flex items-center justify-center ${totalAvailable > 0 ? "bg-primary/10 ring-1 ring-primary/20" : "bg-red-100 ring-1 ring-red-200"}`}>
                 {totalAvailable > 0 ? <FaCheckCircle className="w-10 h-10 text-primary" /> : <FaBed className="w-10 h-10 text-red-500" />}
               </div>
               <span className="text-text font-medium">
@@ -115,7 +115,7 @@ function RoomTypeResult({ type, rooms, availabilityResults, t, reversed }: RoomT
               </span>
             </div>
             <div className="flex items-center gap-8 text-sm">
-              <div className="w-22 h-22 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-22 h-22 rounded-xl bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center">
                 <FaUsers className="w-10 h-10 text-primary" />
               </div>
               <span className="text-text font-medium">Up to {selectedRoom.max} {t("person", { count: selectedRoom.max })}</span>
@@ -210,7 +210,7 @@ export function PreturiClient() {
 
       {(dateError || submitError || (isError && hasAttemptedFetch)) && (
         <div className="bg-white/80 backdrop-blur-md rounded-3xl p-20 shadow-xl border border-white/50 max-w-500 w-full text-center">
-          <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-15">
+          <div className="w-40 h-40 rounded-xl bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center mx-auto mb-15">
             <FaExclamationTriangle className="w-20 h-20 text-primary" />
           </div>
           <span className="text-sm text-text">{dateError || submitError || fetchError?.message || t("unknownError")}</span>
@@ -234,7 +234,7 @@ export function PreturiClient() {
 
       {!hasAttemptedFetch && rooms && groupedRooms.length > 0 && (
         <div className="bg-white/80 backdrop-blur-md rounded-3xl p-25 shadow-xl border border-white/50 max-w-500 w-full text-center">
-          <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-15">
+          <div className="w-40 h-40 rounded-xl bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center mx-auto mb-15">
             <FaSearch className="w-20 h-20 text-primary" />
           </div>
           <p className="text-sm text-text/70">{t("selectDatesAndCheck")}</p>
@@ -243,7 +243,7 @@ export function PreturiClient() {
 
       {hasAttemptedFetch && !isFetching && !(dateError || submitError) && !isError && (!availabilityResults || Object.keys(availabilityResults).length === 0) && (
         <div className="bg-white/80 backdrop-blur-md rounded-3xl p-20 shadow-xl border border-white/50 max-w-500 w-full text-center">
-          <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-15">
+          <div className="w-40 h-40 rounded-xl bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center mx-auto mb-15">
             <FaExclamationTriangle className="w-20 h-20 text-primary" />
           </div>
           <span className="text-sm text-text">{t("noAvailability")}</span>

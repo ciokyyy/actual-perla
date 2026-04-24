@@ -405,19 +405,52 @@
     }
   },
   "HalfBoardPage": {
-    "title": "Ofertă Cazare Cu Demipensiune",
-    "book_now": "Rezervă Acum !",
-    "food_included": "Oferta include micul dejun si cina la bufet suedez",
-    "food_traditional": "Mâncare tradițională 60% din producție proprie",
-    "food_card_title": "Mâncare",
-    "food_card_desc": "Află ce bunătățuri avem !",
-    "spa_included": "Oferta include accesul la spa. Bucură-te de starea de bine în ciubărul cu apă sărată, piscină, salină, saună, sau jacuzzi.",
-    "spa_card_title": "Spa",
-    "spa_card_desc": "Unde te vei relaxa?",
+    "title": "Ofertă de Cazare cu Demipensiune",
+    "book_now": "Rezervă acum!",
+    "food_included": "Include micul dejun și cina la bufet suedez, zilnic proaspete",
+    "food_traditional": "60% din ingrediente, din producție proprie",
+    "food_card_title": "Bucătărie",
+    "food_card_desc": "Descoperă bunătățile gospodăriei noastre!",
+    "food_image_alt": "Bucătăria pensiunii noastre, cu preparate tradiționale",
+    "local_gastronomy": "Gastronomie de Bucovina",
+    "breakfast_included": "Micul dejun inclus",
+    "dinner_included": "Cina inclusă",
+    "traditional_cooking": "Rețete moștenite din generație în generație",
+    "own_production": "Produse făcute în casă, 60% din producție proprie",
+    "spa_included": "Acces liber la întregul spa: ciubăr sărat, piscină, salină, saună și jacuzzi.",
+    "spa_card_title": "Spa & Wellness",
+    "spa_card_desc": "Unde te vei deconecta complet?",
+    "spa_image_alt": "Zona de relaxare cu jacuzzi și apă sărată",
+    "wellness_relaxare": "Binefăcător pentru minte și trup",
+    "jacuzzi_title": "Ciubăr cu apă sărată",
+    "piscina_title": "Piscină încălzită",
+    "sauna_title": "Saună uscată",
+    "salina_title": "Cameră cu sare",
     "rooms_card_title": "Camere",
-    "rooms_card_desc": "Priveliște și facilități",
+    "rooms_card_desc": "Confort și priveliști de basm",
+    "rooms_image_alt": "Cameră dublă cu vedere spre poiana pensiunii",
+    "fairy_accommodation": "O cameră în care visele devin realitate",
+    "mountain_view": "Priveliște curată de Bucovina",
+    "forest_atmosphere": "Atmosferă de pădure de brad",
+    "private_bathroom": "Baie proprie cu articole eco",
     "offers_card_title": "Alte oferte",
-    "offers_card_desc": "Crăciun sau Revelion în Bucovina"
+    "offers_card_desc": "Crăciun și Revelion în inima Bucovinei",
+    "why_halfboard_title": "De ce să alegi demipensiunea?",
+    "why_halfboard_desc": "Când vacanța ta include deja micul dejun și cina, tot ce rămâne de făcut este să te relaxezi. Fără griji, fără drumuri la supermarket - doar tu și muntele.",
+    "halfboard_title": "Demipensiune",
+    "halfboard_desc": "Micul dejun + cina incluse, bufet suedez zilnic",
+    "nature_relax_title": "Natură și liniște",
+    "nature_relax_desc": "Aer curat de munte, pădure de brad și cascade în apropiere",
+    "wellness_title": "Acces spa inclus",
+    "wellness_desc": "Piscină, saună, cameră cu sare și ciubăr sărat - gratuit pentru oaspeți",
+    "local_products_title": "Produse din gospodărie",
+    "local_products_desc": "Cârnați, caș, brânză, dulceață și cidru - totul făcut în casă",
+    "check_availability_title": "Verifică disponibilitatea",
+    "check_availability_desc": "Află ce camere sunt libere și prețurile pentru perioada ta dorită.",
+    "see_prices": "Vezi prețurile și calendarul",
+    "discover_offers_title": "Descoperă și celelalte oferte",
+    "see_offers": "Ofertele noastre de Crăciun și Revelion",
+    "spa_cta": "Vezi toate facilitățile spa"
   },
   "Spa": {
     "ciubar_1_alt": "Ciubăr din lemn cu apă sărată, prima vedere",
@@ -534,5 +567,35 @@
         "desc": "Copiii până în 12 ani beneficiază de 50% reducere, cei între 4 și 6 ani de 70%, iar pentru cei cu vârsta între 0 și 3 ani, accesul este gratuit."
       }
     }
+  },
+  "ReviewsSection": {
+    "title": "Ce Spun Oaspeții Noștri",
+    "reviews": [
+      {
+        "text": "Am fost întâmpinați cu căldură de proprietara pensiunii, o femeie de nota 10. Am avut cazări anterioare și în hotel de 4 stele și nu ne-am simțit ca și aici. Este ireproșabil!",
+        "author": "Familia Darius",
+        "location": "Miercurea Ciuc"
+      },
+      {
+        "text": "Am petrecut sărbătorile pascale într-un ținut bucovinean fascinant, alături de o gazdă primitoare și un personal de nota 10 cu plus! Mâncarea este de nerefuzat!",
+        "author": "Georgică R.",
+        "location": "Peceneaga"
+      },
+      {
+        "text": "Recomand tuturor celor care doresc un concediu relaxant în care să se îmbine armonios liniștea munților și condițiile pe care le poți avea pe litoral.",
+        "author": "Nicoleta C.",
+        "location": "Iași"
+      },
+      {
+        "text": "A fost ceva de vis - o gazdă de nota 10+, o cazare excelentă, un meniu de nu am cuvinte. Ne-am simțit tot grupul excelent!",
+        "author": "Familia Marian G.",
+        "location": "București"
+      },
+      {
+        "text": "De câte ori simt nevoia acută de relaxare vin aici, la Perla Brazilor. Gazdele sunt niște oameni extraordinari!",
+        "author": "Mitrea",
+        "location": "Țăndărei"
+      }
+    ]
   }
 }

@@ -120,14 +120,14 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
           
           <div className="flex flex-wrap gap-15 mb-20">
             <div className="flex items-center gap-8 text-sm">
-              <div className="w-22 h-22 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-22 h-22 rounded-xl bg-primary/10 ring-1 ring-primary/20 flex items-center justify-center">
                 <FaUser className="w-10 h-10 text-primary" />
               </div>
               <span className="text-text font-medium">Up to {selectedRoom?.max || 2} guests</span>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-8 text-xs text-text/50">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-xs text-text/50 text-center">
             <span>{t("select_room")}: </span>
             {typeRooms.map((room, idx) => (
               <button key={room.id} onClick={() => { setSelectedIdx(idx); setPhotoIdx(0); }} className={`px-14 py-8 rounded-full transition-all cursor-pointer font-semibold text-sm ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
