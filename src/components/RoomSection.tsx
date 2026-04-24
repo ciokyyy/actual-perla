@@ -63,15 +63,17 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed }: RoomTyp
           
           {typeRooms.length > 1 && (
             <>
-              <button onClick={goPrev} className="absolute left-12 top-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg cursor-pointer hover:bg-white transition-all z-10">
-                <FaArrowLeft className="w-12 h-12 text-primary" />
+              <button onClick={goPrev} className="absolute left-12 top-1/2 -translate-y-1/2 w-35 h-35 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border-2 border-primary/20">
+                <FaArrowLeft className="w-15 h-15 text-primary" />
               </button>
-              <button onClick={goNext} className="absolute right-12 top-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg cursor-pointer hover:bg-white transition-all z-10">
-                <FaArrowRight className="w-12 h-12 text-primary" />
+              <button onClick={goNext} className="absolute right-12 top-1/2 -translate-y-1/2 w-35 h-35 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border-2 border-primary/20">
+                <FaArrowRight className="w-15 h-15 text-primary" />
               </button>
-              <div className="absolute bottom-15 left-1/2 -translate-x-1/2 flex gap-5 z-10">
+              <div className="absolute bottom-15 left-1/2 -translate-x-1/2 flex gap-8 z-10">
                 {typeRooms.map((_, idx) => (
-                  <button key={idx} onClick={() => setSelectedIdx(idx)} className={`w-8 h-8 rounded-full transition-all cursor-pointer ${idx === selectedIdx ? "bg-primary" : "bg-white/50 hover:bg-white"}`} />
+                  <button key={idx} onClick={() => setSelectedIdx(idx)} className={`w-10 h-10 rounded-full transition-all cursor-pointer flex items-center justify-center text-xs font-bold ${idx === selectedIdx ? "bg-primary text-white" : "bg-white/80 hover:bg-white text-text"}`}>
+                    {typeRooms[idx].number}
+                  </button>
                 ))}
               </div>
             </>
@@ -96,10 +98,10 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed }: RoomTyp
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-8 text-xs text-text/50">
-            <span>Available rooms: </span>
+          <div className="flex flex-wrap gap-15 text-xs text-text/50">
+            <span>{t("select_room")}: </span>
             {typeRooms.map((room, idx) => (
-              <button key={room.id} onClick={() => setSelectedIdx(idx)} className={`px-10 py-4 rounded-full transition-all cursor-pointer ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
+              <button key={room.id} onClick={() => setSelectedIdx(idx)} className={`px-12 py-6 rounded-full transition-all cursor-pointer font-semibold ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
                 {room.number}
               </button>
             ))}
@@ -139,7 +141,7 @@ export default function RoomSection() {
         <div className="flex justify-center">
           <Link href="/preturi-valabilitate" className="group bg-primary text-white px-25 py-15 rounded-full text-lg font-medium shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-10">
             <FaEye className="w-18 h-18" />
-            Verifica disponibilitatea
+            {t("check_availability")}
           </Link>
         </div>
       </div>

@@ -268,6 +268,8 @@
   },
   "Rooms": {
     "pricesAndAvailability": "Preturi și valabilitate",
+    "select_room": "Selectează cameră",
+    "verify_availability": "Verifică disponibilitatea",
     "choosePeriodToSeePrices": "Alege perioada de ședere pentru a vedea prețurile și disponibilitatea",
     "selectValidRange": "Te rugăm să selectezi un interval de date valid.",
     "selectValidRangeBeforeCheck": "Te rugăm să selectezi un interval de date valid înainte de a verifica.",
