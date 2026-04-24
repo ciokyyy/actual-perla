@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-10 mb-35">
             <Logo white className="w-55" />
             <span className="text-white/60 text-xs tracking-wider uppercase">
-              Pensiunea Perla Brazilor
+              {t("guesthouse_name")}
             </span>
           </div>
 
@@ -108,7 +108,7 @@ export default function Footer() {
           {/* Bottom */}
           <div className="border-t border-white/10 pt-20 text-center">
             <p className="text-white/40 text-xs">
-              &copy; {new Date().getFullYear()} Pensiunea Perla Brazilor. Toate drepturile rezervate.
+              &copy; {new Date().getFullYear()} {t("guesthouse_name")}. {t("rights_reserved")}
             </p>
           </div>
         </div>

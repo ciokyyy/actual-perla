@@ -27,7 +27,7 @@ export default function Home({ params }: Readonly<Props>) {
         <CompactOfferCards />
       </section>
       <AboutSection />
-      <ReviewsSection locale={locale} />
+      <ReviewsSection />
     </>
   );
 }
