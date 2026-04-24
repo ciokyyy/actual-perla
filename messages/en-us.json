@@ -431,10 +431,17 @@
   },
   "BookNow": {
     "book_now": "Book Now!",
-    "contact_for_rezervation": "To book a room, please contact us at the phone number",
-    "contact_whatsapp": "Contact us on WhatsApp",
-    "verify_availability": "Check availability first",
-    "or_separator": "or"
+    "call_us": "Call Us",
+    "call_us_desc": "Mon-Fri, 09:00 - 18:00",
+    "whatsapp": "WhatsApp",
+    "whatsapp_desc": "We reply quickly to messages",
+    "send_message": "Send Message",
+    "email_us": "Email",
+    "email_us_desc": "We reply within 24h",
+    "send_email": "Send Email",
+    "check_availability": "Check Availability",
+    "selectDatesAndCheck": "Select dates to see prices",
+    "verify_availability": "Check availability"
   },
   "Calculate": {
     "adults": "Adults",
