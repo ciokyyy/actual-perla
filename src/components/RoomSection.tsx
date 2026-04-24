@@ -16,12 +16,13 @@ interface RoomTypeSectionProps {
 }
 
 function RoomTypeCard({ typeId, title, description, typeKey, reversed }: RoomTypeSectionProps) {
-  const typeRooms = rooms.rooms.filter(r => r.typeId === typeKey && r.images.length > 0);
+  const typeRooms = rooms.rooms.filter(r => r.typeId === typeKey);
   
   const [selectedIdx, setSelectedIdx] = useState(0);
   const selectedRoom = typeRooms[selectedIdx];
   const roomImages = selectedRoom?.images || [];
   const firstImage = roomImages[0]?.src || "/images/ui/header.jpg";
+  const hasImages = roomImages.length > 0;
 
   const goNext = () => {
     setSelectedIdx((prev) => (prev + 1) % typeRooms.length);
@@ -60,7 +61,9 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed }: RoomTyp
             Camera {selectedRoom?.number}
           </div>
           
-          {typeRooms.length > 1 && (
+          const roomsWithImages = typeRooms.filter(r => r.images.length > 0);
+          
+          {roomsWithImages.length > 1 && (
             <>
               <button onClick={goPrev} className="absolute left-12 top-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg cursor-pointer hover:bg-white transition-all z-10">
                 <FaArrowLeft className="w-12 h-12 text-primary" />
