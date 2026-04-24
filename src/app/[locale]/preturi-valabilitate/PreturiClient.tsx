@@ -68,7 +68,7 @@ function RoomTypeResult({ type, rooms, availabilityResults, t, reversed }: RoomT
           
           <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent" />
           
-          <div className="absolute top-15 left-15 bg-primary/90 text-white px-14 py-6 rounded-full text-sm font-semibold z-10">
+          <div className={`absolute top-15 ${reversed ? 'right-15' : 'left-15'} bg-primary/90 text-white px-14 py-6 rounded-full text-sm font-semibold z-10`}>
             {selectedRoom.number}
           </div>
           
