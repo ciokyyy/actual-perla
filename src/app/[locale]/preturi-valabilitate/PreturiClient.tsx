@@ -111,7 +111,7 @@ function RoomTypeResult({ type, rooms, availabilityResults, t, reversed }: RoomT
                 {totalAvailable > 0 ? <FaCheckCircle className="w-10 h-10 text-primary" /> : <FaBed className="w-10 h-10 text-red-500" />}
               </div>
               <span className="text-text font-medium">
-                {totalAvailable} {t("room", { count: totalAvailable })}
+                <span className="text-text/50">{t("available")}: </span>{totalAvailable} {t("room", { count: totalAvailable })}
               </span>
             </div>
             <div className="flex items-center gap-8 text-sm">
