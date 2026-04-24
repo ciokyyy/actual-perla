@@ -24,14 +24,14 @@ interface RoomTypeResultProps {
 function RoomTypeResult({ type, rooms, availabilityResults, t, reversed }: RoomTypeResultProps) {
   const [selectedIdx, setSelectedIdx] = useState(0);
   const selectedRoom = rooms[selectedIdx];
-  const roomAvail = availabilityResults[selectedRoom.id];
+  const roomAvail = selectedRoom ? availabilityResults[selectedRoom.id] : undefined;
   const availableCount = roomAvail?.numar_camere ?? 0;
   const roomImages = selectedRoom?.images || [];
   const [photoIdx, setPhotoIdx] = useState(0);
   const currentPhoto = roomImages[photoIdx]?.src || "/images/ui/header.jpg";
   const hasImages = roomImages.length > 0;
   const totalAvailable = rooms.reduce((sum, r) => sum + Number(availabilityResults[r.id]?.numar_camere ?? 0), 0);
-  const totalPrice = roomAvail?.pret_camera;
+  const totalPrice = roomAvail?.pret_camera ?? "—";
 
   const goNextRoom = () => setSelectedIdx((prev) => (prev + 1) % rooms.length);
   const goPrevRoom = () => setSelectedIdx((prev) => (prev - 1 + rooms.length) % rooms.length);
@@ -160,7 +160,7 @@ export function PreturiClient() {
   function getGroupedRoomsByType(rooms: Room[] | undefined) {
     if (!rooms || !availabilityResults) return [];
     const grouped = rooms.reduce<Record<string, Room[]>>((acc, room) => {
-      if (!availabilityResults[room.id]) return acc;
+      // Include room in its type even if it has 0 availability (numar_camere can be 0)
       if (!acc[room.typeId]) acc[room.typeId] = [];
       acc[room.typeId].push(room);
       return acc;
