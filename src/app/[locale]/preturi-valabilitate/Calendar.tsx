@@ -57,8 +57,8 @@ export function Calendar({
           day_button:
             "cursor-pointer rounded-xl text-center transition-all duration-150 py-10 px-8 w-full h-full text-sm font-medium hover:bg-primary/10 hover:text-primary active:scale-95",
           today: "!bg-foreground/40 !text-primary !font-bold",
-          range_start: "!bg-primary !text-white !rounded-r-none !rounded-l-xl",
-          range_end: "!bg-primary !text-white !rounded-l-none !rounded-r-xl",
+          range_start: "!bg-primary !text-white !rounded-xl",
+          range_end: "!bg-primary !text-white !rounded-xl",
           range_middle: "!bg-primary/15 !text-primary",
           selected: "!bg-primary !text-white",
         }}
