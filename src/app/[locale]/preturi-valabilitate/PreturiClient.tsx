@@ -10,6 +10,7 @@ import { format } from "date-fns";
 import { RoomCarousel } from "./RoomCarousel";
 import { useTranslations } from "next-intl";
 import { FaSearch, FaBed, FaUsers, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
+import { motion } from "motion/react";
 
 export function PreturiClient() {
   const { data: rooms } = useRooms();
@@ -121,7 +122,7 @@ export function PreturiClient() {
 
       {/* Error messages */}
       {(dateError || submitError || (isError && hasAttemptedFetch)) && (
-        <div className="bg-surface rounded-2xl p-20 shadow-md border border-foreground/30 max-w-500 w-full text-center flex flex-col gap-10">
+        <div className="bg-white/80 backdrop-blur-md rounded-3xl p-20 shadow-xl border border-white/50 max-w-500 w-full text-center flex flex-col gap-10">
           <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
             <FaExclamationTriangle className="w-20 h-20 text-primary" />
           </div>
@@ -138,7 +139,7 @@ export function PreturiClient() {
       {/* Room results */}
       {hasAttemptedFetch && !(dateError || submitError) && !isError && (
         <div className="w-full">
-          {groupedRooms.map((roomTypeGroup) => (
+          {groupedRooms.map((roomTypeGroup, groupIdx) => (
             <div key={roomTypeGroup.type} className="mb-30">
               <h2 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-text text-center mb-12">
                 {t(`${roomTypeGroup.type}.title`)}
@@ -146,74 +147,80 @@ export function PreturiClient() {
               <p className="text-sm text-text/70 text-center mb-25 max-w-600 mx-auto">
                 {t(`${roomTypeGroup.type}.description`)}
               </p>
-              <div className="flex flex-col gap-15">
-                {roomTypeGroup.rooms.map((room) => {
+              <div className="flex flex-col gap-25">
+                {roomTypeGroup.rooms.map((room, roomIdx) => {
                   const roomAvailability = availabilityResults
                     ? availabilityResults[room.id]
                     : undefined;
                   const availableCount = roomAvailability?.numar_camere ?? 0;
 
                   return (
-                    <div
+                    <motion.div
                       key={room.id}
-                      className="bg-surface rounded-2xl shadow-md border border-foreground/30 overflow-hidden flex flex-col lg:flex-row"
+                      initial={{ y: 20, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4 }}
+                      className="bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-xl border border-white/50"
                     >
-                      {/* Room carousel */}
-                      <div className="w-full lg:w-1/2 min-h-200">
-                        <RoomCarousel room={room} />
-                      </div>
+                      <div className="grid lg:grid-cols-2">
+                        {/* Room carousel */}
+                        <div className="aspect-video lg:aspect-auto">
+                          <RoomCarousel room={room} />
+                        </div>
 
-                      {/* Room details */}
-                      <div className="w-full lg:w-1/2 p-20 flex flex-col justify-between gap-15">
-                        <div>
-                          <h3 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-text mb-10">
+                        {/* Room details */}
+                        <div className="p-25 flex flex-col justify-center">
+                          <h3 className="font-[family-name:var(--font-heading)] text-xl font-semibold text-primary mb-15">
                             {t(`${room.typeId}.title`)} {room.number}
                           </h3>
 
-                          {/* Availability */}
-                          <div className="flex items-center gap-10 mb-10">
-                            <div className={`w-28 h-28 rounded-full flex items-center justify-center ${availableCount > 0 ? 'bg-primary/15' : 'bg-red-100'}`}>
+                          {/* Availability status */}
+                          <div className="flex items-center gap-12 mb-15">
+                            <div className={`w-28 h-28 rounded-full flex items-center justify-center ${availableCount > 0 ? 'bg-primary/10' : 'bg-red-100'}`}>
                               {availableCount > 0 ? (
                                 <FaCheckCircle className="w-14 h-14 text-primary" />
                               ) : (
                                 <FaBed className="w-14 h-14 text-red-500" />
                               )}
                             </div>
-                            <span className="text-sm font-medium text-text">
-                              {availableCount}{" "}
-                              {t("room", { count: availableCount })}
-                            </span>
+                            <div>
+                              <span className="text-sm font-medium text-text block">
+                                {availableCount > 0 ? availableCount : 0} {t("room", { count: availableCount })}
+                              </span>
+                              <span className="text-xs text-text/50">
+                                {availableCount > 0 ? "Available" : "Unavailable"}
+                              </span>
+                            </div>
                           </div>
 
                           {/* Capacity */}
-                          <div className="flex items-center gap-10 mb-10">
+                          <div className="flex items-center gap-12 mb-15">
                             <div className="w-28 h-28 rounded-full bg-primary/10 flex items-center justify-center">
                               <FaUsers className="w-14 h-14 text-primary" />
                             </div>
                             <span className="text-sm font-medium text-text">
-                              {room.max} {t("person", { count: room.max })}
+                              Up to {room.max} {t("person", { count: room.max })}
                             </span>
                           </div>
 
                           {/* Agropensiune note */}
                           {room.number.includes("Agropensiune") && (
-                            <div className="mt-10 p-12 bg-primary/5 border border-primary/15 rounded-xl">
-                              <p className="text-xs text-primary/80 leading-relaxed">
-                                {t("secondaryBuildingNote")}
-                              </p>
+                            <div className="mb-15 p-12 bg-primary/5 border border-primary/15 rounded-2xl">
+                              <p className="text-xs text-primary/80">{t("secondaryBuildingNote")}</p>
                             </div>
                           )}
-                        </div>
 
-                        {/* Price */}
-                        <div className="bg-primary/8 rounded-xl p-15 text-center border border-primary/15">
-                          <span className="text-xs font-medium text-primary/60 block mb-3">{t("price")}</span>
-                          <span className="font-[family-name:var(--font-heading)] text-xl font-bold text-primary">
-                            {roomAvailability?.pret_camera} RON
-                          </span>
+                          {/* Price */}
+                          <div className="bg-primary/10 rounded-2xl p-15 text-center border border-primary/20">
+                            <span className="text-xs font-medium text-primary/60 block mb-3">{t("price")}</span>
+                            <span className="font-[family-name:var(--font-heading)] text-2xl font-bold text-primary">
+                              {roomAvailability?.pret_camera} RON
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -224,7 +231,7 @@ export function PreturiClient() {
 
       {/* Initial message */}
       {!hasAttemptedFetch && rooms && groupedRooms.length > 0 && (
-        <div className="bg-surface rounded-2xl p-25 shadow-md border border-foreground/30 max-w-500 w-full text-center">
+        <div className="bg-white/80 backdrop-blur-md rounded-3xl p-25 shadow-xl border border-white/50 max-w-500 w-full text-center">
           <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-15">
             <FaSearch className="w-20 h-20 text-primary" />
           </div>
@@ -239,7 +246,7 @@ export function PreturiClient() {
         !isError &&
         (!availabilityResults ||
           Object.keys(availabilityResults).length === 0) && (
-          <div className="bg-surface rounded-2xl p-20 shadow-md border border-foreground/30 max-w-500 w-full text-center flex flex-col gap-10">
+          <div className="bg-white/80 backdrop-blur-md rounded-3xl p-20 shadow-xl border border-white/50 max-w-500 w-full text-center flex flex-col gap-10">
             <div className="w-40 h-40 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
               <FaExclamationTriangle className="w-20 h-20 text-primary" />
             </div>
