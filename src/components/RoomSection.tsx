@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "motion/react";
-import { FaUser, FaArrowLeft, FaArrowRight, FaCheck, FaEye } from "react-icons/fa";
+import { FaUser, FaArrowLeft, FaArrowRight, FaCheck, FaEye, FaExpand } from "react-icons/fa";
 import Image from "next/image";
 import rooms from "@/libs/db.json";
 import { useState } from "react";
@@ -22,15 +22,26 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
   const [selectedIdx, setSelectedIdx] = useState(0);
   const selectedRoom = typeRooms[selectedIdx];
   const roomImages = selectedRoom?.images || [];
-  const firstImage = roomImages[0]?.src || "/images/ui/header.jpg";
+  const [photoIdx, setPhotoIdx] = useState(0);
   const hasImages = roomImages.length > 0;
+  const currentPhoto = roomImages[photoIdx]?.src || "/images/ui/header.jpg";
 
-  const goNext = () => {
+  const goNextRoom = () => {
     setSelectedIdx((prev) => (prev + 1) % typeRooms.length);
+    setPhotoIdx(0);
   };
 
-  const goPrev = () => {
+  const goPrevRoom = () => {
     setSelectedIdx((prev) => (prev - 1 + typeRooms.length) % typeRooms.length);
+    setPhotoIdx(0);
+  };
+
+  const goNextPhoto = () => {
+    setPhotoIdx((prev) => (prev + 1) % roomImages.length);
+  };
+
+  const goPrevPhoto = () => {
+    setPhotoIdx((prev) => (prev - 1 + roomImages.length) % roomImages.length);
   };
 
   return (
@@ -43,18 +54,24 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
     >
       <div className="grid lg:grid-cols-2">
         <div className={`relative aspect-video lg:aspect-auto ${reversed ? 'lg:order-2' : 'lg:order-1'}`}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={selectedRoom?.id}
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="absolute inset-0"
-            >
-              <Image src={firstImage} alt={`Camera ${selectedRoom?.number}`} fill className="object-cover" />
-            </motion.div>
-          </AnimatePresence>
+          {hasImages ? (
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${selectedRoom?.id}-${photoIdx}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="absolute inset-0"
+              >
+                <Image src={currentPhoto} alt={`Camera ${selectedRoom?.number}`} fill className="object-cover" />
+              </motion.div>
+            </AnimatePresence>
+          ) : (
+            <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
+              <span className="text-primary/40 text-sm">No photos available</span>
+            </div>
+          )}
           
           <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent" />
           
@@ -62,22 +79,33 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
             Camera {selectedRoom?.number}
           </div>
           
+          {/* Room navigation */}
           {typeRooms.length > 1 && (
             <>
-              <button onClick={goPrev} className="absolute left-12 top-1/2 -translate-y-1/2 w-35 h-35 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border-2 border-primary/20">
-                <FaArrowLeft className="w-15 h-15 text-primary" />
+              <button onClick={goPrevRoom} className="absolute left-12 top-1/2 -translate-y-1/2 w-30 h-30 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border border-primary/20">
+                <FaArrowLeft className="w-12 h-12 text-primary" />
               </button>
-              <button onClick={goNext} className="absolute right-12 top-1/2 -translate-y-1/2 w-35 h-35 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border-2 border-primary/20">
-                <FaArrowRight className="w-15 h-15 text-primary" />
+              <button onClick={goNextRoom} className="absolute right-12 top-1/2 -translate-y-1/2 w-30 h-30 rounded-full bg-white/95 flex items-center justify-center shadow-xl cursor-pointer hover:bg-white transition-all z-10 border border-primary/20">
+                <FaArrowRight className="w-12 h-12 text-primary" />
               </button>
-              <div className="absolute bottom-15 left-1/2 -translate-x-1/2 flex gap-8 z-10">
-                {typeRooms.map((_, idx) => (
-                  <button key={idx} onClick={() => setSelectedIdx(idx)} className={`w-10 h-10 rounded-full transition-all cursor-pointer flex items-center justify-center text-xs font-bold ${idx === selectedIdx ? "bg-primary text-white" : "bg-white/80 hover:bg-white text-text"}`}>
-                    {typeRooms[idx].number}
-                  </button>
+            </>
+          )}
+          
+          {/* Photo dots - only show when room has multiple photos */}
+          {roomImages.length > 1 && (
+            <div className="absolute bottom-15 left-1/2 -translate-x-1/2 flex gap-6 z-10">
+              <button onClick={goPrevPhoto} className="w-22 h-22 rounded-full bg-white/90 flex items-center justify-center shadow-md cursor-pointer hover:bg-white transition-all">
+                <FaArrowLeft className="w-10 h-10 text-primary" />
+              </button>
+              <div className="flex gap-5 items-center bg-white/90 px-12 py-6 rounded-full shadow-md">
+                {roomImages.map((_, idx) => (
+                  <button key={idx} onClick={() => setPhotoIdx(idx)} className={`w-8 h-8 rounded-full transition-all cursor-pointer ${idx === photoIdx ? "bg-primary" : "bg-primary/30 hover:bg-primary/50"}`} />
                 ))}
               </div>
-            </>
+              <button onClick={goNextPhoto} className="w-22 h-22 rounded-full bg-white/90 flex items-center justify-center shadow-md cursor-pointer hover:bg-white transition-all">
+                <FaArrowRight className="w-10 h-10 text-primary" />
+              </button>
+            </div>
           )}
         </div>
 
@@ -99,10 +127,10 @@ function RoomTypeCard({ typeId, title, description, typeKey, reversed, t }: Room
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-15 text-xs text-text/50">
+          <div className="flex flex-wrap gap-8 text-xs text-text/50">
             <span>{t("select_room")}: </span>
             {typeRooms.map((room, idx) => (
-              <button key={room.id} onClick={() => setSelectedIdx(idx)} className={`px-12 py-6 rounded-full transition-all cursor-pointer font-semibold ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
+              <button key={room.id} onClick={() => { setSelectedIdx(idx); setPhotoIdx(0); }} className={`px-14 py-8 rounded-full transition-all cursor-pointer font-semibold text-sm ${idx === selectedIdx ? "bg-primary text-white" : "bg-primary/10 hover:bg-primary/20"}`}>
                 {room.number}
               </button>
             ))}
