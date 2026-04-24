@@ -432,10 +432,17 @@
   },
   "BookNow": {
     "book_now": "Rezervă Acum !",
-    "contact_for_rezervation": "Pentru a rezerva o cameră, vă rugăm să ne contactați la numărul de telefon",
-    "contact_whatsapp": "Contactați-ne pe WhatsApp",
-    "verify_availability": "Verifică mai întai valabilitatea",
-    "or_separator": "sau"
+    "call_us": "Sună-ne",
+    "call_us_desc": "De luni până vineri, 09:00 - 18:00",
+    "whatsapp": "WhatsApp",
+    "whatsapp_desc": "Răspundem rapid la mesaje",
+    "send_message": "Trimite mesaj",
+    "email_us": "Email",
+    "email_us_desc": "Îți răspundem în maxim 24h",
+    "send_email": "Trimite email",
+    "check_availability": "Verifică disponibilitatea",
+    "selectDatesAndCheck": "Selectează datele și vezi prețurile",
+    "verify_availability": "Verifică disponibilitatea"
   },
   "Calculate": {
     "adults": "Adulți",
