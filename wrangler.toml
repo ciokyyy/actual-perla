@@ -17,6 +17,3 @@ for = "/videos/*"
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
 
-# Environment variables (set via dashboard or `wrangler secret put`)
-# STARDESK_T1 = "^REDACTED_STARDESK_T1"
-# STARDESK_T  = "REDACTED_STARDESK_T"
