@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pensiunea Perla Brazilor — Website
 
-## Getting Started
+Official website for Pensiunea Perla Brazilor, a family-run guest house in Frumosu, Bucovina, Romania. The site showcases the guest house's rooms and spa facilities, presents seasonal offers (Christmas, New Year's Eve, half board), checks real-time availability and pricing through the 5stardesk booking system, and lets visitors book directly — fully localized in Romanian, Italian, and English and deployed globally on Cloudflare.
 
-First, run the development server:
+## Features
+
+- Trilingual site (Romanian, Italian, English) with localized URLs via next-intl
+- Room showcase with photo galleries and per-room details
+- Live availability and price check integrated with the 5stardesk booking API
+- Direct booking flow with client-side form validation (TanStack Form)
+- Seasonal offer pages: Christmas, New Year's Eve, half-board packages
+- Spa facilities page (pool, hot tub, sauna, salt room)
+- Responsive design with Tailwind CSS and a custom image-optimization pipeline
+- SEO: sitemap, robots.txt, canonical URLs, and hreflang language alternates
+- Security headers (X-Frame-Options, nosniff) served at the edge
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org) (App Router) + React 19 + TypeScript
+- [next-intl](https://next-intl.dev) for internationalization
+- Tailwind CSS v4, Motion, Embla Carousel, TanStack Query / React Form
+- [OpenNext Cloudflare](https://opennext.js.org/cloudflare) — deployed as a Cloudflare Worker on Workers/Pages
+
+## Quickstart
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For the live availability API, copy `.dev.vars.example` to `.dev.vars` and fill in the 5stardesk tokens.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Deploy
 
-## Learn More
+```bash
+bun run deploy   # optimize images, build with OpenNext, deploy to Cloudflare
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Live site: https://www.perlabrazilor.com
