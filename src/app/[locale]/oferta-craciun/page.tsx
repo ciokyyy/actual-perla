@@ -147,6 +147,7 @@ export default function CraciunPage({ params }: Readonly<Props>) {
             <DayPlanCard day={t("schedule.dec24.title")} description={t("schedule.dec24.desc")} />
             <DayPlanCard day={t("schedule.dec25.title")} description={t("schedule.dec25.desc")} />
             <DayPlanCard day={t("schedule.dec26.title")} description={t("schedule.dec26.desc")} />
+            <DayPlanCard day={t("schedule.dec27.title")} description={t("schedule.dec27.desc")} />
           </div>
         </div>
 
