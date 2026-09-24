@@ -148,6 +148,7 @@ export default function RevelionPage({ params }: Readonly<Props>) {
             <DayPlanCard day={t("schedule.dec30.title")} description={t("schedule.dec30.desc")} />
             <DayPlanCard day={t("schedule.dec31.title")} description={t("schedule.dec31.desc")} />
             <DayPlanCard day={t("schedule.jan1.title")} description={t("schedule.jan1.desc")} />
+            <DayPlanCard day={t("schedule.jan2.title")} description={t("schedule.jan2.desc")} />
           </div>
         </div>
 
