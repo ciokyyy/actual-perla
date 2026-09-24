@@ -559,6 +559,10 @@
       "jan1": {
         "title": "1 Gennaio",
         "desc": "Il primo giorno dell'anno è per il relax, come desideri. Puoi andare a sciare a Câmpulung Moldovenesc, visitare i monasteri della zona (Moldovița, Voroneț, Humor, Sucevița), i laboratori di ceramica nera a Marginea o fare un giro con la Mocănița attraverso la valle di Moldovița."
+      },
+      "jan2": {
+        "title": "2 Gennaio",
+        "desc": "Dopo la colazione ci salutiamo, con la speranza che abbiate trascorso un Capodanno indimenticabile con noi e di rivederci presto!"
       }
     },
     "book_now": "Prenota Ora!",
