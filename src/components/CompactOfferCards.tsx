@@ -20,7 +20,7 @@ import RevelionThree from "~/images/revelion/revelion-3.webp";
 import { useTranslations } from "next-intl";
 import type { StaticImageData } from "next/image";
 
-function CompactOfferCardClassic({ title, icon: Icon, images, href, subtitle, price, cta }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string; subtitle: string; price: string; cta: string }) {
+function CompactOfferCardClassic({ title, icon: Icon, images, href, subtitle, price, cta, bigPrice }: { title: string; icon: React.ElementType; images: [StaticImageData, StaticImageData, StaticImageData]; href: string; subtitle: string; price: string; cta: string; bigPrice?: boolean }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function CompactOfferCardClassic({ title, icon: Icon, images, href, subtitle, pr
           </div>
           <h3 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold text-center">{title}</h3>
           <p className="text-white/80 text-center text-sm">{subtitle}</p>
-          <p className="text-white/60 text-center text-xs">{price}</p>
+          <p className={bigPrice ? "text-white text-center text-lg font-semibold" : "text-white/60 text-center text-xs"}>{price}</p>
           <button className="px-15 py-8 bg-primary text-white rounded-full text-sm font-medium">
             {cta}
           </button>
@@ -91,6 +91,7 @@ export function CompactOfferCards() {
           href="/oferta-craciun"
           subtitle={t("craciun_subtitle")}
           price={t("craciun_price")}
+          bigPrice
           cta={t("cta_book")}
         />
         <CompactOfferCardClassic
@@ -100,6 +101,7 @@ export function CompactOfferCards() {
           href="/oferta-revelion"
           subtitle={t("revelion_subtitle")}
           price={t("revelion_price")}
+          bigPrice
           cta={t("cta_book")}
         />
         <CompactOfferCardClassic
