@@ -108,7 +108,7 @@
     "cta_book": "Prenota ora!",
     "craciun_title": "Natale 2026 in Bucovina",
     "craciun_subtitle": "Cibo tradizionale, divertimento e tradizioni",
-    "craciun_price": "Da 3.500 lei a persona",
+    "craciun_price": "Da 2.500 lei a persona",
     "revelion_title": "Capodanno 2026-2027 in Bucovina",
     "revelion_subtitle": "Cena festiva, musica e tradizioni",
     "revelion_price": "Da 3.700 lei a persona",
@@ -279,6 +279,8 @@
     "selectDatesAndCheck": "Seleziona le date e premi per vedere disponibilità e prezzi.",
     "secondaryBuildingNote": "Edificio secondario, a 50m dall'edificio principale.",
     "price": "Prezzo:",
+    "rate_halfBoard": "Mezza pensione",
+    "rate_roomOnly": "Pernottamento & Spa",
     "room": "{count, plural, one {camera disponibile} other {camere disponibili}}",
     "person": "{count, plural, one {persona} other {persone}}",
     "title": "Le nostre camere",
@@ -484,11 +486,11 @@
   },
   "ChristmasPage": {
     "title": "Festeggia il Natale 2026 in Bucovina",
-    "pricing": "4 notti / 5 giorni a soli 3500 lei/persona",
+    "pricing": "4 notti / 5 giorni a soli 2500 lei/persona",
     "food_drink": {
       "title": "Cibo e bevande",
-      "subtitle": "Tutto incluso !!!",
-      "desc1": "Tutto è incluso, dal cibo alle bevande, hai cosa scegliere durante il tuo soggiorno in Bucovina",
+      "subtitle": "Mezza pensione",
+      "desc1": "Mezza pensione, con bevande alcoliche a cena e bibite incluse",
       "desc2": "Cucina tradizionale al 60% di produzione propria"
     },
     "spa": {
@@ -504,11 +506,11 @@
       },
       "dec24": {
         "title": "24 Dicembre",
-        "desc": "Alle 10:00, inizia con una gita in slitta trainata da cavalli, poi goditi un pasto all'aperto con la tradizionale macellazione del maiale, barbecue e bistecca in umido, insieme a vin brulé, grappa bollita e deliziosi Poale-n Brâu. In serata, a cena, i cantanti natalizi e Babbo Natale porteranno la magia delle feste."
+        "desc": "Alle 14:00, pomana porcului (festa tradizionale del maiale), con vin brulé e grappa calda, griglia ardente, Poale-n Brâu, musica e buonumore. In serata, alla vigilia, arriva Babbo Natale per distribuire i regali e accogliamo i cantori."
       },
       "dec25": {
         "title": "25 Dicembre",
-        "desc": "In un'atmosfera festosa, goditi piatti tradizionali, bevande selezionate e buona allegria con i tuoi cari, dalle 14:30, al ritmo di un'orchestra dal vivo."
+        "desc": "Dalle 14:00, pranzo festivo con piatti tradizionali e bevande selezionate, con i tuoi cari, al ritmo di un'orchestra dal vivo."
       },
       "dec26": {
         "title": "26 Dicembre",
@@ -550,7 +552,7 @@
       },
       "dec30": {
         "title": "30 Dicembre",
-        "desc": "Alle 10:00, partiamo con un giro in carrozza trainata da cavalli attraverso il paesaggio invernale della Bucovina. Dopo la strada, ci fermiamo per un pasto all'aperto con cibo tradizionale: macellazione del maiale, barbecue, bistecca in umido, vin brulé, grappa bollita e Poale-n Brâu - perfetto per una vera giornata invernale."
+        "desc": "Alle 10:00, partiamo con un giro in carrozza trainata da cavalli attraverso il paesaggio invernale della Bucovina. Dopo la strada, ci fermiamo per un pasto all'aperto con cibo tradizionale: pomana porcului (festa del maiale) con vin brulé e grappa calda, griglia ardente, bistecca in umido, Poale-n Brâu, musica e buonumore - perfetto per una vera giornata invernale."
       },
       "dec31": {
         "title": "31 Dicembre",

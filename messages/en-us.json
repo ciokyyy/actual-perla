@@ -108,7 +108,7 @@
     "cta_book": "Book now!",
     "craciun_title": "Christmas 2026 in Bucovina",
     "craciun_subtitle": "Traditional food, fun and traditions",
-    "craciun_price": "From 3,500 lei per person",
+    "craciun_price": "From 2,500 lei per person",
     "revelion_title": "New Year 2026-2027 in Bucovina",
     "revelion_subtitle": "Festive dinner, music and traditions",
     "revelion_price": "From 3,700 lei per person",
@@ -279,6 +279,8 @@
     "selectDatesAndCheck": "Select dates and press to see availability and prices.",
     "secondaryBuildingNote": "Secondary building, 50m from the main building.",
     "price": "Price:",
+    "rate_halfBoard": "Half board",
+    "rate_roomOnly": "Accommodation & Spa",
     "room": "{count, plural, one {room available} other {rooms available}}",
     "person": "{count, plural, one {person} other {people}}",
     "title": "Our Rooms",
@@ -484,11 +486,11 @@
   },
   "ChristmasPage": {
     "title": "Celebrate Christmas 2026 in Bucovina",
-    "pricing": "4 nights / 5 days for only 3500 lei/person",
+    "pricing": "4 nights / 5 days for only 2500 lei/person",
     "food_drink": {
       "title": "Food and drink",
-      "subtitle": "All inclusive !!!",
-      "desc1": "Everything is included, from food to drinks, you have what to choose during your stay in Bucovina",
+      "subtitle": "Half board",
+      "desc1": "Half board, with alcoholic drinks at dinner and soft drinks included",
       "desc2": "Traditional food 60% from our own production"
     },
     "spa": {
@@ -504,11 +506,11 @@
       },
       "dec24": {
         "title": "December 24",
-        "desc": "At 10 AM, start with a horse-drawn sleigh ride, then enjoy an outdoor meal with traditional pig slaughter, barbecue and stewed steak, along with mulled wine, boiled brandy and delicious Poale-n Brâu. In the evening, at dinner, Carolers and Santa Claus will bring the magic of the holidays."
+        "desc": "At 2 PM, the traditional pig feast (pomana porcului), with mulled wine and hot boiled brandy, a blazing grill, Poale-n Brâu, music and good cheer. In the evening, on Christmas Eve, Santa Claus comes to hand out gifts and we welcome carolers."
       },
       "dec25": {
         "title": "December 25",
-        "desc": "In a festive atmosphere, enjoy traditional dishes, selected drinks and good cheer with your loved ones, from 2:30 PM, to the rhythms of a live orchestra."
+        "desc": "From 2 PM, festive meal with traditional dishes and selected drinks, with your loved ones, to the rhythms of a live orchestra."
       },
       "dec26": {
         "title": "December 26",
@@ -550,7 +552,7 @@
       },
       "dec30": {
         "title": "December 30",
-        "desc": "At 10 AM, we start with a horse-drawn cart ride through the winter landscape of Bucovina. After the road, we stop for an outdoor meal with traditional food: pig slaughter, barbecues, stewed steak, mulled wine, boiled brandy and Poale-n Brâu - perfect for a real winter day."
+        "desc": "At 10 AM, we start with a horse-drawn cart ride through the winter landscape of Bucovina. After the road, we stop for an outdoor meal with traditional food: the pig feast (pomana porcului) with mulled wine and hot boiled brandy, a blazing grill, stewed steak, Poale-n Brâu, music and good cheer - perfect for a real winter day."
       },
       "dec31": {
         "title": "December 31",

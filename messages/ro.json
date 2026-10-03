@@ -108,7 +108,7 @@
     "cta_book": "Rezervă acum !",
     "craciun_title": "Crăciun 2026 în Bucovina",
     "craciun_subtitle": "Bucate pe-ndelete, distracție și tradiții",
-    "craciun_price": "De la 3,500 lei de persoană",
+    "craciun_price": "De la 2,500 lei de persoană",
     "revelion_title": "Revelion 2026-2027 în Bucovina",
     "revelion_subtitle": "Cină festiva, muzică și tradiții",
     "revelion_price": "De la 3,700 lei de persoană",
@@ -279,6 +279,8 @@
     "selectDatesAndCheck": "Selectează datele și apasă pentru a vedea disponibilitatea și prețurile.",
     "secondaryBuildingNote": "Clădirea secundară, la 50m de corpul principal.",
     "price": "Preț:",
+    "rate_halfBoard": "Demipensiune",
+    "rate_roomOnly": "Cazare & Spa",
     "room": "{count, plural, =0 {0 camere disponibile} =1 {1 cameră disponibilă} other {# camere disponibile}}",
     "person": "{count, plural, one {persoană} other {persoane}}",
     "title": "Camerele Noastre",
@@ -484,11 +486,11 @@
   },
   "ChristmasPage": {
     "title": "Sărbătorește Crăciun 2026 în Bucovina",
-    "pricing": "4 nopți / 5 zile la doar 3500 lei/pers",
+    "pricing": "4 nopți / 5 zile la doar 2500 lei/pers",
     "food_drink": {
       "title": "Mâncare și băutură",
-      "subtitle": "All inclusive !!!",
-      "desc1": "Totul este inclus, de la mâncare, la băutură, ai ce alege în sejurul tău în Bucovina",
+      "subtitle": "Demipensiune",
+      "desc1": "Demipensiune, cu băuturi alcoolice la cină și sucuri incluse",
       "desc2": "Mâncare tradițională 60% din producție proprie"
     },
     "spa": {
@@ -504,11 +506,11 @@
       },
       "dec24": {
         "title": "24 Decembrie",
-        "desc": "La ora 10, pornește într-o plimbare cu sănii trase de cai, apoi savurează o masă în aer liber cu pomana porcului, grătar și friptură la ceaun, alături de vin fiert, țuică fiartă și delicioasele Poale-n Brâu. Seara, la cină, Colindătorii și Moș Crăciun vor aduce magia sărbătorilor."
+        "desc": "La ora 14:00, pomana porcului, cu vin și țuică fiartă, grătar încins, Poale-n Brâu, muzică și voie bună. Seara, în ajun, vine Moș Crăciun să împartă darul și așteptăm colindători."
       },
       "dec25": {
         "title": "25 Decembrie",
-        "desc": "Într-o atmosferă festivă, bucură-te de bucate tradiționale, băuturi alese și voie bună alături de cei dragi, de la ora 14:30, pe ritmurile unei orchestre live."
+        "desc": "De la ora 14:00, masă festivă cu bucate tradiționale și băuturi alese, alături de cei dragi, pe ritmurile unei orchestre live."
       },
       "dec26": {
         "title": "26 Decembrie",
@@ -550,7 +552,7 @@
       },
       "dec30": {
         "title": "30 Decembrie",
-        "desc": "La ora 10, pornim la o plimbare cu căruțele trase de cai prin peisajul de iarnă al Bucovinei. După drum, ne oprim pentru o masă în aer liber cu mâncare tradițională: pomana porcului, grătare, friptură la ceaun, vin fiert, țuică fiartă și Poale-n Brâu - perfecte pentru o zi de iarnă adevărată."
+        "desc": "La ora 10, pornim la o plimbare cu căruțele trase de cai prin peisajul de iarnă al Bucovinei. După drum, ne oprim pentru o masă în aer liber cu mâncare tradițională: pomana porcului cu vin și țuică fiartă, grătar încins, friptură la ceaun, Poale-n Brâu, muzică și voie bună - perfecte pentru o zi de iarnă adevărată."
       },
       "dec31": {
         "title": "31 Decembrie",
